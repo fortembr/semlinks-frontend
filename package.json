@@ -1,6 +1,6 @@
 {
   "name": "semlinks-frontend",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "",
   "private": true,
   "author": {
@@ -9,8 +9,9 @@
     "url": "https://carbondigital.us/"
   },
   "scripts": {
+    "build:dev": "webpack",
+    "build:prod": "webpack --config webpack.config.prod.js",
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prebuild:clean": "rimraf dist",
@@ -18,9 +19,12 @@
     "db:migrate:run": "npm run build && npx typeorm migration:run -d dist/typeorm-cli.config",
     "db:migrate:revert": "npx typeorm migration:revert -d dist/typeorm-cli.config",
     "db:migrate:auto": "npm run build && npx typeorm migration:generate src/migrations/SchemaSync -d dist/typeorm-cli.config",
-    "start:dev": "NODE_ENV=development react-scripts start --watch",
+    "start:dev": "NODE_ENV=development nodemon --watch './**/*.ts' --exec 'ts-node' src/index.ts",
     "start:debug": "nest start --debug --watch",
     "start:prod": "NODE_ENV=production node dist/main.js",
+    "style": "sass public/css/scss/style.scss:public/css/style.css",
+    "style:min": "sass public/css/scss/style.scss:public/css/style.css --style=compressed",
+    "style:watch": "sass --watch public/css/scss/style.scss:public/css/style.css",
     "test:unit": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
@@ -28,20 +32,15 @@
     "test:e2e": "jest --config ./test/_setup/jest/jest-e2e.json"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "28.1.8",
     "@types/node": "^16.0.0",
     "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.7",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "jest": "28.1.3",
     "prettier": "^2.3.2",
-    "ts-jest": "28.0.8",
     "ts-loader": "^9.2.3",
     "ts-node": "^10.0.0"
   },
@@ -54,26 +53,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "reflect-metadata": "^0.1.13",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.8.4",
-    "web-vitals": "^2.1.4"
+    "typescript": "^4.8.4"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "type": "module"
 }
