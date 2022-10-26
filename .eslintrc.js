@@ -33,13 +33,6 @@ module.exports = {
       parserOptions: {
         sourceType: 'module'
       }
-    },
-    {
-      files: ['/test/**/*.js'], // Your JavaScript files extension
-      extends: ['plugin:prettier/recommended'],
-      parserOptions: {
-        sourceType: 'module'
-      }
     }
   ],
   root: true
