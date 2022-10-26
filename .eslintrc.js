@@ -10,7 +10,8 @@ module.exports = {
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'plugin:prettier/recommended'
+        'plugin:prettier/recommended',
+        'plugin:react/recommended'
       ],
       parser: '@typescript-eslint/parser',
       parserOptions: {
