@@ -11,25 +11,12 @@
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack --config webpack.config.prod.js",
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prebuild:clean": "rimraf dist",
-    "prebuild:create": "nest build",
-    "db:migrate:run": "npm run build && npx typeorm migration:run -d dist/typeorm-cli.config",
-    "db:migrate:revert": "npx typeorm migration:revert -d dist/typeorm-cli.config",
-    "db:migrate:auto": "npm run build && npx typeorm migration:generate src/migrations/SchemaSync -d dist/typeorm-cli.config",
     "start:dev": "NODE_ENV=development nodemon --watch './**/*.ts' --exec 'ts-node' src/index.ts",
     "start:debug": "nest start --debug --watch",
     "start:prod": "NODE_ENV=production node dist/main.js",
     "style": "sass public/css/scss/style.scss:public/css/style.css",
     "style:min": "sass public/css/scss/style.scss:public/css/style.css --style=compressed",
-    "style:watch": "sass --watch public/css/scss/style.scss:public/css/style.css",
-    "test:unit": "jest",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/_setup/jest/jest-e2e.json"
+    "style:watch": "sass --watch public/css/scss/style.scss:public/css/style.css"
   },
   "devDependencies": {
     "@types/node": "^16.0.0",
