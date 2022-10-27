@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './assets/img/logo.svg';
+import './assets/css/App.css';
 
-export default class App extends React.Component {
-  return() {
+export default function App() {
+  return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
