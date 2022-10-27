@@ -25,5 +25,5 @@
     "strictNullChecks": false,
     "target": "es6"
   },
-  "include": ["src"]
+  "include": ["src", "types/react-app-env.d.ts"]
 }
