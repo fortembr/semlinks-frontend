@@ -9,7 +9,6 @@
     "url": "https://carbondigital.us/"
   },
   "homepage": ".",
-  "proxy": "http://localhost:3000",
   "scripts": {
     "build": "react-scripts build",
     "build:clean": "rm -r dist",
