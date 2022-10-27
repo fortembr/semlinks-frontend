@@ -23,7 +23,7 @@
     "strict": true,
     "strictBindCallApply": false,
     "strictNullChecks": false,
-    "target": "es2017"
+    "target": "es6"
   },
   "include": ["src"]
 }
