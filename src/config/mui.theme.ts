@@ -1,8 +1,9 @@
 import { createTheme } from '@mui/material';
 
-export const customTheme = createTheme({
+const customTheme = createTheme({
   components: {},
   mixins: {},
   palette: {},
   typography: {}
 });
+export default customTheme;
