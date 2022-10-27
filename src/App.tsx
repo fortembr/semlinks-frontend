@@ -13,6 +13,6 @@ export default class App extends React.Component {
           Learn React
         </a>
       </header>
-    </div>;
-  }
+    </div>
+  );
 }
