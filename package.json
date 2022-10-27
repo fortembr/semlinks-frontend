@@ -2,7 +2,7 @@
   "name": "semlinks-frontend",
   "version": "0.0.1",
   "description": "",
-  "private": true,
+  "private": false,
   "author": {
     "name": "Carbon Digital",
     "email": "hello@carbondigital.us",
