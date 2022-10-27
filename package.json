@@ -36,5 +36,4 @@
     "reflect-metadata": "^0.1.13",
     "typescript": "^4.8.4"
   },
-  "type": "module"
 }
