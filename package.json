@@ -9,6 +9,7 @@
     "url": "https://carbondigital.us/"
   },
   "homepage": ".",
+  "proxy": "http://localhost:3000",
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack --config webpack.config.prod.js",
