@@ -11,8 +11,6 @@
   "homepage": ".",
   "proxy": "http://localhost:3000",
   "scripts": {
-    "build:dev": "webpack",
-    "build:prod": "webpack --config webpack.config.prod.js",
     "start:dev": "NODE_ENV=development nodemon --watch './**/*.ts' --exec 'ts-node' src/index.ts",
     "start:prod": "NODE_ENV=production node dist/main.js",
     "style": "sass public/css/scss/style.scss:public/css/style.css",
