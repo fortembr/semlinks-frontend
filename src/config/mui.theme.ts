@@ -10,7 +10,132 @@ const customTheme = createTheme({
       xl: 1200
     }
   },
-  components: {},
+  components: {
+    // Accordion
+    MuiAccordion: {},
+    // Alert
+    MuiAlert: {},
+    // App Bar
+    MuiAppBar: {},
+    // Autocomplete
+    MuiAutocomplete: {},
+    // Avatar
+    MuiAvatar: {},
+    // Backdrop
+    MuiBackdrop: {},
+    // Badge
+    MuiBadge: {},
+    // Box
+    // Breadcrumbs
+    MuiBreadcrumbs: {},
+    // Button
+    MuiButton: {},
+    MuiButtonBase: {},
+    // Button Group
+    MuiButtonGroup: {},
+    // Button Navigation
+    // Card
+    MuiCard: {},
+    // Checkbox
+    MuiCheckbox: {},
+    // Chip
+    MuiChip: {},
+    // Container
+    MuiContainer: {},
+    // Dialog
+    MuiDialog: {},
+    // Divider
+    MuiDivider: {},
+    // Drawer
+    MuiDrawer: {},
+    // Floating Action Button
+    // Grid
+    MuiGrid: {},
+    // Grid v2
+    MuiGrid2: {},
+    // Hidden
+    // Icons
+    MuiIcon: {},
+    // Image List
+    MuiImageList: {},
+    MuiImageListItem: {},
+    MuiImageListItemBar: {},
+    // Link
+    MuiLink: {},
+    // List
+    MuiList: {},
+    MuiListItem: {},
+    MuiListItemAvatar: {},
+    MuiListItemButton: {},
+    MuiListItemIcon: {},
+    MuiListItemSecondaryAction: {},
+    MuiListItemText: {},
+    MuiListSubheader: {},
+    // Material Icons
+    // Menu
+    MuiMenu: {},
+    MuiMenuItem: {},
+    // Modal
+    MuiModal: {},
+    // Pagination
+    MuiPagination: {},
+    MuiPaginationItem: {},
+    // Paper
+    MuiPaper: {},
+    // Popover
+    MuiPopover: {},
+    // Popper
+    MuiPopper: {},
+    // Portal
+    // Progress
+    // Radio Group
+    MuiRadio: {},
+    // Rating
+    MuiRating: {},
+    // Select
+    MuiSelect: {},
+    // Slider
+    MuiSlider: {},
+    // Snackbar
+    MuiSnackbar: {},
+    MuiSnackbarContent: {},
+    // Skeleton
+    MuiSkeleton: {},
+    // Speed Dial
+    MuiSpeedDial: {},
+    MuiSpeedDialAction: {},
+    MuiSpeedDialIcon: {},
+    // Stack
+    MuiStack: {},
+    // Stepper
+    MuiStepper: {},
+    // Switch
+    MuiSwitch: {},
+    // Table
+    MuiTable: {},
+    MuiTableBody: {},
+    MuiTableCell: {},
+    MuiTableContainer: {},
+    MuiTableFooter: {},
+    MuiTableHead: {},
+    MuiTablePagination: {},
+    MuiTableRow: {},
+    MuiTableSortLabel: {},
+    // Tabs
+    MuiTab: {},
+    MuiTabs: {},
+    // Text Field
+    MuiTextField: {},
+    // Tooltip
+    MuiTooltip: {},
+    MuiToolbar: {},
+    // Transfer List
+    // Toggle Button
+    MuiToggleButton: {},
+    MuiToggleButtonGroup: {},
+    // Typography
+    MuiTypography: {}
+  },
   palette: {
     primary: {
       50: 'hsl(186, 100%, 94%)',
