@@ -11,7 +11,6 @@ const customTheme = createTheme({
     }
   },
   components: {},
-  typography: {}
   palette: {
     primary: {
       50: 'hsl(186, 100%, 94%)',
@@ -103,5 +102,19 @@ const customTheme = createTheme({
       paper: ''
     }
   },
+  typography: {
+    h1: {},
+    h2: {},
+    h3: {},
+    h4: {},
+    h5: {},
+    h6: {},
+    subtitle1: {},
+    subtitle2: {},
+    body1: {},
+    body2: {},
+    caption: {},
+    button: {}
+  }
 });
 export default customTheme;
