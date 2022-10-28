@@ -11,7 +11,6 @@ const customTheme = createTheme({
     }
   },
   components: {},
-  mixins: {},
   palette: {},
   typography: {}
 });
