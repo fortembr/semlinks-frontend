@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { selectionAndOperation } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { selectionAndOperation } from './code.js';
 
-import { Table, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function SelectionAndOperationTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -22,16 +22,16 @@ export default function SelectionAndOperationTable() {
   const columns = [
     {
       title: 'Name',
-      dataIndex: 'name',
+      dataIndex: 'name'
     },
     {
       title: 'Age',
-      dataIndex: 'age',
+      dataIndex: 'age'
     },
     {
       title: 'Address',
-      dataIndex: 'address',
-    },
+      dataIndex: 'address'
+    }
   ];
 
   const data = [];
@@ -40,16 +40,16 @@ export default function SelectionAndOperationTable() {
       key: i,
       name: 'John Brown ' + i,
       age: 32,
-      address: 'London, Park Lane no. ' + i,
+      address: 'London, Park Lane no. ' + i
     });
   }
 
   const start = () => {
-    setLoading(true)
+    setLoading(true);
     // ajax request after empty completing
     setTimeout(() => {
-      setSelectedRowKeys([])
-      setLoading(false)
+      setSelectedRowKeys([]);
+      setLoading(false);
     }, 1000);
   };
 
@@ -59,7 +59,7 @@ export default function SelectionAndOperationTable() {
 
   const rowSelection = {
     selectedRowKeys,
-    onChange: onSelectChange,
+    onChange: onSelectChange
   };
   const hasSelected = selectedRowKeys.length > 0;
 
@@ -69,16 +69,13 @@ export default function SelectionAndOperationTable() {
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Selection and operation</h4>
           <p className="hp-p1-body">
-            To perform operations and clear selections after selecting some rows, use rowSelection.selectedRowKeys to control selected rows.
+            To perform operations and clear selections after selecting some rows, use rowSelection.selectedRowKeys to
+            control selected rows.
           </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -92,19 +89,14 @@ export default function SelectionAndOperationTable() {
             </span>
           </div>
 
-          <Table
-            rowSelection={rowSelection}
-            columns={columns}
-            dataSource={data}
-            scroll={{ x: 500 }}
-          />
+          <Table rowSelection={rowSelection} columns={columns} dataSource={data} scroll={{ x: 500 }} />
         </Col>
       </Row>
 
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {selectionAndOperation}

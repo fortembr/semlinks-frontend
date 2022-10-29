@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { responsiveAvatar } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { responsiveAvatar } from './code.js';
 
-import { Card, Row, Col, Avatar, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
-import { User } from "react-iconly";
+import { Card, Row, Col, Avatar, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
+import { User } from 'react-iconly';
 
 export default function AvatarResponsive() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -22,31 +22,22 @@ export default function AvatarResponsive() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Responsive Size</h4>
-          <p className="hp-p1-body">
-            Avatar size can be automatically adjusted based on the screen size.
-          </p>
+          <p className="hp-p1-body">Avatar size can be automatically adjusted based on the screen size.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
-          <Avatar
-            size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }}
-            icon={<User className="remix-icon" />}
-          />
+          <Avatar size={{ xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100 }} icon={<User className="remix-icon" />} />
         </Col>
       </Row>
 
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {responsiveAvatar}

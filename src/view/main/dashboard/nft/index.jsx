@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageHeaderNFT from "./pageHeaderNFT";
-import BidCardNFT from "./bidCard";
-import OwnNFT from "./ownNFT";
-import TotalBalanceNFT from "./totalBalance";
-import RecentActivityNFT from "./recentActivity";
-import SummaryNFT from "./summary";
-import HotBidNFT from "./hotBid";
+import PageHeaderNFT from './pageHeaderNFT';
+import BidCardNFT from './bidCard';
+import OwnNFT from './ownNFT';
+import TotalBalanceNFT from './totalBalance';
+import RecentActivityNFT from './recentActivity';
+import SummaryNFT from './summary';
+import HotBidNFT from './hotBid';
 
 export default function NFT() {
   return (

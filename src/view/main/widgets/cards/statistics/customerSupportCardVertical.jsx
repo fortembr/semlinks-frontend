@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import { Row, Col } from "antd";
-import Chart from "react-apexcharts";
+import { Row, Col } from 'antd';
+import Chart from 'react-apexcharts';
 
 export default function CustomerSupportCardVertical() {
-  const [chartWidth, setChartWidth] = useState("50%")
+  const [chartWidth, setChartWidth] = useState('50%');
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setChartWidth("100%")
+      setChartWidth('100%');
     }, 10);
     return () => clearTimeout(timer);
   }, []);
@@ -19,8 +19,8 @@ export default function CustomerSupportCardVertical() {
       chart: {
         stacked: true,
         toolbar: {
-          show: false,
-        },
+          show: false
+        }
       },
       grid: {
         show: false,
@@ -28,72 +28,71 @@ export default function CustomerSupportCardVertical() {
           left: -24,
           right: -24,
           top: -12,
-          bottom: -16,
-        },
+          bottom: -16
+        }
       },
       plotOptions: {
         radialBar: {
           startAngle: 0,
           endAngle: 360,
           hollow: {
-            size: '45%',
+            size: '45%'
           },
           track: {
             show: true,
-            background: "#ffffff",
+            background: '#ffffff',
             strokeWidth: '100%',
             opacity: 1,
-            margin: 0,
+            margin: 0
           },
           dataLabels: {
             show: true,
             value: {
-              fontSize: "12px",
-              color: "#FF455E",
+              fontSize: '12px',
+              color: '#FF455E',
               fontWeight: 500,
-              offsetY: -11,
+              offsetY: -11
             },
             total: {
               show: true,
-              fontSize: "12px",
-              label: "",
+              fontSize: '12px',
+              label: '',
               formatter: function (w) {
-                return "%" + 76;
-              },
-            },
-          },
-        },
+                return '%' + 76;
+              }
+            }
+          }
+        }
       },
       legend: {
-        show: false,
+        show: false
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
-      colors: ["#FF455E"],
+      colors: ['#FF455E'],
       xaxis: {
         labels: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
-        },
+          show: false
+        }
       },
       yaxis: {
         show: false,
-        max: 100,
+        max: 100
       },
       tooltip: {
         x: {
-          show: false,
-        },
-      },
-    },
+          show: false
+        }
+      }
+    }
   });
-
 
   return (
     <div className="hp-border-1 hp-overflow-hidden hp-border-color-black-40 hp-border-color-dark-80 hp-border-radius-xxl hp-bg-color-black-0 hp-bg-color-dark-100 hp-p-16 hp-card-2">
@@ -114,9 +113,7 @@ export default function CustomerSupportCardVertical() {
           </div>
 
           <h3 className="hp-mb-0">2,345</h3>
-          <p className="hp-p1-body hp-mb-0 hp-text-color-black-80 hp-text-color-dark-50">
-            Ticket Closed
-          </p>
+          <p className="hp-p1-body hp-mb-0 hp-text-color-black-80 hp-text-color-dark-50">Ticket Closed</p>
         </Col>
       </Row>
     </div>

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { searchSort } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { searchSort } from './code.js';
 
-import { Select, Card, Row, Col, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Select, Card, Row, Col, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Option } = Select;
 
@@ -27,11 +27,7 @@ export default function SelectSearchSort() {
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -40,9 +36,7 @@ export default function SelectSearchSort() {
             style={{ width: 200 }}
             placeholder="Search to Select"
             optionFilterProp="children"
-            filterOption={(input, option) =>
-              option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
+            filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
             filterSort={(optionA, optionB) =>
               optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
             }
@@ -57,16 +51,15 @@ export default function SelectSearchSort() {
         </Col>
       </Row>
 
-      { checkedCode && (
+      {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {searchSort}
         </SyntaxHighlighter>
-      )
-      }
-    </Card >
+      )}
+    </Card>
   );
 }

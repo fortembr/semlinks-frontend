@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col, Button, Avatar, Tag } from "antd";
-import { User } from "react-iconly";
+import { Card, Row, Col, Button, Avatar, Tag } from 'antd';
+import { User } from 'react-iconly';
 
-import userImg from "../../../../../assets/images/memoji/memoji-1.png";
+import userImg from '../../../../../assets/images/memoji/memoji-1.png';
 
 export default function MeetingCard() {
   return (
@@ -16,29 +16,23 @@ export default function MeetingCard() {
 
           <h5 className="hp-mb-4">Sales Meeting</h5>
 
-          <p className="hp-p1-body hp-mb-16">
-            2020 Overview of yearly sales over Covid-19 pandemic situation.
-          </p>
+          <p className="hp-p1-body hp-mb-16">2020 Overview of yearly sales over Covid-19 pandemic situation.</p>
 
           <p className="hp-badge-text hp-mb-8 hp-text-color-black-100 hp-text-color-dark-0">Teams</p>
 
-          <Tag color="red">
-            Sales
-          </Tag>
+          <Tag color="red">Sales</Tag>
 
           <Tag className="hp-mb-16" color="cyan">
             Marketing
           </Tag>
 
-          <p className="hp-badge-text hp-mb-8 hp-text-color-black-100 hp-text-color-dark-0">
-            Members
-          </p>
+          <p className="hp-badge-text hp-mb-8 hp-text-color-black-100 hp-text-color-dark-0">Members</p>
 
           <Avatar.Group
             maxCount={5}
             maxStyle={{
-              color: "#FF0022",
-              backgroundColor: "#FFE7EA",
+              color: '#FF0022',
+              backgroundColor: '#FFE7EA'
             }}
           >
             <Avatar src={userImg} />
@@ -46,7 +40,7 @@ export default function MeetingCard() {
             <Avatar
               className="hp-text-color-danger-1"
               style={{
-                backgroundColor: "#FFE7EA",
+                backgroundColor: '#FFE7EA'
               }}
             >
               A
@@ -55,7 +49,7 @@ export default function MeetingCard() {
             <Avatar
               className="hp-text-color-black-100"
               style={{
-                backgroundColor: "#F0F3F5",
+                backgroundColor: '#F0F3F5'
               }}
               icon={<User set="curved" className="remix-icon" size={22} />}
             />
@@ -63,7 +57,7 @@ export default function MeetingCard() {
             <Avatar
               className="hp-text-color-info-1"
               style={{
-                backgroundColor: "#EAFCFF",
+                backgroundColor: '#EAFCFF'
               }}
             >
               W
@@ -72,7 +66,7 @@ export default function MeetingCard() {
             <Avatar
               className="hp-text-color-warning-1"
               style={{
-                backgroundColor: "#FFF9E9",
+                backgroundColor: '#FFF9E9'
               }}
             >
               X
@@ -81,7 +75,7 @@ export default function MeetingCard() {
             <Avatar
               className="hp-text-color-danger-1"
               style={{
-                backgroundColor: "#FFE7EA",
+                backgroundColor: '#FFE7EA'
               }}
             >
               M
@@ -90,7 +84,7 @@ export default function MeetingCard() {
             <Avatar
               className="hp-text-color-secondary-1"
               style={{
-                backgroundColor: "#FDEFFC",
+                backgroundColor: '#FDEFFC'
               }}
             >
               Y

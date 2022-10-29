@@ -72,18 +72,13 @@
 .@{class-prefix}-sidebar {
   // Collapsed
   .ant-menu.ant-menu-inline-collapsed > .ant-menu-item,
-  .ant-menu.ant-menu-inline-collapsed
-    > .ant-menu-item-group
-    > .ant-menu-item-group-list
-    > .ant-menu-item,
+  .ant-menu.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item,
   .ant-menu.ant-menu-inline-collapsed
     > .ant-menu-item-group
     > .ant-menu-item-group-list
     > .ant-menu-submenu
     > .ant-menu-submenu-title,
-  .ant-menu.ant-menu-inline-collapsed
-    > .ant-menu-submenu
-    > .ant-menu-submenu-title {
+  .ant-menu.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
     padding: 0 calc(50% - 24px / 2) !important;
   }
 
@@ -107,10 +102,7 @@
     margin: 0 auto 16px;
   }
 
-  .ant-menu-inline-collapsed
-    > .ant-menu-submenu
-    > .ant-menu-submenu-title
-    .remix-icon {
+  .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .remix-icon {
     margin: 0;
     font-size: 24px;
   }
@@ -393,9 +385,7 @@
 }
 
 // Arrow
-.ant-menu-submenu-open.ant-menu-submenu-inline
-  > .ant-menu-submenu-title
-  > .ant-menu-submenu-arrow {
+.ant-menu-submenu-open.ant-menu-submenu-inline > .ant-menu-submenu-title > .ant-menu-submenu-arrow {
   transform: translate(-4px, -50%) rotate(180deg);
 }
 
@@ -476,22 +466,10 @@
   left: 5px;
   right: auto;
 }
-.ant-menu-rtl
-  .ant-menu-submenu-vertical
-  > .ant-menu-submenu-title
-  .ant-menu-submenu-arrow,
-.ant-menu-rtl
-  .ant-menu-submenu-vertical-left
-  > .ant-menu-submenu-title
-  .ant-menu-submenu-arrow,
-.ant-menu-rtl
-  .ant-menu-submenu-vertical-right
-  > .ant-menu-submenu-title
-  .ant-menu-submenu-arrow,
-.ant-menu-rtl
-  .ant-menu-submenu-inline
-  > .ant-menu-submenu-title
-  .ant-menu-submenu-arrow {
+.ant-menu-rtl .ant-menu-submenu-vertical > .ant-menu-submenu-title .ant-menu-submenu-arrow,
+.ant-menu-rtl .ant-menu-submenu-vertical-left > .ant-menu-submenu-title .ant-menu-submenu-arrow,
+.ant-menu-rtl .ant-menu-submenu-vertical-right > .ant-menu-submenu-title .ant-menu-submenu-arrow,
+.ant-menu-rtl .ant-menu-submenu-inline > .ant-menu-submenu-title .ant-menu-submenu-arrow {
   right: auto !important;
   left: 0;
 }
@@ -504,21 +482,16 @@
   margin-left: 0;
 }
 
-html[dir="rtl"] {
+html[dir='rtl'] {
   // Collapsed
   .ant-menu.ant-menu-inline-collapsed > .ant-menu-item,
-  .ant-menu.ant-menu-inline-collapsed
-    > .ant-menu-item-group
-    > .ant-menu-item-group-list
-    > .ant-menu-item,
+  .ant-menu.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item,
   .ant-menu.ant-menu-inline-collapsed
     > .ant-menu-item-group
     > .ant-menu-item-group-list
     > .ant-menu-submenu
     > .ant-menu-submenu-title,
-  .ant-menu.ant-menu-inline-collapsed
-    > .ant-menu-submenu
-    > .ant-menu-submenu-title {
+  .ant-menu.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
     padding: 0 39px !important;
   }
 
@@ -541,9 +514,7 @@ html[dir="rtl"] {
       padding: 0 14px 0 0px;
     }
 
-    .ant-menu-submenu-open.ant-menu-submenu-inline
-      > .ant-menu-submenu-title
-      > .ant-menu-submenu-arrow {
+    .ant-menu-submenu-open.ant-menu-submenu-inline > .ant-menu-submenu-title > .ant-menu-submenu-arrow {
       transform: translate(4px, -50%) rotate(180deg);
     }
 
@@ -573,21 +544,15 @@ html[dir="rtl"] {
     }
 
     .ant-menu-sub.ant-menu-inline > .ant-menu-item,
-    .ant-menu-sub.ant-menu-inline
-      > .ant-menu-submenu
-      > .ant-menu-submenu-title {
+    .ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
       margin-left: 0px !important;
       margin-right: 20px !important;
     }
   }
 
   // Mobile Sidebar
-  .@{class-prefix}-mobile-sidebar.@{class-prefix}-sidebar
-    .ant-menu-inline
-    .ant-menu-item,
-  .@{class-prefix}-mobile-sidebar.@{class-prefix}-sidebar
-    .ant-menu-inline
-    .ant-menu-submenu {
+  .@{class-prefix}-mobile-sidebar.@{class-prefix}-sidebar .ant-menu-inline .ant-menu-item,
+  .@{class-prefix}-mobile-sidebar.@{class-prefix}-sidebar .ant-menu-inline .ant-menu-submenu {
     padding: 0 14px 0 4px !important;
   }
 }

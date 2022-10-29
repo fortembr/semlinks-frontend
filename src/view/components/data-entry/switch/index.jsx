@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicSwitch from "./basic";
-import SwitchDisabled from "./disabled";
-import SwitchTextIcon from "./textIcon";
-import SwitchLoading from "./loading";
-import SwitchSizes from "./switchSizes";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicSwitch from './basic';
+import SwitchDisabled from './disabled';
+import SwitchTextIcon from './textIcon';
+import SwitchLoading from './loading';
+import SwitchSizes from './switchSizes';
 
 export default function Switch() {
   return (
@@ -18,14 +18,14 @@ export default function Switch() {
           desc="Switching Selector."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Entry",
+              title: 'Data Entry'
             },
             {
-              title: "Switch",
+              title: 'Switch'
             }
           ]}
         />

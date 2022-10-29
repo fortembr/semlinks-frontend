@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col, Tooltip } from "antd";
+import { Card, Row, Col, Tooltip } from 'antd';
 
 export default function BlackGradients() {
   return (
@@ -9,10 +9,8 @@ export default function BlackGradients() {
         <h5 className="hp-w-100 hp-mb-8">Blacks & Gradients</h5>
 
         <p className="hp-p1-body">
-          Black tags can be use with class
-          .hp-&#123;css-property&#125;-black-dark-bg, Gradients can be used with
-          class .hp-&#123;css-property&#125;-primary-gradient. Gradients is used
-          for background instead of backgroun-color.
+          Black tags can be use with class .hp-&#123;css-property&#125;-black-dark-bg, Gradients can be used with class
+          .hp-&#123;css-property&#125;-primary-gradient. Gradients is used for background instead of backgroun-color.
         </p>
       </Row>
 
@@ -80,9 +78,7 @@ export default function BlackGradients() {
             <div className="hp-w-100 hp-bg-primary-gradient hp-color-wrapper hp-border-radius hp-mb-8"></div>
           </Tooltip>
 
-          <p className="hp-badge-text hp-text-color-black-100 hp-text-color-dark-0">
-            Primary Gradient
-          </p>
+          <p className="hp-badge-text hp-text-color-black-100 hp-text-color-dark-0">Primary Gradient</p>
         </Col>
 
         <Col lg={4} span={12}>
@@ -90,9 +86,7 @@ export default function BlackGradients() {
             <div className="hp-w-100 hp-bg-secondary-gradient hp-color-wrapper hp-border-radius hp-mb-8"></div>
           </Tooltip>
 
-          <p className="hp-badge-text hp-text-color-black-100 hp-text-color-dark-0">
-            Secondary Gradient
-          </p>
+          <p className="hp-badge-text hp-text-color-black-100 hp-text-color-dark-0">Secondary Gradient</p>
         </Col>
 
         <Col lg={4} span={12}>
@@ -100,9 +94,7 @@ export default function BlackGradients() {
             <div className="hp-w-100 hp-bg-danger-gradient hp-color-wrapper hp-border-radius hp-mb-8"></div>
           </Tooltip>
 
-          <p className="hp-badge-text hp-text-color-black-100 hp-text-color-dark-0">
-            Danger Gradient
-          </p>
+          <p className="hp-badge-text hp-text-color-black-100 hp-text-color-dark-0">Danger Gradient</p>
         </Col>
 
         <Col lg={4} span={12}>
@@ -110,9 +102,7 @@ export default function BlackGradients() {
             <div className="hp-w-100 hp-bg-info-gradient hp-color-wrapper hp-border-radius hp-mb-8"></div>
           </Tooltip>
 
-          <p className="hp-badge-text hp-text-color-black-100 hp-text-color-dark-0">
-            Info Gradient
-          </p>
+          <p className="hp-badge-text hp-text-color-black-100 hp-text-color-dark-0">Info Gradient</p>
         </Col>
 
         <Col lg={4} span={12}>
@@ -120,9 +110,7 @@ export default function BlackGradients() {
             <div className="hp-w-100 hp-bg-success-gradient hp-color-wrapper hp-border-radius hp-mb-8"></div>
           </Tooltip>
 
-          <p className="hp-badge-text hp-text-color-black-100 hp-text-color-dark-0">
-            Success Gradient
-          </p>
+          <p className="hp-badge-text hp-text-color-black-100 hp-text-color-dark-0">Success Gradient</p>
         </Col>
 
         <Col lg={4} span={12}>
@@ -130,9 +118,7 @@ export default function BlackGradients() {
             <div className="hp-w-100 hp-bg-warning-gradient hp-color-wrapper hp-border-radius hp-mb-8"></div>
           </Tooltip>
 
-          <p className="hp-badge-text hp-text-color-black-100 hp-text-color-dark-0">
-            Warning Gradient
-          </p>
+          <p className="hp-badge-text hp-text-color-black-100 hp-text-color-dark-0">Warning Gradient</p>
         </Col>
       </Row>
     </Card>

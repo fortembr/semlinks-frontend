@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { vertical } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { vertical } from './code.js';
 
-import { Card, Row, Col, Menu, Button } from "antd";
-import { RiMailLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Menu, Button } from 'antd';
+import { RiMailLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 const { SubMenu } = Menu;
 
@@ -21,7 +21,7 @@ export default function VerticalMenu() {
   }
 
   // Redux
-  const customise = useSelector(state => state.customise)
+  const customise = useSelector((state) => state.customise);
 
   return (
     <Card className="hp-border-color-black-40">
@@ -44,15 +44,8 @@ export default function VerticalMenu() {
         </Col>
 
         <Col span={24}>
-          <Menu
-            mode="vertical"
-            theme={customise.theme == "light" ? "light" : "dark"}
-          >
-            <SubMenu
-              key="sub1"
-              icon={<RiMailLine className="remix-icon" />}
-              title="Navigation One"
-            >
+          <Menu mode="vertical" theme={customise.theme == 'light' ? 'light' : 'dark'}>
+            <SubMenu key="sub1" icon={<RiMailLine className="remix-icon" />} title="Navigation One">
               <Menu.ItemGroup title="Item 1">
                 <Menu.Item key="1">Option 1</Menu.Item>
                 <Menu.Item key="2">Option 2</Menu.Item>
@@ -64,11 +57,7 @@ export default function VerticalMenu() {
               </Menu.ItemGroup>
             </SubMenu>
 
-            <SubMenu
-              key="sub2"
-              icon={<RiMailLine className="remix-icon" />}
-              title="Navigation Two"
-            >
+            <SubMenu key="sub2" icon={<RiMailLine className="remix-icon" />} title="Navigation Two">
               <Menu.Item key="5">Option 5</Menu.Item>
               <Menu.Item key="6">Option 6</Menu.Item>
 
@@ -78,11 +67,7 @@ export default function VerticalMenu() {
               </SubMenu>
             </SubMenu>
 
-            <SubMenu
-              key="sub4"
-              icon={<RiMailLine className="remix-icon" />}
-              title="Navigation Three"
-            >
+            <SubMenu key="sub4" icon={<RiMailLine className="remix-icon" />} title="Navigation Three">
               <Menu.Item key="9">Option 9</Menu.Item>
               <Menu.Item key="10">Option 10</Menu.Item>
               <Menu.Item key="11">Option 11</Menu.Item>
@@ -95,7 +80,7 @@ export default function VerticalMenu() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {vertical}

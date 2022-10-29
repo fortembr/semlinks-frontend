@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { status } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { status } from './code.js';
 
-import { Card, Row, Col, Tag, Button } from "antd";
+import { Card, Row, Col, Tag, Button } from 'antd';
 import {
   RiCheckboxCircleLine,
   RiRefreshLine,
@@ -12,8 +12,8 @@ import {
   RiErrorWarningLine,
   RiTimeLine,
   RiIndeterminateCircleLine,
-  RiCodeSSlashLine,
-} from "react-icons/ri";
+  RiCodeSSlashLine
+} from 'react-icons/ri';
 
 export default function TagStatus() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -30,18 +30,13 @@ export default function TagStatus() {
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Status Tag</h4>
           <p className="hp-p1-body">
-            We preset five different colors, you can set color property such as
-            success,processing,error,default and warning to indicate specific
-            status.
+            We preset five different colors, you can set color property such as success,processing,error,default and
+            warning to indicate specific status.
           </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -73,37 +68,25 @@ export default function TagStatus() {
 
           <Row gutter={[0, 16]}>
             <Col className="hp-mr-16">
-              <Tag
-                icon={<RiCheckboxCircleLine className="remix-icon" />}
-                color="success"
-              >
+              <Tag icon={<RiCheckboxCircleLine className="remix-icon" />} color="success">
                 Success
               </Tag>
             </Col>
 
             <Col className="hp-mr-16">
-              <Tag
-                icon={<RiRefreshLine className="remix-icon remix-icon-spin" />}
-                color="processing"
-              >
+              <Tag icon={<RiRefreshLine className="remix-icon remix-icon-spin" />} color="processing">
                 Processing
               </Tag>
             </Col>
 
             <Col className="hp-mr-16">
-              <Tag
-                icon={<RiCloseCircleLine className="remix-icon" />}
-                color="error"
-              >
+              <Tag icon={<RiCloseCircleLine className="remix-icon" />} color="error">
                 Error
               </Tag>
             </Col>
 
             <Col className="hp-mr-16">
-              <Tag
-                icon={<RiErrorWarningLine className="remix-icon" />}
-                color="warning"
-              >
+              <Tag icon={<RiErrorWarningLine className="remix-icon" />} color="warning">
                 Warning
               </Tag>
             </Col>
@@ -115,11 +98,7 @@ export default function TagStatus() {
             </Col>
 
             <Col className="hp-mr-16">
-              <Tag
-                icon={<RiIndeterminateCircleLine className="remix-icon" />}
-
-                color="default"
-              >
+              <Tag icon={<RiIndeterminateCircleLine className="remix-icon" />} color="default">
                 Stop
               </Tag>
             </Col>
@@ -130,7 +109,7 @@ export default function TagStatus() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {status}

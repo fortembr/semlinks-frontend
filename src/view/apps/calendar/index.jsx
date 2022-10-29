@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import { Layout, Row, Col, Card, Button, Drawer } from "antd";
-import { RiMenuFill, RiCloseFill } from "react-icons/ri";
+import { Layout, Row, Col, Card, Button, Drawer } from 'antd';
+import { RiMenuFill, RiCloseFill } from 'react-icons/ri';
 
 // Component
-import Calendar from "./Calendar";
-import Sidebar from "./Sidebar";
-import AddEventSidebar from "./AddEventSidebar";
+import Calendar from './Calendar';
+import Sidebar from './Sidebar';
+import AddEventSidebar from './AddEventSidebar';
 
 // Redux
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from 'react-redux';
 import {
   fetchEvents,
   selectEvent,
@@ -17,15 +17,15 @@ import {
   updateFilter,
   updateAllFilters,
   addEvent,
-  removeEvent,
-} from "../../../redux/calendar/calendarActions";
+  removeEvent
+} from '../../../redux/calendar/calendarActions';
 
 // Colors
 const calendarsColor = {
-  Travel: "travel",
-  Social: "social",
-  Work: "work",
-  Important: "important",
+  Travel: 'travel',
+  Social: 'social',
+  Work: 'work',
+  Important: 'important'
 };
 
 const { Sider, Content } = Layout;
@@ -38,7 +38,7 @@ export default function Calender() {
   // Redux
   const dispatch = useDispatch();
   const store = useSelector((state) => state.calendar);
-  const customise = useSelector(state => state.customise)
+  const customise = useSelector((state) => state.customise);
 
   const showDrawer = () => {
     setIsDrawerVisible(true);
@@ -62,17 +62,17 @@ export default function Calender() {
 
   // Object
   const blankEvent = {
-    title: "",
-    start: "",
-    end: "",
+    title: '',
+    start: '',
+    end: '',
     allDay: false,
-    url: "",
+    url: '',
     extendedProps: {
-      calendar: "",
+      calendar: '',
       guests: [],
-      location: "",
-      description: "",
-    },
+      location: '',
+      description: ''
+    }
   };
 
   // RefetchEvents
@@ -96,12 +96,7 @@ export default function Calender() {
         closable={true}
         onClose={closeDrawer}
         visible={isDrawervisible}
-        closeIcon={
-          <RiCloseFill
-            className="remix-icon hp-text-color-black-80 hp-text-color-dark-30"
-            size={24}
-          />
-        }
+        closeIcon={<RiCloseFill className="remix-icon hp-text-color-black-80 hp-text-color-dark-30" size={24} />}
       >
         <Sidebar
           store={store}
@@ -120,12 +115,7 @@ export default function Calender() {
           <Button
             className="hp-p-0"
             type="text"
-            icon={
-              <RiMenuFill
-                size={24}
-                className="remix-icon hp-text-color-black-80 hp-text-color-dark-30"
-              />
-            }
+            icon={<RiMenuFill size={24} className="remix-icon hp-text-color-black-80 hp-text-color-dark-30" />}
             onClick={showDrawer}
           />
         </Row>
@@ -134,7 +124,7 @@ export default function Calender() {
           <Row>
             <Sider
               className="hp-bg-dark-100 hp-border-right-1 hp-border-color-dark-80 hp-py-24 hp-mr-24"
-              theme={customise.theme == "light" ? "light" : "dark"}
+              theme={customise.theme == 'light' ? 'light' : 'dark'}
               width={256}
             >
               <Sidebar

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col, Table, Tag } from "antd";
-import { Download } from "react-iconly";
+import { Card, Row, Col, Table, Tag } from 'antd';
+import { Download } from 'react-iconly';
 
 export default function ProjectTableEcommerceCard() {
   const columns = [
@@ -11,11 +11,9 @@ export default function ProjectTableEcommerceCard() {
           Date
         </span>
       ),
-      dataIndex: "date",
-      key: "date",
-      render: (text) => (
-        <p className="hp-mb-0 hp-text-color-black-100 hp-text-color-dark-0">{text}</p>
-      ),
+      dataIndex: 'date',
+      key: 'date',
+      render: (text) => <p className="hp-mb-0 hp-text-color-black-100 hp-text-color-dark-0">{text}</p>
     },
     {
       title: (
@@ -23,11 +21,9 @@ export default function ProjectTableEcommerceCard() {
           Billing name
         </span>
       ),
-      dataIndex: "billingname",
-      key: "billingname",
-      render: (text) => (
-        <p className="hp-mb-0 hp-text-color-black-100 hp-text-color-dark-0">{text}</p>
-      ),
+      dataIndex: 'billingname',
+      key: 'billingname',
+      render: (text) => <p className="hp-mb-0 hp-text-color-black-100 hp-text-color-dark-0">{text}</p>
     },
     {
       title: (
@@ -35,11 +31,9 @@ export default function ProjectTableEcommerceCard() {
           Amount
         </span>
       ),
-      dataIndex: "amount",
-      key: "amount",
-      render: (text) => (
-        <p className="hp-mb-0 hp-text-color-black-100 hp-text-color-dark-0">{text}</p>
-      ),
+      dataIndex: 'amount',
+      key: 'amount',
+      render: (text) => <p className="hp-mb-0 hp-text-color-black-100 hp-text-color-dark-0">{text}</p>
     },
     {
       title: (
@@ -47,18 +41,18 @@ export default function ProjectTableEcommerceCard() {
           Status
         </span>
       ),
-      key: "tags",
-      dataIndex: "tags",
+      key: 'tags',
+      dataIndex: 'tags',
       render: (tags) => (
         <>
           {tags.map((tag) => {
             let color = tag;
-            if (tag === "Refund") {
-              color = "warning";
-            } else if (tag === "Charge Back") {
-              color = "error";
+            if (tag === 'Refund') {
+              color = 'warning';
+            } else if (tag === 'Charge Back') {
+              color = 'error';
             } else {
-              color = "success";
+              color = 'success';
             }
             return (
               <Tag color={color} key={tag}>
@@ -67,7 +61,7 @@ export default function ProjectTableEcommerceCard() {
             );
           })}
         </>
-      ),
+      )
     },
     {
       title: (
@@ -75,56 +69,54 @@ export default function ProjectTableEcommerceCard() {
           Invoice
         </span>
       ),
-      dataIndex: "invoice",
-      key: "invoice",
-      align: "center",
-      render: (text) => (
-        <span className="hp-d-block hp-text-color-black-60 hp-text-color-dark-50">{text}</span>
-      ),
-    },
+      dataIndex: 'invoice',
+      key: 'invoice',
+      align: 'center',
+      render: (text) => <span className="hp-d-block hp-text-color-black-60 hp-text-color-dark-50">{text}</span>
+    }
   ];
 
   const data = [
     {
-      key: "1",
-      date: "June 9,2020",
-      billingname: "Elon Musk",
-      amount: "$1,322.45",
-      tags: ["Paid"],
-      invoice: <Download className="remix-icon" />,
+      key: '1',
+      date: 'June 9,2020',
+      billingname: 'Elon Musk',
+      amount: '$1,322.45',
+      tags: ['Paid'],
+      invoice: <Download className="remix-icon" />
     },
     {
-      key: "2",
-      date: "June 9,2020",
-      billingname: "Christiano Ronaldo",
-      amount: "$733.32",
-      tags: ["Paid"],
-      invoice: <Download className="remix-icon" />,
+      key: '2',
+      date: 'June 9,2020',
+      billingname: 'Christiano Ronaldo',
+      amount: '$733.32',
+      tags: ['Paid'],
+      invoice: <Download className="remix-icon" />
     },
     {
-      key: "3",
-      date: "June 10,2020",
-      billingname: "Jeff Bezos",
-      amount: "$1,923.32",
-      tags: ["Refund"],
-      invoice: <Download className="remix-icon" />,
+      key: '3',
+      date: 'June 10,2020',
+      billingname: 'Jeff Bezos',
+      amount: '$1,923.32',
+      tags: ['Refund'],
+      invoice: <Download className="remix-icon" />
     },
     {
-      key: "4",
-      date: "June 9,2020",
-      billingname: "Richard Hamilton",
-      amount: "$922.12",
-      tags: ["Paid"],
-      invoice: <Download className="remix-icon" />,
+      key: '4',
+      date: 'June 9,2020',
+      billingname: 'Richard Hamilton',
+      amount: '$922.12',
+      tags: ['Paid'],
+      invoice: <Download className="remix-icon" />
     },
     {
-      key: "5",
-      date: "June 10,2020",
-      billingname: "Lebron James",
-      amount: "$323.98",
-      tags: ["Charge Back"],
-      invoice: <Download className="remix-icon" />,
-    },
+      key: '5',
+      date: 'June 10,2020',
+      billingname: 'Lebron James',
+      amount: '$323.98',
+      tags: ['Charge Back'],
+      invoice: <Download className="remix-icon" />
+    }
   ];
 
   return (
@@ -139,12 +131,7 @@ export default function ProjectTableEcommerceCard() {
             </p>
           </Row>
 
-          <Table
-            columns={columns}
-            dataSource={data}
-            pagination={false}
-            scroll={{ x: 700 }}
-          />
+          <Table columns={columns} dataSource={data} pagination={false} scroll={{ x: 700 }} />
         </Col>
       </Row>
     </Card>

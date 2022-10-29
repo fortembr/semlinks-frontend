@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { prefixsuffix } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { prefixsuffix } from './code.js';
 
-import { Card, Row, Col, Input, Tooltip, Button } from "antd";
-import { RiInformationLine, RiCodeSSlashLine } from "react-icons/ri";
-import { User } from "react-iconly";
+import { Card, Row, Col, Input, Tooltip, Button } from 'antd';
+import { RiInformationLine, RiCodeSSlashLine } from 'react-icons/ri';
+import { User } from 'react-iconly';
 
 export default function PrefixSuffix() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -22,17 +22,11 @@ export default function PrefixSuffix() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Prefix and Suffix</h4>
-          <p className="hp-p1-body">
-            Add a prefix or suffix icons inside input.
-          </p>
+          <p className="hp-p1-body">Add a prefix or suffix icons inside input.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -57,7 +51,7 @@ export default function PrefixSuffix() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {prefixsuffix}

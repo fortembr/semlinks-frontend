@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { dynamicSettings } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { dynamicSettings } from './code.js';
 
-import { Table, Switch, Radio, Form, Space, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine, RiArrowDownLine } from "react-icons/ri";
+import { Table, Switch, Radio, Form, Space, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine, RiArrowDownLine } from 'react-icons/ri';
 
 export default function DynamicSettingsTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -19,12 +19,12 @@ export default function DynamicSettingsTable() {
   const columns = [
     {
       title: 'Name',
-      dataIndex: 'name',
+      dataIndex: 'name'
     },
     {
       title: 'Age',
       dataIndex: 'age',
-      sorter: (a, b) => a.age - b.age,
+      sorter: (a, b) => a.age - b.age
     },
     {
       title: 'Address',
@@ -32,14 +32,14 @@ export default function DynamicSettingsTable() {
       filters: [
         {
           text: 'London',
-          value: 'London',
+          value: 'London'
         },
         {
           text: 'New York',
-          value: 'New York',
-        },
+          value: 'New York'
+        }
       ],
-      onFilter: (value, record) => record.address.indexOf(value) === 0,
+      onFilter: (value, record) => record.address.indexOf(value) === 0
     },
     {
       title: 'Action',
@@ -52,8 +52,8 @@ export default function DynamicSettingsTable() {
             More actions <RiArrowDownLine />
           </a>
         </Space>
-      ),
-    },
+      )
+    }
   ];
 
   const data = [];
@@ -63,30 +63,30 @@ export default function DynamicSettingsTable() {
       name: 'John Brown',
       age: i + '2',
       address: 'New York No. ' + i + ' Lake Park',
-      description: 'My name is John Brown, I am ' + i + '2 years old, living in New York No. ' + i + ' Lake Park.',
+      description: 'My name is John Brown, I am ' + i + '2 years old, living in New York No. ' + i + ' Lake Park.'
     });
   }
 
-  const defaultExpandable = { expandedRowRender: record => <p>{record.description}</p> };
+  const defaultExpandable = { expandedRowRender: (record) => <p>{record.description}</p> };
   const pagination = { position: 'bottom' };
   const defaultTitle = 'Here is title';
   const defaultFooter = 'Here is footer';
 
-  const [xScroll, setXScroll] = useState()
-  const [yScroll, setYScroll] = useState()
-  const [ellipsis, setEllipsis] = useState()
-  const [expandable, setExpandable] = useState(defaultExpandable)
-  const [bordered, setBordered] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [size, setSize] = useState('default')
-  const [title, setTitle] = useState(defaultTitle)
-  const [showHeader, setShowHeader] = useState(true)
-  const [footer, setFooter] = useState(defaultFooter)
-  const [rowSelection, setRowSelection] = useState({})
-  const [hasData, setHasData] = useState(true)
-  const [tableLayout, setTableLayout] = useState()
-  const [top, setTop] = useState('none')
-  const [bottom, setBottom] = useState('bottomRight')
+  const [xScroll, setXScroll] = useState();
+  const [yScroll, setYScroll] = useState();
+  const [ellipsis, setEllipsis] = useState();
+  const [expandable, setExpandable] = useState(defaultExpandable);
+  const [bordered, setBordered] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [size, setSize] = useState('default');
+  const [title, setTitle] = useState(defaultTitle);
+  const [showHeader, setShowHeader] = useState(true);
+  const [footer, setFooter] = useState(defaultFooter);
+  const [rowSelection, setRowSelection] = useState({});
+  const [hasData, setHasData] = useState(true);
+  const [tableLayout, setTableLayout] = useState();
+  const [top, setTop] = useState('none');
+  const [bottom, setBottom] = useState('bottomRight');
 
   const state = {
     bordered: bordered,
@@ -102,58 +102,58 @@ export default function DynamicSettingsTable() {
     hasData: hasData,
     tableLayout: tableLayout,
     top: top,
-    bottom: bottom,
+    bottom: bottom
   };
 
-  const handleToggle = prop => enable => {
-    if (prop == "bordered") {
+  const handleToggle = (prop) => (enable) => {
+    if (prop == 'bordered') {
       setBordered(enable);
-    } else if (prop == "loading") {
+    } else if (prop == 'loading') {
       setLoading(enable);
     }
   };
 
-  const handleSizeChange = e => {
+  const handleSizeChange = (e) => {
     setSize(e.target.value);
   };
 
-  const handleTableLayoutChange = e => {
+  const handleTableLayoutChange = (e) => {
     setTableLayout(e.target.value);
   };
 
-  const handleExpandChange = enable => {
+  const handleExpandChange = (enable) => {
     setExpandable(enable ? defaultExpandable : undefined);
   };
 
-  const handleEllipsisChange = enable => {
+  const handleEllipsisChange = (enable) => {
     setEllipsis(enable);
   };
 
-  const handleTitleChange = enable => {
-    setTitle(enable ? defaultTitle : '')
+  const handleTitleChange = (enable) => {
+    setTitle(enable ? defaultTitle : '');
   };
 
-  const handleHeaderChange = enable => {
+  const handleHeaderChange = (enable) => {
     setShowHeader(enable ? true : false);
   };
 
-  const handleFooterChange = enable => {
+  const handleFooterChange = (enable) => {
     setFooter(enable ? defaultFooter : null);
   };
 
-  const handleRowSelectionChange = enable => {
+  const handleRowSelectionChange = (enable) => {
     setRowSelection(enable ? {} : undefined);
   };
 
-  const handleYScrollChange = enable => {
+  const handleYScrollChange = (enable) => {
     setYScroll(enable);
   };
 
-  const handleXScrollChange = e => {
+  const handleXScrollChange = (e) => {
     setXScroll(e.target.value);
   };
 
-  const handleDataChange = hasData => {
+  const handleDataChange = (hasData) => {
     setHasData(hasData);
   };
 
@@ -165,7 +165,7 @@ export default function DynamicSettingsTable() {
     scroll.x = '100vw';
   }
 
-  const tableColumns = columns.map(item => ({ ...item, ellipsis: ellipsis }));
+  const tableColumns = columns.map((item) => ({ ...item, ellipsis: ellipsis }));
   if (xScroll === 'fixed') {
     tableColumns[0].fixed = true;
     tableColumns[tableColumns.length - 1].fixed = 'right';
@@ -176,25 +176,15 @@ export default function DynamicSettingsTable() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Dynamic Settings</h4>
-          <p className="hp-p1-body">
-            Select different settings to see the result.
-          </p>
+          <p className="hp-p1-body">Select different settings to see the result.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24} className="hp-overflow-hidden">
-          <Form
-            layout="inline"
-            className="components-table-demo-control-bar"
-            style={{ marginBottom: 16 }}
-          >
+          <Form layout="inline" className="components-table-demo-control-bar" style={{ marginBottom: 16 }}>
             <Row gutter={[8, 16]}>
               <Col>
                 <Form.Item label="Bordered">
@@ -289,8 +279,8 @@ export default function DynamicSettingsTable() {
                 <Form.Item label="Pagination Top">
                   <Radio.Group
                     value={top}
-                    onChange={e => {
-                      setTop(e.target.value)
+                    onChange={(e) => {
+                      setTop(e.target.value);
                     }}
                   >
                     <Radio.Button value="topLeft">TopLeft</Radio.Button>
@@ -305,8 +295,8 @@ export default function DynamicSettingsTable() {
                 <Form.Item label="Pagination Bottom">
                   <Radio.Group
                     value={bottom}
-                    onChange={e => {
-                      setBottom(e.target.value)
+                    onChange={(e) => {
+                      setBottom(e.target.value);
                     }}
                   >
                     <Radio.Button value="bottomLeft">BottomLeft</Radio.Button>
@@ -332,7 +322,7 @@ export default function DynamicSettingsTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {dynamicSettings}

@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicComment from "./basic";
-import CommentListUsage from "./listUsage";
-import CommentReplyEditor from "./replyEditor";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicComment from './basic';
+import CommentListUsage from './listUsage';
+import CommentReplyEditor from './replyEditor';
 
 export default function Comment() {
   return (
@@ -16,14 +16,14 @@ export default function Comment() {
           desc="A comment displays user feedback and discussion to website content."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Display",
+              title: 'Data Display'
             },
             {
-              title: "Comment",
+              title: 'Comment'
             }
           ]}
         />

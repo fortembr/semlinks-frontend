@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../../layout/components/content/page-content";
-import RevenueColumnCard from "./revenueColumnCard";
-import ExpensesDonutCard from "./expensesDonutCard";
-import VisitersLineCard from "./visitersLineCard";
-import RevenueRadarCard from "./revenueRadarCard";
-import SiteTraficRadarCard from "./siteTraficRadarCard";
-import RevenueLineList from "./revenueLineList";
-import EnergyCard from "./enegryCard";
-import MarketPlaceRadialbarCard from "./marketPlaceRadialbarCard";
-import VisitCustomerDonutCard from "./visitCustomerDonutCard";
+import PageContent from '../../../../../layout/components/content/page-content';
+import RevenueColumnCard from './revenueColumnCard';
+import ExpensesDonutCard from './expensesDonutCard';
+import VisitersLineCard from './visitersLineCard';
+import RevenueRadarCard from './revenueRadarCard';
+import SiteTraficRadarCard from './siteTraficRadarCard';
+import RevenueLineList from './revenueLineList';
+import EnergyCard from './enegryCard';
+import MarketPlaceRadialbarCard from './marketPlaceRadialbarCard';
+import VisitCustomerDonutCard from './visitCustomerDonutCard';
 
 export default function Analytics() {
   return (
@@ -22,16 +22,16 @@ export default function Analytics() {
           desc="You can find special Analytic Cards we designed for Yoda Admin Template"
           breadcrumb={[
             {
-              title: "Main",
+              title: 'Main'
             },
             {
-              title: "Widgets",
+              title: 'Widgets'
             },
             {
-              title: "YodaCards",
+              title: 'YodaCards'
             },
             {
-              title: "Analytics",
+              title: 'Analytics'
             }
           ]}
         />

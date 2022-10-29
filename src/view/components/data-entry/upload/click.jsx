@@ -1,16 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { click } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { click } from './code.js';
 
-import { Card, Row, Col, Upload, message, Button } from "antd";
-import {
-  RiUpload2Line,
-  RiCheckboxCircleLine,
-  RiCloseCircleLine,
-  RiCodeSSlashLine,
-} from "react-icons/ri";
+import { Card, Row, Col, Upload, message, Button } from 'antd';
+import { RiUpload2Line, RiCheckboxCircleLine, RiCloseCircleLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function ClickUpload() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -22,27 +17,27 @@ export default function ClickUpload() {
   }
 
   const props = {
-    name: "file",
-    action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
+    name: 'file',
+    action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
     headers: {
-      authorization: "authorization-text",
+      authorization: 'authorization-text'
     },
     onChange(info) {
-      if (info.file.status !== "uploading") {
+      if (info.file.status !== 'uploading') {
         console.log(info.file, info.fileList);
       }
-      if (info.file.status === "done") {
+      if (info.file.status === 'done') {
         message.success({
           content: `${info.file.name} file uploaded successfully.`,
-          icon: <RiCheckboxCircleLine className="remix-icon" />,
+          icon: <RiCheckboxCircleLine className="remix-icon" />
         });
-      } else if (info.file.status === "error") {
+      } else if (info.file.status === 'error') {
         message.error({
           content: `${info.file.name} file upload failed.`,
-          icon: <RiCloseCircleLine className="remix-icon" />,
+          icon: <RiCloseCircleLine className="remix-icon" />
         });
       }
-    },
+    }
   };
 
   return (
@@ -52,10 +47,7 @@ export default function ClickUpload() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Upload by Clicking</h4>
-              <p className="hp-p1-body">
-                Classic mode. File selection dialog pops up when upload button
-                is clicked.
-              </p>
+              <p className="hp-p1-body">Classic mode. File selection dialog pops up when upload button is clicked.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -70,10 +62,7 @@ export default function ClickUpload() {
 
         <Col span={24}>
           <Upload {...props}>
-            <Button
-              type="primary"
-              icon={<RiUpload2Line className="remix-icon" />}
-            >
+            <Button type="primary" icon={<RiUpload2Line className="remix-icon" />}>
               Click to Upload
             </Button>
           </Upload>
@@ -83,7 +72,7 @@ export default function ClickUpload() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {click}

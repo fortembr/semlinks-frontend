@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { icon } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { icon } from './code.js';
 
-import { Card, Row, Col, Breadcrumb, Button } from "antd";
-import {
-  RiHome2Line,
-  RiApps2Line,
-  RiFileListLine,
-  RiContactsLine,
-  RiCodeSSlashLine,
-} from "react-icons/ri";
+import { Card, Row, Col, Breadcrumb, Button } from 'antd';
+import { RiHome2Line, RiApps2Line, RiFileListLine, RiContactsLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function BreadcrumbWithIcon() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -27,17 +21,11 @@ export default function BreadcrumbWithIcon() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>With an Icon</h4>
-          <p className="hp-p1-body">
-            The icon should be placed in front of the text.
-          </p>
+          <p className="hp-p1-body">The icon should be placed in front of the text.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col>
@@ -67,7 +55,7 @@ export default function BreadcrumbWithIcon() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {icon}

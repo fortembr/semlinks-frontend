@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import Chart from "react-apexcharts";
-import { Row, Col, Select } from "antd";
-import SummaryItem from "../../widgets/cards/statistics/summaryItem";
+import Chart from 'react-apexcharts';
+import { Row, Col, Select } from 'antd';
+import SummaryItem from '../../widgets/cards/statistics/summaryItem';
 
 const { Option } = Select;
 
@@ -10,54 +10,54 @@ export default function SummaryNFT() {
   const data1 = {
     series: [
       {
-        data: [31, 10, 109, 60, 140, 40, 300],
-      },
+        data: [31, 10, 109, 60, 140, 40, 300]
+      }
     ],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "line",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'line',
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
-      colors: ["#00f7bf"],
+      colors: ['#00f7bf'],
       stroke: {
-        curve: "smooth",
-        lineCap: "round",
+        curve: 'smooth',
+        lineCap: 'round'
       },
       tooltip: {
-        enabled: true,
+        enabled: true
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
       grid: {
         show: false,
         padding: {
           left: 0,
-          right: 0,
-        },
+          right: 0
+        }
       },
       xaxis: {
         lines: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
+          show: false
         },
         tooltip: {
-          enabled: false,
+          enabled: false
         },
         labels: {
-          show: false,
-        },
+          show: false
+        }
       },
       responsive: [
         {
@@ -66,11 +66,11 @@ export default function SummaryNFT() {
             legend: {
               itemMargin: {
                 horizontal: 16,
-                vertical: 8,
-              },
-            },
-          },
-        },
+                vertical: 8
+              }
+            }
+          }
+        }
       ],
       yaxis: [
         {
@@ -79,64 +79,64 @@ export default function SummaryNFT() {
           offsetY: 0,
           padding: {
             left: 0,
-            right: 0,
-          },
-        },
-      ],
-    },
+            right: 0
+          }
+        }
+      ]
+    }
   };
 
   const data2 = {
     series: [
       {
-        data: [31, 10, 500, 60, 300, 40, 10],
-      },
+        data: [31, 10, 500, 60, 300, 40, 10]
+      }
     ],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "line",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'line',
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
-      colors: ["#ff455e"],
+      colors: ['#ff455e'],
       stroke: {
-        curve: "smooth",
-        lineCap: "round",
+        curve: 'smooth',
+        lineCap: 'round'
       },
       tooltip: {
-        enabled: true,
+        enabled: true
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
       grid: {
         show: false,
         padding: {
           left: 0,
-          right: 0,
-        },
+          right: 0
+        }
       },
       xaxis: {
         lines: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
+          show: false
         },
         tooltip: {
-          enabled: false,
+          enabled: false
         },
         labels: {
-          show: false,
-        },
+          show: false
+        }
       },
       responsive: [
         {
@@ -145,11 +145,11 @@ export default function SummaryNFT() {
             legend: {
               itemMargin: {
                 horizontal: 16,
-                vertical: 8,
-              },
-            },
-          },
-        },
+                vertical: 8
+              }
+            }
+          }
+        }
       ],
       yaxis: [
         {
@@ -158,11 +158,11 @@ export default function SummaryNFT() {
           offsetY: 0,
           padding: {
             left: 0,
-            right: 0,
-          },
-        },
-      ],
-    },
+            right: 0
+          }
+        }
+      ]
+    }
   };
 
   return (
@@ -183,20 +183,11 @@ export default function SummaryNFT() {
 
       <Row gutter={[32, 32]}>
         <Col md={12} span={24}>
-          <SummaryItem
-            chartData={data1}
-            title="Offer"
-            type="success"
-          />
+          <SummaryItem chartData={data1} title="Offer" type="success" />
         </Col>
 
         <Col md={12} span={24}>
-          <SummaryItem
-            chartData={data2}
-            title="Favorite"
-            type="danger"
-            arrowDown={true}
-          />
+          <SummaryItem chartData={data2} title="Favorite" type="danger" arrowDown={true} />
         </Col>
       </Row>
     </>

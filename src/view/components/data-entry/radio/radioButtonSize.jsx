@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { RiCodeSSlashLine } from "react-icons/ri";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { sizes } from "./code.js";
+import { RiCodeSSlashLine } from 'react-icons/ri';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { sizes } from './code.js';
 
-import { Card, Row, Col, Radio, Space, Button } from "antd";
+import { Card, Row, Col, Radio, Space, Button } from 'antd';
 
 export default function RadioButtonSize() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -22,17 +22,12 @@ export default function RadioButtonSize() {
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Size</h4>
           <p className="hp-p1-body">
-            There are three sizes available: large, medium, and small. It can
-            coordinate with input box.
+            There are three sizes available: large, medium, and small. It can coordinate with input box.
           </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -64,7 +59,7 @@ export default function RadioButtonSize() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {sizes}

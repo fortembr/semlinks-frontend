@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { Switch, Route, Redirect } from 'react-router';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
 import Inventory from './inventory';
 import Shop from './shop/Shop';
@@ -13,8 +13,8 @@ import AddressInformation from './checkout/AddressInformation';
 import Payment from './checkout/Payment';
 
 export default function Ecommerce() {
-  const cart = useSelector(state => state.ecommerce.cart)
-  const current = useSelector(state => state.ecommerce.currentItem)
+  const cart = useSelector((state) => state.ecommerce.cart);
+  const current = useSelector((state) => state.ecommerce.currentItem);
 
   // Checkout Price
   const [totalPrice, setTotalPrice] = useState(0);
@@ -26,7 +26,7 @@ export default function Ecommerce() {
 
     cart.forEach((item) => {
       items += item.qty;
-      price += (item.qty * (item.discount ? item.discount : item.price))
+      price += item.qty * (item.discount ? item.discount : item.price);
     });
 
     setTotalItem(items);
@@ -37,10 +37,7 @@ export default function Ecommerce() {
     <Row gutter={32} className="hp-ecommerce-app hp-mb-32">
       <Col span={24}>
         <Switch>
-          <Route
-            exact
-            path="/apps/ecommerce/shop"
-          >
+          <Route exact path="/apps/ecommerce/shop">
             <Shop />
           </Route>
 
@@ -53,24 +50,15 @@ export default function Ecommerce() {
           </Route>
 
           <Route path="/apps/ecommerce/checkout">
-            <OrderDetails
-              totalItem={totalItem}
-              totalPrice={totalPrice}
-            />
+            <OrderDetails totalItem={totalItem} totalPrice={totalPrice} />
           </Route>
 
           <Route path="/apps/ecommerce/address-information">
-            <AddressInformation
-              totalItem={totalItem}
-              totalPrice={totalPrice}
-            />
+            <AddressInformation totalItem={totalItem} totalPrice={totalPrice} />
           </Route>
 
           <Route path="/apps/ecommerce/payment">
-            <Payment
-              totalItem={totalItem}
-              totalPrice={totalPrice}
-            />
+            <Payment totalItem={totalItem} totalPrice={totalPrice} />
           </Route>
 
           {!current ? (
@@ -82,6 +70,6 @@ export default function Ecommerce() {
           )}
         </Switch>
       </Col>
-    </Row >
-  )
+    </Row>
+  );
 }

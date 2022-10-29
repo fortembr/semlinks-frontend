@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { optionGroup } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { optionGroup } from './code.js';
 
-import { Select, Card, Row, Col, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Select, Card, Row, Col, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Option, OptGroup } = Select;
 
@@ -19,7 +19,7 @@ export default function SelectOptionGroup() {
   }
 
   function handleChange(value) {
-    console.log("selected", value);
+    console.log('selected', value);
   }
 
   return (
@@ -31,11 +31,7 @@ export default function SelectOptionGroup() {
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -44,7 +40,7 @@ export default function SelectOptionGroup() {
               <Option value="jack">Jack</Option>
               <Option value="lucy">Lucy</Option>
             </OptGroup>
-            
+
             <OptGroup label="Engineer">
               <Option value="Yiminghe">yiminghe</Option>
             </OptGroup>
@@ -52,16 +48,15 @@ export default function SelectOptionGroup() {
         </Col>
       </Row>
 
-      { checkedCode && (
+      {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {optionGroup}
         </SyntaxHighlighter>
-      )
-      }
-    </Card >
+      )}
+    </Card>
   );
 }

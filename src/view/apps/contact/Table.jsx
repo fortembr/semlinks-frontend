@@ -1,20 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 // Redux
-import { getAllData, getData } from "../../../redux/contact/contactActions";
-import { useDispatch, useSelector } from "react-redux";
+import { getAllData, getData } from '../../../redux/contact/contactActions';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { Row, Col, Button, Input, Table, Card } from "antd";
-import { User } from "react-iconly";
-import { RiUserAddLine } from "react-icons/ri";
+import { Row, Col, Button, Input, Table, Card } from 'antd';
+import { User } from 'react-iconly';
+import { RiUserAddLine } from 'react-icons/ri';
 
-import { columns } from "./columns";
-import AddNewUser from "./Modal";
+import { columns } from './columns';
+import AddNewUser from './Modal';
 import BreadCrumbs from '../../../layout/components/content/breadcrumbs';
 
 export default function UsersList() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
 
   // Redux
   const dispatch = useDispatch();
@@ -26,18 +26,18 @@ export default function UsersList() {
     setSearchTerm(val);
     dispatch(
       getData({
-        q: val,
+        q: val
       })
     );
   };
 
-  // Get Data 
+  // Get Data
   useEffect(() => {
     dispatch(getAllData());
 
     dispatch(
       getData({
-        q: searchTerm,
+        q: searchTerm
       })
     );
   }, [dispatch, store.data.length]);
@@ -51,7 +51,7 @@ export default function UsersList() {
       role: store.data[i].role,
       contact: store.data[i].contact,
       email: store.data[i].email,
-      status: store.data[i].status,
+      status: store.data[i].status
     });
   }
 
@@ -59,10 +59,7 @@ export default function UsersList() {
     <>
       <div className="hp-mb-32">
         <Row gutter={[32, 32]} justify="space-between">
-          <BreadCrumbs
-            breadCrumbParent="Applications"
-            breadCrumbActive="Contact"
-          />
+          <BreadCrumbs breadCrumbParent="Applications" breadCrumbActive="Contact" />
 
           <Col md={15} span={24}>
             <Row justify="end" align="middle" gutter={[16]}>
@@ -105,4 +102,4 @@ export default function UsersList() {
       </Card>
     </>
   );
-};
+}

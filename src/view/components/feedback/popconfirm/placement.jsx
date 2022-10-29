@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { placement } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { placement } from './code.js';
 
-import { Card, Row, Col, Button, Popconfirm, message } from "antd";
-import { RiErrorWarningLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button, Popconfirm, message } from 'antd';
+import { RiErrorWarningLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function PlacementPopconfirm() {
   const [checkedCode, setCheckedCode] = useState(false);
   const [codeClass, setCodeClass] = useState(false);
-  const text = "Are you sure to delete this task?";
+  const text = 'Are you sure to delete this task?';
 
   function toggleChecked() {
     setTimeout(() => setCodeClass(!codeClass), 100);
@@ -21,13 +21,13 @@ export default function PlacementPopconfirm() {
 
   function confirm() {
     message.info({
-      content: "Clicked on Yes.",
-      icon: <RiErrorWarningLine className="remix-icon" />,
+      content: 'Clicked on Yes.',
+      icon: <RiErrorWarningLine className="remix-icon" />
     });
   }
 
   // Rtl
-  const direction = useSelector(state => state.customise.direction)
+  const direction = useSelector((state) => state.customise.direction);
 
   return (
     <Card className="hp-border-color-black-40">
@@ -36,9 +36,7 @@ export default function PlacementPopconfirm() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Placement</h4>
-              <p className="hp-p1-body">
-                There are 12 placement options available.
-              </p>
+              <p className="hp-p1-body">There are 12 placement options available.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -53,7 +51,13 @@ export default function PlacementPopconfirm() {
 
         <Col span={24}>
           <div className="hp-placement">
-            <div style={direction == "rtl" ? { marginRight: 90, whiteSpace: "nowrap" } : { marginLeft: 90, whiteSpace: "nowrap" }}>
+            <div
+              style={
+                direction == 'rtl'
+                  ? { marginRight: 90, whiteSpace: 'nowrap' }
+                  : { marginLeft: 90, whiteSpace: 'nowrap' }
+              }
+            >
               <Popconfirm
                 placement="topLeft"
                 title={text}
@@ -96,7 +100,7 @@ export default function PlacementPopconfirm() {
               </Popconfirm>
             </div>
 
-            <div style={direction == "rtl" ? { width: 90, float: "right" } : { width: 90, float: "left" }}>
+            <div style={direction == 'rtl' ? { width: 90, float: 'right' } : { width: 90, float: 'left' }}>
               <Popconfirm
                 placement="leftTop"
                 title={text}
@@ -139,7 +143,7 @@ export default function PlacementPopconfirm() {
               </Popconfirm>
             </div>
 
-            <div style={direction == "rtl" ? { width: 90, marginRight: 358 } : { width: 90, marginLeft: 358 }}>
+            <div style={direction == 'rtl' ? { width: 90, marginRight: 358 } : { width: 90, marginLeft: 358 }}>
               <Popconfirm
                 placement="rightTop"
                 title={text}
@@ -182,7 +186,13 @@ export default function PlacementPopconfirm() {
               </Popconfirm>
             </div>
 
-            <div style={direction == "rtl" ? { marginRight: 90, clear: "both", whiteSpace: "nowrap" } : { marginLeft: 90, clear: "both", whiteSpace: "nowrap" }}>
+            <div
+              style={
+                direction == 'rtl'
+                  ? { marginRight: 90, clear: 'both', whiteSpace: 'nowrap' }
+                  : { marginLeft: 90, clear: 'both', whiteSpace: 'nowrap' }
+              }
+            >
               <Popconfirm
                 placement="bottomLeft"
                 title={text}
@@ -228,17 +238,15 @@ export default function PlacementPopconfirm() {
         </Col>
       </Row>
 
-      {
-        checkedCode && (
-          <SyntaxHighlighter
-            language="javascript"
-            className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
-            style={monoBlue}
-          >
-            {placement}
-          </SyntaxHighlighter>
-        )
-      }
-    </Card >
+      {checkedCode && (
+        <SyntaxHighlighter
+          language="javascript"
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
+          style={monoBlue}
+        >
+          {placement}
+        </SyntaxHighlighter>
+      )}
+    </Card>
   );
 }

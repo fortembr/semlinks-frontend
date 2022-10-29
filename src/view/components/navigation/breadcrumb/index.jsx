@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicBreadcrumb from "./basic";
-import BreadcrumbWithIcon from "./icon";
-import ConfiguredBreadcrumb from "./configureSeparator";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicBreadcrumb from './basic';
+import BreadcrumbWithIcon from './icon';
+import ConfiguredBreadcrumb from './configureSeparator';
 
 export default function Breadcrumb() {
   return (
@@ -16,14 +16,14 @@ export default function Breadcrumb() {
           desc="A breadcrumb displays the current location within a hierarchy. It allows going back to states higher up in the hierarchy."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Navigation",
+              title: 'Navigation'
             },
             {
-              title: "Breadcrumb",
+              title: 'Breadcrumb'
             }
           ]}
         />

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col, Progress } from "antd";
-import { RiMoneyEuroCircleLine, RiMastercardFill } from "react-icons/ri";
+import { Card, Row, Col, Progress } from 'antd';
+import { RiMoneyEuroCircleLine, RiMastercardFill } from 'react-icons/ri';
 
 export default function CreditMasterCard() {
   return (
@@ -29,16 +29,12 @@ export default function CreditMasterCard() {
 
           <Row className="hp-mt-24">
             <Col className="hp-mr-64">
-              <p className="hp-mb-0 hp-caption hp-text-color-black-80 hp-text-color-dark-30">
-                Name on Card
-              </p>
+              <p className="hp-mb-0 hp-caption hp-text-color-black-80 hp-text-color-dark-30">Name on Card</p>
               <h5 className="hp-mb-0">Edward Lightning</h5>
             </Col>
 
             <Col>
-              <p className="hp-mb-0 hp-caption hp-text-color-black-80 hp-text-color-dark-30">
-                Expires
-              </p>
+              <p className="hp-mb-0 hp-caption hp-text-color-black-80 hp-text-color-dark-30">Expires</p>
               <h5 className="hp-mb-0">12/23</h5>
             </Col>
           </Row>

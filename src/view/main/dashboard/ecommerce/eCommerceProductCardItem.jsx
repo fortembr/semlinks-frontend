@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col, Rate } from "antd";
+import { Row, Col, Rate } from 'antd';
 
 export default function ECommerceProductCardItem(props) {
-  const { value } = props
+  const { value } = props;
 
   return (
     <div className="hp-px-16 hp-card-6 hp-eCommerceCardOne hp-cursor-pointer">
@@ -21,12 +21,8 @@ export default function ECommerceProductCardItem(props) {
           </Col>
 
           <Col span={24} className="hp-mb-8">
-            <p className="hp-mb-4 hp-text-color-black-100 hp-text-color-dark-0 hp-p1-body">
-              {value.title}
-            </p>
-            <p className="hp-mb-0 hp-caption hp-text-color-black-60 hp-text-color-dark-50">
-              {value.subTitle}
-            </p>
+            <p className="hp-mb-4 hp-text-color-black-100 hp-text-color-dark-0 hp-p1-body">{value.title}</p>
+            <p className="hp-mb-0 hp-caption hp-text-color-black-60 hp-text-color-dark-50">{value.subTitle}</p>
           </Col>
 
           <Col span={24} className="hp-mt-16">

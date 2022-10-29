@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicTag from "./basic";
-import TagColorful from "./colorful";
-import TagStatus from "./status";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicTag from './basic';
+import TagColorful from './colorful';
+import TagStatus from './status';
 
 export default function Tags() {
   return (
@@ -16,14 +16,14 @@ export default function Tags() {
           desc="Tag for categorizing or markup."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Display",
+              title: 'Data Display'
             },
             {
-              title: "Tag",
+              title: 'Tag'
             }
           ]}
         />

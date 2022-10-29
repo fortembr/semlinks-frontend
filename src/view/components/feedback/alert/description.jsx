@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { description } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { description } from './code.js';
 
-import { Card, Row, Col, Alert, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Alert, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function DescriptionAlert() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -23,9 +23,7 @@ export default function DescriptionAlert() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Description</h4>
-              <p className="hp-p1-body">
-                Additional description for alert message.
-              </p>
+              <p className="hp-p1-body">Additional description for alert message.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -71,7 +69,7 @@ export default function DescriptionAlert() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {description}

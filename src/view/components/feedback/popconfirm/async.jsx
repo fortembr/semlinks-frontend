@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { async } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { async } from './code.js';
 
-import { Card, Row, Col, Button, Popconfirm } from "antd";
-import { RiErrorWarningLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button, Popconfirm } from 'antd';
+import { RiErrorWarningLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function AsyncPopconfirm() {
   const [visible, setVisible] = useState(false);
@@ -43,9 +43,8 @@ export default function AsyncPopconfirm() {
             <Col lg={12} span={20}>
               <h4>Asynchronously close</h4>
               <p className="hp-p1-body">
-                Asynchronously close a popconfirm when a the OK button is
-                pressed. For example, you can use this pattern when you submit a
-                form.
+                Asynchronously close a popconfirm when a the OK button is pressed. For example, you can use this pattern
+                when you submit a form.
               </p>
             </Col>
 
@@ -66,9 +65,7 @@ export default function AsyncPopconfirm() {
             onConfirm={handleOk}
             okButtonProps={{ loading: confirmLoading }}
             onCancel={handleCancel}
-            icon={
-              <RiErrorWarningLine className="remix-icon hp-text-color-primary-1 hp-text-color-dark-primary-2" />
-            }
+            icon={<RiErrorWarningLine className="remix-icon hp-text-color-primary-1 hp-text-color-dark-primary-2" />}
           >
             <Button type="primary" onClick={showPopconfirm}>
               Open Popconfirm with br async logic
@@ -80,7 +77,7 @@ export default function AsyncPopconfirm() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {async}

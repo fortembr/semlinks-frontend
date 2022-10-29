@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { withTabs } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { withTabs } from './code.js';
 
-import { Card, Row, Col, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function CardWithTabs() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -18,48 +18,48 @@ export default function CardWithTabs() {
 
   const tabList = [
     {
-      key: "tab1",
-      tab: "tab1",
+      key: 'tab1',
+      tab: 'tab1'
     },
     {
-      key: "tab2",
-      tab: "tab2",
-    },
+      key: 'tab2',
+      tab: 'tab2'
+    }
   ];
 
   const contentList = {
     tab1: <p className="hp-p1-body">content1</p>,
-    tab2: <p className="hp-p1-body">content2</p>,
+    tab2: <p className="hp-p1-body">content2</p>
   };
 
   const tabListNoTitle = [
     {
-      key: "article",
-      tab: "article",
+      key: 'article',
+      tab: 'article'
     },
     {
-      key: "app",
-      tab: "app",
+      key: 'app',
+      tab: 'app'
     },
     {
-      key: "project",
-      tab: "project",
-    },
+      key: 'project',
+      tab: 'project'
+    }
   ];
 
   const contentListNoTitle = {
     article: <p className="hp-p1-body">article content</p>,
     app: <p className="hp-p1-body">app content</p>,
-    project: <p className="hp-p1-body">project content</p>,
+    project: <p className="hp-p1-body">project content</p>
   };
 
-  const [key, setKey] = useState("tab1");
-  const [noTitleKey, setNoTitleKey] = useState("app");
+  const [key, setKey] = useState('tab1');
+  const [noTitleKey, setNoTitleKey] = useState('app');
 
   const onTabChange = (key, type) => {
-    if (type === "key") {
+    if (type === 'key') {
       setKey(key);
-    } else if (type === "noTitleKey") {
+    } else if (type === 'noTitleKey') {
       setNoTitleKey(key);
     }
   };
@@ -73,11 +73,7 @@ export default function CardWithTabs() {
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col lg={24} md={24} sm={24} xs={24}>
@@ -88,7 +84,7 @@ export default function CardWithTabs() {
             tabList={tabList}
             activeTabKey={key}
             onTabChange={(key) => {
-              onTabChange(key, "key");
+              onTabChange(key, 'key');
             }}
           >
             {contentList[key]}
@@ -99,7 +95,7 @@ export default function CardWithTabs() {
             activeTabKey={noTitleKey}
             tabBarExtraContent={<a href="#">More</a>}
             onTabChange={(key) => {
-              onTabChange(key, "noTitleKey");
+              onTabChange(key, 'noTitleKey');
             }}
           >
             {contentListNoTitle[noTitleKey]}
@@ -110,7 +106,7 @@ export default function CardWithTabs() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {withTabs}

@@ -1,225 +1,225 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import productImg1 from "../../../../../assets/images/product/ecommerce-product-img-1.png";
-import productImg2 from "../../../../../assets/images/product/ecommerce-product-img-2.png";
+import productImg1 from '../../../../../assets/images/product/ecommerce-product-img-1.png';
+import productImg2 from '../../../../../assets/images/product/ecommerce-product-img-2.png';
 
-import slideAvatar1 from "../../../../../assets/images/memoji/memoji-6.png";
-import slideAvatar2 from "../../../../../assets/images/memoji/memoji-5.png";
-import slideAvatar3 from "../../../../../assets/images/memoji/memoji-4.png";
-import slideImage1 from "../../../../../assets/images/dasboard/nft-slide-image-1.png";
-import slideImage2 from "../../../../../assets/images/dasboard/nft-slide-image-2.png";
-import slideImage3 from "../../../../../assets/images/dasboard/nft-slide-image-3.png";
-import slideImage4 from "../../../../../assets/images/dasboard/nft-slide-image-4.png";
+import slideAvatar1 from '../../../../../assets/images/memoji/memoji-6.png';
+import slideAvatar2 from '../../../../../assets/images/memoji/memoji-5.png';
+import slideAvatar3 from '../../../../../assets/images/memoji/memoji-4.png';
+import slideImage1 from '../../../../../assets/images/dasboard/nft-slide-image-1.png';
+import slideImage2 from '../../../../../assets/images/dasboard/nft-slide-image-2.png';
+import slideImage3 from '../../../../../assets/images/dasboard/nft-slide-image-3.png';
+import slideImage4 from '../../../../../assets/images/dasboard/nft-slide-image-4.png';
 
-import bitcoinBg from "../../../../../assets/images/dasboard/bitcoin-bg.svg";
-import ethBg from "../../../../../assets/images/dasboard/eth-bg.svg";
-import dogecoinBg from "../../../../../assets/images/dasboard/dogecoin-bg.svg";
-import shibcoinBg from "../../../../../assets/images/dasboard/shibcoin-bg.svg";
-import paypalBg from "../../../../../assets/images/dasboard/paypal-bg.svg";
-import netflixBg from "../../../../../assets/images/dasboard/netflix-bg.svg";
-import googlePlayBg from "../../../../../assets/images/dasboard/googleplay-bg.svg";
-import amazonBg from "../../../../../assets/images/dasboard/amazon-bg.svg";
-import bitcoinLogo from "../../../../../assets/images/dasboard/bitcoin-logo.png";
-import dogecoinLogo from "../../../../../assets/images/dasboard/dogecoin-logo.svg"
-import ethLogo from "../../../../../assets/images/dasboard/eth-circle-logo.svg"
-import shibcoinLogo from "../../../../../assets/images/dasboard/shibcoin-logo.svg"
-import paypalLogo from "../../../../../assets/images/dasboard/paypal-logo.svg"
-import netflixLogo from "../../../../../assets/images/dasboard/netflix-logo.svg"
-import googlePlayLogo from "../../../../../assets/images/dasboard/google-play-logo.svg"
-import amazonLogo from "../../../../../assets/images/dasboard/amazon-logo.svg"
+import bitcoinBg from '../../../../../assets/images/dasboard/bitcoin-bg.svg';
+import ethBg from '../../../../../assets/images/dasboard/eth-bg.svg';
+import dogecoinBg from '../../../../../assets/images/dasboard/dogecoin-bg.svg';
+import shibcoinBg from '../../../../../assets/images/dasboard/shibcoin-bg.svg';
+import paypalBg from '../../../../../assets/images/dasboard/paypal-bg.svg';
+import netflixBg from '../../../../../assets/images/dasboard/netflix-bg.svg';
+import googlePlayBg from '../../../../../assets/images/dasboard/googleplay-bg.svg';
+import amazonBg from '../../../../../assets/images/dasboard/amazon-bg.svg';
+import bitcoinLogo from '../../../../../assets/images/dasboard/bitcoin-logo.png';
+import dogecoinLogo from '../../../../../assets/images/dasboard/dogecoin-logo.svg';
+import ethLogo from '../../../../../assets/images/dasboard/eth-circle-logo.svg';
+import shibcoinLogo from '../../../../../assets/images/dasboard/shibcoin-logo.svg';
+import paypalLogo from '../../../../../assets/images/dasboard/paypal-logo.svg';
+import netflixLogo from '../../../../../assets/images/dasboard/netflix-logo.svg';
+import googlePlayLogo from '../../../../../assets/images/dasboard/google-play-logo.svg';
+import amazonLogo from '../../../../../assets/images/dasboard/amazon-logo.svg';
 
-import PageContent from "../../../../../layout/components/content/page-content";
-import CategoriesOfTheWeek from "./categoriesOfTheWeek";
-import EcommerceCardOne from "./eCommerceCardOne";
-import BrowserStates from "./browserStates";
-import BestSellingCategories from "./bestSellingCategories";
-import AttendenceCard from "./attendenceCard";
-import EcommerceCardTwo from "./eCommerceCardTwo";
-import CreditVisaCard from "./creditVisaCard";
-import CreditMasterCard from "./creditMasterCard";
-import ApplicationCard from "./applicationCard";
-import UpgradePlanCardOne from "./upgradePlanCardOne";
-import CtaCardOne from "./ctaCardOne";
-import CtaCardTwo from "./ctaCardTwo";
-import CtaCardThree from "./ctaCardThree";
-import CtaCardFour from "./ctaCardFour";
-import CtaCardFive from "./ctaCardFive";
-import CtaCardSix from "./ctaCardSix";
-import SubscribeCard from "./subscribeCard";
-import EcommerceCardThree from "./eCommerceCardThree";
-import EcommerceCardFour from "./eCommerceCardFour";
-import EcommerceCardFive from "./eCommerceCardFive";
-import EcommerceCardSix from "./eCommerceCardSix";
-import MeetingCard from "./meetingCard";
-import NotificationCardOne from "./notificationCardOne";
-import NotificationCardTwo from "./notificationCardTwo";
-import SocailMediaCard from "./socialMediaCard";
-import ProjectTableCard from "./projectTableCard";
-import UploadCard from "./uploadCard";
-import OrderlistTableCard from "./orderListTableCard";
-import SaleFeatureCard from "./saleFeatureCard";
-import ProfitFeatureCard from "./profitFeatureCard";
-import OrdersFeatureCard from "./ordersFeatureCard";
-import CustomerFeatureCard from "./customerFeatureCard";
-import ECommerceProductCardItem from "../../../dashboard/ecommerce/eCommerceProductCardItem";
-import UpgradePlanCardOneLight from "./upgradePlanCardOneLight";
-import UpgradePlanCardOneDark from "./upgradePlanCardOneDark";
-import CreditCardNew from "./creditCardNew";
-import UpgradeNowCard from "./upgradeNowCard";
-import BestTeamCard from "../statistics/bestTeamCard";
-import EarningsCard from "./earningsCard";
-import ExpensesCard from "./expensesCard";
-import BidCardNFT from "../../../dashboard/nft/bidCard";
-import OwnNFT from "../../../dashboard/nft/ownNFT";
-import NFTProductCard from "../../../dashboard/nft/nftProductCard";
-import RecentActivityNFT from "../../../dashboard/nft/recentActivity";
-import DownloadCard from "./downloadCard";
-import HotBidItem from "../../../dashboard/nft/hotBidItem";
-import CreditCard from "./creditCard";
-import SmallCardItem from "./smallCardItem";
+import PageContent from '../../../../../layout/components/content/page-content';
+import CategoriesOfTheWeek from './categoriesOfTheWeek';
+import EcommerceCardOne from './eCommerceCardOne';
+import BrowserStates from './browserStates';
+import BestSellingCategories from './bestSellingCategories';
+import AttendenceCard from './attendenceCard';
+import EcommerceCardTwo from './eCommerceCardTwo';
+import CreditVisaCard from './creditVisaCard';
+import CreditMasterCard from './creditMasterCard';
+import ApplicationCard from './applicationCard';
+import UpgradePlanCardOne from './upgradePlanCardOne';
+import CtaCardOne from './ctaCardOne';
+import CtaCardTwo from './ctaCardTwo';
+import CtaCardThree from './ctaCardThree';
+import CtaCardFour from './ctaCardFour';
+import CtaCardFive from './ctaCardFive';
+import CtaCardSix from './ctaCardSix';
+import SubscribeCard from './subscribeCard';
+import EcommerceCardThree from './eCommerceCardThree';
+import EcommerceCardFour from './eCommerceCardFour';
+import EcommerceCardFive from './eCommerceCardFive';
+import EcommerceCardSix from './eCommerceCardSix';
+import MeetingCard from './meetingCard';
+import NotificationCardOne from './notificationCardOne';
+import NotificationCardTwo from './notificationCardTwo';
+import SocailMediaCard from './socialMediaCard';
+import ProjectTableCard from './projectTableCard';
+import UploadCard from './uploadCard';
+import OrderlistTableCard from './orderListTableCard';
+import SaleFeatureCard from './saleFeatureCard';
+import ProfitFeatureCard from './profitFeatureCard';
+import OrdersFeatureCard from './ordersFeatureCard';
+import CustomerFeatureCard from './customerFeatureCard';
+import ECommerceProductCardItem from '../../../dashboard/ecommerce/eCommerceProductCardItem';
+import UpgradePlanCardOneLight from './upgradePlanCardOneLight';
+import UpgradePlanCardOneDark from './upgradePlanCardOneDark';
+import CreditCardNew from './creditCardNew';
+import UpgradeNowCard from './upgradeNowCard';
+import BestTeamCard from '../statistics/bestTeamCard';
+import EarningsCard from './earningsCard';
+import ExpensesCard from './expensesCard';
+import BidCardNFT from '../../../dashboard/nft/bidCard';
+import OwnNFT from '../../../dashboard/nft/ownNFT';
+import NFTProductCard from '../../../dashboard/nft/nftProductCard';
+import RecentActivityNFT from '../../../dashboard/nft/recentActivity';
+import DownloadCard from './downloadCard';
+import HotBidItem from '../../../dashboard/nft/hotBidItem';
+import CreditCard from './creditCard';
+import SmallCardItem from './smallCardItem';
 
 export default function Advance() {
   // Product Data
   const productCard = [
     {
       imgUrl: productImg1,
-      price: "$69.00",
-      discount: "$79.00",
-      title: "Rales Wireless Earbuds Bluetooth 5.0",
-      subTitle: "By Urbanears",
-      rate: "4.5",
+      price: '$69.00',
+      discount: '$79.00',
+      title: 'Rales Wireless Earbuds Bluetooth 5.0',
+      subTitle: 'By Urbanears',
+      rate: '4.5'
     },
     {
       imgUrl: productImg2,
-      price: "$69.00",
-      discount: "$79.00",
-      title: "Rales Wireless Earbuds Bluetooth 5.0",
-      subTitle: "By Urbanears",
-      rate: "4.5",
+      price: '$69.00',
+      discount: '$79.00',
+      title: 'Rales Wireless Earbuds Bluetooth 5.0',
+      subTitle: 'By Urbanears',
+      rate: '4.5'
     },
     {
       imgUrl: productImg1,
-      price: "$69.00",
-      discount: "$79.00",
-      title: "Rales Wireless Earbuds Bluetooth 5.0",
-      subTitle: "By Urbanears",
-      rate: "4.5",
-    },
+      price: '$69.00',
+      discount: '$79.00',
+      title: 'Rales Wireless Earbuds Bluetooth 5.0',
+      subTitle: 'By Urbanears',
+      rate: '4.5'
+    }
   ];
 
-  // Hot Bid Data 
+  // Hot Bid Data
   const hotBidData = [
     {
       bg: slideImage1,
-      title: "Perfect Mess 1",
-      lastBid: "1.44 ETH",
-      price: "$4,852.23",
+      title: 'Perfect Mess 1',
+      lastBid: '1.44 ETH',
+      price: '$4,852.23',
       avatars: [
         {
-          img: slideAvatar1,
+          img: slideAvatar1
         },
         {
-          img: slideAvatar2,
+          img: slideAvatar2
         },
         {
-          img: slideAvatar3,
-        },
+          img: slideAvatar3
+        }
       ]
     },
     {
       bg: slideImage2,
-      title: "Perfect Mess 1",
-      lastBid: "1.44 ETH",
-      price: "$4,852.23",
+      title: 'Perfect Mess 1',
+      lastBid: '1.44 ETH',
+      price: '$4,852.23',
       avatars: [
         {
-          img: slideAvatar1,
+          img: slideAvatar1
         },
         {
-          img: slideAvatar2,
+          img: slideAvatar2
         },
         {
-          img: slideAvatar3,
-        },
+          img: slideAvatar3
+        }
       ]
     },
     {
       bg: slideImage3,
-      title: "Perfect Mess 1",
-      lastBid: "1.44 ETH",
-      price: "$4,852.23",
+      title: 'Perfect Mess 1',
+      lastBid: '1.44 ETH',
+      price: '$4,852.23',
       avatars: [
         {
-          img: slideAvatar1,
+          img: slideAvatar1
         },
         {
-          img: slideAvatar2,
+          img: slideAvatar2
         },
         {
-          img: slideAvatar3,
-        },
+          img: slideAvatar3
+        }
       ]
     },
     {
       bg: slideImage4,
-      title: "Perfect Mess 1",
-      lastBid: "1.44 ETH",
-      price: "$4,852.23",
+      title: 'Perfect Mess 1',
+      lastBid: '1.44 ETH',
+      price: '$4,852.23',
       avatars: [
         {
-          img: slideAvatar1,
+          img: slideAvatar1
         },
         {
-          img: slideAvatar2,
+          img: slideAvatar2
         },
         {
-          img: slideAvatar3,
-        },
+          img: slideAvatar3
+        }
       ]
-    },
-  ]
+    }
+  ];
 
-  // Credit Card Data 
+  // Credit Card Data
   const creditCardData = [
     {
-      type: "primary",
-      title: "paypal",
+      type: 'primary',
+      title: 'paypal',
       cardNumber: 1923,
       cardValue: 1.90124523,
       progress: 30,
-      name: "Edward Yıldırım",
-      expires: "12/23",
+      name: 'Edward Yıldırım',
+      expires: '12/23'
     },
     {
-      type: "danger",
-      title: "netflix",
+      type: 'danger',
+      title: 'netflix',
       cardNumber: 1924,
       cardValue: 1.90124524,
       progress: 40,
-      name: "Edward Yıldırım",
-      expires: "12/24",
+      name: 'Edward Yıldırım',
+      expires: '12/24'
     },
     {
-      type: "dark",
-      title: "google-play",
+      type: 'dark',
+      title: 'google-play',
       cardNumber: 1925,
       cardValue: 1.90124525,
       progress: 20,
-      name: "Edward Yıldırım",
-      expires: "12/25",
+      name: 'Edward Yıldırım',
+      expires: '12/25'
     },
     {
-      type: "warning",
-      title: "amazon",
+      type: 'warning',
+      title: 'amazon',
       cardNumber: 1926,
       cardValue: 1.90124526,
       progress: 68,
-      name: "Edward Yıldırım",
-      expires: "12/26",
-    },
-  ]
+      name: 'Edward Yıldırım',
+      expires: '12/26'
+    }
+  ];
 
   return (
     <Row gutter={[32, 32]} className="hp-mb-32">
@@ -229,16 +229,16 @@ export default function Advance() {
           desc="You can find special cards we designed for Yoda Admin Template"
           breadcrumb={[
             {
-              title: "Main",
+              title: 'Main'
             },
             {
-              title: "Widgets",
+              title: 'Widgets'
             },
             {
-              title: "YodaCards",
+              title: 'YodaCards'
             },
             {
-              title: "Advance",
+              title: 'Advance'
             }
           ]}
         />
@@ -382,7 +382,7 @@ export default function Advance() {
               <Col sm={12} span={24}>
                 <CreditCardNew />
               </Col>
-             
+
               <Col sm={12} span={24}>
                 <UpgradeNowCard />
               </Col>
@@ -433,46 +433,30 @@ export default function Advance() {
 
       <Col span={24}>
         <Row gutter={[32, 32]}>
-          {
-            hotBidData.map((item, index) => (
-              <Col lg={6} md={12} span={24} key={index}>
-                <HotBidItem item={item} />
-              </Col>
-            ))
-          }
+          {hotBidData.map((item, index) => (
+            <Col lg={6} md={12} span={24} key={index}>
+              <HotBidItem item={item} />
+            </Col>
+          ))}
         </Row>
       </Col>
 
       <Col span={24}>
         <Row gutter={[32, 32]}>
-          {
-            creditCardData.map((item, index) => (
-              <Col lg={8} md={12} span={24} key={index}>
-                <CreditCard item={item} />
-              </Col>
-            ))
-          }
+          {creditCardData.map((item, index) => (
+            <Col lg={8} md={12} span={24} key={index}>
+              <CreditCard item={item} />
+            </Col>
+          ))}
 
           <Col lg={8} md={12} span={24}>
             <Row gutter={[32, 32]}>
               <Col span={24}>
-                <SmallCardItem
-                  logo={bitcoinLogo}
-                  bg={bitcoinBg}
-                  number={1923}
-                  value={1.90124523}
-                  title="Bitcoin"
-                />
+                <SmallCardItem logo={bitcoinLogo} bg={bitcoinBg} number={1923} value={1.90124523} title="Bitcoin" />
               </Col>
 
               <Col span={24}>
-                <SmallCardItem
-                  logo={dogecoinLogo}
-                  bg={dogecoinBg}
-                  number={1923}
-                  value={1.90124525}
-                  title="Dogecoin"
-                />
+                <SmallCardItem logo={dogecoinLogo} bg={dogecoinBg} number={1923} value={1.90124525} title="Dogecoin" />
               </Col>
             </Row>
           </Col>
@@ -480,45 +464,21 @@ export default function Advance() {
           <Col lg={8} md={12} span={24}>
             <Row gutter={[32, 32]}>
               <Col span={24}>
-                <SmallCardItem
-                  logo={ethLogo}
-                  bg={ethBg}
-                  number={1923}
-                  value={1.90124524}
-                  title="ETH"
-                />
+                <SmallCardItem logo={ethLogo} bg={ethBg} number={1923} value={1.90124524} title="ETH" />
               </Col>
 
               <Col span={24}>
-                <SmallCardItem
-                  logo={shibcoinLogo}
-                  bg={shibcoinBg}
-                  number={1923}
-                  value={1.90124526}
-                  title="Shibcoin"
-                />
+                <SmallCardItem logo={shibcoinLogo} bg={shibcoinBg} number={1923} value={1.90124526} title="Shibcoin" />
               </Col>
             </Row>
           </Col>
 
           <Col lg={8} md={12} span={24}>
-            <SmallCardItem
-              logo={paypalLogo}
-              bg={paypalBg}
-              number={1923}
-              value={1.90124527}
-              title="Paypal"
-            />
+            <SmallCardItem logo={paypalLogo} bg={paypalBg} number={1923} value={1.90124527} title="Paypal" />
           </Col>
 
           <Col lg={8} md={12} span={24}>
-            <SmallCardItem
-              logo={netflixLogo}
-              bg={netflixBg}
-              number={1923}
-              value={1.90124528}
-              title="Netflix"
-            />
+            <SmallCardItem logo={netflixLogo} bg={netflixBg} number={1923} value={1.90124528} title="Netflix" />
           </Col>
 
           <Col lg={8} md={12} span={24}>
@@ -532,13 +492,7 @@ export default function Advance() {
           </Col>
 
           <Col lg={8} md={12} span={24}>
-            <SmallCardItem
-              logo={amazonLogo}
-              bg={amazonBg}
-              number={1923}
-              value={1.90124593}
-              title="Amazon"
-            />
+            <SmallCardItem logo={amazonLogo} bg={amazonBg} number={1923} value={1.90124593} title="Amazon" />
           </Col>
         </Row>
       </Col>

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { resetFiltersSorters } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { resetFiltersSorters } from './code.js';
 
-import { Table, Space, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Space, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function ResetFiltersSortersTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -18,41 +18,39 @@ export default function ResetFiltersSortersTable() {
 
   const [filteredInfo, setFilteredInfo] = useState({
     name: null,
-    address: null,
+    address: null
   });
 
-  const [sortedInfo, setSortedInfo] = useState(
-    {
-      order: null,
-      columnKey: null,
-    }
-  );
+  const [sortedInfo, setSortedInfo] = useState({
+    order: null,
+    columnKey: null
+  });
 
   const data = [
     {
       key: '1',
       name: 'John Brown',
       age: 32,
-      address: 'New York No. 1 Lake Park',
+      address: 'New York No. 1 Lake Park'
     },
     {
       key: '2',
       name: 'Jim Green',
       age: 42,
-      address: 'London No. 1 Lake Park',
+      address: 'London No. 1 Lake Park'
     },
     {
       key: '3',
       name: 'Joe Black',
       age: 32,
-      address: 'Sidney No. 1 Lake Park',
+      address: 'Sidney No. 1 Lake Park'
     },
     {
       key: '4',
       name: 'Jim Red',
       age: 32,
-      address: 'London No. 2 Lake Park',
-    },
+      address: 'London No. 2 Lake Park'
+    }
   ];
 
   const handleChange = (pagination, filters, sorter) => {
@@ -65,28 +63,26 @@ export default function ResetFiltersSortersTable() {
   const clearFilters = () => {
     setFilteredInfo({
       name: null,
-      address: null,
+      address: null
     });
   };
 
   const clearAll = () => {
     setFilteredInfo({
       name: null,
-      address: null,
+      address: null
     });
     setSortedInfo({
       order: null,
-      columnKey: null,
+      columnKey: null
     });
   };
 
   const setAgeSort = () => {
-    setSortedInfo(
-      {
-        order: 'descend',
-        columnKey: 'age',
-      }
-    );
+    setSortedInfo({
+      order: 'descend',
+      columnKey: 'age'
+    });
   };
 
   const columns = [
@@ -96,13 +92,13 @@ export default function ResetFiltersSortersTable() {
       key: 'name',
       filters: [
         { text: 'Joe', value: 'Joe' },
-        { text: 'Jim', value: 'Jim' },
+        { text: 'Jim', value: 'Jim' }
       ],
       filteredValue: filteredInfo.name || null,
       onFilter: (value, record) => record.name.includes(value),
       sorter: (a, b) => a.name.length - b.name.length,
       sortOrder: sortedInfo.columnKey === 'name' && sortedInfo.order,
-      ellipsis: true,
+      ellipsis: true
     },
     {
       title: 'Age',
@@ -110,7 +106,7 @@ export default function ResetFiltersSortersTable() {
       key: 'age',
       sorter: (a, b) => a.age - b.age,
       sortOrder: sortedInfo.columnKey === 'age' && sortedInfo.order,
-      ellipsis: true,
+      ellipsis: true
     },
     {
       title: 'Address',
@@ -118,14 +114,14 @@ export default function ResetFiltersSortersTable() {
       key: 'address',
       filters: [
         { text: 'London', value: 'London' },
-        { text: 'New York', value: 'New York' },
+        { text: 'New York', value: 'New York' }
       ],
       filteredValue: filteredInfo.address || null,
       onFilter: (value, record) => record.address.includes(value),
       sorter: (a, b) => a.address.length - b.address.length,
       sortOrder: sortedInfo.columnKey === 'address' && sortedInfo.order,
-      ellipsis: true,
-    },
+      ellipsis: true
+    }
   ];
 
   return (
@@ -133,17 +129,11 @@ export default function ResetFiltersSortersTable() {
       <Row>
         <Col className="hp-mb-16" lg={15} span={20}>
           <h4>Reset filters and sorters</h4>
-          <p className="hp-p1-body">
-            Control filters and sorters by filteredValue and sortOrder.
-          </p>
+          <p className="hp-p1-body">Control filters and sorters by filteredValue and sortOrder.</p>
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -152,7 +142,7 @@ export default function ResetFiltersSortersTable() {
               <Col>
                 <Button onClick={setAgeSort}>Sort age</Button>
               </Col>
-              
+
               <Col>
                 <Button onClick={clearFilters}>Clear filters</Button>
               </Col>
@@ -170,7 +160,7 @@ export default function ResetFiltersSortersTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {resetFiltersSorters}

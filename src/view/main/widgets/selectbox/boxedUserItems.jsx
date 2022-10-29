@@ -1,29 +1,29 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import userImage1 from "../../../../assets/images/users/user-1.svg";
-import userImage2 from "../../../../assets/images/users/user-2.svg";
-import userImage3 from "../../../../assets/images/users/user-3.svg";
-import userImage4 from "../../../../assets/images/users/user-4.svg";
-import userImage5 from "../../../../assets/images/users/user-5.svg";
-import userImage6 from "../../../../assets/images/users/user-6.svg";
-import userImage7 from "../../../../assets/images/users/user-7.svg";
-import userImage8 from "../../../../assets/images/users/user-8.svg";
-import userImage9 from "../../../../assets/images/users/user-9.svg";
-import userImage10 from "../../../../assets/images/users/user-10.svg";
-import userImage11 from "../../../../assets/images/users/user-11.svg";
-import userImage12 from "../../../../assets/images/users/user-12.svg";
-import userImage13 from "../../../../assets/images/users/user-13.svg";
-import userImage14 from "../../../../assets/images/users/user-14.svg";
-import userImage16 from "../../../../assets/images/users/user-16.svg";
-import userImage17 from "../../../../assets/images/users/user-17.svg";
-import userImage18 from "../../../../assets/images/users/user-18.svg";
-import userImage19 from "../../../../assets/images/users/user-19.svg";
-import userImage20 from "../../../../assets/images/users/user-20.svg";
-import userImage21 from "../../../../assets/images/users/user-21.svg";
+import userImage1 from '../../../../assets/images/users/user-1.svg';
+import userImage2 from '../../../../assets/images/users/user-2.svg';
+import userImage3 from '../../../../assets/images/users/user-3.svg';
+import userImage4 from '../../../../assets/images/users/user-4.svg';
+import userImage5 from '../../../../assets/images/users/user-5.svg';
+import userImage6 from '../../../../assets/images/users/user-6.svg';
+import userImage7 from '../../../../assets/images/users/user-7.svg';
+import userImage8 from '../../../../assets/images/users/user-8.svg';
+import userImage9 from '../../../../assets/images/users/user-9.svg';
+import userImage10 from '../../../../assets/images/users/user-10.svg';
+import userImage11 from '../../../../assets/images/users/user-11.svg';
+import userImage12 from '../../../../assets/images/users/user-12.svg';
+import userImage13 from '../../../../assets/images/users/user-13.svg';
+import userImage14 from '../../../../assets/images/users/user-14.svg';
+import userImage16 from '../../../../assets/images/users/user-16.svg';
+import userImage17 from '../../../../assets/images/users/user-17.svg';
+import userImage18 from '../../../../assets/images/users/user-18.svg';
+import userImage19 from '../../../../assets/images/users/user-19.svg';
+import userImage20 from '../../../../assets/images/users/user-20.svg';
+import userImage21 from '../../../../assets/images/users/user-21.svg';
 
-import SelectBoxItem from "./selectBoxItem";
+import SelectBoxItem from './selectBoxItem';
 
 export default function SelectBoxBoxedUserItems() {
   return (
@@ -34,15 +34,25 @@ export default function SelectBoxBoxedUserItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -106,15 +116,25 @@ export default function SelectBoxBoxedUserItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -174,15 +194,25 @@ export default function SelectBoxBoxedUserItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -242,15 +272,25 @@ export default function SelectBoxBoxedUserItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -310,15 +350,25 @@ export default function SelectBoxBoxedUserItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -374,15 +424,25 @@ export default function SelectBoxBoxedUserItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -438,15 +498,25 @@ export default function SelectBoxBoxedUserItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -502,15 +572,25 @@ export default function SelectBoxBoxedUserItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">User</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>

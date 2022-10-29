@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { listUsage } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { listUsage } from './code.js';
 
-import { Card, Row, Col, List, Tooltip, Comment, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
-import moment from "moment";
+import { Card, Row, Col, List, Tooltip, Comment, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
+import moment from 'moment';
 
-import user from "../../../../assets/images/memoji/memoji-1.png";
+import user from '../../../../assets/images/memoji/memoji-1.png';
 
 export default function CommentListUsage() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -26,18 +26,15 @@ export default function CommentListUsage() {
       avatar: user,
       content: (
         <p>
-          We supply a series of design principles, practical patterns and high
-          quality design resources (Sketch and Axure), to help people create
-          their product prototypes beautifully and efficiently.
+          We supply a series of design principles, practical patterns and high quality design resources (Sketch and
+          Axure), to help people create their product prototypes beautifully and efficiently.
         </p>
       ),
       datetime: (
-        <Tooltip
-          title={moment().subtract(1, "days").format("YYYY-MM-DD HH:mm:ss")}
-        >
-          <span>{moment().subtract(1, "days").fromNow()}</span>
+        <Tooltip title={moment().subtract(1, 'days').format('YYYY-MM-DD HH:mm:ss')}>
+          <span>{moment().subtract(1, 'days').fromNow()}</span>
         </Tooltip>
-      ),
+      )
     },
     {
       actions: [<span key="comment-list-reply-to-0">Reply to</span>],
@@ -45,19 +42,16 @@ export default function CommentListUsage() {
       avatar: user,
       content: (
         <p>
-          We supply a series of design principles, practical patterns and high
-          quality design resources (Sketch and Axure), to help people create
-          their product prototypes beautifully and efficiently.
+          We supply a series of design principles, practical patterns and high quality design resources (Sketch and
+          Axure), to help people create their product prototypes beautifully and efficiently.
         </p>
       ),
       datetime: (
-        <Tooltip
-          title={moment().subtract(2, "days").format("YYYY-MM-DD HH:mm:ss")}
-        >
-          <span>{moment().subtract(2, "days").fromNow()}</span>
+        <Tooltip title={moment().subtract(2, 'days').format('YYYY-MM-DD HH:mm:ss')}>
+          <span>{moment().subtract(2, 'days').fromNow()}</span>
         </Tooltip>
-      ),
-    },
+      )
+    }
   ];
 
   return (
@@ -65,17 +59,11 @@ export default function CommentListUsage() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Usage with list</h4>
-          <p className="hp-p1-body">
-            Displaying a series of comments using the antd List Component.
-          </p>
+          <p className="hp-p1-body">Displaying a series of comments using the antd List Component.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -102,7 +90,7 @@ export default function CommentListUsage() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {listUsage}

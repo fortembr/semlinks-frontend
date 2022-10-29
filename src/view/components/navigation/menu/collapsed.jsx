@@ -1,18 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { collapsedCode } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { collapsedCode } from './code.js';
 
-import { Card, Row, Col, Menu, Button } from "antd";
-import {
-  RiMailLine,
-  RiMenuFoldLine,
-  RiMenuUnfoldLine,
-  RiCodeSSlashLine,
-} from "react-icons/ri";
+import { Card, Row, Col, Menu, Button } from 'antd';
+import { RiMailLine, RiMenuFoldLine, RiMenuUnfoldLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 const { SubMenu } = Menu;
 
@@ -31,7 +26,7 @@ export default function CollapsedMenu() {
   };
 
   // Redux
-  const customise = useSelector(state => state.customise)
+  const customise = useSelector((state) => state.customise);
 
   return (
     <Card className="hp-border-color-black-40">
@@ -54,22 +49,16 @@ export default function CollapsedMenu() {
         </Col>
 
         <Col span={24}>
-          <Button
-            type="primary"
-            onClick={toggleCollapsed}
-            style={{ marginBottom: 16 }}
-          >
-            {React.createElement(
-              collapsed ? RiMenuUnfoldLine : RiMenuFoldLine
-            )}
+          <Button type="primary" onClick={toggleCollapsed} style={{ marginBottom: 16 }}>
+            {React.createElement(collapsed ? RiMenuUnfoldLine : RiMenuFoldLine)}
           </Button>
 
           <Menu
-            defaultSelectedKeys={["1"]}
-            defaultOpenKeys={["sub1"]}
+            defaultSelectedKeys={['1']}
+            defaultOpenKeys={['sub1']}
             mode="inline"
             inlineCollapsed={collapsed}
-            theme={customise.theme == "light" ? "light" : "dark"}
+            theme={customise.theme == 'light' ? 'light' : 'dark'}
           >
             <Menu.Item key="1" icon={<RiMailLine className="remix-icon" />}>
               Option 1
@@ -83,22 +72,14 @@ export default function CollapsedMenu() {
               Option 3
             </Menu.Item>
 
-            <SubMenu
-              key="sub1"
-              icon={<RiMailLine className="remix-icon" />}
-              title="Navigation One"
-            >
+            <SubMenu key="sub1" icon={<RiMailLine className="remix-icon" />} title="Navigation One">
               <Menu.Item key="5">Option 5</Menu.Item>
               <Menu.Item key="6">Option 6</Menu.Item>
               <Menu.Item key="7">Option 7</Menu.Item>
               <Menu.Item key="8">Option 8</Menu.Item>
             </SubMenu>
 
-            <SubMenu
-              key="sub2"
-              icon={<RiMailLine className="remix-icon" />}
-              title="Navigation Two"
-            >
+            <SubMenu key="sub2" icon={<RiMailLine className="remix-icon" />} title="Navigation Two">
               <Menu.Item key="9">Option 9</Menu.Item>
               <Menu.Item key="10">Option 10</Menu.Item>
 
@@ -114,7 +95,7 @@ export default function CollapsedMenu() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {collapsedCode}

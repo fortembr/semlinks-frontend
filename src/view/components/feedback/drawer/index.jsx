@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import NormalDrawer from "./basic";
-import CustomDrawer from "./custom";
-import SubmitDrawer from "./submit";
-import MultiDrawer from "./multi";
+import PageContent from '../../../../layout/components/content/page-content';
+import NormalDrawer from './basic';
+import CustomDrawer from './custom';
+import SubmitDrawer from './submit';
+import MultiDrawer from './multi';
 
 export default function Drawer() {
   return (
@@ -17,14 +17,14 @@ export default function Drawer() {
           desc="A panel which slides in from the edge of the screen."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Feedback",
+              title: 'Feedback'
             },
             {
-              title: "Drawer",
+              title: 'Drawer'
             }
           ]}
         />

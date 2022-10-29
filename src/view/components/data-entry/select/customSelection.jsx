@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { customSelection } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { customSelection } from './code.js';
 
-import { Select, Card, Row, Col, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Select, Card, Row, Col, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Option } = Select;
 
@@ -19,7 +19,7 @@ export default function SelectCustomSelection() {
   }
 
   function handleChange(value) {
-    console.log("selected", value);
+    console.log('selected', value);
   }
 
   return (
@@ -31,11 +31,7 @@ export default function SelectCustomSelection() {
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -86,16 +82,15 @@ export default function SelectCustomSelection() {
         </Col>
       </Row>
 
-      { checkedCode && (
+      {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {customSelection}
         </SyntaxHighlighter>
-      )
-      }
-    </Card >
+      )}
+    </Card>
   );
 }

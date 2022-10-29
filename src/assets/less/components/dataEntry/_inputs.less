@@ -60,10 +60,7 @@
   box-shadow: 0px 0px 10px rgba(255, 0, 34, 0.35);
 }
 
-.@{class-prefix}-xl-search-button
-  .ant-input-group
-  > .ant-input-group-addon:last-child
-  .ant-input-search-button {
+.@{class-prefix}-xl-search-button .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button {
   padding: 0 64px;
 
   @media @sm {
@@ -72,16 +69,13 @@
 }
 
 // RTL
-html[dir="rtl"] {
+html[dir='rtl'] {
   .ant-input-group > .ant-input:last-child,
   .ant-input-group-addon:last-child {
     border-radius: 7px 0 0 7px;
   }
 
-  .ant-input-search
-    > .ant-input-group
-    > .ant-input-group-addon:last-child
-    .ant-input-search-button {
+  .ant-input-search > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button {
     border-radius: 7px 0 0 7px;
   }
 }

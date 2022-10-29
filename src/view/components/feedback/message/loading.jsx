@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { loading } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { loading } from './code.js';
 
-import { Card, Row, Col, Button, message } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button, message } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function LoadingIndicatorMessage() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -17,7 +17,7 @@ export default function LoadingIndicatorMessage() {
   }
 
   const success = () => {
-    const hide = message.loading("Action in progress..", 0);
+    const hide = message.loading('Action in progress..', 0);
     setTimeout(hide, 2500);
   };
 
@@ -29,8 +29,7 @@ export default function LoadingIndicatorMessage() {
             <Col lg={12} span={20}>
               <h4>Message with Loading Indicator</h4>
               <p className="hp-p1-body">
-                Display a global loading indicator, which is dismissed by itself
-                asynchronously.
+                Display a global loading indicator, which is dismissed by itself asynchronously.
               </p>
             </Col>
 
@@ -54,7 +53,7 @@ export default function LoadingIndicatorMessage() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {loading}

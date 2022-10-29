@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicEmpty from "./basic";
-import EmptyChooseImage from "./chooseImage";
-import EmptyCustomize from "./customize";
-import EmptyGroups from "./groups";
-import EmptySheets from "./sheets";
-import EmptyQuestions from "./questions";
-import EmptyForms from "./forms";
-import EmptySearch from "./search";
-import EmptySearch2 from "./search-2";
-import EmptyNoDescription from "./noDescription";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicEmpty from './basic';
+import EmptyChooseImage from './chooseImage';
+import EmptyCustomize from './customize';
+import EmptyGroups from './groups';
+import EmptySheets from './sheets';
+import EmptyQuestions from './questions';
+import EmptyForms from './forms';
+import EmptySearch from './search';
+import EmptySearch2 from './search-2';
+import EmptyNoDescription from './noDescription';
 
 export default function Empty() {
   return (
@@ -23,14 +23,14 @@ export default function Empty() {
           desc="Empty state placeholder."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Display",
+              title: 'Data Display'
             },
             {
-              title: "Empty",
+              title: 'Empty'
             }
           ]}
         />

@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicAvatar from "./basic";
-import AvatarTypes from "./types";
-import AvatarBadge from "./avatarBadge";
-import AvatarResponsive from "./responsiveAvatar";
-import AvatarGroup from "./avatarGroup";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicAvatar from './basic';
+import AvatarTypes from './types';
+import AvatarBadge from './avatarBadge';
+import AvatarResponsive from './responsiveAvatar';
+import AvatarGroup from './avatarGroup';
 
 export default function Avatar() {
   return (
@@ -18,14 +18,14 @@ export default function Avatar() {
           desc="Avatars can be used to represent people or objects. It supports images, Icons, or letters."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Display",
+              title: 'Data Display'
             },
             {
-              title: "Avatar",
+              title: 'Avatar'
             }
           ]}
         />

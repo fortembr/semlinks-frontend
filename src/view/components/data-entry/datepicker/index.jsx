@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicDatepicker from "./basic";
-import RangePickerItem from "./rangePicker";
-import SwitchablePicker from "./switchable";
-import DateFormat from "./dateFormat";
-import DatePickerSizes from "./datePickerSizes";
-import DatePickerDisabled from "./disabled";
-import DatePickerCustomizedDateRender from "./customizedDateRender";
-import DatePickerExtraFooter from "./extraFooter";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicDatepicker from './basic';
+import RangePickerItem from './rangePicker';
+import SwitchablePicker from './switchable';
+import DateFormat from './dateFormat';
+import DatePickerSizes from './datePickerSizes';
+import DatePickerDisabled from './disabled';
+import DatePickerCustomizedDateRender from './customizedDateRender';
+import DatePickerExtraFooter from './extraFooter';
 
 export default function Datepicker() {
   return (
@@ -21,14 +21,14 @@ export default function Datepicker() {
           desc="To select or input a date."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Entry",
+              title: 'Data Entry'
             },
             {
-              title: "Date Picker",
+              title: 'Date Picker'
             }
           ]}
         />

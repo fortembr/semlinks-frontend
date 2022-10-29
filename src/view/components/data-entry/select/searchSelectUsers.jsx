@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { searchSelectUsers } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { searchSelectUsers } from './code.js';
 
-import { Select, Spin, Card, Row, Col, Button } from "antd";
+import { Select, Spin, Card, Row, Col, Button } from 'antd';
 import debounce from 'lodash/debounce';
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Option } = Select;
 
@@ -63,8 +63,8 @@ export default function SearchSelectUsers() {
       .then((body) =>
         body.results.map((user) => ({
           label: user.name.first + ' ' + user.name.last,
-          value: user.login.username,
-        })),
+          value: user.login.username
+        }))
       );
   }
 
@@ -73,15 +73,14 @@ export default function SearchSelectUsers() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Search and Select Users</h4>
-          <p className="hp-p1-body">A complete multiple select sample with remote search, debounce fetch, ajax callback order flow, and loading state.</p>
+          <p className="hp-p1-body">
+            A complete multiple select sample with remote search, debounce fetch, ajax callback order flow, and loading
+            state.
+          </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -94,7 +93,7 @@ export default function SearchSelectUsers() {
               setValue(newValue);
             }}
             style={{
-              width: '100%',
+              width: '100%'
             }}
           />
         </Col>
@@ -103,12 +102,12 @@ export default function SearchSelectUsers() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {searchSelectUsers}
         </SyntaxHighlighter>
       )}
-    </Card >
+    </Card>
   );
 }

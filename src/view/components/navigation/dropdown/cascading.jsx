@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { cascading } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { cascading } from './code.js';
 
-import { Card, Row, Col, Menu, Dropdown, Button } from "antd";
-import { RiArrowDropDownLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Menu, Dropdown, Button } from 'antd';
+import { RiArrowDropDownLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 const { SubMenu } = Menu;
 
@@ -59,11 +59,7 @@ export default function CascadingDropdown() {
 
         <Col span={24}>
           <Dropdown overlay={menu}>
-            <a
-              href="#"
-              className="ant-dropdown-link"
-              onClick={(e) => e.preventDefault()}
-            >
+            <a href="#" className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
               Cascading menu
               <RiArrowDropDownLine className="remix-icon" size={24} />
             </a>
@@ -74,7 +70,7 @@ export default function CascadingDropdown() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {cascading}

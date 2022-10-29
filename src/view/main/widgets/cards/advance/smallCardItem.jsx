@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import mastercardLogo from "../../../../../assets/images/dasboard/mastercard-logo.png";
+import mastercardLogo from '../../../../../assets/images/dasboard/mastercard-logo.png';
 
 export default function SmallCardItem(props) {
-  const { logo, bg, number, value, title } = props
+  const { logo, bg, number, value, title } = props;
 
   return (
     <div
       className="hp-d-flex hp-d-flex-between hp-d-flex-column hp-border-radius-xxl hp-overflow-hidden hp-card-1 hp-p-18"
-      style={{ backgroundImage: "url(" + bg + ")", backgroundSize: "cover", backgroundPosition: "center right" }}
+      style={{ backgroundImage: 'url(' + bg + ')', backgroundSize: 'cover', backgroundPosition: 'center right' }}
     >
       <Row justify="space-between">
         <Col>

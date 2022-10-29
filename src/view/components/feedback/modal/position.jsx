@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { position } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { position } from './code.js';
 
-import { Card, Row, Col, Button, Modal } from "antd";
-import { RiCloseFill, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button, Modal } from 'antd';
+import { RiCloseFill, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function PositionModal() {
   const [modal1Visible, setIsModal1Visible] = useState(false);
@@ -34,8 +34,7 @@ export default function PositionModal() {
             <Col lg={12} span={20}>
               <h4>To customize the position of modal</h4>
               <p className="hp-p1-body">
-                You can use centered,style.top or other styles to set position
-                of modal dialog.
+                You can use centered,style.top or other styles to set position of modal dialog.
               </p>
             </Col>
 
@@ -61,17 +60,11 @@ export default function PositionModal() {
               visible={modal1Visible}
               onOk={() => setModal1Visible(false)}
               onCancel={() => setModal1Visible(false)}
-              closeIcon={
-                <RiCloseFill
-                  className="remix-icon hp-text-color-black-100 hp-text-color-dark-0"
-                  size={24}
-                />
-              }
+              closeIcon={<RiCloseFill className="remix-icon hp-text-color-black-100 hp-text-color-dark-0" size={24} />}
             >
               <p className="hp-p2-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                vestibulum risus velit, ut placerat diam imperdiet nec. Aenean
-                ex turpis, feugiat sed euismod nec, iaculis id dui. Suspendisse.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum risus velit, ut placerat
+                diam imperdiet nec. Aenean ex turpis, feugiat sed euismod nec, iaculis id dui. Suspendisse.
               </p>
             </Modal>
           </Col>
@@ -82,24 +75,16 @@ export default function PositionModal() {
             </Button>
 
             <Modal
-              title={
-                <h5 className="hp-mb-0">Vertically centered modal dialog</h5>
-              }
+              title={<h5 className="hp-mb-0">Vertically centered modal dialog</h5>}
               centered
               visible={modal2Visible}
               onOk={() => setModal2Visible(false)}
               onCancel={() => setModal2Visible(false)}
-              closeIcon={
-                <RiCloseFill
-                  className="remix-icon hp-text-color-black-100 hp-text-color-dark-0"
-                  size={24}
-                />
-              }
+              closeIcon={<RiCloseFill className="remix-icon hp-text-color-black-100 hp-text-color-dark-0" size={24} />}
             >
               <p className="hp-p2-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                vestibulum risus velit, ut placerat diam imperdiet nec. Aenean
-                ex turpis, feugiat sed euismod nec, iaculis id dui. Suspendisse.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum risus velit, ut placerat
+                diam imperdiet nec. Aenean ex turpis, feugiat sed euismod nec, iaculis id dui. Suspendisse.
               </p>
             </Modal>
           </Col>
@@ -109,7 +94,7 @@ export default function PositionModal() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {position}

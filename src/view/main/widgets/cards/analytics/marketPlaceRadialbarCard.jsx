@@ -1,33 +1,33 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Card, Row, Col } from "antd";
-import Chart from "react-apexcharts";
+import { Card, Row, Col } from 'antd';
+import Chart from 'react-apexcharts';
 
 export default function MarketPlaceRadialbarCard() {
   const [data] = useState({
     series: [61, 82, 65],
     options: {
       chart: {
-        height: "184px",
-        id: "market-place-chart",
-        fontFamily: "Manrope, sans-serif",
-        type: "radialBar",
+        height: '184px',
+        id: 'market-place-chart',
+        fontFamily: 'Manrope, sans-serif',
+        type: 'radialBar',
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
-      colors: ["#00F7BF", "#0010F7", "#FFC700"],
+      colors: ['#00F7BF', '#0010F7', '#FFC700'],
 
-      labels: ["Ebay", "Web", "Amazon"],
+      labels: ['Ebay', 'Web', 'Amazon'],
 
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
       stroke: {
-        lineCap: "round",
+        lineCap: 'round'
       },
 
       plotOptions: {
@@ -35,38 +35,38 @@ export default function MarketPlaceRadialbarCard() {
           dataLabels: {
             show: true,
             name: {
-              fontSize: "10px",
+              fontSize: '10px'
             },
             value: {
-              fontSize: "10px",
-              offsetY: 0,
+              fontSize: '10px',
+              offsetY: 0
             },
             total: {
               show: true,
-              fontSize: "10px",
-              label: "Total",
+              fontSize: '10px',
+              label: 'Total',
               formatter: function (w) {
                 return 7400;
-              },
-            },
-          },
-        },
+              }
+            }
+          }
+        }
       },
 
       legend: {
         show: true,
         itemMargin: {
           horizontal: 0,
-          vertical: 6,
+          vertical: 6
         },
 
-        horizontalAlign: "center",
-        position: "left",
-        fontSize: "14px",
+        horizontalAlign: 'center',
+        position: 'left',
+        fontSize: '14px',
 
         markers: {
-          radius: 12,
-        },
+          radius: 12
+        }
       },
 
       responsive: [
@@ -76,16 +76,16 @@ export default function MarketPlaceRadialbarCard() {
             legend: {
               itemMargin: {
                 horizontal: 8,
-                vertical: 0,
+                vertical: 0
               },
-              horizontalAlign: "center",
-              position: "bottom",
-              fontSize: "14px",
-            },
-          },
-        },
-      ],
-    },
+              horizontalAlign: 'center',
+              position: 'bottom',
+              fontSize: '14px'
+            }
+          }
+        }
+      ]
+    }
   });
 
   return (
@@ -97,13 +97,7 @@ export default function MarketPlaceRadialbarCard() {
 
         <Col span={24}>
           <div id="market-place-chart">
-            <Chart
-              options={data.options}
-              series={data.series}
-              type="radialBar"
-              height="184px"
-              legend="legend"
-            />
+            <Chart options={data.options} series={data.series} type="radialBar" height="184px" legend="legend" />
           </div>
         </Col>
       </Row>

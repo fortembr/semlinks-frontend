@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col } from "antd";
-import { RiArrowRightUpLine } from "react-icons/ri";
+import { Card, Row, Col } from 'antd';
+import { RiArrowRightUpLine } from 'react-icons/ri';
 
-import watch from "../../../../../assets/images/product/watch-card.png";
+import watch from '../../../../../assets/images/product/watch-card.png';
 
 export default function EcommerceCardTwo() {
   return (
@@ -20,19 +20,12 @@ export default function EcommerceCardTwo() {
                 Xbox Wireless Game
               </h5>
 
-              <h3 className="hp-mb-0 hp-my-8 hp-text-color-primary-1">
-                £399
-              </h3>
+              <h3 className="hp-mb-0 hp-my-8 hp-text-color-primary-1">£399</h3>
 
               <Row align="middle" justify="center">
-                <RiArrowRightUpLine
-                  size={16}
-                  className="hp-text-color-success-1"
-                />
+                <RiArrowRightUpLine size={16} className="hp-text-color-success-1" />
 
-                <p className="hp-mb-0 hp-mr-8 hp-badge-text hp-text-color-success-1">
-                  +4
-                </p>
+                <p className="hp-mb-0 hp-mr-8 hp-badge-text hp-text-color-success-1">+4</p>
 
                 <p className="hp-mb-0 hp-badge-text">New Item</p>
               </Row>

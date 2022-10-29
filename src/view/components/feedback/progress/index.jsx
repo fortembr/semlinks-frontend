@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import ProgessBar from "./progressBar";
-import MiniProgessBar from "./miniProgressBar";
-import CircleProgessBar from "./circleProgressBar";
-import MiniCircleProgessBar from "./miniCircleProgressBar";
+import PageContent from '../../../../layout/components/content/page-content';
+import ProgessBar from './progressBar';
+import MiniProgessBar from './miniProgressBar';
+import CircleProgessBar from './circleProgressBar';
+import MiniCircleProgessBar from './miniCircleProgressBar';
 
 export default function Progress() {
   return (
@@ -17,14 +17,14 @@ export default function Progress() {
           desc="Display the current progress of an operation flow."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Feedback",
+              title: 'Feedback'
             },
             {
-              title: "Progress",
+              title: 'Progress'
             }
           ]}
         />

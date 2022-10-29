@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { custom } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { custom } from './code.js';
 
-import { Card, Row, Col, Drawer, Button, Radio, Space } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Drawer, Button, Radio, Space } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function CustomDrawer() {
   const [visible, setVisible] = useState(false);
-  const [placement, setPlacement] = useState("left");
+  const [placement, setPlacement] = useState('left');
   const [checkedCode, setCheckedCode] = useState(false);
   const [codeClass, setCodeClass] = useState(false);
 
@@ -37,9 +37,7 @@ export default function CustomDrawer() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Custom Placement</h4>
-              <p className="hp-p1-body">
-                The Drawer can appear from any edge of the screen.
-              </p>
+              <p className="hp-p1-body">The Drawer can appear from any edge of the screen.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -96,7 +94,7 @@ export default function CustomDrawer() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {custom}

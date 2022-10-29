@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { controlled } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { controlled } from './code.js';
 
-import { Card, Row, Col, Button, Checkbox } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button, Checkbox } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function CheckboxControlled() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -31,7 +31,7 @@ export default function CheckboxControlled() {
     setChecked(e.target.checked);
   };
 
-  const label = `${checked ? "Checked" : "Unchecked"}-${disabled ? "Disabled" : "Enabled"}`;
+  const label = `${checked ? 'Checked' : 'Unchecked'}-${disabled ? 'Disabled' : 'Enabled'}`;
 
   return (
     <Card className="hp-border-color-black-40">
@@ -57,16 +57,11 @@ export default function CheckboxControlled() {
 
         <Col span={24}>
           <Button type="primary" size="small" onClick={toggleChecked}>
-            {checked ? "Check" : "Uncheck"}
+            {checked ? 'Check' : 'Uncheck'}
           </Button>
 
-          <Button
-            style={{ margin: "0 10px" }}
-            type="primary"
-            size="small"
-            onClick={toggleDisable}
-          >
-            {disabled ? "Disable" : "Enable"}
+          <Button style={{ margin: '0 10px' }} type="primary" size="small" onClick={toggleDisable}>
+            {disabled ? 'Disable' : 'Enable'}
           </Button>
         </Col>
       </Row>
@@ -74,7 +69,7 @@ export default function CheckboxControlled() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {controlled}

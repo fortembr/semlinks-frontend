@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { avatar } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { avatar } from './code.js';
 
-import { Card, Row, Col, Upload, message, Button } from "antd";
-import { RiLoaderLine, RiAddLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Upload, message, Button } from 'antd';
+import { RiLoaderLine, RiAddLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function AvatarUpload() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -18,18 +18,18 @@ export default function AvatarUpload() {
 
   function getBase64(img, callback) {
     const reader = new FileReader();
-    reader.addEventListener("load", () => callback(reader.result));
+    reader.addEventListener('load', () => callback(reader.result));
     reader.readAsDataURL(img);
   }
 
   function beforeUpload(file) {
-    const isJpgOrPng = file.type === "image/jpeg" || file.type === "image/png";
+    const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
     if (!isJpgOrPng) {
-      message.error("You can only upload JPG/PNG file!");
+      message.error('You can only upload JPG/PNG file!');
     }
     const isLt2M = file.size / 1024 / 1024 < 2;
     if (!isLt2M) {
-      message.error("Image must smaller than 2MB!");
+      message.error('Image must smaller than 2MB!');
     }
     return isJpgOrPng && isLt2M;
   }
@@ -38,27 +38,20 @@ export default function AvatarUpload() {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (info) => {
-    if (info.file.status === "uploading") {
+    if (info.file.status === 'uploading') {
       setLoading(true);
       return;
     }
 
-    if (info.file.status === "done") {
-      getBase64(
-        info.file.originFileObj,
-        (imageUrl) => setImageUrl(imageUrl),
-        setLoading(false)
-      );
+    if (info.file.status === 'done') {
+      getBase64(info.file.originFileObj, (imageUrl) => setImageUrl(imageUrl), setLoading(false));
     }
   };
 
   const uploadButton = (
     <div>
       {loading ? (
-        <RiLoaderLine
-          className="remix-icon-loading remix-icon-spin remix-icon"
-          size={24}
-        />
+        <RiLoaderLine className="remix-icon-loading remix-icon-spin remix-icon" size={24} />
       ) : (
         <RiAddLine size={24} />
       )}
@@ -74,8 +67,7 @@ export default function AvatarUpload() {
             <Col lg={12} span={20}>
               <h4>Avatar</h4>
               <p className="hp-p1-body">
-                Click to upload user's avatar, and validate size and format of
-                picture with beforeUpload.
+                Click to upload user's avatar, and validate size and format of picture with beforeUpload.
               </p>
             </Col>
 
@@ -99,11 +91,7 @@ export default function AvatarUpload() {
             beforeUpload={beforeUpload}
             onChange={handleChange}
           >
-            {imageUrl ? (
-              <img src={imageUrl} alt="avatar" style={{ width: "100%" }} />
-            ) : (
-              uploadButton
-            )}
+            {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : uploadButton}
           </Upload>
         </Col>
       </Row>
@@ -111,7 +99,7 @@ export default function AvatarUpload() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {avatar}

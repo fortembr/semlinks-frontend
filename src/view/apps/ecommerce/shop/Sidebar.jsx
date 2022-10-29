@@ -1,40 +1,35 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Row, Col, Divider, Collapse, Radio, Slider, Button } from "antd";
-import { RiArrowRightSLine } from "react-icons/ri";
+import { Row, Col, Divider, Collapse, Radio, Slider, Button } from 'antd';
+import { RiArrowRightSLine } from 'react-icons/ri';
 
 const { Panel } = Collapse;
 
 export default function Sidebar() {
   // Collapse
-  const genExtra = () => (
-    <RiArrowRightSLine
-      size={24}
-      className="hp-collapse-arrow hp-text-color-black-60"
-    />
-  );
+  const genExtra = () => <RiArrowRightSLine size={24} className="hp-collapse-arrow hp-text-color-black-60" />;
 
   // Price Slider
-  const priceMinValue = 0
-  const priceMaxValue = 500
-  const [priceMin, setPriceMin] = useState(priceMinValue)
-  const [priceMax, setPriceMax] = useState(priceMaxValue)
+  const priceMinValue = 0;
+  const priceMaxValue = 500;
+  const [priceMin, setPriceMin] = useState(priceMinValue);
+  const [priceMax, setPriceMax] = useState(priceMaxValue);
 
   const priceOnChange = (value) => {
-    setPriceMin(value[0])
-    setPriceMax(value[1])
-  }
+    setPriceMin(value[0]);
+    setPriceMax(value[1]);
+  };
 
   // Radio
   const [valueRate, setValueRate] = useState(0);
   const [valueTags, setValueTags] = useState(0);
 
-  const onChangeRate = e => {
+  const onChangeRate = (e) => {
     setValueRate(e.target.value);
   };
 
-  const onChangeTags = e => {
+  const onChangeTags = (e) => {
     setValueTags(e.target.value);
   };
 
@@ -50,32 +45,40 @@ export default function Sidebar() {
 
         <Collapse defaultActiveKey={1}>
           <Panel
-            header={
-              <h5 className="hp-mb-0 hp-text-color-black-80 hp-text-color-dark-30">Categories</h5>
-            }
+            header={<h5 className="hp-mb-0 hp-text-color-black-80 hp-text-color-dark-30">Categories</h5>}
             key="1"
             showArrow={false}
             extra={genExtra()}
           >
             <Row className="hp-mt-16">
               <Col span={24}>
-                <Link to="#" className="hp-badge-text hp-d-block hp-text-color-black-80 hp-text-color-dark-30">SLR Cameras</Link>
+                <Link to="#" className="hp-badge-text hp-d-block hp-text-color-black-80 hp-text-color-dark-30">
+                  SLR Cameras
+                </Link>
               </Col>
 
               <Col span={24} className="hp-mt-10">
-                <Link to="#" className="hp-badge-text hp-d-block hp-text-color-black-80 hp-text-color-dark-30">Digital Cameras</Link>
+                <Link to="#" className="hp-badge-text hp-d-block hp-text-color-black-80 hp-text-color-dark-30">
+                  Digital Cameras
+                </Link>
               </Col>
 
               <Col span={24} className="hp-mt-10">
-                <Link to="#" className="hp-badge-text hp-d-block hp-text-color-black-80 hp-text-color-dark-30">Mirrorless Compact Cameras</Link>
+                <Link to="#" className="hp-badge-text hp-d-block hp-text-color-black-80 hp-text-color-dark-30">
+                  Mirrorless Compact Cameras
+                </Link>
               </Col>
 
               <Col span={24} className="hp-mt-10">
-                <Link to="#" className="hp-badge-text hp-d-block hp-text-color-black-80 hp-text-color-dark-30">Video Cameras</Link>
+                <Link to="#" className="hp-badge-text hp-d-block hp-text-color-black-80 hp-text-color-dark-30">
+                  Video Cameras
+                </Link>
               </Col>
 
               <Col span={24} className="hp-mt-10">
-                <Link to="#" className="hp-badge-text hp-d-block hp-text-color-black-80 hp-text-color-dark-30">Action Cameras</Link>
+                <Link to="#" className="hp-badge-text hp-d-block hp-text-color-black-80 hp-text-color-dark-30">
+                  Action Cameras
+                </Link>
               </Col>
             </Row>
           </Panel>
@@ -85,9 +88,7 @@ export default function Sidebar() {
 
         <Collapse>
           <Panel
-            header={
-              <h5 className="hp-mb-0 hp-text-color-black-80 hp-text-color-dark-30">Ratings</h5>
-            }
+            header={<h5 className="hp-mb-0 hp-text-color-black-80 hp-text-color-dark-30">Ratings</h5>}
             key="1"
             showArrow={false}
             extra={genExtra()}
@@ -144,9 +145,7 @@ export default function Sidebar() {
 
         <Collapse>
           <Panel
-            header={
-              <h5 className="hp-mb-0 hp-text-color-black-80 hp-text-color-dark-30">Price Range</h5>
-            }
+            header={<h5 className="hp-mb-0 hp-text-color-black-80 hp-text-color-dark-30">Price Range</h5>}
             key="1"
             showArrow={false}
             extra={genExtra()}
@@ -189,9 +188,7 @@ export default function Sidebar() {
 
         <Collapse>
           <Panel
-            header={
-              <h5 className="hp-mb-0 hp-text-color-black-80 hp-text-color-dark-30">Tags</h5>
-            }
+            header={<h5 className="hp-mb-0 hp-text-color-black-80 hp-text-color-dark-30">Tags</h5>}
             key="1"
             showArrow={false}
             extra={genExtra()}
@@ -230,8 +227,10 @@ export default function Sidebar() {
           </Panel>
         </Collapse>
 
-        <Button block type="primary" className="hp-mt-32">Remove Filter</Button>
+        <Button block type="primary" className="hp-mt-32">
+          Remove Filter
+        </Button>
       </Row>
     </Col>
-  )
+  );
 }

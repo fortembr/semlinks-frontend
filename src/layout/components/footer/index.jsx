@@ -1,8 +1,8 @@
-import { Col, Layout, Row } from "antd";
+import { Col, Layout, Row } from 'antd';
 
 export default function MenuFooter() {
   const { Footer } = Layout;
-  
+
   return (
     <Footer className="hp-bg-color-black-20 hp-bg-color-dark-90">
       <Row align="middle" justify="space-between">
@@ -14,4 +14,4 @@ export default function MenuFooter() {
       </Row>
     </Footer>
   );
-};
+}

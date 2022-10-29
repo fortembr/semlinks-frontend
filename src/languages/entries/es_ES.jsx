@@ -1,12 +1,12 @@
-import antdES from "antd/lib/locale-provider/es_ES";
-import saMessages from "../locales/es_ES.json";
+import antdES from 'antd/lib/locale-provider/es_ES';
+import saMessages from '../locales/es_ES.json';
 
 const esLang = {
-    messages: {
-        ...saMessages
-    },
-    antd: antdES,
-    locale: 'es-ES',
+  messages: {
+    ...saMessages
+  },
+  antd: antdES,
+  locale: 'es-ES'
 };
 
 export default esLang;

@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicModal from "./basic";
-import InfoModal from "./info";
-import CustomizeWidthModal from "./customizeWidth";
-import PositionModal from "./position";
-import ConfirmationModal from "./confirmation";
-import YodaModal from "./yoda";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicModal from './basic';
+import InfoModal from './info';
+import CustomizeWidthModal from './customizeWidth';
+import PositionModal from './position';
+import ConfirmationModal from './confirmation';
+import YodaModal from './yoda';
 
 export default function Modal() {
   return (
@@ -19,14 +19,14 @@ export default function Modal() {
           desc="Modal dialogs."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Feedback",
+              title: 'Feedback'
             },
             {
-              title: "Modal",
+              title: 'Modal'
             }
           ]}
         />

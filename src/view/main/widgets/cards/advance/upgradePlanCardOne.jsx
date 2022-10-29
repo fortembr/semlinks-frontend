@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col, Button } from "antd";
-import { RiArrowRightSLine } from "react-icons/ri";
+import { Card, Row, Col, Button } from 'antd';
+import { RiArrowRightSLine } from 'react-icons/ri';
 
 export default function UpgradePlanCardOne() {
   return (
@@ -10,13 +10,9 @@ export default function UpgradePlanCardOne() {
         <Col span={24} className="hp-mb-4">
           <Row align="middle" justify="space-between">
             <Col span={20}>
-              <h5 className="hp-mb-8">
-                Get exclusive discounts for any payment method
-              </h5>
+              <h5 className="hp-mb-8">Get exclusive discounts for any payment method</h5>
 
-              <p className="hp-p1-body hp-mb-0">
-                by upgrading your plan to premium
-              </p>
+              <p className="hp-p1-body hp-mb-0">by upgrading your plan to premium</p>
             </Col>
 
             <Button

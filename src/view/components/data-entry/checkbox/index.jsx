@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicCheckbox from "./basic";
-import DisabledCheckbox from "./disabled";
-import CheckboxGroup from "./checkboxGroup";
-import CheckboxGrid from "./checkboxGrid";
-import CheckboxControlled from "./checkboxControlled";
-import CheckboxCheckAll from "./checkboxCheckAll";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicCheckbox from './basic';
+import DisabledCheckbox from './disabled';
+import CheckboxGroup from './checkboxGroup';
+import CheckboxGrid from './checkboxGrid';
+import CheckboxControlled from './checkboxControlled';
+import CheckboxCheckAll from './checkboxCheckAll';
 
 export default function Checkbox() {
   return (
@@ -19,14 +19,14 @@ export default function Checkbox() {
           desc="Checkbox component."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Entry",
+              title: 'Data Entry'
             },
             {
-              title: "Checkbox",
+              title: 'Checkbox'
             }
           ]}
         />

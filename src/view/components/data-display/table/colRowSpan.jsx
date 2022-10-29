@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { colRowSpan } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { colRowSpan } from './code.js';
 
-import { Table, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function ColRowSpanTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -21,7 +21,7 @@ export default function ColRowSpanTable() {
   const renderContent = (value, row, index) => {
     const obj = {
       children: value,
-      props: {},
+      props: {}
     };
     if (index === 4) {
       obj.props.colSpan = 0;
@@ -40,15 +40,15 @@ export default function ColRowSpanTable() {
         return {
           children: <a>{text}</a>,
           props: {
-            colSpan: 5,
-          },
+            colSpan: 5
+          }
         };
-      },
+      }
     },
     {
       title: 'Age',
       dataIndex: 'age',
-      render: renderContent,
+      render: renderContent
     },
     {
       title: 'Home phone',
@@ -57,7 +57,7 @@ export default function ColRowSpanTable() {
       render: (value, row, index) => {
         const obj = {
           children: value,
-          props: {},
+          props: {}
         };
         if (index === 2) {
           obj.props.rowSpan = 2;
@@ -70,19 +70,19 @@ export default function ColRowSpanTable() {
           obj.props.colSpan = 0;
         }
         return obj;
-      },
+      }
     },
     {
       title: 'Phone',
       colSpan: 0,
       dataIndex: 'phone',
-      render: renderContent,
+      render: renderContent
     },
     {
       title: 'Address',
       dataIndex: 'address',
-      render: renderContent,
-    },
+      render: renderContent
+    }
   ];
 
   const data = [
@@ -92,7 +92,7 @@ export default function ColRowSpanTable() {
       age: 32,
       tel: '0571-22098909',
       phone: 18889898989,
-      address: 'New York No. 1 Lake Park',
+      address: 'New York No. 1 Lake Park'
     },
     {
       key: '2',
@@ -100,7 +100,7 @@ export default function ColRowSpanTable() {
       tel: '0571-22098333',
       phone: 18889898888,
       age: 42,
-      address: 'London No. 1 Lake Park',
+      address: 'London No. 1 Lake Park'
     },
     {
       key: '3',
@@ -108,7 +108,7 @@ export default function ColRowSpanTable() {
       age: 32,
       tel: '0575-22098909',
       phone: 18900010002,
-      address: 'Sidney No. 1 Lake Park',
+      address: 'Sidney No. 1 Lake Park'
     },
     {
       key: '4',
@@ -116,7 +116,7 @@ export default function ColRowSpanTable() {
       age: 18,
       tel: '0575-22098909',
       phone: 18900010002,
-      address: 'London No. 2 Lake Park',
+      address: 'London No. 2 Lake Park'
     },
     {
       key: '5',
@@ -124,8 +124,8 @@ export default function ColRowSpanTable() {
       age: 18,
       tel: '0575-22098909',
       phone: 18900010002,
-      address: 'Dublin No. 2 Lake Park',
-    },
+      address: 'Dublin No. 2 Lake Park'
+    }
   ];
 
   return (
@@ -136,16 +136,13 @@ export default function ColRowSpanTable() {
           <p className="hp-p1-body">
             Table column title supports colSpan that set in column.
             <br />
-            Table cell supports colSpan and rowSpan that set in render return object. When each of them is set to 0, the cell will not be rendered.
+            Table cell supports colSpan and rowSpan that set in render return object. When each of them is set to 0, the
+            cell will not be rendered.
           </p>
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -156,7 +153,7 @@ export default function ColRowSpanTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {colRowSpan}

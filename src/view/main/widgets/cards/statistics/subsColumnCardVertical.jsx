@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import { Row, Col } from "antd";
-import { ExportSquare } from "iconsax-react";
-import Chart from "react-apexcharts";
+import { Row, Col } from 'antd';
+import { ExportSquare } from 'iconsax-react';
+import Chart from 'react-apexcharts';
 
 export default function SubsColumnCardVertical() {
-  const [chartWidth, setChartWidth] = useState("50%")
+  const [chartWidth, setChartWidth] = useState('50%');
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setChartWidth("100%")
+      setChartWidth('100%');
     }, 10);
     return () => clearTimeout(timer);
   }, []);
@@ -17,16 +17,16 @@ export default function SubsColumnCardVertical() {
   const [data] = useState({
     series: [
       {
-        name: "Earning",
-        data: [50, 70, 100, 60],
-      },
+        name: 'Earning',
+        data: [50, 70, 100, 60]
+      }
     ],
     options: {
       chart: {
         stacked: true,
         toolbar: {
-          show: false,
-        },
+          show: false
+        }
       },
       grid: {
         show: false,
@@ -34,48 +34,48 @@ export default function SubsColumnCardVertical() {
           left: 8,
           right: 15,
           top: -10,
-          bottom: -10,
-        },
+          bottom: -10
+        }
       },
       plotOptions: {
         bar: {
           horizontal: false,
-          columnWidth: "60%",
+          columnWidth: '60%',
           borderRadius: 2,
           colors: {
             backgroundBarColors: [],
-            backgroundBarRadius: 5,
-          },
-        },
+            backgroundBarRadius: 5
+          }
+        }
       },
       legend: {
-        show: false,
+        show: false
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
-      colors: ["#00F7BF"],
+      colors: ['#00F7BF'],
       xaxis: {
         labels: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
-        },
+          show: false
+        }
       },
       yaxis: {
         show: false,
-        max: 100,
+        max: 100
       },
       tooltip: {
         x: {
-          show: false,
-        },
-      },
-    },
+          show: false
+        }
+      }
+    }
   });
 
   return (
@@ -98,16 +98,10 @@ export default function SubsColumnCardVertical() {
 
           <h3 className="hp-mb-0 hp-font-weight-600 hp-d-flex-full-center">
             <span>43,046</span>
-            <ExportSquare
-              size="20"
-              variant="Bold"
-              className="hp-ml-4"
-            />
+            <ExportSquare size="20" variant="Bold" className="hp-ml-4" />
           </h3>
 
-          <p className="hp-p1-body hp-mb-0">
-            New Subscribe
-          </p>
+          <p className="hp-p1-body hp-mb-0">New Subscribe</p>
         </Col>
       </Row>
     </div>

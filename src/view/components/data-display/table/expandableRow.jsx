@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { expandableRow } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { expandableRow } from './code.js';
 
-import { Table, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function ExpandableRowTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -24,8 +24,8 @@ export default function ExpandableRowTable() {
       title: 'Action',
       dataIndex: '',
       key: 'x',
-      render: () => <a>Delete</a>,
-    },
+      render: () => <a>Delete</a>
+    }
   ];
 
   const data = [
@@ -34,29 +34,29 @@ export default function ExpandableRowTable() {
       name: 'John Brown',
       age: 32,
       address: 'New York No. 1 Lake Park',
-      description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.',
+      description: 'My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park.'
     },
     {
       key: 2,
       name: 'Jim Green',
       age: 42,
       address: 'London No. 1 Lake Park',
-      description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
+      description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.'
     },
     {
       key: 3,
       name: 'Not Expandable',
       age: 29,
       address: 'Jiangsu No. 1 Lake Park',
-      description: 'This not expandable',
+      description: 'This not expandable'
     },
     {
       key: 4,
       name: 'Joe Black',
       age: 32,
       address: 'Sidney No. 1 Lake Park',
-      description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-    },
+      description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.'
+    }
   ];
 
   return (
@@ -70,19 +70,15 @@ export default function ExpandableRowTable() {
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
           <Table
             columns={columns}
             expandable={{
-              expandedRowRender: record => <p style={{ margin: 0 }}>{record.description}</p>,
-              rowExpandable: record => record.name !== 'Not Expandable',
+              expandedRowRender: (record) => <p style={{ margin: 0 }}>{record.description}</p>,
+              rowExpandable: (record) => record.name !== 'Not Expandable'
             }}
             dataSource={data}
             scroll={{ x: 500 }}
@@ -93,7 +89,7 @@ export default function ExpandableRowTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {expandableRow}

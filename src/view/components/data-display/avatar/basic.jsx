@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { basic } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { basic } from './code.js';
 
-import { Card, Row, Col, Avatar, Button, } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
-import { User } from "react-iconly";
+import { Card, Row, Col, Avatar, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
+import { User } from 'react-iconly';
 
 export default function BasicAvatar() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -22,47 +22,30 @@ export default function BasicAvatar() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Basic</h4>
-          <p className="hp-p1-body">
-            Three sizes and two shapes are available.
-          </p>
+          <p className="hp-p1-body">Three sizes and two shapes are available.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
           <Col className="hp-mb-24">
             <Row gutter={[16, 16]} align="middle">
               <Col>
-                <Avatar
-                  size={64}
-                  icon={<User className="remix-icon" />}
-                />
+                <Avatar size={64} icon={<User className="remix-icon" />} />
               </Col>
 
               <Col>
-                <Avatar
-                  size="large"
-                  icon={<User className="remix-icon" />}
-                />
+                <Avatar size="large" icon={<User className="remix-icon" />} />
               </Col>
 
               <Col>
-                <Avatar
-                  icon={<User className="remix-icon" />}
-                />
+                <Avatar icon={<User className="remix-icon" />} />
               </Col>
 
               <Col>
-                <Avatar
-                  size="small"
-                  icon={<User className="remix-icon" />}
-                />
+                <Avatar size="small" icon={<User className="remix-icon" />} />
               </Col>
             </Row>
           </Col>
@@ -70,34 +53,19 @@ export default function BasicAvatar() {
           <Col>
             <Row gutter={[16, 16]} align="middle">
               <Col>
-                <Avatar
-                  shape="square"
-                  size={64}
-                  icon={<User className="remix-icon" />}
-                />
+                <Avatar shape="square" size={64} icon={<User className="remix-icon" />} />
               </Col>
 
               <Col>
-                <Avatar
-                  shape="square"
-                  size="large"
-                  icon={<User className="remix-icon" />}
-                />
+                <Avatar shape="square" size="large" icon={<User className="remix-icon" />} />
               </Col>
 
               <Col>
-                <Avatar
-                  shape="square"
-                  icon={<User className="remix-icon" />}
-                />
+                <Avatar shape="square" icon={<User className="remix-icon" />} />
               </Col>
 
               <Col>
-                <Avatar
-                  shape="square"
-                  size="small"
-                  icon={<User className="remix-icon" />}
-                />
+                <Avatar shape="square" size="small" icon={<User className="remix-icon" />} />
               </Col>
             </Row>
           </Col>
@@ -107,7 +75,7 @@ export default function BasicAvatar() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {basic}

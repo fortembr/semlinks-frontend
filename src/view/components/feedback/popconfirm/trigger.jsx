@@ -1,16 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { trigger } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { trigger } from './code.js';
 
-import { Card, Row, Col, Popconfirm, Switch, message, Button } from "antd";
-import {
-  RiCheckboxCircleLine,
-  RiErrorWarningLine,
-  RiCloseCircleLine,
-  RiCodeSSlashLine,
-} from "react-icons/ri";
+import { Card, Row, Col, Popconfirm, Switch, message, Button } from 'antd';
+import { RiCheckboxCircleLine, RiErrorWarningLine, RiCloseCircleLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function TriggerPopconfirm() {
   const [visible, setVisible] = useState(false);
@@ -29,15 +24,15 @@ export default function TriggerPopconfirm() {
 
   function confirm() {
     message.success({
-      content: "Next step.",
-      icon: <RiCheckboxCircleLine className="remix-icon" />,
+      content: 'Next step.',
+      icon: <RiCheckboxCircleLine className="remix-icon" />
     });
   }
 
   function cancel() {
     message.error({
-      content: "Click on cancel",
-      icon: <RiCloseCircleLine className="remix-icon" />,
+      content: 'Click on cancel',
+      icon: <RiCloseCircleLine className="remix-icon" />
     });
   }
 
@@ -61,9 +56,7 @@ export default function TriggerPopconfirm() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Conditional trigger</h4>
-              <p className="hp-p1-body">
-                Make it pop up under some conditions.
-              </p>
+              <p className="hp-p1-body">Make it pop up under some conditions.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -85,9 +78,7 @@ export default function TriggerPopconfirm() {
             onCancel={cancel}
             okText="Yes"
             cancelText="No"
-            icon={
-              <RiErrorWarningLine className="remix-icon hp-text-color-primary-1 hp-text-color-dark-primary-2" />
-            }
+            icon={<RiErrorWarningLine className="remix-icon hp-text-color-primary-1 hp-text-color-dark-primary-2" />}
           >
             <a href="#">Delete a task</a>
           </Popconfirm>
@@ -102,7 +93,7 @@ export default function TriggerPopconfirm() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {trigger}

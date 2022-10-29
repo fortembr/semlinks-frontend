@@ -1,13 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Breadcrumb, Col, Row } from "antd";
+import { Breadcrumb, Col, Row } from 'antd';
 
 export default function PageContent(props) {
   const { title, breadcrumb, desc } = props;
 
   return (
-    <Col span={24} className="hp-bg-black-bg hp-py-sm-32 hp-py-64 hp-px-sm-24 hp-px-md-48 hp-px-80 hp-overflow-hidden" style={{ borderRadius: 32 }}>
+    <Col
+      span={24}
+      className="hp-bg-black-bg hp-py-sm-32 hp-py-64 hp-px-sm-24 hp-px-md-48 hp-px-80 hp-overflow-hidden"
+      style={{ borderRadius: 32 }}
+    >
       <svg
         width={358}
         height={336}
@@ -22,14 +26,7 @@ export default function PageContent(props) {
           strokeLinejoin="bevel"
         />
         <defs>
-          <linearGradient
-            id="a"
-            x1={315.467}
-            y1={6.875}
-            x2={397.957}
-            y2={337.724}
-            gradientUnits="userSpaceOnUse"
-          >
+          <linearGradient id="a" x1={315.467} y1={6.875} x2={397.957} y2={337.724} gradientUnits="userSpaceOnUse">
             <stop stopColor="#fff" />
             <stop offset={1} stopColor="#fff" stopOpacity={0} />
           </linearGradient>
@@ -39,41 +36,40 @@ export default function PageContent(props) {
       <Row>
         <Col sm={12} span={24}>
           <Row>
-            {
-              title && (
-                <Col span={24}>
-                  <h1 className="hp-mb-0 hp-text-color-black-0">{title}</h1>
-                </Col>
-              )
-            }
+            {title && (
+              <Col span={24}>
+                <h1 className="hp-mb-0 hp-text-color-black-0">{title}</h1>
+              </Col>
+            )}
 
-            {
-              breadcrumb && (
-                <Col span={24}>
-                  <Breadcrumb className="hp-d-flex hp-flex-wrap hp-mt-24">
-                    <Breadcrumb.Item>
-                      <Link to="/" className="hp-text-color-black-0 hp-hover-text-color-primary-2">Home</Link>
+            {breadcrumb && (
+              <Col span={24}>
+                <Breadcrumb className="hp-d-flex hp-flex-wrap hp-mt-24">
+                  <Breadcrumb.Item>
+                    <Link to="/" className="hp-text-color-black-0 hp-hover-text-color-primary-2">
+                      Home
+                    </Link>
+                  </Breadcrumb.Item>
+
+                  {breadcrumb.map((item, index) => (
+                    <Breadcrumb.Item key={index}>
+                      <Link
+                        to={item.link ? item.link : '#'}
+                        className={`hp-text-color-black-0${item.link ? ' hp-hover-text-color-primary-2' : ''}`}
+                      >
+                        {item.title}
+                      </Link>
                     </Breadcrumb.Item>
+                  ))}
+                </Breadcrumb>
+              </Col>
+            )}
 
-                    {
-                      breadcrumb.map((item, index) => (
-                        <Breadcrumb.Item key={index}>
-                          <Link to={item.link ? item.link : '#'} className={`hp-text-color-black-0${item.link ? ' hp-hover-text-color-primary-2' : ''}`}>{item.title}</Link>
-                        </Breadcrumb.Item>
-                      ))
-                    }
-                  </Breadcrumb>
-                </Col>
-              )
-            }
-
-            {
-              desc && (
-                <Col span={24}>
-                  <p className="h5 hp-mb-0 hp-mt-24 hp-text-color-black-0">{desc}</p>
-                </Col>
-              )
-            }
+            {desc && (
+              <Col span={24}>
+                <p className="h5 hp-mb-0 hp-mt-24 hp-text-color-black-0">{desc}</p>
+              </Col>
+            )}
           </Row>
         </Col>
       </Row>

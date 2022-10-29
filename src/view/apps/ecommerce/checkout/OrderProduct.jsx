@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 import { removeFromCart, adjustItemQty, loadCurrentItem } from '../../../../redux/ecommerce/ecommerceActions';
 
-import { Row, Col, InputNumber } from "antd";
-import { RiCheckboxCircleFill } from "react-icons/ri";
+import { Row, Col, InputNumber } from 'antd';
+import { RiCheckboxCircleFill } from 'react-icons/ri';
 
 export default function OrderProduct(props) {
-  const { value, valueQty } = props
-  const dispatch = useDispatch()
+  const { value, valueQty } = props;
+  const dispatch = useDispatch();
 
   // Qty
   const [input, setInput] = useState(value.qty);
 
-  useEffect(() => {
-  }, [input])
+  useEffect(() => {}, [input]);
 
   const onChangeHandler = (e) => {
     setInput(e);
-    dispatch(adjustItemQty(value.id, e))
+    dispatch(adjustItemQty(value.id, e));
   };
 
   // Price Split
@@ -36,7 +35,10 @@ export default function OrderProduct(props) {
           <Col md={13} span={24}>
             <Row align="middle">
               <Col flex="0 0 135px" className="hp-ecommerce-app-checkout-item-img">
-                <Link to={`/apps/ecommerce/product-detail/${value.id}`} onClick={() => dispatch(loadCurrentItem(value))}>
+                <Link
+                  to={`/apps/ecommerce/product-detail/${value.id}`}
+                  onClick={() => dispatch(loadCurrentItem(value))}
+                >
                   <img src={require(`../../../../assets/images/product/${value.imgList}`).default} alt={value.title} />
                 </Link>
               </Col>
@@ -59,12 +61,7 @@ export default function OrderProduct(props) {
           <Col md={11} span={24} className="hp-mt-sm-24 hp-ecommerce-app-checkout-info">
             <Row align="middle" justify="end">
               <Col>
-                <InputNumber
-                  min={1}
-                  max={99}
-                  value={valueQty}
-                  onChange={onChangeHandler}
-                />
+                <InputNumber min={1} max={99} value={valueQty} onChange={onChangeHandler} />
 
                 <div
                   className="hp-cursor-pointer hp-mt-4 hp-caption hp-text-color-black-60 hp-text-underline"
@@ -76,38 +73,28 @@ export default function OrderProduct(props) {
 
               <Col className="hp-text-right hp-ml-64">
                 <div className="h2 hp-text-color-black-80 hp-text-color-dark-30">
-                  {
-                    value.discount ? (
-                      <span>
-                        {discountSplit1}.
-                        <sup style={{ top: -6 }}>
-                          {discountSplit2}
-                        </sup>
-                      </span>
-                    ) : (
-                      <span>
-                        {priceSplit1}.
-                        <sup style={{ top: -6 }}>
-                          {priceSplit2}
-                        </sup>
-                      </span>
-                    )
-                  }
+                  {value.discount ? (
+                    <span>
+                      {discountSplit1}.<sup style={{ top: -6 }}>{discountSplit2}</sup>
+                    </span>
+                  ) : (
+                    <span>
+                      {priceSplit1}.<sup style={{ top: -6 }}>{priceSplit2}</sup>
+                    </span>
+                  )}
                 </div>
 
-                {
-                  value.freeShipping && (
-                    <div className="hp-d-flex-center hp-mt-4 hp-caption hp-font-weight-400 hp-text-color-success-1 hp-text-underline">
-                      <RiCheckboxCircleFill className="hp-mr-4" />
-                      Free Shipping
-                    </div>
-                  )
-                }
+                {value.freeShipping && (
+                  <div className="hp-d-flex-center hp-mt-4 hp-caption hp-font-weight-400 hp-text-color-success-1 hp-text-underline">
+                    <RiCheckboxCircleFill className="hp-mr-4" />
+                    Free Shipping
+                  </div>
+                )}
               </Col>
             </Row>
           </Col>
         </Row>
       </div>
     </Col>
-  )
+  );
 }

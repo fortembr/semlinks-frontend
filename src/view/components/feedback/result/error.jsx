@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { error } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { error } from './code.js';
 
-import { Card, Row, Col, Result, Button, Typography } from "antd";
-import {
-  RiCloseCircleFill,
-  RiCloseCircleLine,
-  RiCodeSSlashLine,
-} from "react-icons/ri";
+import { Card, Row, Col, Result, Button, Typography } from 'antd';
+import { RiCloseCircleFill, RiCloseCircleLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Paragraph, Text } = Typography;
 
@@ -42,10 +38,7 @@ export default function ErrorResult() {
           </Row>
         </Col>
 
-        <Col
-          span={24}
-          className="hp-result-col"
-        >
+        <Col span={24} className="hp-result-col">
           <Result
             className="hp-px-sm-8 hp-pb-32"
             status="error"
@@ -55,9 +48,7 @@ export default function ErrorResult() {
           >
             <div className="desc">
               <Paragraph>
-                <Text className="h5">
-                  The content you submitted has the following error:
-                </Text>
+                <Text className="h5">The content you submitted has the following error:</Text>
               </Paragraph>
 
               <Paragraph>
@@ -74,9 +65,7 @@ export default function ErrorResult() {
           </Result>
 
           <div className="hp-result-button hp-text-center hp-mb-48">
-            <Button type="primary">
-              Go Console
-            </Button>
+            <Button type="primary">Go Console</Button>
 
             <Button className="hp-ml-8" ghost>
               Buy Again
@@ -88,7 +77,7 @@ export default function ErrorResult() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {error}

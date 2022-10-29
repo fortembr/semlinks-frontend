@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { confirmation } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { confirmation } from './code.js';
 
-import { Card, Row, Col, Button, Modal } from "antd";
-import { RiInformationLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button, Modal } from 'antd';
+import { RiInformationLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 const { confirm } = Modal;
 
@@ -20,96 +20,70 @@ export default function ConfirmationModal() {
 
   function showConfirm() {
     confirm({
-      title: (
-        <h5 className="hp-mb-0 hp-font-weight-500">
-          Do you Want to delete these items?
-        </h5>
-      ),
+      title: <h5 className="hp-mb-0 hp-font-weight-500">Do you Want to delete these items?</h5>,
       icon: (
         <span className="remix-icon">
           <RiInformationLine />
         </span>
       ),
-      content: (
-        <p className="hp-p1-body">Some descriptions</p>
-      ),
+      content: <p className="hp-p1-body">Some descriptions</p>,
       onOk() {},
-      onCancel() {},
+      onCancel() {}
     });
   }
 
   function showPromiseConfirm() {
     confirm({
-      title: (
-        <h5 className="hp-mb-0 hp-font-weight-500">
-          Do you Want to delete these items?
-        </h5>
-      ),
+      title: <h5 className="hp-mb-0 hp-font-weight-500">Do you Want to delete these items?</h5>,
       icon: (
         <span className="remix-icon">
           <RiInformationLine />
         </span>
       ),
-      content: (
-        <p className="hp-p1-body">
-          When clicked the OK button, this dialog will be closed after 1 second
-        </p>
-      ),
+      content: <p className="hp-p1-body">When clicked the OK button, this dialog will be closed after 1 second</p>,
       onOk() {
         return new Promise((resolve, reject) => {
           setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
-        }).catch(() => console.log("Oops errors!"));
+        }).catch(() => console.log('Oops errors!'));
       },
-      onCancel() {},
+      onCancel() {}
     });
   }
 
   function showDeleteConfirm() {
     confirm({
-      title: (
-        <h5 className="hp-mb-0 hp-font-weight-500">
-          Are you sure delete this task?
-        </h5>
-      ),
+      title: <h5 className="hp-mb-0 hp-font-weight-500">Are you sure delete this task?</h5>,
       icon: (
         <span className="remix-icon">
           <RiInformationLine />
         </span>
       ),
-      content: (
-        <p className="hp-p1-body">Some descriptions</p>
-      ),
-      okText: "Yes",
-      okType: "danger",
-      cancelText: "No",
+      content: <p className="hp-p1-body">Some descriptions</p>,
+      okText: 'Yes',
+      okType: 'danger',
+      cancelText: 'No',
       onOk() {},
-      onCancel() {},
+      onCancel() {}
     });
   }
 
   function showPropsConfirm() {
     confirm({
-      title: (
-        <h5 className="hp-mb-0 hp-font-weight-500">
-          Are you sure delete this task?
-        </h5>
-      ),
+      title: <h5 className="hp-mb-0 hp-font-weight-500">Are you sure delete this task?</h5>,
       icon: (
         <span className="remix-icon">
           <RiInformationLine />
         </span>
       ),
-      content: (
-        <p className="hp-p1-body">Some descriptions</p>
-      ),
-      okText: "Yes",
-      okType: "danger",
+      content: <p className="hp-p1-body">Some descriptions</p>,
+      okText: 'Yes',
+      okType: 'danger',
       okButtonProps: {
-        disabled: true,
+        disabled: true
       },
-      cancelText: "No",
+      cancelText: 'No',
       onOk() {},
-      onCancel() {},
+      onCancel() {}
     });
   }
 
@@ -121,9 +95,8 @@ export default function ConfirmationModal() {
             <Col lg={12} span={20}>
               <h4>Confirmation modal dialog</h4>
               <p className="hp-p1-body">
-                Use confirm() to show a confirmation modal dialog. Let
-                onCancel/onOk function return a promise object to delay closing
-                the dialog.
+                Use confirm() to show a confirmation modal dialog. Let onCancel/onOk function return a promise object to
+                delay closing the dialog.
               </p>
             </Col>
 
@@ -138,39 +111,19 @@ export default function ConfirmationModal() {
         </Col>
 
         <Col span={24}>
-          <Button
-            className="hp-mb-16 hp-mr-16"
-            type="primary"
-            ghost
-            onClick={showConfirm}
-          >
+          <Button className="hp-mb-16 hp-mr-16" type="primary" ghost onClick={showConfirm}>
             Confirm
           </Button>
 
-          <Button
-            className="hp-mb-16 hp-mr-16"
-            type="primary"
-            ghost
-            onClick={showPromiseConfirm}
-          >
+          <Button className="hp-mb-16 hp-mr-16" type="primary" ghost onClick={showPromiseConfirm}>
             With promise
           </Button>
 
-          <Button
-            className="hp-mb-16 hp-mr-16"
-            type="primary"
-            ghost
-            onClick={showDeleteConfirm}
-          >
+          <Button className="hp-mb-16 hp-mr-16" type="primary" ghost onClick={showDeleteConfirm}>
             Delete
           </Button>
 
-          <Button
-            className="hp-mb-16 hp-mr-16"
-            type="primary"
-            ghost
-            onClick={showPropsConfirm}
-          >
+          <Button className="hp-mb-16 hp-mr-16" type="primary" ghost onClick={showPropsConfirm}>
             With extra props
           </Button>
         </Col>
@@ -179,7 +132,7 @@ export default function ConfirmationModal() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {confirmation}

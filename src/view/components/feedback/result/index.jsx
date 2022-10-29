@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import SuccessResult from "./success";
-import InfoResult from "./info";
-import WarningResult from "./warning";
-import ErrorResult from "./error";
+import PageContent from '../../../../layout/components/content/page-content';
+import SuccessResult from './success';
+import InfoResult from './info';
+import WarningResult from './warning';
+import ErrorResult from './error';
 
 export default function Result() {
   return (
@@ -17,14 +17,14 @@ export default function Result() {
           desc="A panel which slides in from the edge of the screen."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Feedback",
+              title: 'Feedback'
             },
             {
-              title: "Result",
+              title: 'Result'
             }
           ]}
         />

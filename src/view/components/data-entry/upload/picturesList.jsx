@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { picturesList } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { picturesList } from './code.js';
 
-import { Card, Row, Col, Upload, Button } from "antd";
-import { RiUpload2Line, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Upload, Button } from 'antd';
+import { RiUpload2Line, RiCodeSSlashLine } from 'react-icons/ri';
 
-import images from "../../../../assets/images/memoji/memoji-1.png";
+import images from '../../../../assets/images/memoji/memoji-1.png';
 
 export default function PicturesListUpload() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -20,17 +20,17 @@ export default function PicturesListUpload() {
 
   const fileList = [
     {
-      uid: "-1",
-      name: "xxx.png",
-      status: "done",
+      uid: '-1',
+      name: 'xxx.png',
+      status: 'done',
       url: images,
-      thumbUrl: images,
+      thumbUrl: images
     },
     {
-      uid: "-2",
-      name: "yyy.png",
-      status: "error",
-    },
+      uid: '-2',
+      name: 'yyy.png',
+      status: 'error'
+    }
   ];
 
   return (
@@ -40,9 +40,7 @@ export default function PicturesListUpload() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Pictures with List Style</h4>
-              <p className="hp-p1-body">
-                If uploaded file is a picture, the thumbnail can be shown.
-              </p>
+              <p className="hp-p1-body">If uploaded file is a picture, the thumbnail can be shown.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -61,10 +59,7 @@ export default function PicturesListUpload() {
             listType="picture"
             defaultFileList={[...fileList]}
           >
-            <Button
-              type="primary"
-              icon={<RiUpload2Line className="remix-icon" />}
-            >
+            <Button type="primary" icon={<RiUpload2Line className="remix-icon" />}>
               Upload
             </Button>
           </Upload>
@@ -74,7 +69,7 @@ export default function PicturesListUpload() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {picturesList}

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { basic } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { basic } from './code.js';
 
-import { Table, Tag, Space, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Tag, Space, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function BasicTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -18,29 +18,29 @@ export default function BasicTable() {
 
   const columns = [
     {
-      title: "Name",
-      dataIndex: "name",
-      key: "name",
-      render: (text) => <a href="#">{text}</a>,
+      title: 'Name',
+      dataIndex: 'name',
+      key: 'name',
+      render: (text) => <a href="#">{text}</a>
     },
     {
-      title: "Age",
-      dataIndex: "age",
-      key: "age",
+      title: 'Age',
+      dataIndex: 'age',
+      key: 'age'
     },
     {
-      title: "Address",
-      dataIndex: "address",
-      key: "address",
+      title: 'Address',
+      dataIndex: 'address',
+      key: 'address'
     },
     {
-      title: "Tags",
-      key: "tags",
-      dataIndex: "tags",
+      title: 'Tags',
+      key: 'tags',
+      dataIndex: 'tags',
       render: (tags) => (
         <>
           {tags.map((tag) => {
-            let color = tag.length > 5 ? "geekblue" : "green";
+            let color = tag.length > 5 ? 'geekblue' : 'green';
             return (
               <Tag className="hp-mb-md-8" color={color} key={tag}>
                 {tag.toUpperCase()}
@@ -48,42 +48,42 @@ export default function BasicTable() {
             );
           })}
         </>
-      ),
+      )
     },
     {
-      title: "Action",
-      key: "action",
+      title: 'Action',
+      key: 'action',
       render: (text, record) => (
         <Space size="middle">
           <a href="#">Invite {record.name}</a>
           <a href="#">Delete</a>
         </Space>
-      ),
-    },
+      )
+    }
   ];
 
   const data = [
     {
-      key: "1",
-      name: "John Brown",
+      key: '1',
+      name: 'John Brown',
       age: 32,
-      address: "New York No. 1 Lake Park",
-      tags: ["nice", "developer"],
+      address: 'New York No. 1 Lake Park',
+      tags: ['nice', 'developer']
     },
     {
-      key: "2",
-      name: "Jim Green",
+      key: '2',
+      name: 'Jim Green',
       age: 42,
-      address: "London No. 1 Lake Park",
-      tags: ["designer"],
+      address: 'London No. 1 Lake Park',
+      tags: ['designer']
     },
     {
-      key: "3",
-      name: "Joe Black",
+      key: '3',
+      name: 'Joe Black',
       age: 32,
-      address: "Sidney No. 1 Lake Park",
-      tags: ["cool", "teacher"],
-    },
+      address: 'Sidney No. 1 Lake Park',
+      tags: ['cool', 'teacher']
+    }
   ];
 
   return (
@@ -91,17 +91,11 @@ export default function BasicTable() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Basic</h4>
-          <p className="hp-p1-body">
-            Simple table with actions.
-          </p>
+          <p className="hp-p1-body">Simple table with actions.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -112,7 +106,7 @@ export default function BasicTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {basic}

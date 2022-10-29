@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { notice } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { notice } from './code.js';
 
-import { Card, Row, Col, Calendar, Badge, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Calendar, Badge, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function NoticeCalendar() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -21,25 +21,25 @@ export default function NoticeCalendar() {
     switch (value.date()) {
       case 8:
         listData = [
-          { type: "warning", content: "This is warning event." },
-          { type: "success", content: "This is usual event." },
+          { type: 'warning', content: 'This is warning event.' },
+          { type: 'success', content: 'This is usual event.' }
         ];
         break;
       case 10:
         listData = [
-          { type: "warning", content: "This is warning event." },
-          { type: "success", content: "This is usual event." },
-          { type: "error", content: "This is error event." },
+          { type: 'warning', content: 'This is warning event.' },
+          { type: 'success', content: 'This is usual event.' },
+          { type: 'error', content: 'This is error event.' }
         ];
         break;
       case 15:
         listData = [
-          { type: "warning", content: "This is warning event" },
-          { type: "success", content: "This is very long usual event。。...." },
-          { type: "error", content: "This is error event 1." },
-          { type: "error", content: "This is error event 2." },
-          { type: "error", content: "This is error event 3." },
-          { type: "error", content: "This is error event 4." },
+          { type: 'warning', content: 'This is warning event' },
+          { type: 'success', content: 'This is very long usual event。。....' },
+          { type: 'error', content: 'This is error event 1.' },
+          { type: 'error', content: 'This is error event 2.' },
+          { type: 'error', content: 'This is error event 3.' },
+          { type: 'error', content: 'This is error event 4.' }
         ];
         break;
       default:
@@ -55,12 +55,13 @@ export default function NoticeCalendar() {
           <li key={item.content}>
             <Badge
               className={
-                "hp-border-1 hp-bg-color-" +
+                'hp-border-1 hp-bg-color-' +
                 item.type +
-                "-4 hp-bg-color-dark-" +
-                item.type + " hp-border-color-" +
+                '-4 hp-bg-color-dark-' +
                 item.type +
-                "-1"
+                ' hp-border-color-' +
+                item.type +
+                '-1'
               }
               status={item.type}
               text={item.content}
@@ -93,31 +94,23 @@ export default function NoticeCalendar() {
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Notice Calendar</h4>
           <p className="hp-p1-body">
-            This component can be rendered by using dateCellRender and
-            monthCellRender with the data you need.
+            This component can be rendered by using dateCellRender and monthCellRender with the data you need.
           </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col>
-          <Calendar
-            dateCellRender={dateCellRender}
-            monthCellRender={monthCellRender}
-          />
+          <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} />
         </Col>
       </Row>
 
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {notice}

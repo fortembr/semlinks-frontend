@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import LineChart from "./lineChart";
-import ColumnChart from "./columnChart";
-import AreaChart from "./areaChart";
-import ScatterChart from "./scatterChart";
-import BarChart from "./barChart";
-import CandlestickChart from "./candlestickChart";
-import HeatmapChart from "./heatmapChart";
-import DonutChart from "./donutChart";
-import RadarChart from "./radarChart";
-import RadialbarChart from "./radialbarChart";
+import PageContent from '../../../../layout/components/content/page-content';
+import LineChart from './lineChart';
+import ColumnChart from './columnChart';
+import AreaChart from './areaChart';
+import ScatterChart from './scatterChart';
+import BarChart from './barChart';
+import CandlestickChart from './candlestickChart';
+import HeatmapChart from './heatmapChart';
+import DonutChart from './donutChart';
+import RadarChart from './radarChart';
+import RadialbarChart from './radialbarChart';
 
 export default function Charts() {
   return (
@@ -23,13 +23,13 @@ export default function Charts() {
           desc="We used Apex Charts and customized for Yoda "
           breadcrumb={[
             {
-              title: "Main",
+              title: 'Main'
             },
             {
-              title: "Widgets",
+              title: 'Widgets'
             },
             {
-              title: "Charts",
+              title: 'Charts'
             }
           ]}
         />
@@ -50,7 +50,7 @@ export default function Charts() {
       <Col span={24}>
         <ScatterChart />
       </Col>
-      
+
       <Col xl={12} lg={24}>
         <BarChart />
       </Col>
@@ -58,11 +58,11 @@ export default function Charts() {
       <Col xl={12} lg={24}>
         <HeatmapChart />
       </Col>
-      
+
       <Col xl={12} lg={24}>
         <RadarChart />
       </Col>
-      
+
       <Col xl={12} lg={24}>
         <CandlestickChart />
       </Col>

@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import HtmlTags from "./htmlTags";
-import ThemeColors from "./themeColors";
-import BlacksGradients from "./blacksGradients";
+import PageContent from '../../../../layout/components/content/page-content';
+import HtmlTags from './htmlTags';
+import ThemeColors from './themeColors';
+import BlacksGradients from './blacksGradients';
 
 export default function StyleGuide() {
   return (
@@ -16,14 +16,14 @@ export default function StyleGuide() {
           desc="This is base of Yoda UI Style with typography and colors."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "General",
+              title: 'General'
             },
             {
-              title: "Style Guide",
+              title: 'Style Guide'
             }
           ]}
         />

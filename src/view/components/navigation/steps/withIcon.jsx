@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { withIcon } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { withIcon } from './code.js';
 
-import { Card, Row, Col, Steps, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Steps, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Step } = Steps;
 
@@ -23,18 +23,11 @@ export default function StepsWithIcon() {
       <Row>
         <Col lg={12} span={20} className="hp-mb-16">
           <h4>With icon</h4>
-          <p className="hp-p1-body">
-            You can use your own custom icons by setting the property icon for
-            Steps.Step.
-          </p>
+          <p className="hp-p1-body">You can use your own custom icons by setting the property icon for Steps.Step.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24} className="hp-overflow-scroll hp-scrollbar-x-hidden">
@@ -74,7 +67,7 @@ export default function StepsWithIcon() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {withIcon}

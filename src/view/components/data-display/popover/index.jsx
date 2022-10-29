@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicPopover from "./basic";
-import PopoverTrigers from "./trigers";
-import PopoverPlacements from "./placement";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicPopover from './basic';
+import PopoverTrigers from './trigers';
+import PopoverPlacements from './placement';
 
 export default function Popover() {
   return (
@@ -16,14 +16,14 @@ export default function Popover() {
           desc="The floating card popped by clicking or hovering."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Display",
+              title: 'Data Display'
             },
             {
-              title: "Popover",
+              title: 'Popover'
             }
           ]}
         />

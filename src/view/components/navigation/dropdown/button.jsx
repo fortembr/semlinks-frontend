@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { button } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { button } from './code.js';
 
-import { Card, Row, Col, Menu, Dropdown, Button, message, Space } from "antd";
-import {
-  RiArrowDropDownLine,
-  RiMoreLine,
-  RiCodeSSlashLine,
-} from "react-icons/ri";
-import { User } from "react-iconly";
+import { Card, Row, Col, Menu, Dropdown, Button, message, Space } from 'antd';
+import { RiArrowDropDownLine, RiMoreLine, RiCodeSSlashLine } from 'react-icons/ri';
+import { User } from 'react-iconly';
 
 export default function ButtonWithDropdown() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -22,33 +18,24 @@ export default function ButtonWithDropdown() {
   }
 
   function handleButtonClick(e) {
-    message.info("Click on left button.");
+    message.info('Click on left button.');
   }
 
   function handleMenuClick(e) {
-    message.info("Click on menu item.");
+    message.info('Click on menu item.');
   }
 
   const menu = (
     <Menu onClick={handleMenuClick}>
-      <Menu.Item
-        key="1"
-        icon={<User set="curved" className="remix-icon" size={16} />}
-      >
+      <Menu.Item key="1" icon={<User set="curved" className="remix-icon" size={16} />}>
         1st menu item
       </Menu.Item>
 
-      <Menu.Item
-        key="2"
-        icon={<User set="curved" className="remix-icon" size={16} />}
-      >
+      <Menu.Item key="2" icon={<User set="curved" className="remix-icon" size={16} />}>
         2nd menu item
       </Menu.Item>
 
-      <Menu.Item
-        key="3"
-        icon={<User set="curved" className="remix-icon" size={16} />}
-      >
+      <Menu.Item key="3" icon={<User set="curved" className="remix-icon" size={16} />}>
         3rd menu item
       </Menu.Item>
     </Menu>
@@ -61,10 +48,7 @@ export default function ButtonWithDropdown() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Button with Dropdown Menu</h4>
-              <p className="hp-p1-body">
-                A button is on the left, and a related functional menu is on the
-                right.
-              </p>
+              <p className="hp-p1-body">A button is on the left, and a related functional menu is on the right.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -116,7 +100,7 @@ export default function ButtonWithDropdown() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {button}

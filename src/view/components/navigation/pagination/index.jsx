@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicPagination from "./basic";
-import PaginationMore from "./more";
-import PaginationChanger from "./changer";
-import PaginationJumper from "./jumper";
-import PaginationMiniSize from "./miniSize";
-import PaginationSimpleMode from "./simpleMode";
-import PaginationPrevNext from "./prevNext";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicPagination from './basic';
+import PaginationMore from './more';
+import PaginationChanger from './changer';
+import PaginationJumper from './jumper';
+import PaginationMiniSize from './miniSize';
+import PaginationSimpleMode from './simpleMode';
+import PaginationPrevNext from './prevNext';
 
 export default function Pagination() {
   return (
@@ -20,14 +20,14 @@ export default function Pagination() {
           desc="A long list can be divided into several pages using Pagination, and only one page will be loaded at a time."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Navigation",
+              title: 'Navigation'
             },
             {
-              title: "Pagination",
+              title: 'Pagination'
             }
           ]}
         />

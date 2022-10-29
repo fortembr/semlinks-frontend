@@ -1,16 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col, Button } from "antd";
+import { Row, Col, Button } from 'antd';
 
 export default function UpgradeNowCard() {
   return (
     <div className="hp-overflow-hidden hp-position-relative hp-border-radius-xxl hp-bg-black-bg hp-pt-24 hp-px-24 hp-pb-18">
       <div className="hp-position-absolute-bottom-right" style={{ height: '90%', right: -50 }}>
-        <svg
-          className="hp-w-100 hp-h-100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg className="hp-w-100 hp-h-100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M384.797 85.179 194.619 10.257l46.816 86.462L113.23 44.63l129.884 138.803L69.597 116.68l60.469 87.899L2.651 171.657"
             stroke="url(#CreditCardNew)"

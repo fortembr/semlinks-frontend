@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Card, Row, Col, Dropdown, Menu } from "antd";
-import { RiMoreFill } from "react-icons/ri";
-import Chart from "react-apexcharts";
+import { Card, Row, Col, Dropdown, Menu } from 'antd';
+import { RiMoreFill } from 'react-icons/ri';
+import Chart from 'react-apexcharts';
 
 export default function EnergyCard() {
   const menu = (
@@ -17,16 +17,16 @@ export default function EnergyCard() {
     series: [91],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "radialBar",
-        id: "energy-card",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'radialBar',
+        id: 'energy-card',
 
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
 
       plotOptions: {
@@ -34,46 +34,46 @@ export default function EnergyCard() {
           startAngle: -135,
           endAngle: 135,
           track: {
-            background: "transparent",
+            background: 'transparent'
           },
           dataLabels: {
             name: {
               show: true,
-              fontSize: "12px",
-              fontWeight: "400",
-              color: "#636E72",
+              fontSize: '12px',
+              fontWeight: '400',
+              color: '#636E72'
             },
             value: {
-              fontSize: "24px",
-              fontWeight: "500",
+              fontSize: '24px',
+              fontWeight: '500',
               color: undefined,
               formatter: function (val) {
-                return val + "%";
-              },
-            },
-          },
-        },
+                return val + '%';
+              }
+            }
+          }
+        }
       },
 
       stroke: {
-        dashArray: 6,
+        dashArray: 6
       },
-      labels: ["Completed"],
+      labels: ['Completed'],
 
       fill: {
-        type: "gradient",
+        type: 'gradient',
         gradient: {
-          shade: "dark",
-          type: "horizontal",
+          shade: 'dark',
+          type: 'horizontal',
           shadeIntensity: 1,
-          gradientToColors: ["#0010F7", "#1BE7FF"],
+          gradientToColors: ['#0010F7', '#1BE7FF'],
           inverseColors: true,
           opacityFrom: 1,
           opacityTo: 1,
-          stops: [0, 50, 100],
-        },
-      },
-    },
+          stops: [0, 50, 100]
+        }
+      }
+    }
   });
 
   return (
@@ -84,7 +84,7 @@ export default function EnergyCard() {
             <h4 className="hp-mr-8">Energy Consuming</h4>
 
             <Col>
-              <Dropdown overlay={menu} trigger={["click"]}>
+              <Dropdown overlay={menu} trigger={['click']}>
                 <RiMoreFill className="hp-text-color-dark-0" size={24} onClick={(e) => e.preventDefault()} />
               </Dropdown>
             </Col>
@@ -93,13 +93,7 @@ export default function EnergyCard() {
 
         <Col span={24}>
           <Col id="energy-card">
-            <Chart
-              options={data1.options}
-              series={data1.series}
-              height={335}
-              type="radialBar"
-              legend="legend"
-            />
+            <Chart options={data1.options} series={data1.series} height={335} type="radialBar" legend="legend" />
 
             <Row className="hp-text-center hp-pt-32" justify="space between">
               <Col span={12}>

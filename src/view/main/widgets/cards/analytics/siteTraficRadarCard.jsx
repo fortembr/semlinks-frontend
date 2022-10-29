@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Card, Row, Col, Dropdown, Menu } from "antd";
-import { RiMoreFill } from "react-icons/ri";
-import Chart from "react-apexcharts";
+import { Card, Row, Col, Dropdown, Menu } from 'antd';
+import { RiMoreFill } from 'react-icons/ri';
+import Chart from 'react-apexcharts';
 
 export default function SiteTraficRadarCard() {
   const menu = (
@@ -16,73 +16,73 @@ export default function SiteTraficRadarCard() {
   const [data] = useState({
     series: [
       {
-        name: "SEO Visits",
-        data: [20, 50, 60, 80, 90, 55],
+        name: 'SEO Visits',
+        data: [20, 50, 60, 80, 90, 55]
       },
       {
-        name: "Organic",
-        data: [35, 35, 35, 15, 35, 15],
+        name: 'Organic',
+        data: [35, 35, 35, 15, 35, 15]
       },
       {
-        name: "Sponsored",
-        data: [100, 15, 60, 40, 50, 80],
-      },
+        name: 'Sponsored',
+        data: [100, 15, 60, 40, 50, 80]
+      }
     ],
     options: {
       chart: {
-        id: "site-trafic-radar-card",
-        fontFamily: "Manrope, sans-serif",
-        type: "radar",
+        id: 'site-trafic-radar-card',
+        fontFamily: 'Manrope, sans-serif',
+        type: 'radar',
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
       fill: {
-        opacity: [0.2, 0.2, 0.2],
+        opacity: [0.2, 0.2, 0.2]
       },
       stroke: {
         show: true,
-        width: 3,
+        width: 3
       },
       markers: {
-        size: 0,
+        size: 0
       },
 
-      colors: ["#0063F7", "#FF0022", "#00F7BF"],
+      colors: ['#0063F7', '#FF0022', '#00F7BF'],
 
-      labels: ["Marketing", "Payments", "Bills"],
+      labels: ['Marketing', 'Payments', 'Bills'],
 
       yaxis: {
-        show: false,
+        show: false
       },
       xaxis: {
-        categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
       },
 
       plotOptions: {
         radar: {
           polygons: {
-            connectorColors: "#fff",
-          },
-        },
+            connectorColors: '#fff'
+          }
+        }
       },
       legend: {
         itemMargin: {
           horizontal: 32,
-          vertical: 16,
+          vertical: 16
         },
-        horizontalAlign: "center",
-        position: "bottom",
-        fontSize: "24px",
+        horizontalAlign: 'center',
+        position: 'bottom',
+        fontSize: '24px',
         fontWeight: 500,
         markers: {
-          radius: 12,
-        },
-      },
-    },
+          radius: 12
+        }
+      }
+    }
   });
 
   return (
@@ -90,12 +90,12 @@ export default function SiteTraficRadarCard() {
       <Row>
         <Col span={24}>
           <Row justify="space-between" align="top">
-            <Row align="bottom" >
+            <Row align="bottom">
               <h4 className="hp-mr-8 hp-mb-32">Site Trafic</h4>
             </Row>
 
             <Col>
-              <Dropdown overlay={menu} trigger={["click"]}>
+              <Dropdown overlay={menu} trigger={['click']}>
                 <RiMoreFill className="hp-text-color-dark-0" size={24} onClick={(e) => e.preventDefault()} />
               </Dropdown>
             </Col>
@@ -104,13 +104,7 @@ export default function SiteTraficRadarCard() {
 
         <Col span={24}>
           <div id="site-trafic-radar-card" className="hp-donut-chart">
-            <Chart
-              options={data.options}
-              series={data.series}
-              type="radar"
-              height="100%"
-              legend="legend"
-            />
+            <Chart options={data.options} series={data.series} type="radar" height="100%" legend="legend" />
           </div>
         </Col>
       </Row>

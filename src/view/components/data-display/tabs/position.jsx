@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { position } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { position } from './code.js';
 
-import { Tabs, Row, Col, Card, Space, Radio, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Tabs, Row, Col, Card, Space, Radio, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { TabPane } = Tabs;
 
 export default function TabsPosition() {
-  const [tabPosition, setTabPosition] = useState("left");
+  const [tabPosition, setTabPosition] = useState('left');
 
   const changeTabPosition = (e) => {
     setTabPosition(e.target.value);
@@ -29,18 +29,11 @@ export default function TabsPosition() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Position</h4>
-          <p className="hp-p1-body">
-            Tab's position: left, right, top or bottom. Will auto switch to top
-            in mobile.
-          </p>
+          <p className="hp-p1-body">Tab's position: left, right, top or bottom. Will auto switch to top in mobile.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -73,7 +66,7 @@ export default function TabsPosition() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {position}

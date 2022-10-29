@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import { Row, Col } from "antd";
-import { ExportSquare } from "iconsax-react";
-import Chart from "react-apexcharts";
+import { Row, Col } from 'antd';
+import { ExportSquare } from 'iconsax-react';
+import Chart from 'react-apexcharts';
 
 export default function ActiveUserCardVertical() {
-  const [chartWidth, setChartWidth] = useState("50%")
+  const [chartWidth, setChartWidth] = useState('50%');
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setChartWidth("100%")
+      setChartWidth('100%');
     }, 10);
 
     return () => clearTimeout(timer);
@@ -21,8 +21,8 @@ export default function ActiveUserCardVertical() {
       chart: {
         stacked: true,
         toolbar: {
-          show: false,
-        },
+          show: false
+        }
       },
       grid: {
         show: false,
@@ -30,70 +30,70 @@ export default function ActiveUserCardVertical() {
           left: -24,
           right: -24,
           top: -12,
-          bottom: -16,
-        },
+          bottom: -16
+        }
       },
       plotOptions: {
         radialBar: {
           startAngle: 0,
           endAngle: 360,
           hollow: {
-            size: '45%',
+            size: '45%'
           },
           track: {
             show: true,
-            background: "#ffffff",
+            background: '#ffffff',
             strokeWidth: '100%',
             opacity: 1,
-            margin: 0,
+            margin: 0
           },
           dataLabels: {
             show: true,
             value: {
-              fontSize: "12px",
-              color: "#FFC700",
+              fontSize: '12px',
+              color: '#FFC700',
               fontWeight: 500,
-              offsetY: -11,
+              offsetY: -11
             },
             total: {
               show: true,
-              fontSize: "12px",
-              label: "",
+              fontSize: '12px',
+              label: '',
               formatter: function (w) {
-                return "%" + 40;
-              },
-            },
-          },
-        },
+                return '%' + 40;
+              }
+            }
+          }
+        }
       },
       legend: {
-        show: false,
+        show: false
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
-      colors: ["#FFD252"],
+      colors: ['#FFD252'],
       xaxis: {
         labels: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
-        },
+          show: false
+        }
       },
       yaxis: {
         show: false,
-        max: 100,
+        max: 100
       },
       tooltip: {
         x: {
-          show: false,
-        },
-      },
-    },
+          show: false
+        }
+      }
+    }
   });
 
   return (
@@ -116,16 +116,10 @@ export default function ActiveUserCardVertical() {
 
           <h3 className="hp-mb-0 hp-font-weight-600 hp-d-flex-full-center">
             <span>43,046</span>
-            <ExportSquare
-              size="20"
-              variant="Bold"
-              className="hp-ml-4"
-            />
+            <ExportSquare size="20" variant="Bold" className="hp-ml-4" />
           </h3>
 
-          <p className="hp-p1-body hp-mb-0 hp-text-color-black-80 hp-text-color-dark-50">
-            Active Users
-          </p>
+          <p className="hp-p1-body hp-mb-0 hp-text-color-black-80 hp-text-color-dark-50">Active Users</p>
         </Col>
       </Row>
     </div>

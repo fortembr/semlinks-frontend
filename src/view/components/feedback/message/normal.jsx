@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { normal } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { normal } from './code.js';
 
-import { Card, Row, Col, Button, message } from "antd";
-import { RiErrorWarningLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button, message } from 'antd';
+import { RiErrorWarningLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function NormalMessage() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -18,8 +18,8 @@ export default function NormalMessage() {
 
   const info = () => {
     message.info({
-      content: "This is a normal message",
-      icon: <RiErrorWarningLine className="remix-icon" />,
+      content: 'This is a normal message',
+      icon: <RiErrorWarningLine className="remix-icon" />
     });
   };
 
@@ -53,7 +53,7 @@ export default function NormalMessage() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {normal}

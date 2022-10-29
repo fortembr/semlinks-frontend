@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { selectedItem } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { selectedItem } from './code.js';
 
-import { Select, Card, Row, Col, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Select, Card, Row, Col, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Option } = Select;
 
@@ -27,24 +27,19 @@ export default function SelectSelectedItem() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Get value of selected item</h4>
-          <p className="hp-p1-body">As a default behavior, the onChange callback can only get the value of the selected item. The labelInValue prop can be used to get the label property of the selected item. The label of the selected item will be packed as an object for passing to the onChange callback.</p>
+          <p className="hp-p1-body">
+            As a default behavior, the onChange callback can only get the value of the selected item. The labelInValue
+            prop can be used to get the label property of the selected item. The label of the selected item will be
+            packed as an object for passing to the onChange callback.
+          </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
-          <Select
-            labelInValue
-            defaultValue={{ value: 'lucy' }}
-            style={{ width: 120 }}
-            onChange={handleChange}
-          >
+          <Select labelInValue defaultValue={{ value: 'lucy' }} style={{ width: 120 }} onChange={handleChange}>
             <Option value="jack">Jack (100)</Option>
             <Option value="lucy">Lucy (101)</Option>
           </Select>
@@ -54,12 +49,12 @@ export default function SelectSelectedItem() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {selectedItem}
         </SyntaxHighlighter>
       )}
-    </Card >
+    </Card>
   );
 }

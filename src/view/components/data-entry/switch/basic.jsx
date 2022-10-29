@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { RiCodeSSlashLine } from "react-icons/ri";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { basic } from "./code.js";
+import { RiCodeSSlashLine } from 'react-icons/ri';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { basic } from './code.js';
 
-import { Card, Row, Col, Switch, Button } from "antd";
+import { Card, Row, Col, Switch, Button } from 'antd';
 
 export default function BasicSwitch() {
   function onChange(checked) {
@@ -29,22 +29,18 @@ export default function BasicSwitch() {
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={12}>
           <Switch defaultChecked onChange={onChange} />
         </Col>
       </Row>
-      
+
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {basic}

@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import IconButtons from "./iconButtons";
-import DefaultButtons from "./defaultButtons";
-import LargeButtons from "./largeButtons";
-import DisabledButton from "./disabledButton";
-import GhostButtons from "./ghostButtons";
-import SmallButtons from "./smallButtons";
-import TextButtons from "./textButtons";
-import LinkButtons from "./linkButtons";
-import DashedButtons from "./dashedButtons";
-import OutlineButtons from "./outlineButtons";
-import GradientButtons from "./gradientButtons";
-import OnlyIconButtons from "./onlyIconButtons";
+import PageContent from '../../../../layout/components/content/page-content';
+import IconButtons from './iconButtons';
+import DefaultButtons from './defaultButtons';
+import LargeButtons from './largeButtons';
+import DisabledButton from './disabledButton';
+import GhostButtons from './ghostButtons';
+import SmallButtons from './smallButtons';
+import TextButtons from './textButtons';
+import LinkButtons from './linkButtons';
+import DashedButtons from './dashedButtons';
+import OutlineButtons from './outlineButtons';
+import GradientButtons from './gradientButtons';
+import OnlyIconButtons from './onlyIconButtons';
 
 export default function Buttons() {
   return (
@@ -25,14 +25,14 @@ export default function Buttons() {
           desc="To trigger an operation."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "General",
+              title: 'General'
             },
             {
-              title: "Buttons",
+              title: 'Buttons'
             }
           ]}
         />

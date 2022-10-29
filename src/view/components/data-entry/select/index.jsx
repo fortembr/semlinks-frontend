@@ -1,27 +1,27 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicSelect from "./basic";
-import SelectSearchField from "./searchField";
-import SelectMultipleSelection from "./multipleSelection";
-import SelectSizes from "./sizes";
-import SelectCustomSelection from "./customSelection";
-import SelectSearchSort from "./searchSort";
-import SelectTags from "./tags";
-import SelectOptionGroup from "./optionGroup";
-import SelectCoordinate from "./coordinate";
-import SelectSearchBox from "./searchBox";
-import SelectSelectedItem from "./selectedItem";
-import SelectAutomaticTokenization from "./automaticTokenization";
-import SearchSelectUsers from "./searchSelectUsers";
-import SelectCustomDropdown from "./customDropdown";
-import SelectHideSelected from "./hideSelected";
-import SelectBorderedLess from "./borderedLess";
-import SelectCustomTagRender from "./customTagRender";
-import SelectResponsive from "./responsive";
-import SelectBigData from "./bigData";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicSelect from './basic';
+import SelectSearchField from './searchField';
+import SelectMultipleSelection from './multipleSelection';
+import SelectSizes from './sizes';
+import SelectCustomSelection from './customSelection';
+import SelectSearchSort from './searchSort';
+import SelectTags from './tags';
+import SelectOptionGroup from './optionGroup';
+import SelectCoordinate from './coordinate';
+import SelectSearchBox from './searchBox';
+import SelectSelectedItem from './selectedItem';
+import SelectAutomaticTokenization from './automaticTokenization';
+import SearchSelectUsers from './searchSelectUsers';
+import SelectCustomDropdown from './customDropdown';
+import SelectHideSelected from './hideSelected';
+import SelectBorderedLess from './borderedLess';
+import SelectCustomTagRender from './customTagRender';
+import SelectResponsive from './responsive';
+import SelectBigData from './bigData';
 
 export default function Select() {
   return (
@@ -32,14 +32,14 @@ export default function Select() {
           desc="Select component to select value from options."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Entry",
+              title: 'Data Entry'
             },
             {
-              title: "Select",
+              title: 'Select'
             }
           ]}
         />

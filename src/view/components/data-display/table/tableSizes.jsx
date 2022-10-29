@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { tableSize } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { tableSize } from './code.js';
 
-import {
-  Table,
-  Row,
-  Col,
-  Card,
-  Button,
-} from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function TableSizes() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -24,45 +18,45 @@ export default function TableSizes() {
 
   const columns = [
     {
-      title: "Name",
-      dataIndex: "name",
-      render: (text) => <a href="#">{text}</a>,
+      title: 'Name',
+      dataIndex: 'name',
+      render: (text) => <a href="#">{text}</a>
     },
     {
-      title: "Age",
-      dataIndex: "age",
+      title: 'Age',
+      dataIndex: 'age'
     },
     {
-      title: "Address",
-      dataIndex: "address",
-    },
+      title: 'Address',
+      dataIndex: 'address'
+    }
   ];
 
   const data = [
     {
-      key: "1",
-      name: "John Brown",
+      key: '1',
+      name: 'John Brown',
       age: 32,
-      address: "New York No. 1 Lake Park",
+      address: 'New York No. 1 Lake Park'
     },
     {
-      key: "2",
-      name: "Jim Green",
+      key: '2',
+      name: 'Jim Green',
       age: 42,
-      address: "London No. 1 Lake Park",
+      address: 'London No. 1 Lake Park'
     },
     {
-      key: "3",
-      name: "Joe Black",
+      key: '3',
+      name: 'Joe Black',
       age: 32,
-      address: "Sidney No. 1 Lake Park",
+      address: 'Sidney No. 1 Lake Park'
     },
     {
-      key: "4",
-      name: "Disabled User",
+      key: '4',
+      name: 'Disabled User',
       age: 99,
-      address: "Sidney No. 1 Lake Park",
-    },
+      address: 'Sidney No. 1 Lake Park'
+    }
   ];
 
   return (
@@ -71,17 +65,12 @@ export default function TableSizes() {
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Size</h4>
           <p className="hp-p1-body">
-            There are two compacted table sizes: middle and small. The small
-            size is used in Modals only.
+            There are two compacted table sizes: middle and small. The small size is used in Modals only.
           </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -96,7 +85,7 @@ export default function TableSizes() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {tableSize}

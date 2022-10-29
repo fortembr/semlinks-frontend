@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { group } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { group } from './code.js';
 
-import { Card, Row, Col, Radio, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Radio, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function RadioGroup() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -19,7 +19,7 @@ export default function RadioGroup() {
   const [value, setValue] = useState(1);
 
   const onChange = (e) => {
-    console.log("radio checked", e.target.value);
+    console.log('radio checked', e.target.value);
     setValue(e.target.value);
   };
 
@@ -32,11 +32,7 @@ export default function RadioGroup() {
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={12}>
@@ -52,7 +48,7 @@ export default function RadioGroup() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {group}

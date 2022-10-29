@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicCalendar from "./basic";
-import NoticeCalendar from "./notice";
-import CardCalendar from "./cardCalendar";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicCalendar from './basic';
+import NoticeCalendar from './notice';
+import CardCalendar from './cardCalendar';
 
 export default function Calendar() {
   return (
@@ -16,14 +16,14 @@ export default function Calendar() {
           desc="Container for displaying data in calendar form."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Display",
+              title: 'Data Display'
             },
             {
-              title: "Calendar",
+              title: 'Calendar'
             }
           ]}
         />

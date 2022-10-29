@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { addClose } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { addClose } from './code.js';
 
-import { Tabs, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Tabs, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { TabPane } = Tabs;
 
@@ -19,8 +19,8 @@ export default function TabsAddClose() {
   }
 
   const initPanes = [
-    { title: "Tab 1", content: "Content of Tab Pane 1", key: "1" },
-    { title: "Tab 2", content: "Content of Tab Pane 2", key: "2" },
+    { title: 'Tab 1', content: 'Content of Tab Pane 1', key: '1' },
+    { title: 'Tab 2', content: 'Content of Tab Pane 2', key: '2' }
   ];
   const [panes, setPanes] = useState(initPanes);
   const [newTabIndex, setNewTabIndex] = useState(0);
@@ -31,9 +31,9 @@ export default function TabsAddClose() {
   };
 
   const onEdit = (targetKey, action) => {
-    if (action === "remove") {
+    if (action === 'remove') {
       remove(targetKey);
-    } else if (action === "add") {
+    } else if (action === 'add') {
       add();
     }
   };
@@ -41,7 +41,7 @@ export default function TabsAddClose() {
   const add = () => {
     let newTabIndex2 = newTabIndex + 1;
     let key = `newTab${newTabIndex2}`;
-    panes.push({ title: "New Tab", content: "New Tab Pane", key: key });
+    panes.push({ title: 'New Tab', content: 'New Tab Pane', key: key });
     setPanes(panes);
     setActiveKey(key);
     setNewTabIndex(newTabIndex2);
@@ -78,20 +78,11 @@ export default function TabsAddClose() {
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
-          <Tabs
-            type="editable-card"
-            onChange={onChange}
-            activeKey={activeKey}
-            onEdit={onEdit}
-          >
+          <Tabs type="editable-card" onChange={onChange} activeKey={activeKey} onEdit={onEdit}>
             {panes.map((pane) => (
               <TabPane tab={pane.title} key={pane.key} closable={pane.closable}>
                 {pane.content}
@@ -104,7 +95,7 @@ export default function TabsAddClose() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {addClose}

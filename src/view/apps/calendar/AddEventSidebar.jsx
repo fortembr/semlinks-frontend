@@ -1,11 +1,11 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState } from 'react';
 
-import Select, { components } from "react-select";
-import "flatpickr/dist/themes/light.css";
-import Flatpickr from "react-flatpickr";
-import { useForm } from "react-hook-form";
-import { RiCloseFill } from "react-icons/ri";
-import { Button, Input, Form, Modal, Badge, Row, Col } from "antd";
+import Select, { components } from 'react-select';
+import 'flatpickr/dist/themes/light.css';
+import Flatpickr from 'react-flatpickr';
+import { useForm } from 'react-hook-form';
+import { RiCloseFill } from 'react-icons/ri';
+import { Button, Input, Form, Modal, Badge, Row, Col } from 'antd';
 
 export const isObjEmpty = (obj) => Object.keys(obj).length === 0;
 
@@ -24,24 +24,24 @@ const AddEventSidebar = (props) => {
     handleCancel,
     isModalVisible,
     setIsModalVisible,
-    showModal,
+    showModal
   } = props;
 
   const selectedEvent = store.selectedEvent;
   const { errors, handleSubmit } = useForm();
 
-  const [desc, setDesc] = useState("");
-  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState('');
+  const [title, setTitle] = useState('');
   const [allDay, setAllDay] = useState(false);
   const [endPicker, setEndPicker] = useState(new Date());
   const [startPicker, setStartPicker] = useState(new Date());
-  const [value, setValue] = useState([{ value: "Travel", label: "Travel" }]);
+  const [value, setValue] = useState([{ value: 'Travel', label: 'Travel' }]);
 
   const options = [
-    { value: "Travel", label: "Travel", badge: "#C903FF" },
-    { value: "Social", label: "Social", badge: "#00F7BF" },
-    { value: "Work", label: "Work", badge: "#FFC700" },
-    { value: "Important", label: "Important", badge: "#FF0022" },
+    { value: 'Travel', label: 'Travel', badge: '#C903FF' },
+    { value: 'Social', label: 'Social', badge: '#00F7BF' },
+    { value: 'Work', label: 'Work', badge: '#FFC700' },
+    { value: 'Important', label: 'Important', badge: '#FF0022' }
   ];
 
   const OptionComponent = ({ data, ...props }) => {
@@ -60,11 +60,11 @@ const AddEventSidebar = (props) => {
       start: startPicker,
       end: endPicker,
       allDay,
-      display: "block",
+      display: 'block',
       extendedProps: {
         calendar: value[0].label,
-        desc: desc.length ? desc : undefined,
-      },
+        desc: desc.length ? desc : undefined
+      }
     };
     dispatch(addEvent(obj));
     refetchEvents();
@@ -74,20 +74,16 @@ const AddEventSidebar = (props) => {
   // Reset Input Values on Close
   const handleResetInputValues = () => {
     dispatch(selectEvent({}));
-    setTitle("");
-    setDesc("");
-    setValue([{ value: "Travel", label: "Travel" }]);
+    setTitle('');
+    setDesc('');
+    setValue([{ value: 'Travel', label: 'Travel' }]);
     setStartPicker(new Date());
     setEndPicker(new Date());
     setIsModalVisible(false);
   };
 
   // (UI) updateEventInCalendar
-  const updateEventInCalendar = (
-    updatedEventData,
-    propsToUpdate,
-    extendedPropsToUpdate
-  ) => {
+  const updateEventInCalendar = (updatedEventData, propsToUpdate, extendedPropsToUpdate) => {
     const existingEvent = calendarApi.getEventById(updatedEventData.id);
 
     // Set event properties except date related
@@ -98,17 +94,14 @@ const AddEventSidebar = (props) => {
 
     // Set date related props
     existingEvent.setDates(updatedEventData.start, updatedEventData.end, {
-      allDay: updatedEventData.allDay,
+      allDay: updatedEventData.allDay
     });
 
     // Set event's extendedProps
     // eslint-disable-next-line no-plusplus
     for (let index = 0; index < extendedPropsToUpdate.length; index++) {
       const propName = extendedPropsToUpdate[index];
-      existingEvent.setExtendedProp(
-        propName,
-        updatedEventData.extendedProps[propName]
-      );
+      existingEvent.setExtendedProp(propName, updatedEventData.extendedProps[propName]);
     }
   };
 
@@ -122,12 +115,12 @@ const AddEventSidebar = (props) => {
       end: endPicker,
       extendedProps: {
         description: desc,
-        calendar: value[0].label,
-      },
+        calendar: value[0].label
+      }
     };
 
-    const propsToUpdate = ["id", "title"];
-    const extendedPropsToUpdate = ["calendar", "description"];
+    const propsToUpdate = ['id', 'title'];
+    const extendedPropsToUpdate = ['calendar', 'description'];
 
     dispatch(updateEvent(eventToUpdate));
     updateEventInCalendar(eventToUpdate, propsToUpdate, extendedPropsToUpdate);
@@ -146,10 +139,7 @@ const AddEventSidebar = (props) => {
   };
 
   const FooterAddOrUpdate = () => {
-    if (
-      isObjEmpty(selectedEvent) ||
-      (!isObjEmpty(selectedEvent) && !selectedEvent.title.length)
-    ) {
+    if (isObjEmpty(selectedEvent) || (!isObjEmpty(selectedEvent) && !selectedEvent.title.length)) {
       return (
         <Fragment>
           <Button
@@ -184,10 +174,7 @@ const AddEventSidebar = (props) => {
   };
 
   const FooterCancelOrDelete = () => {
-    if (
-      isObjEmpty(selectedEvent) ||
-      (!isObjEmpty(selectedEvent) && !selectedEvent.title.length)
-    ) {
+    if (isObjEmpty(selectedEvent) || (!isObjEmpty(selectedEvent) && !selectedEvent.title.length)) {
       return (
         <Fragment>
           <Button
@@ -224,9 +211,7 @@ const AddEventSidebar = (props) => {
 
   const modalTitle = (
     <h5 className="modal-title">
-      {selectedEvent && selectedEvent.title && selectedEvent.title.length
-        ? "Update"
-        : "Add"}
+      {selectedEvent && selectedEvent.title && selectedEvent.title.length ? 'Update' : 'Add'}
       Event
     </h5>
   );
@@ -252,18 +237,13 @@ const AddEventSidebar = (props) => {
         </Row>
       }
       centered
-      closeIcon={
-        <RiCloseFill className="remix-icon text-color-black-100" size={24} />
-      }
+      closeIcon={<RiCloseFill className="remix-icon text-color-black-100" size={24} />}
       width={416}
     >
       <Form
         layout="vertical"
         onSubmit={handleSubmit(() => {
-          if (
-            isObjEmpty(selectedEvent) ||
-            (!isObjEmpty(selectedEvent) && !selectedEvent.title.length)
-          ) {
+          if (isObjEmpty(selectedEvent) || (!isObjEmpty(selectedEvent) && !selectedEvent.title.length)) {
             handleAddEvent();
           } else {
             handleUpdateEvent();
@@ -274,7 +254,7 @@ const AddEventSidebar = (props) => {
           <Input
             id="title"
             name="title"
-            style={{ width: "100%" }}
+            style={{ width: '100%' }}
             placeholder="Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -286,13 +266,13 @@ const AddEventSidebar = (props) => {
             required
             id="startDate"
             name="startDate"
-            style={{ width: "100%" }}
+            style={{ width: '100%' }}
             onChange={(date) => setStartPicker(date[0])}
             value={startPicker}
             options={{
               enableTime: allDay === false,
-              dateFormat: "d M Y - H:i K",
-              static: true,
+              dateFormat: 'd M Y - H:i K',
+              static: true
             }}
           />
         </Form.Item>
@@ -302,13 +282,13 @@ const AddEventSidebar = (props) => {
             required
             id="endDate"
             name="endDate"
-            style={{ width: "100%" }}
+            style={{ width: '100%' }}
             onChange={(date) => setEndPicker(date[0])}
             value={endPicker}
             options={{
               enableTime: allDay === false,
-              dateFormat: "d M Y - H:i K",
-              static: true,
+              dateFormat: 'd M Y - H:i K',
+              static: true
             }}
           />
         </Form.Item>
@@ -322,14 +302,14 @@ const AddEventSidebar = (props) => {
             isClearable={false}
             onChange={(data) => setValue([data])}
             components={{
-              Option: OptionComponent,
+              Option: OptionComponent
             }}
           />
         </Form.Item>
 
         <Form.Item label="Description :">
           <TextArea
-            style={{ width: "100%" }}
+            style={{ width: '100%' }}
             type="textarea"
             name="text"
             id="description"

@@ -1,29 +1,10 @@
 // Color Variables
-@darkColors: ~"dark-0"@dark-0,
-  ~"dark-5"@dark-5,
-  ~"dark-10"@dark-10,
-  ~"dark-15"@dark-15,
-  ~"dark-20"@dark-20,
-  ~"dark-30"@dark-30,
-  ~"dark-35"@dark-35,
-  ~"dark-40"@dark-40,
-  ~"dark-45"@dark-45,
-  ~"dark-50"@dark-50,
-  ~"dark-60"@dark-60,
-  ~"dark-70"@dark-70,
-  ~"dark-80"@dark-80,
-  ~"dark-85"@dark-85,
-  ~"dark-90"@dark-90,
-  ~"dark-100"@dark-100,
-  ~"dark-primary-2"@primary-2,
-  ~"dark-primary-1"@primary-1,
-  ~"dark-primary"@primary-dark,
-  ~"dark-danger"@danger-dark,
-  ~"dark-error"@danger-dark,
-  ~"dark-warning"@warning-dark,
-  ~"dark-success"@success-dark,
-  ~"dark-secondary"@secondary-dark,
-  ~"dark-info"@info-dark;
+@darkColors: ~'dark-0' @dark-0, ~'dark-5' @dark-5, ~'dark-10' @dark-10, ~'dark-15' @dark-15, ~'dark-20' @dark-20,
+  ~'dark-30' @dark-30, ~'dark-35' @dark-35, ~'dark-40' @dark-40, ~'dark-45' @dark-45, ~'dark-50' @dark-50,
+  ~'dark-60' @dark-60, ~'dark-70' @dark-70, ~'dark-80' @dark-80, ~'dark-85' @dark-85, ~'dark-90' @dark-90,
+  ~'dark-100' @dark-100, ~'dark-primary-2' @primary-2, ~'dark-primary-1' @primary-1, ~'dark-primary' @primary-dark,
+  ~'dark-danger' @danger-dark, ~'dark-error' @danger-dark, ~'dark-warning' @warning-dark, ~'dark-success' @success-dark,
+  ~'dark-secondary' @secondary-dark, ~'dark-info' @info-dark;
 
 // Text Color Hover Map
 .dark-text-color-hover-classes(@prefix, @list) {
@@ -38,7 +19,7 @@
     body.dark {
       .@{class-prefix}-hover-@{prefix}-color-@{key} {
         &:hover {
-          color: @value  !important;
+          color: @value !important;
         }
       }
     }
@@ -59,7 +40,7 @@
 
     body.dark {
       .@{class-prefix}-@{prefix}-color-@{key} {
-        color: @value  !important;
+        color: @value !important;
       }
     }
   }
@@ -80,7 +61,7 @@
     body.dark {
       .@{class-prefix}-hover-@{prefix}-color-@{key} {
         &:hover {
-          background-color: @value  !important;
+          background-color: @value !important;
         }
       }
     }
@@ -101,7 +82,7 @@
 
     body.dark {
       .@{class-prefix}-@{prefix}-color-@{key} {
-        background-color: @value  !important;
+        background-color: @value !important;
       }
     }
   }
@@ -122,7 +103,7 @@
     body.dark {
       .@{class-prefix}-hover-@{prefix}-@{key} {
         &:hover {
-          background: @value  !important;
+          background: @value !important;
         }
       }
     }
@@ -143,7 +124,7 @@
 
     body.dark {
       .@{class-prefix}-@{prefix}-@{key} {
-        background: @value  !important;
+        background: @value !important;
       }
     }
   }
@@ -164,7 +145,7 @@
     body.dark {
       .@{class-prefix}-hover-@{prefix}-color-@{key} {
         &:hover {
-          border-color: @value  !important;
+          border-color: @value !important;
         }
       }
     }
@@ -185,7 +166,7 @@
 
     body.dark {
       .@{class-prefix}-@{prefix}-color-@{key} {
-        border-color: @value  !important;
+        border-color: @value !important;
       }
     }
   }
@@ -206,7 +187,7 @@
     body.dark {
       .@{class-prefix}-@{prefix}-@{key} {
         path {
-          fill: @value  !important;
+          fill: @value !important;
         }
       }
     }
@@ -229,7 +210,7 @@
       .@{class-prefix}-hover-@{prefix}-@{key} {
         &:hover {
           path {
-            fill: @value  !important;
+            fill: @value !important;
           }
         }
       }
@@ -251,12 +232,11 @@
 
     body.dark {
       .@{class-prefix}-@{prefix}-@{key} {
-
         path,
         rect,
         line,
         circle {
-          stroke: @value  !important;
+          stroke: @value !important;
         }
       }
     }
@@ -278,12 +258,11 @@
     body.dark {
       .@{class-prefix}-hover-@{prefix}-@{key} {
         &:hover {
-
           path,
           rect,
           line,
           circle {
-            stroke: @value  !important;
+            stroke: @value !important;
           }
         }
       }

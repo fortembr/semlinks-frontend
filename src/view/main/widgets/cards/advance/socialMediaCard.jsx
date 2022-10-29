@@ -1,14 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col, Progress } from "antd";
-import {
-  RiMoreFill,
-  RiLinkedinFill,
-  RiFacebookFill,
-  RiInstagramFill,
-  RiTwitterFill,
-} from "react-icons/ri";
-import { SiTiktok } from "react-icons/si";
+import { Card, Row, Col, Progress } from 'antd';
+import { RiMoreFill, RiLinkedinFill, RiFacebookFill, RiInstagramFill, RiTwitterFill } from 'react-icons/ri';
+import { SiTiktok } from 'react-icons/si';
 
 export default function SocailMediaCard() {
   return (
@@ -28,19 +22,12 @@ export default function SocailMediaCard() {
             <Col span={24}>
               <Row align="middle" className="hp-mr-16">
                 <div className="hp-social-media-logo-wrapper hp-bg-primary-2 hp-mr-16">
-                  <RiLinkedinFill
-                    size={16}
-                    className="hp-text-color-black-0 hp-social-media-logo "
-                  />
+                  <RiLinkedinFill size={16} className="hp-text-color-black-0 hp-social-media-logo " />
                 </div>
 
                 <Col sm={19} xs={16}>
                   <h5 className="hp-mb-0 hp-placeholder">Linkedin</h5>
-                  <Progress
-                    percent={30}
-                    strokeWidth={4}
-                    strokeColor={"#0063F7"}
-                  />
+                  <Progress percent={30} strokeWidth={4} strokeColor={'#0063F7'} />
                 </Col>
               </Row>
             </Col>
@@ -48,10 +35,7 @@ export default function SocailMediaCard() {
             <Col span={24}>
               <Row align="middle" className="hp-mr-16">
                 <div className="hp-social-media-logo-wrapper hp-bg-primary-1 hp-mr-16">
-                  <RiFacebookFill
-                    size={16}
-                    className="hp-text-color-black-0 hp-social-media-logo "
-                  />
+                  <RiFacebookFill size={16} className="hp-text-color-black-0 hp-social-media-logo " />
                 </div>
 
                 <Col sm={19} xs={16}>
@@ -64,19 +48,12 @@ export default function SocailMediaCard() {
             <Col span={24}>
               <Row align="middle" className="hp-mr-16">
                 <div className="hp-social-media-logo-wrapper hp-bg-danger-1 hp-mr-16">
-                  <RiInstagramFill
-                    size={16}
-                    className="hp-text-color-black-0 hp-social-media-logo "
-                  />
+                  <RiInstagramFill size={16} className="hp-text-color-black-0 hp-social-media-logo " />
                 </div>
 
                 <Col sm={19} xs={16}>
                   <h5 className="hp-mb-0 hp-placeholder">Instagram</h5>
-                  <Progress
-                    percent={30}
-                    strokeWidth={4}
-                    strokeColor="#FF455E"
-                  />
+                  <Progress percent={30} strokeWidth={4} strokeColor="#FF455E" />
                 </Col>
               </Row>
             </Col>
@@ -84,19 +61,12 @@ export default function SocailMediaCard() {
             <Col span={24}>
               <Row align="middle" className="hp-mr-16">
                 <div className="hp-social-media-logo-wrapper hp-bg-info-1 hp-mr-16">
-                  <RiTwitterFill
-                    size={16}
-                    className="hp-text-color-black-0 hp-social-media-logo "
-                  />
+                  <RiTwitterFill size={16} className="hp-text-color-black-0 hp-social-media-logo " />
                 </div>
 
                 <Col sm={19} xs={16}>
                   <h5 className="hp-mb-0 hp-placeholder">Twitter</h5>
-                  <Progress
-                    percent={30}
-                    strokeWidth={4}
-                    strokeColor="#1BE7FF"
-                  />
+                  <Progress percent={30} strokeWidth={4} strokeColor="#1BE7FF" />
                 </Col>
               </Row>
             </Col>
@@ -104,19 +74,12 @@ export default function SocailMediaCard() {
             <Col span={24}>
               <Row align="middle" className="hp-mr-16">
                 <div className="hp-social-media-logo-wrapper hp-bg-black-80 hp-mr-16">
-                  <SiTiktok
-                    size={16}
-                    className="hp-text-color-black-0 hp-social-media-logo "
-                  />
+                  <SiTiktok size={16} className="hp-text-color-black-0 hp-social-media-logo " />
                 </div>
 
                 <Col sm={19} xs={16}>
                   <h5 className="hp-mb-0 hp-placeholder">TikTok</h5>
-                  <Progress
-                    percent={30}
-                    strokeWidth={4}
-                    strokeColor="#636E72"
-                  />
+                  <Progress percent={30} strokeWidth={4} strokeColor="#636E72" />
                 </Col>
               </Row>
             </Col>

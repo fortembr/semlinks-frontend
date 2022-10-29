@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { editableRows } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { editableRows } from './code.js';
 
-import { Table, Input, InputNumber, Popconfirm, Form, Typography, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Input, InputNumber, Popconfirm, Form, Typography, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function EditableRowsTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -23,20 +23,11 @@ export default function EditableRowsTable() {
       key: i.toString(),
       name: 'John ' + i,
       age: 32,
-      address: 'London Park no. ' + i,
+      address: 'London Park no. ' + i
     });
   }
 
-  const EditableCell = ({
-    editing,
-    dataIndex,
-    title,
-    inputType,
-    record,
-    index,
-    children,
-    ...restProps
-  }) => {
+  const EditableCell = ({ editing, dataIndex, title, inputType, record, index, children, ...restProps }) => {
     const inputNode = inputType === 'number' ? <InputNumber /> : <Input />;
     return (
       <td {...restProps}>
@@ -44,13 +35,13 @@ export default function EditableRowsTable() {
           <Form.Item
             name={dataIndex}
             style={{
-              margin: 0,
+              margin: 0
             }}
             rules={[
               {
                 required: true,
-                message: 'Please Input ' + title + '!',
-              },
+                message: 'Please Input ' + title + '!'
+              }
             ]}
           >
             {inputNode}
@@ -73,7 +64,7 @@ export default function EditableRowsTable() {
       name: '',
       age: '',
       address: '',
-      ...record,
+      ...record
     });
     setEditingKey(record.key);
   };
@@ -108,19 +99,19 @@ export default function EditableRowsTable() {
       title: 'name',
       dataIndex: 'name',
       width: '25%',
-      editable: true,
+      editable: true
     },
     {
       title: 'age',
       dataIndex: 'age',
       width: '15%',
-      editable: true,
+      editable: true
     },
     {
       title: 'address',
       dataIndex: 'address',
       width: '40%',
-      editable: true,
+      editable: true
     },
     {
       title: 'operation',
@@ -133,7 +124,7 @@ export default function EditableRowsTable() {
               href="javascript:;"
               onClick={() => save(record.key)}
               style={{
-                marginRight: 8,
+                marginRight: 8
               }}
             >
               Save
@@ -147,8 +138,8 @@ export default function EditableRowsTable() {
             Edit
           </Typography.Link>
         );
-      },
-    },
+      }
+    }
   ];
 
   const mergedColumns = columns.map((col) => {
@@ -163,8 +154,8 @@ export default function EditableRowsTable() {
         inputType: col.dataIndex === 'age' ? 'number' : 'text',
         dataIndex: col.dataIndex,
         title: col.title,
-        editing: isEditing(record),
-      }),
+        editing: isEditing(record)
+      })
     };
   });
 
@@ -173,17 +164,11 @@ export default function EditableRowsTable() {
       <Row>
         <Col className="hp-mb-16" lg={15} span={20}>
           <h4>Editable Rows</h4>
-          <p className="hp-p1-body">
-            Table with editable rows.
-          </p>
+          <p className="hp-p1-body">Table with editable rows.</p>
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -191,15 +176,15 @@ export default function EditableRowsTable() {
             <Table
               components={{
                 body: {
-                  cell: EditableCell,
-                },
+                  cell: EditableCell
+                }
               }}
               bordered
               dataSource={data}
               columns={mergedColumns}
               rowClassName="editable-row"
               pagination={{
-                onChange: cancel,
+                onChange: cancel
               }}
               scroll={{ x: 500 }}
             />
@@ -210,7 +195,7 @@ export default function EditableRowsTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {editableRows}

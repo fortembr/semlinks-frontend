@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { yoda } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { yoda } from './code.js';
 
-import { Card, Row, Col, Form, Input, Checkbox, Button, Modal } from "antd";
-import { RiCloseFill, RiMailAddLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Form, Input, Checkbox, Button, Modal } from 'antd';
+import { RiCloseFill, RiMailAddLine, RiCodeSSlashLine } from 'react-icons/ri';
 
-import popUpImage from "../../../../assets/images/modal/pop-up.svg";
+import popUpImage from '../../../../assets/images/modal/pop-up.svg';
 
 export default function YodaModal() {
   const [PopupModalVisible, setPopupModalVisible] = useState(false);
@@ -97,39 +97,19 @@ export default function YodaModal() {
         </Col>
 
         <Col span={24}>
-          <Button
-            className="hp-mb-16 hp-mr-16"
-            type="primary"
-            ghost
-            onClick={showPopupModal}
-          >
+          <Button className="hp-mb-16 hp-mr-16" type="primary" ghost onClick={showPopupModal}>
             Pop-up
           </Button>
 
-          <Button
-            className="hp-mb-16 hp-mr-16"
-            type="primary"
-            ghost
-            onClick={showPopupWidthModal}
-          >
+          <Button className="hp-mb-16 hp-mr-16" type="primary" ghost onClick={showPopupWidthModal}>
             Pop-up Width
           </Button>
 
-          <Button
-            className="hp-mb-16 hp-mr-16"
-            type="primary"
-            ghost
-            onClick={showFormModal}
-          >
+          <Button className="hp-mb-16 hp-mr-16" type="primary" ghost onClick={showFormModal}>
             Form
           </Button>
 
-          <Button
-            className="hp-mb-16 hp-mr-16"
-            type="primary"
-            ghost
-            onClick={showFormWidthModal}
-          >
+          <Button className="hp-mb-16 hp-mr-16" type="primary" ghost onClick={showFormWidthModal}>
             Form Width
           </Button>
 
@@ -144,10 +124,7 @@ export default function YodaModal() {
             <div className="hp-text-center">
               <img src={popUpImage} alt="Pop-up" />
               <h3 className="hp-text-color-dark-bg">Pop-up Title</h3>
-              <p className="hp-p2-body">
-                Curabitur varius purus sed congue consectetur. Donec a leo
-                malesuada,
-              </p>
+              <p className="hp-p2-body">Curabitur varius purus sed congue consectetur. Donec a leo malesuada,</p>
               <Button
                 block
                 className="hp-mt-16"
@@ -174,22 +151,16 @@ export default function YodaModal() {
                 <Col md={14}>
                   <h3 className="hp-text-color-dark-bg">Pop-up Title</h3>
                   <p className="hp-p2-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nunc, urna arcu mattis sagittis ut velit ornare scelerisque.
-                    Justo eget eleifend sed urna, risus. Augue ornare sit non
-                    auctor consectetur. Amet.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, urna arcu mattis sagittis ut velit
+                    ornare scelerisque. Justo eget eleifend sed urna, risus. Augue ornare sit non auctor consectetur.
+                    Amet.
                   </p>
                 </Col>
               </Row>
 
               <Row className="hp-mt-16">
                 <Col span={12}>
-                  <Button
-                    block
-                    type="primary"
-                    ghost
-                    onClick={handlePopupWidthCancel}
-                  >
+                  <Button block type="primary" ghost onClick={handlePopupWidthCancel}>
                     Cancel
                   </Button>
                 </Col>
@@ -218,24 +189,13 @@ export default function YodaModal() {
                 Signup
               </Button>
             }
-            closeIcon={
-              <RiCloseFill
-                className="remix-icon hp-text-color-black-100 hp-text-color-dark-0"
-                size={24}
-              />
-            }
+            closeIcon={<RiCloseFill className="remix-icon hp-text-color-black-100 hp-text-color-dark-0" size={24} />}
           >
-            <Form
-              layout="vertical"
-              name="basic"
-              initialValues={{ remember: true }}
-            >
+            <Form layout="vertical" name="basic" initialValues={{ remember: true }}>
               <Form.Item
                 label="Username"
                 name="username"
-                rules={[
-                  { required: true, message: "Please input your username!" },
-                ]}
+                rules={[{ required: true, message: 'Please input your username!' }]}
               >
                 <Input />
               </Form.Item>
@@ -243,9 +203,7 @@ export default function YodaModal() {
               <Form.Item
                 label="Password"
                 name="password"
-                rules={[
-                  { required: true, message: "Please input your password!" },
-                ]}
+                rules={[{ required: true, message: 'Please input your password!' }]}
               >
                 <Input.Password />
               </Form.Item>
@@ -255,12 +213,7 @@ export default function YodaModal() {
               </Form.Item>
 
               <Form.Item>
-                <Button
-                  block
-                  type="primary"
-                  htmlType="submit"
-                  onClick={handleFormOk}
-                >
+                <Button block type="primary" htmlType="submit" onClick={handleFormOk}>
                   Button
                 </Button>
               </Form.Item>
@@ -281,38 +234,25 @@ export default function YodaModal() {
                 <Col>
                   <Button type="primary" ghost>
                     Delete
-                    </Button>
+                  </Button>
                 </Col>
 
                 <Col>
                   <Button type="test" onClick={handleFormWidthCancel}>
                     Cancel
-                    </Button>
+                  </Button>
                 </Col>
 
                 <Col>
-                  <Button
-                    type="primary"
-                    htmlType="submit"
-                    onClick={handleFormWidthOk}
-                  >
+                  <Button type="primary" htmlType="submit" onClick={handleFormWidthOk}>
                     Confirm
-                    </Button>
+                  </Button>
                 </Col>
               </Row>
             }
-            closeIcon={
-              <RiCloseFill
-                className="remix-icon hp-text-color-black-100 hp-text-color-dark-0"
-                size={24}
-              />
-            }
+            closeIcon={<RiCloseFill className="remix-icon hp-text-color-black-100 hp-text-color-dark-0" size={24} />}
           >
-            <Form
-              layout="vertical"
-              name="basic"
-              initialValues={{ remember: true }}
-            >
+            <Form layout="vertical" name="basic" initialValues={{ remember: true }}>
               <Row>
                 <Col md={12} span={24}>
                   <Form.Item
@@ -321,8 +261,8 @@ export default function YodaModal() {
                     rules={[
                       {
                         required: true,
-                        message: "Please input your firstname!",
-                      },
+                        message: 'Please input your firstname!'
+                      }
                     ]}
                   >
                     <Input />
@@ -337,8 +277,8 @@ export default function YodaModal() {
                     rules={[
                       {
                         required: true,
-                        message: "Please input your lastname!",
-                      },
+                        message: 'Please input your lastname!'
+                      }
                     ]}
                   >
                     <Input />
@@ -351,9 +291,7 @@ export default function YodaModal() {
                   <Form.Item
                     label="Password"
                     name="password"
-                    rules={[
-                      { required: true, message: "At least 6 Character" },
-                    ]}
+                    rules={[{ required: true, message: 'At least 6 Character' }]}
                   >
                     <Input.Password />
                   </Form.Item>
@@ -364,7 +302,7 @@ export default function YodaModal() {
                     className="hp-pl-sm-0 hp-pl-16"
                     label="Zip Code"
                     name="zipcode"
-                    rules={[{ required: true, message: "1234" }]}
+                    rules={[{ required: true, message: '1234' }]}
                   >
                     <Input />
                   </Form.Item>
@@ -373,11 +311,7 @@ export default function YodaModal() {
 
               <Row>
                 <Col span={24}>
-                  <Form.Item
-                    label="Address"
-                    name="address"
-                    rules={[{ required: true, message: "St. 200 etc." }]}
-                  >
+                  <Form.Item label="Address" name="address" rules={[{ required: true, message: 'St. 200 etc.' }]}>
                     <Input.TextArea />
                   </Form.Item>
                 </Col>
@@ -385,18 +319,17 @@ export default function YodaModal() {
             </Form>
           </Modal>
         </Col>
-      </Row >
+      </Row>
 
-      { checkedCode && (
+      {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {yoda}
         </SyntaxHighlighter>
-      )
-      }
-    </Card >
+      )}
+    </Card>
   );
 }

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { formsizes } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { formsizes } from './code.js';
 
 import {
   Card,
@@ -17,12 +17,12 @@ import {
   DatePicker,
   InputNumber,
   TreeSelect,
-  Switch,
-} from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+  Switch
+} from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function FormSizes() {
-  const [componentSize, setComponentSize] = useState("default");
+  const [componentSize, setComponentSize] = useState('default');
 
   const [checkedCode, setCheckedCode] = useState(false);
   const [codeClass, setCodeClass] = useState(false);
@@ -41,30 +41,24 @@ export default function FormSizes() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Form Size</h4>
-          <p className="hp-p1-body">
-            Set component size, only works for antd components.
-          </p>
+          <p className="hp-p1-body">Set component size, only works for antd components.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
           <Form
             labelCol={{
-              span: 4,
+              span: 4
             }}
             wrapperCol={{
-              span: 18,
+              span: 18
             }}
             layout="horizontal"
             initialValues={{
-              size: componentSize,
+              size: componentSize
             }}
             onValuesChange={onFormLayoutChange}
             size={componentSize}
@@ -91,15 +85,15 @@ export default function FormSizes() {
               <TreeSelect
                 treeData={[
                   {
-                    title: "Light",
-                    value: "light",
+                    title: 'Light',
+                    value: 'light',
                     children: [
                       {
-                        title: "Bamboo",
-                        value: "bamboo",
-                      },
-                    ],
-                  },
+                        title: 'Bamboo',
+                        value: 'bamboo'
+                      }
+                    ]
+                  }
                 ]}
               />
             </Form.Item>
@@ -108,15 +102,15 @@ export default function FormSizes() {
               <Cascader
                 options={[
                   {
-                    value: "zhejiang",
-                    label: "Zhejiang",
+                    value: 'zhejiang',
+                    label: 'Zhejiang',
                     children: [
                       {
-                        value: "hangzhou",
-                        label: "Hangzhou",
-                      },
-                    ],
-                  },
+                        value: 'hangzhou',
+                        label: 'Hangzhou'
+                      }
+                    ]
+                  }
                 ]}
               />
             </Form.Item>
@@ -143,7 +137,7 @@ export default function FormSizes() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {formsizes}

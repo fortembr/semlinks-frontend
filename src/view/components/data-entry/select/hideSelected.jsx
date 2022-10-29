@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { hideSelected } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { hideSelected } from './code.js';
 
-import { Select, Card, Row, Col, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Select, Card, Row, Col, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function SelectHideSelected() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -16,14 +16,14 @@ export default function SelectHideSelected() {
     setCheckedCode(!checkedCode);
   }
 
-  const [selectedItems, setSelectedItems] = useState([])
+  const [selectedItems, setSelectedItems] = useState([]);
   const options = ['Apples', 'Nails', 'Bananas', 'Helicopters'];
 
-  const handleChange = selectedItems => {
+  const handleChange = (selectedItems) => {
     setSelectedItems(selectedItems);
   };
 
-  const filteredOptions = options.filter(o => !selectedItems.includes(o));
+  const filteredOptions = options.filter((o) => !selectedItems.includes(o));
 
   return (
     <Card className="hp-border-color-black-40">
@@ -34,11 +34,7 @@ export default function SelectHideSelected() {
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -49,7 +45,7 @@ export default function SelectHideSelected() {
             onChange={handleChange}
             style={{ width: '100%' }}
           >
-            {filteredOptions.map(item => (
+            {filteredOptions.map((item) => (
               <Select.Option key={item} value={item}>
                 {item}
               </Select.Option>
@@ -61,12 +57,12 @@ export default function SelectHideSelected() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {hideSelected}
         </SyntaxHighlighter>
       )}
-    </Card >
+    </Card>
   );
 }

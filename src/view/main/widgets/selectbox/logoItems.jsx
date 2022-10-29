@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import logoImage from "../../../../assets/images/crypto/bitcoin.png";
+import logoImage from '../../../../assets/images/crypto/bitcoin.png';
 
-import SelectBoxItem from "./selectBoxItem";
+import SelectBoxItem from './selectBoxItem';
 
 export default function SelectBoxLogoItems() {
   return (
@@ -15,13 +15,21 @@ export default function SelectBoxLogoItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Logo</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Logo</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
             </Col>
 
             <Col lg={12} span={24}>
@@ -49,13 +57,21 @@ export default function SelectBoxLogoItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Logo</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Logo</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
             </Col>
 
             <Col lg={12} span={24}>
@@ -65,7 +81,11 @@ export default function SelectBoxLogoItems() {
                 image={logoImage}
                 imageHeight={32}
                 title="Bitcoin"
-                info={<span>From €40/mo. <br /> or € 200</span>}
+                info={
+                  <span>
+                    From €40/mo. <br /> or € 200
+                  </span>
+                }
               />
             </Col>
 
@@ -76,7 +96,11 @@ export default function SelectBoxLogoItems() {
                 image={logoImage}
                 imageHeight={32}
                 title="Bitcoin"
-                info={<span>From €40/mo. <br /> or € 200</span>}
+                info={
+                  <span>
+                    From €40/mo. <br /> or € 200
+                  </span>
+                }
               />
             </Col>
           </Row>
@@ -85,13 +109,21 @@ export default function SelectBoxLogoItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Logo</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Logo</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
             </Col>
 
             <Col lg={12} span={24}>
@@ -102,7 +134,11 @@ export default function SelectBoxLogoItems() {
                 imageHeight={32}
                 title="Bitcoin"
                 subTitle="Credit Card"
-                info={<span>From €40/mo. <br /> or € 200</span>}
+                info={
+                  <span>
+                    From €40/mo. <br /> or € 200
+                  </span>
+                }
               />
             </Col>
 
@@ -114,7 +150,11 @@ export default function SelectBoxLogoItems() {
                 imageHeight={32}
                 title="Bitcoin"
                 subTitle="Credit Card"
-                info={<span>From €40/mo. <br /> or € 200</span>}
+                info={
+                  <span>
+                    From €40/mo. <br /> or € 200
+                  </span>
+                }
               />
             </Col>
           </Row>
@@ -123,13 +163,21 @@ export default function SelectBoxLogoItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Logo</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Logo</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col lg={12} span={24}>
@@ -140,14 +188,18 @@ export default function SelectBoxLogoItems() {
                 imageHeight={32}
                 title="Bitcoin"
                 subTitle="Credit Card"
-                info={<span>From €40/mo. <br /> or € 200</span>}
+                info={
+                  <span>
+                    From €40/mo. <br /> or € 200
+                  </span>
+                }
                 description={[
-                  "Enim est.",
-                  "Tempor donec viverra porttitor.",
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget a nullam.",
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia sed ut.",
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia.",
-                  "Aenean odio faucibus pellentesque urna.",
+                  'Enim est.',
+                  'Tempor donec viverra porttitor.',
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget a nullam.',
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia sed ut.',
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia.',
+                  'Aenean odio faucibus pellentesque urna.'
                 ]}
               />
             </Col>
@@ -160,14 +212,18 @@ export default function SelectBoxLogoItems() {
                 imageHeight={32}
                 title="Bitcoin"
                 subTitle="Credit Card"
-                info={<span>From €40/mo. <br /> or € 200</span>}
+                info={
+                  <span>
+                    From €40/mo. <br /> or € 200
+                  </span>
+                }
                 description={[
-                  "Enim est.",
-                  "Tempor donec viverra porttitor.",
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget a nullam.",
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia sed ut.",
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia.",
-                  "Aenean odio faucibus pellentesque urna.",
+                  'Enim est.',
+                  'Tempor donec viverra porttitor.',
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget a nullam.',
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia sed ut.',
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia.',
+                  'Aenean odio faucibus pellentesque urna.'
                 ]}
               />
             </Col>

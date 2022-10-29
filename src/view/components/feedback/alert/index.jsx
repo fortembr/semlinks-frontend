@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicAlert from "./basic";
-import MoreAlert from "./more";
-import ClosableAlert from "./closable";
-import DescriptionAlert from "./description";
-import IconAlert from "./icon";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicAlert from './basic';
+import MoreAlert from './more';
+import ClosableAlert from './closable';
+import DescriptionAlert from './description';
+import IconAlert from './icon';
 
 export default function Alert() {
   return (
@@ -18,14 +18,14 @@ export default function Alert() {
           desc="Alert component for feedback."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Feedback",
+              title: 'Feedback'
             },
             {
-              title: "Alert",
+              title: 'Alert'
             }
           ]}
         />

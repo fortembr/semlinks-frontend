@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { duration } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { duration } from './code.js';
 
-import { Card, Row, Col, Button, message } from "antd";
-import { RiCheckboxCircleLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button, message } from 'antd';
+import { RiCheckboxCircleLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function DurationMessage() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -18,10 +18,9 @@ export default function DurationMessage() {
 
   const success = () => {
     message.success({
-      content:
-        "This is a prompt message for success, and it will disappear in 10 seconds",
+      content: 'This is a prompt message for success, and it will disappear in 10 seconds',
       icon: <RiCheckboxCircleLine className="remix-icon" />,
-      duration: 10,
+      duration: 10
     });
   };
 
@@ -32,9 +31,7 @@ export default function DurationMessage() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Customize Duration</h4>
-              <p className="hp-p1-body">
-                Customize message display duration from default 3s to 10s.
-              </p>
+              <p className="hp-p1-body">Customize message display duration from default 3s to 10s.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -57,7 +54,7 @@ export default function DurationMessage() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {duration}

@@ -1,9 +1,9 @@
-import { useEffect, useRef, memo } from "react";
+import { useEffect, useRef, memo } from 'react';
 
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
-import timeGridPlugin from "@fullcalendar/timegrid";
-import interactionPlugin from "@fullcalendar/interaction";
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import interactionPlugin from '@fullcalendar/interaction';
 
 const Calendar = (props) => {
   const calendarRef = useRef(null);
@@ -17,7 +17,7 @@ const Calendar = (props) => {
     updateEvent,
     calendarsColor,
     setCalendarApi,
-    showModal,
+    showModal
   } = props;
 
   useEffect(() => {
@@ -29,10 +29,10 @@ const Calendar = (props) => {
   const calendarOptions = {
     events: store.events.length ? store.events : [],
     plugins: [interactionPlugin, dayGridPlugin, timeGridPlugin],
-    initialView: "dayGridMonth",
+    initialView: 'dayGridMonth',
     headerToolbar: {
-      start: "prev,next,title",
-      end: "dayGridMonth,timeGridWeek,timeGridDay",
+      start: 'prev,next,title',
+      end: 'dayGridMonth,timeGridWeek,timeGridDay'
     },
     editable: true,
     eventResizableFromStart: true,
@@ -41,8 +41,7 @@ const Calendar = (props) => {
     navLinks: true,
 
     eventClassNames({ event: calendarEvent }) {
-      const colorName =
-        calendarsColor[calendarEvent._def.extendedProps.calendar];
+      const colorName = calendarsColor[calendarEvent._def.extendedProps.calendar];
 
       return [`bg-light-${colorName}`];
     },
@@ -67,7 +66,7 @@ const Calendar = (props) => {
       dispatch(updateEvent(resizedEvent));
     },
 
-    ref: calendarRef,
+    ref: calendarRef
   };
 
   return <FullCalendar {...calendarOptions} />;

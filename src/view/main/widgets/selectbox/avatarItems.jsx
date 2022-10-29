@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import userImage from "../../../../assets/images/users/user-1.svg";
+import userImage from '../../../../assets/images/users/user-1.svg';
 
-import SelectBoxItem from "./selectBoxItem";
+import SelectBoxItem from './selectBoxItem';
 
 export default function SelectBoxAvatarItems() {
   return (
@@ -15,13 +15,21 @@ export default function SelectBoxAvatarItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Avatar</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Avatar</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
             </Col>
 
             <Col lg={12} span={24}>
@@ -51,13 +59,21 @@ export default function SelectBoxAvatarItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Avatar</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Avatar</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
             </Col>
 
             <Col lg={12} span={24}>
@@ -89,13 +105,21 @@ export default function SelectBoxAvatarItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Avatar</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Avatar</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
             </Col>
 
             <Col lg={12} span={24}>
@@ -129,13 +153,21 @@ export default function SelectBoxAvatarItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Avatar</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Avatar</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col lg={12} span={24}>
@@ -149,12 +181,12 @@ export default function SelectBoxAvatarItems() {
                 subTitle="Product Owner"
                 info={<span className="h5">Get Contact</span>}
                 description={[
-                  "4+ years of product design experience",
-                  "Strong visual design skills, sense of aesthetics and beauty",
-                  "Pixel-perfect attitude and attention to details",
-                  "Knowledge of modern design trends",
-                  "Strong conceptualization ability, visual communication ability",
-                  "Strong Information Architecture, layout design, User-centered design, UI/UX design",
+                  '4+ years of product design experience',
+                  'Strong visual design skills, sense of aesthetics and beauty',
+                  'Pixel-perfect attitude and attention to details',
+                  'Knowledge of modern design trends',
+                  'Strong conceptualization ability, visual communication ability',
+                  'Strong Information Architecture, layout design, User-centered design, UI/UX design'
                 ]}
               />
             </Col>
@@ -170,12 +202,12 @@ export default function SelectBoxAvatarItems() {
                 subTitle="Product Owner"
                 info={<span className="h5">Get Contact</span>}
                 description={[
-                  "4+ years of product design experience",
-                  "Strong visual design skills, sense of aesthetics and beauty",
-                  "Pixel-perfect attitude and attention to details",
-                  "Knowledge of modern design trends",
-                  "Strong conceptualization ability, visual communication ability",
-                  "Strong Information Architecture, layout design, User-centered design, UI/UX design",
+                  '4+ years of product design experience',
+                  'Strong visual design skills, sense of aesthetics and beauty',
+                  'Pixel-perfect attitude and attention to details',
+                  'Knowledge of modern design trends',
+                  'Strong conceptualization ability, visual communication ability',
+                  'Strong Information Architecture, layout design, User-centered design, UI/UX design'
                 ]}
               />
             </Col>

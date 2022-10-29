@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { ellipsisColumn } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { ellipsisColumn } from './code.js';
 
-import { Table, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function EllipsisColumnTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -21,39 +21,39 @@ export default function EllipsisColumnTable() {
       title: 'Name',
       dataIndex: 'name',
       key: 'name',
-      render: text => <a>{text}</a>,
-      width: 150,
+      render: (text) => <a>{text}</a>,
+      width: 150
     },
     {
       title: 'Age',
       dataIndex: 'age',
       key: 'age',
-      width: 80,
+      width: 80
     },
     {
       title: 'Address',
       dataIndex: 'address',
       key: 'address 1',
-      ellipsis: true,
+      ellipsis: true
     },
     {
       title: 'Long Column Long Column Long Column',
       dataIndex: 'address',
       key: 'address 2',
-      ellipsis: true,
+      ellipsis: true
     },
     {
       title: 'Long Column Long Column',
       dataIndex: 'address',
       key: 'address 3',
-      ellipsis: true,
+      ellipsis: true
     },
     {
       title: 'Long Column',
       dataIndex: 'address',
       key: 'address 4',
-      ellipsis: true,
-    },
+      ellipsis: true
+    }
   ];
 
   const data = [
@@ -62,22 +62,22 @@ export default function EllipsisColumnTable() {
       name: 'John Brown',
       age: 32,
       address: 'New York No. 1 Lake Park, New York No. 1 Lake Park',
-      tags: ['nice', 'developer'],
+      tags: ['nice', 'developer']
     },
     {
       key: '2',
       name: 'Jim Green',
       age: 42,
       address: 'London No. 2 Lake Park, London No. 2 Lake Park',
-      tags: ['loser'],
+      tags: ['loser']
     },
     {
       key: '3',
       name: 'Joe Black',
       age: 32,
       address: 'Sidney No. 1 Lake Park, Sidney No. 1 Lake Park',
-      tags: ['cool', 'teacher'],
-    },
+      tags: ['cool', 'teacher']
+    }
   ];
 
   return (
@@ -92,11 +92,7 @@ export default function EllipsisColumnTable() {
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -107,7 +103,7 @@ export default function EllipsisColumnTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {ellipsisColumn}

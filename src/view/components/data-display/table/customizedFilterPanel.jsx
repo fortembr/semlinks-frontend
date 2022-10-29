@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { customizedFilterPanel } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { customizedFilterPanel } from './code.js';
 
 import Highlighter from 'react-highlight-words';
-import { Table, Input, Button, Space, Row, Col, Card } from "antd";
-import { RiCodeSSlashLine, RiSearch2Line } from "react-icons/ri";
+import { Table, Input, Button, Space, Row, Col, Card } from 'antd';
+import { RiCodeSSlashLine, RiSearch2Line } from 'react-icons/ri';
 
 export default function CustomizedFilterPanelTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -25,26 +25,26 @@ export default function CustomizedFilterPanelTable() {
       key: '1',
       name: 'John Brown',
       age: 32,
-      address: 'New York No. 1 Lake Park',
+      address: 'New York No. 1 Lake Park'
     },
     {
       key: '2',
       name: 'Joe Black',
       age: 42,
-      address: 'London No. 1 Lake Park',
+      address: 'London No. 1 Lake Park'
     },
     {
       key: '3',
       name: 'Jim Green',
       age: 32,
-      address: 'Sidney No. 1 Lake Park',
+      address: 'Sidney No. 1 Lake Park'
     },
     {
       key: '4',
       name: 'Jim Red',
       age: 32,
-      address: 'London No. 2 Lake Park',
-    },
+      address: 'London No. 2 Lake Park'
+    }
   ];
 
   const getColumnSearchProps = (dataIndex) => ({
@@ -53,7 +53,7 @@ export default function CustomizedFilterPanelTable() {
         <Input
           placeholder={'Search ' + dataIndex}
           value={selectedKeys[0]}
-          onChange={e => setSelectedKeys(e.target.value ? [e.target.value] : [])}
+          onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])}
           onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
           style={{ marginBottom: 8, display: 'block' }}
         />
@@ -74,12 +74,10 @@ export default function CustomizedFilterPanelTable() {
         </Space>
       </div>
     ),
-    filterIcon: filtered => <RiSearch2Line style={{ color: filtered ? '#1890ff' : undefined }} />,
+    filterIcon: (filtered) => <RiSearch2Line style={{ color: filtered ? '#1890ff' : undefined }} />,
     onFilter: (value, record) =>
-      record[dataIndex]
-        ? record[dataIndex].toString().toLowerCase().includes(value.toLowerCase())
-        : '',
-    render: text =>
+      record[dataIndex] ? record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()) : '',
+    render: (text) =>
       searchedColumn === dataIndex ? (
         <Highlighter
           highlightStyle={{ backgroundColor: '#ffc069', padding: 0 }}
@@ -89,7 +87,7 @@ export default function CustomizedFilterPanelTable() {
         />
       ) : (
         text
-      ),
+      )
   });
 
   const handleSearch = (selectedKeys, confirm, dataIndex) => {
@@ -99,7 +97,7 @@ export default function CustomizedFilterPanelTable() {
     setSearchedColumn(dataIndex);
   };
 
-  const handleReset = clearFilters => {
+  const handleReset = (clearFilters) => {
     clearFilters();
 
     setSearchText('');
@@ -111,14 +109,14 @@ export default function CustomizedFilterPanelTable() {
       dataIndex: 'name',
       key: 'name',
       width: '30%',
-      ...getColumnSearchProps('name'),
+      ...getColumnSearchProps('name')
     },
     {
       title: 'Age',
       dataIndex: 'age',
       key: 'age',
       width: '20%',
-      ...getColumnSearchProps('age'),
+      ...getColumnSearchProps('age')
     },
     {
       title: 'Address',
@@ -126,8 +124,8 @@ export default function CustomizedFilterPanelTable() {
       key: 'address',
       ...getColumnSearchProps('address'),
       sorter: (a, b) => a.address.length - b.address.length,
-      sortDirections: ['descend', 'ascend'],
-    },
+      sortDirections: ['descend', 'ascend']
+    }
   ];
 
   return (
@@ -135,17 +133,11 @@ export default function CustomizedFilterPanelTable() {
       <Row>
         <Col className="hp-mb-16" lg={15} span={20}>
           <h4>Customized filter panel</h4>
-          <p className="hp-p1-body">
-            Implement a customized column search example via filterDropdown.
-          </p>
+          <p className="hp-p1-body">Implement a customized column search example via filterDropdown.</p>
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -156,7 +148,7 @@ export default function CustomizedFilterPanelTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {customizedFilterPanel}

@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicDropdown from "./basic";
-import ButtonWithDropdown from "./button";
-import PlacementDropdown from "./placement";
-import CascadingDropdown from "./cascading";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicDropdown from './basic';
+import ButtonWithDropdown from './button';
+import PlacementDropdown from './placement';
+import CascadingDropdown from './cascading';
 
 export default function Dropdown() {
   return (
@@ -17,14 +17,14 @@ export default function Dropdown() {
           desc="A dropdown list."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Navigation",
+              title: 'Navigation'
             },
             {
-              title: "Dropdown",
+              title: 'Dropdown'
             }
           ]}
         />

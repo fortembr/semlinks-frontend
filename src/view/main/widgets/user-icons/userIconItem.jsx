@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col, Card, Avatar } from "antd";
+import { Row, Col, Card, Avatar } from 'antd';
 
 export default function UserIconItem(props) {
   return (
@@ -8,7 +8,7 @@ export default function UserIconItem(props) {
       <Row>
         <Col span={24}>
           {props.image && (
-            <Avatar src={props.image} size={props.imageHeight && (props.imageHeight)} className="hp-m-auto" />
+            <Avatar src={props.image} size={props.imageHeight && props.imageHeight} className="hp-m-auto" />
           )}
         </Col>
       </Row>

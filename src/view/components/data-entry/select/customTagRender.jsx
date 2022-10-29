@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { customTagRender } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { customTagRender } from './code.js';
 
-import { Select, Tag, Card, Row, Col, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Select, Tag, Card, Row, Col, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function SelectCustomTagRender() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -20,7 +20,7 @@ export default function SelectCustomTagRender() {
 
   function tagRender(props) {
     const { label, value, closable, onClose } = props;
-    const onPreventMouseDown = event => {
+    const onPreventMouseDown = (event) => {
       event.preventDefault();
       event.stopPropagation();
     };
@@ -47,11 +47,7 @@ export default function SelectCustomTagRender() {
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -69,12 +65,12 @@ export default function SelectCustomTagRender() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {customTagRender}
         </SyntaxHighlighter>
       )}
-    </Card >
+    </Card>
   );
 }

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { icon } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { icon } from './code.js';
 
-import { Card, Row, Col, Alert, Button } from "antd";
-import { RiFileWarningLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Alert, Button } from 'antd';
+import { RiFileWarningLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function IconAlert() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -23,9 +23,7 @@ export default function IconAlert() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Icon</h4>
-              <p className="hp-p1-body">
-                A relevant icon will make information clearer and more friendly.
-              </p>
+              <p className="hp-p1-body">A relevant icon will make information clearer and more friendly.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -77,7 +75,7 @@ export default function IconAlert() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {icon}

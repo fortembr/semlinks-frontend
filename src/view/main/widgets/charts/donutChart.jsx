@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Card, Row, Col, Dropdown, Menu } from "antd";
-import { RiMoreFill } from "react-icons/ri";
-import Chart from "react-apexcharts";
+import { Card, Row, Col, Dropdown, Menu } from 'antd';
+import { RiMoreFill } from 'react-icons/ri';
+import Chart from 'react-apexcharts';
 
 export default function DonutChart() {
   const menu = (
@@ -17,41 +17,41 @@ export default function DonutChart() {
     series: [1244, 2155, 1541],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "donut",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'donut',
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
-      colors: ["#0010F7", "#55B1F3", "#1BE7FF"],
+      colors: ['#0010F7', '#55B1F3', '#1BE7FF'],
 
-      labels: ["Marketing", "Payments", "Bills"],
+      labels: ['Marketing', 'Payments', 'Bills'],
 
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
       plotOptions: {
         pie: {
           donut: {
-            size: "85%",
+            size: '85%',
             labels: {
               show: true,
               name: {
-                fontSize: "2rem",
+                fontSize: '2rem'
               },
               value: {
-                fontSize: "16px",
+                fontSize: '16px',
                 formatter(val) {
                   return `$ ${val}`;
-                },
+                }
               },
               total: {
                 show: true,
-                fontSize: "16px",
-                label: "Total",
+                fontSize: '16px',
+                label: 'Total',
                 // formatter(w) {
                 //   return `$ `;
                 // },
@@ -59,27 +59,27 @@ export default function DonutChart() {
                   return `$ ${w.globals.seriesTotals.reduce((a, b) => {
                     return a + b;
                   }, 0)}`;
-                },
-              },
-            },
-          },
-        },
+                }
+              }
+            }
+          }
+        }
       },
 
       legend: {
         itemMargin: {
           horizontal: 24,
-          vertical: 0,
+          vertical: 0
         },
-        horizontalAlign: "center",
-        position: "bottom",
-        fontSize: "14px",
+        horizontalAlign: 'center',
+        position: 'bottom',
+        fontSize: '14px',
 
         markers: {
-          radius: 12,
-        },
-      },
-    },
+          radius: 12
+        }
+      }
+    }
   });
 
   return (
@@ -91,9 +91,9 @@ export default function DonutChart() {
               <h4 className="hp-mr-8">Donut Chart</h4>
               <p className="hp-badge-text">Expenses</p>
             </Col>
-            
+
             <Col>
-              <Dropdown overlay={menu} trigger={["click"]}>
+              <Dropdown overlay={menu} trigger={['click']}>
                 <RiMoreFill className="hp-text-color-dark-0" size={24} onClick={(e) => e.preventDefault()} />
               </Dropdown>
             </Col>
@@ -102,13 +102,7 @@ export default function DonutChart() {
 
         <Col span={24}>
           <div id="chart" className="hp-donut-chart">
-            <Chart
-              options={data.options}
-              series={data.series}
-              type="donut"
-              height={398}
-              legend="legend"
-            />
+            <Chart options={data.options} series={data.series} type="donut" height={398} legend="legend" />
           </div>
         </Col>
       </Row>

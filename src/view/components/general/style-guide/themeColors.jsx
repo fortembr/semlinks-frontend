@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col, Tooltip } from "antd";
+import { Card, Row, Col, Tooltip } from 'antd';
 
 export default function ThemeColors() {
   return (
@@ -9,9 +9,8 @@ export default function ThemeColors() {
         <h2 className="hp-mb-8">Color Guide</h2>
 
         <p className="hp-p1-body hp-mb-32">
-          We used dynamic colors to clearly convey the actions, situation and
-          direction within the interface. They serve to make things simple to
-          understand.
+          We used dynamic colors to clearly convey the actions, situation and direction within the interface. They serve
+          to make things simple to understand.
         </p>
       </div>
 
@@ -20,8 +19,7 @@ export default function ThemeColors() {
           <h5 className="hp-w-100 hp-mb-8">Theme Colors</h5>
 
           <p className="hp-p1-body">
-            Theme colors can be use with class
-            .hp-&#123;css-property&#125;-primary-1. It's available for text,
+            Theme colors can be use with class .hp-&#123;css-property&#125;-primary-1. It's available for text,
             background-color, background and border.
           </p>
         </Row>
@@ -44,7 +42,10 @@ export default function ThemeColors() {
                   </Tooltip>
 
                   <Tooltip title="Pr-2 #0063F7">
-                    <Col flex="1 0 0" className="hp-h-100 hp-bg-color-primary-2 hp-color-wrapper-sm hp-border-radius-br"></Col>
+                    <Col
+                      flex="1 0 0"
+                      className="hp-h-100 hp-bg-color-primary-2 hp-color-wrapper-sm hp-border-radius-br"
+                    ></Col>
                   </Tooltip>
                 </Row>
               </Col>
@@ -68,7 +69,10 @@ export default function ThemeColors() {
                     <Col flex="1 0 0" className="hp-h-100 hp-bg-color-secondary-3 hp-color-wrapper-sm"></Col>
                   </Tooltip>
                   <Tooltip title="Se-2 #E26BF5">
-                    <Col flex="1 0 0" className="hp-h-100 hp-bg-color-secondary-2 hp-color-wrapper-sm hp-border-radius-br"></Col>
+                    <Col
+                      flex="1 0 0"
+                      className="hp-h-100 hp-bg-color-secondary-2 hp-color-wrapper-sm hp-border-radius-br"
+                    ></Col>
                   </Tooltip>
                 </Row>
               </Col>
@@ -92,7 +96,10 @@ export default function ThemeColors() {
                     <Col flex="1 0 0" className="hp-h-100 hp-bg-color-danger-3 hp-color-wrapper-sm"></Col>
                   </Tooltip>
                   <Tooltip title="hp-2 #FF455E">
-                    <Col flex="1 0 0" className="hp-h-100 hp-bg-color-danger-2 hp-color-wrapper-sm hp-border-radius-br"></Col>
+                    <Col
+                      flex="1 0 0"
+                      className="hp-h-100 hp-bg-color-danger-2 hp-color-wrapper-sm hp-border-radius-br"
+                    ></Col>
                   </Tooltip>
                 </Row>
               </Col>
@@ -116,7 +123,10 @@ export default function ThemeColors() {
                     <Col flex="1 0 0" className="hp-h-100 hp-bg-color-success-3 hp-color-wrapper-sm"></Col>
                   </Tooltip>
                   <Tooltip title="Su-2 #5BFFCE">
-                    <Col flex="1 0 0" className="hp-h-100 hp-bg-color-success-2 hp-color-wrapper-sm hp-border-radius-br"></Col>
+                    <Col
+                      flex="1 0 0"
+                      className="hp-h-100 hp-bg-color-success-2 hp-color-wrapper-sm hp-border-radius-br"
+                    ></Col>
                   </Tooltip>
                 </Row>
               </Col>
@@ -140,7 +150,10 @@ export default function ThemeColors() {
                     <Col flex="1 0 0" className="hp-h-100 hp-bg-color-warning-3 hp-color-wrapper-sm"></Col>
                   </Tooltip>
                   <Tooltip title="Wa-2 #FFD252">
-                    <Col flex="1 0 0" className="hp-h-100 hp-bg-color-warning-2 hp-color-wrapper-sm hp-border-radius-br"></Col>
+                    <Col
+                      flex="1 0 0"
+                      className="hp-h-100 hp-bg-color-warning-2 hp-color-wrapper-sm hp-border-radius-br"
+                    ></Col>
                   </Tooltip>
                 </Row>
               </Col>
@@ -164,7 +177,10 @@ export default function ThemeColors() {
                     <Col flex="1 0 0" className="hp-h-100 hp-bg-color-info-3 hp-color-wrapper-sm"></Col>
                   </Tooltip>
                   <Tooltip title="In-2 #59EDFF">
-                    <Col flex="1 0 0" className="hp-h-100 hp-bg-color-info-2 hp-color-wrapper-sm hp-border-radius-br"></Col>
+                    <Col
+                      flex="1 0 0"
+                      className="hp-h-100 hp-bg-color-info-2 hp-color-wrapper-sm hp-border-radius-br"
+                    ></Col>
                   </Tooltip>
                 </Row>
               </Col>

@@ -1,264 +1,264 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import acala from "../../../../assets/images/crypto/acala.png";
-import algorand from "../../../../assets/images/crypto/algorand.png";
-import anchor from "../../../../assets/images/crypto/anchor.png";
-import astar from "../../../../assets/images/crypto/astar.png";
-import bitcoin from "../../../../assets/images/crypto/bitcoin.png";
-import bitcoinCash from "../../../../assets/images/crypto/bitcoin-cash.png";
-import bitcoinLightning from "../../../../assets/images/crypto/bitcoin-lightning.png";
-import cardano from "../../../../assets/images/crypto/cardano.png";
-import celo from "../../../../assets/images/crypto/celo.png";
-import cosmos from "../../../../assets/images/crypto/cosmos.png";
-import dash from "../../../../assets/images/crypto/dash.png";
-import dfinity from "../../../../assets/images/crypto/dfinity.png";
-import diem from "../../../../assets/images/crypto/diem.png";
-import dogecoin from "../../../../assets/images/crypto/dogecoin.png";
-import EOS from "../../../../assets/images/crypto/EOS.png";
-import ethereum from "../../../../assets/images/crypto/ethereum.png";
-import ethereum20 from "../../../../assets/images/crypto/ethereum-2.0.png";
-import ethereumClassic from "../../../../assets/images/crypto/ethereum-classic.png";
-import filecoin from "../../../../assets/images/crypto/filecoin.png";
-import flow from "../../../../assets/images/crypto/flow.png";
-import goChain from "../../../../assets/images/crypto/goChain.png";
-import graph from "../../../../assets/images/crypto/graph.png";
-import harmony from "../../../../assets/images/crypto/harmony.png";
-import helium from "../../../../assets/images/crypto/helium.png";
-import hyperledger from "../../../../assets/images/crypto/hyperledger.png";
-import keep from "../../../../assets/images/crypto/keep.png";
-import kusama from "../../../../assets/images/crypto/kusama.png";
-import litecoin from "../../../../assets/images/crypto/litecoin.png";
-import livepeer from "../../../../assets/images/crypto/livepeer.png";
-import mina from "../../../../assets/images/crypto/mina.png";
-import mobileCoin from "../../../../assets/images/crypto/mobileCoin.png";
-import moonbeam from "../../../../assets/images/crypto/moonbeam.png";
-import near from "../../../../assets/images/crypto/near.png";
-import nuCypher from "../../../../assets/images/crypto/nuCypher.png";
-import OAN from "../../../../assets/images/crypto/OAN.png";
-import oasis from "../../../../assets/images/crypto/oasis.png";
-import parityEthereum from "../../../../assets/images/crypto/parity-ethereum.png";
-import polkadot from "../../../../assets/images/crypto/polkadot.png";
-import provenance from "../../../../assets/images/crypto/provenance.png";
-import quorum from "../../../../assets/images/crypto/quorum.png";
-import XRP from "../../../../assets/images/crypto/XRP.png";
-import serum from "../../../../assets/images/crypto/serum.png";
-import skale from "../../../../assets/images/crypto/skale.png";
-import solana from "../../../../assets/images/crypto/solana.png";
-import stacks from "../../../../assets/images/crypto/stacks.png";
-import stellar from "../../../../assets/images/crypto/stellar.png";
-import terra from "../../../../assets/images/crypto/terra.png";
-import tezos from "../../../../assets/images/crypto/tezos.png";
-import trustWallet from "../../../../assets/images/crypto/trust-wallet.png";
-import zcash from "../../../../assets/images/crypto/zcash.png";
+import acala from '../../../../assets/images/crypto/acala.png';
+import algorand from '../../../../assets/images/crypto/algorand.png';
+import anchor from '../../../../assets/images/crypto/anchor.png';
+import astar from '../../../../assets/images/crypto/astar.png';
+import bitcoin from '../../../../assets/images/crypto/bitcoin.png';
+import bitcoinCash from '../../../../assets/images/crypto/bitcoin-cash.png';
+import bitcoinLightning from '../../../../assets/images/crypto/bitcoin-lightning.png';
+import cardano from '../../../../assets/images/crypto/cardano.png';
+import celo from '../../../../assets/images/crypto/celo.png';
+import cosmos from '../../../../assets/images/crypto/cosmos.png';
+import dash from '../../../../assets/images/crypto/dash.png';
+import dfinity from '../../../../assets/images/crypto/dfinity.png';
+import diem from '../../../../assets/images/crypto/diem.png';
+import dogecoin from '../../../../assets/images/crypto/dogecoin.png';
+import EOS from '../../../../assets/images/crypto/EOS.png';
+import ethereum from '../../../../assets/images/crypto/ethereum.png';
+import ethereum20 from '../../../../assets/images/crypto/ethereum-2.0.png';
+import ethereumClassic from '../../../../assets/images/crypto/ethereum-classic.png';
+import filecoin from '../../../../assets/images/crypto/filecoin.png';
+import flow from '../../../../assets/images/crypto/flow.png';
+import goChain from '../../../../assets/images/crypto/goChain.png';
+import graph from '../../../../assets/images/crypto/graph.png';
+import harmony from '../../../../assets/images/crypto/harmony.png';
+import helium from '../../../../assets/images/crypto/helium.png';
+import hyperledger from '../../../../assets/images/crypto/hyperledger.png';
+import keep from '../../../../assets/images/crypto/keep.png';
+import kusama from '../../../../assets/images/crypto/kusama.png';
+import litecoin from '../../../../assets/images/crypto/litecoin.png';
+import livepeer from '../../../../assets/images/crypto/livepeer.png';
+import mina from '../../../../assets/images/crypto/mina.png';
+import mobileCoin from '../../../../assets/images/crypto/mobileCoin.png';
+import moonbeam from '../../../../assets/images/crypto/moonbeam.png';
+import near from '../../../../assets/images/crypto/near.png';
+import nuCypher from '../../../../assets/images/crypto/nuCypher.png';
+import OAN from '../../../../assets/images/crypto/OAN.png';
+import oasis from '../../../../assets/images/crypto/oasis.png';
+import parityEthereum from '../../../../assets/images/crypto/parity-ethereum.png';
+import polkadot from '../../../../assets/images/crypto/polkadot.png';
+import provenance from '../../../../assets/images/crypto/provenance.png';
+import quorum from '../../../../assets/images/crypto/quorum.png';
+import XRP from '../../../../assets/images/crypto/XRP.png';
+import serum from '../../../../assets/images/crypto/serum.png';
+import skale from '../../../../assets/images/crypto/skale.png';
+import solana from '../../../../assets/images/crypto/solana.png';
+import stacks from '../../../../assets/images/crypto/stacks.png';
+import stellar from '../../../../assets/images/crypto/stellar.png';
+import terra from '../../../../assets/images/crypto/terra.png';
+import tezos from '../../../../assets/images/crypto/tezos.png';
+import trustWallet from '../../../../assets/images/crypto/trust-wallet.png';
+import zcash from '../../../../assets/images/crypto/zcash.png';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import CryptoIconItem from "./cryptoIconItem";
+import PageContent from '../../../../layout/components/content/page-content';
+import CryptoIconItem from './cryptoIconItem';
 
 export default function CryptoIcons() {
   const data = [
     {
       image: acala,
-      title: "Acala",
+      title: 'Acala'
     },
     {
       image: algorand,
-      title: "Algorand",
+      title: 'Algorand'
     },
     {
       image: anchor,
-      title: "Anchor",
+      title: 'Anchor'
     },
     {
       image: astar,
-      title: "Astar",
+      title: 'Astar'
     },
     {
       image: bitcoin,
-      title: "Bitcoin",
+      title: 'Bitcoin'
     },
     {
       image: bitcoinCash,
-      title: "Bitcoin Cash",
+      title: 'Bitcoin Cash'
     },
     {
       image: bitcoinLightning,
-      title: "Bitcoin Lightning",
+      title: 'Bitcoin Lightning'
     },
     {
       image: cardano,
-      title: "Cardano",
+      title: 'Cardano'
     },
     {
       image: celo,
-      title: "Celo",
+      title: 'Celo'
     },
     {
       image: cosmos,
-      title: "Cosmos",
+      title: 'Cosmos'
     },
     {
       image: dash,
-      title: "Dash",
+      title: 'Dash'
     },
     {
       image: dfinity,
-      title: "Dfinity",
+      title: 'Dfinity'
     },
     {
       image: diem,
-      title: "Diem",
+      title: 'Diem'
     },
     {
       image: dogecoin,
-      title: "Dogecoin",
+      title: 'Dogecoin'
     },
     {
       image: EOS,
-      title: "Eos",
+      title: 'Eos'
     },
     {
       image: ethereum,
-      title: "Ethereum",
+      title: 'Ethereum'
     },
     {
       image: ethereum20,
-      title: "Ethereum 2.0",
+      title: 'Ethereum 2.0'
     },
     {
       image: ethereumClassic,
-      title: "Ethereum Classic",
+      title: 'Ethereum Classic'
     },
     {
       image: filecoin,
-      title: "Filecoin",
+      title: 'Filecoin'
     },
     {
       image: flow,
-      title: "Flow",
+      title: 'Flow'
     },
     {
       image: goChain,
-      title: "GoChain",
+      title: 'GoChain'
     },
     {
       image: graph,
-      title: "The Graph",
+      title: 'The Graph'
     },
     {
       image: harmony,
-      title: "Harmony",
+      title: 'Harmony'
     },
     {
       image: helium,
-      title: "Helium",
+      title: 'Helium'
     },
     {
       image: hyperledger,
-      title: "Hyperledger",
+      title: 'Hyperledger'
     },
     {
       image: keep,
-      title: "Keep",
+      title: 'Keep'
     },
     {
       image: kusama,
-      title: "Kusama",
+      title: 'Kusama'
     },
     {
       image: litecoin,
-      title: "Litecoin",
+      title: 'Litecoin'
     },
     {
       image: livepeer,
-      title: "Livekeeper",
+      title: 'Livekeeper'
     },
     {
       image: mina,
-      title: "Mina",
+      title: 'Mina'
     },
     {
       image: mobileCoin,
-      title: "Mobilecoin",
+      title: 'Mobilecoin'
     },
     {
       image: moonbeam,
-      title: "Moonbeam",
+      title: 'Moonbeam'
     },
     {
       image: near,
-      title: "Near",
+      title: 'Near'
     },
     {
       image: nuCypher,
-      title: "NuCyper",
+      title: 'NuCyper'
     },
     {
       image: OAN,
-      title: "OAN",
+      title: 'OAN'
     },
     {
       image: oasis,
-      title: "Oasis",
+      title: 'Oasis'
     },
     {
       image: parityEthereum,
-      title: "Parity Ethereum",
+      title: 'Parity Ethereum'
     },
     {
       image: polkadot,
-      title: "Polkadot",
+      title: 'Polkadot'
     },
     {
       image: provenance,
-      title: "Provenance",
+      title: 'Provenance'
     },
     {
       image: quorum,
-      title: "Quorum",
+      title: 'Quorum'
     },
     {
       image: XRP,
-      title: "XRP",
+      title: 'XRP'
     },
     {
       image: serum,
-      title: "Serum",
+      title: 'Serum'
     },
     {
       image: skale,
-      title: "Skale",
+      title: 'Skale'
     },
     {
       image: solana,
-      title: "Solana",
+      title: 'Solana'
     },
     {
       image: stacks,
-      title: "Stacks",
+      title: 'Stacks'
     },
     {
       image: stellar,
-      title: "Stellar",
+      title: 'Stellar'
     },
     {
       image: terra,
-      title: "Terra",
+      title: 'Terra'
     },
     {
       image: tezos,
-      title: "Tezos",
+      title: 'Tezos'
     },
     {
       image: trustWallet,
-      title: "Trust Wallet",
+      title: 'Trust Wallet'
     },
     {
       image: zcash,
-      title: "ZCash",
-    },
-  ]
+      title: 'ZCash'
+    }
+  ];
 
   return (
     <Row gutter={[32, 32]} className="hp-mb-48">
@@ -268,13 +268,13 @@ export default function CryptoIcons() {
           desc="You can use over 50 crypto icons."
           breadcrumb={[
             {
-              title: "Main",
+              title: 'Main'
             },
             {
-              title: "Widgets",
+              title: 'Widgets'
             },
             {
-              title: "Crypto Icons",
+              title: 'Crypto Icons'
             }
           ]}
         />
@@ -284,11 +284,7 @@ export default function CryptoIcons() {
         <Row gutter={[32, 32]}>
           {data.map((item, index) => (
             <Col xl={4} lg={6} md={8} span={12} key={index}>
-              <CryptoIconItem
-                image={item.image}
-                imageHeight={64}
-                title={item.title}
-              />
+              <CryptoIconItem image={item.image} imageHeight={64} title={item.title} />
             </Col>
           ))}
         </Row>

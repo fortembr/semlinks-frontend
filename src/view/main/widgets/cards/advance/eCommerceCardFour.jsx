@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col, Rate } from "antd";
+import { Card, Row, Col, Rate } from 'antd';
 
-import xboxGamepad from "../../../../../assets/images/product/xbox-1.png";
+import xboxGamepad from '../../../../../assets/images/product/xbox-1.png';
 
 export default function EcommerceCardFour() {
   return (
@@ -27,9 +27,7 @@ export default function EcommerceCardFour() {
 
           <Rate defaultValue={4.5} size={16} allowHalf></Rate>
 
-          <span className="h3 hp-mt-8 hp-text-color-primary-1 hp-font-weight-500">
-            $39.00
-          </span>
+          <span className="h3 hp-mt-8 hp-text-color-primary-1 hp-font-weight-500">$39.00</span>
         </Col>
       </Row>
     </Card>

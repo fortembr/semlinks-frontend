@@ -1,73 +1,73 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../../layout/components/content/page-content";
-import SubsColumnCard from "./subsColumnCard";
-import OrderColumnCard from "./orderColumnCard";
-import CustomerSupportCard from "./customerSupportCard";
-import ActiveUserCard from "./activeUserCard";
-import StatisticsCard from "./statisticsCard";
-import SiteTrafficLineCard from "./siteTrafficLineCard";
-import CustomerSupportCardVertical from "./customerSupportCardVertical";
-import SubsColumnCardVertical from "./subsColumnCardVertical";
-import ActiveUserCardVertical from "./activeUserCardVertical";
-import OrderColumnCardVertical from "./orderColumnCardVertical";
-import RevenueLineEcommerceList from "../../../dashboard/ecommerce/revenueLineEcommerceList";
-import SummaryItem from "./summaryItem";
+import PageContent from '../../../../../layout/components/content/page-content';
+import SubsColumnCard from './subsColumnCard';
+import OrderColumnCard from './orderColumnCard';
+import CustomerSupportCard from './customerSupportCard';
+import ActiveUserCard from './activeUserCard';
+import StatisticsCard from './statisticsCard';
+import SiteTrafficLineCard from './siteTrafficLineCard';
+import CustomerSupportCardVertical from './customerSupportCardVertical';
+import SubsColumnCardVertical from './subsColumnCardVertical';
+import ActiveUserCardVertical from './activeUserCardVertical';
+import OrderColumnCardVertical from './orderColumnCardVertical';
+import RevenueLineEcommerceList from '../../../dashboard/ecommerce/revenueLineEcommerceList';
+import SummaryItem from './summaryItem';
 
 export default function Statistics() {
   const dataSuccess = {
     series: [
       {
-        data: [31, 10, 109, 60, 140, 40, 300],
-      },
+        data: [31, 10, 109, 60, 140, 40, 300]
+      }
     ],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "line",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'line',
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
-      colors: ["#00f7bf"],
+      colors: ['#00f7bf'],
       stroke: {
-        curve: "smooth",
-        lineCap: "round",
+        curve: 'smooth',
+        lineCap: 'round'
       },
       tooltip: {
-        enabled: true,
+        enabled: true
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
       grid: {
         show: false,
         padding: {
           left: 0,
-          right: 0,
-        },
+          right: 0
+        }
       },
       xaxis: {
         lines: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
+          show: false
         },
         tooltip: {
-          enabled: false,
+          enabled: false
         },
         labels: {
-          show: false,
-        },
+          show: false
+        }
       },
       responsive: [
         {
@@ -76,11 +76,11 @@ export default function Statistics() {
             legend: {
               itemMargin: {
                 horizontal: 16,
-                vertical: 8,
-              },
-            },
-          },
-        },
+                vertical: 8
+              }
+            }
+          }
+        }
       ],
       yaxis: [
         {
@@ -89,64 +89,64 @@ export default function Statistics() {
           offsetY: 0,
           padding: {
             left: 0,
-            right: 0,
-          },
-        },
-      ],
-    },
+            right: 0
+          }
+        }
+      ]
+    }
   };
 
   const dataDanger = {
     series: [
       {
-        data: [31, 10, 500, 60, 300, 40, 10],
-      },
+        data: [31, 10, 500, 60, 300, 40, 10]
+      }
     ],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "line",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'line',
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
-      colors: ["#ff455e"],
+      colors: ['#ff455e'],
       stroke: {
-        curve: "smooth",
-        lineCap: "round",
+        curve: 'smooth',
+        lineCap: 'round'
       },
       tooltip: {
-        enabled: true,
+        enabled: true
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
       grid: {
         show: false,
         padding: {
           left: 0,
-          right: 0,
-        },
+          right: 0
+        }
       },
       xaxis: {
         lines: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
+          show: false
         },
         tooltip: {
-          enabled: false,
+          enabled: false
         },
         labels: {
-          show: false,
-        },
+          show: false
+        }
       },
       responsive: [
         {
@@ -155,11 +155,11 @@ export default function Statistics() {
             legend: {
               itemMargin: {
                 horizontal: 16,
-                vertical: 8,
-              },
-            },
-          },
-        },
+                vertical: 8
+              }
+            }
+          }
+        }
       ],
       yaxis: [
         {
@@ -168,64 +168,64 @@ export default function Statistics() {
           offsetY: 0,
           padding: {
             left: 0,
-            right: 0,
-          },
-        },
-      ],
-    },
+            right: 0
+          }
+        }
+      ]
+    }
   };
 
   const dataSecondary = {
     series: [
       {
-        data: [31, 10, 500, 60, 300, 40, 10],
-      },
+        data: [31, 10, 500, 60, 300, 40, 10]
+      }
     ],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "line",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'line',
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
-      colors: ["#C903FF"],
+      colors: ['#C903FF'],
       stroke: {
-        curve: "smooth",
-        lineCap: "round",
+        curve: 'smooth',
+        lineCap: 'round'
       },
       tooltip: {
-        enabled: true,
+        enabled: true
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
       grid: {
         show: false,
         padding: {
           left: 0,
-          right: 0,
-        },
+          right: 0
+        }
       },
       xaxis: {
         lines: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
+          show: false
         },
         tooltip: {
-          enabled: false,
+          enabled: false
         },
         labels: {
-          show: false,
-        },
+          show: false
+        }
       },
       responsive: [
         {
@@ -234,11 +234,11 @@ export default function Statistics() {
             legend: {
               itemMargin: {
                 horizontal: 16,
-                vertical: 8,
-              },
-            },
-          },
-        },
+                vertical: 8
+              }
+            }
+          }
+        }
       ],
       yaxis: [
         {
@@ -247,64 +247,64 @@ export default function Statistics() {
           offsetY: 0,
           padding: {
             left: 0,
-            right: 0,
-          },
-        },
-      ],
-    },
+            right: 0
+          }
+        }
+      ]
+    }
   };
 
   const dataInfo = {
     series: [
       {
-        data: [31, 10, 500, 60, 300, 40, 10],
-      },
+        data: [31, 10, 500, 60, 300, 40, 10]
+      }
     ],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "line",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'line',
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
-      colors: ["#1BE7FF"],
+      colors: ['#1BE7FF'],
       stroke: {
-        curve: "smooth",
-        lineCap: "round",
+        curve: 'smooth',
+        lineCap: 'round'
       },
       tooltip: {
-        enabled: true,
+        enabled: true
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
       grid: {
         show: false,
         padding: {
           left: 0,
-          right: 0,
-        },
+          right: 0
+        }
       },
       xaxis: {
         lines: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
+          show: false
         },
         tooltip: {
-          enabled: false,
+          enabled: false
         },
         labels: {
-          show: false,
-        },
+          show: false
+        }
       },
       responsive: [
         {
@@ -313,11 +313,11 @@ export default function Statistics() {
             legend: {
               itemMargin: {
                 horizontal: 16,
-                vertical: 8,
-              },
-            },
-          },
-        },
+                vertical: 8
+              }
+            }
+          }
+        }
       ],
       yaxis: [
         {
@@ -326,64 +326,64 @@ export default function Statistics() {
           offsetY: 0,
           padding: {
             left: 0,
-            right: 0,
-          },
-        },
-      ],
-    },
+            right: 0
+          }
+        }
+      ]
+    }
   };
 
   const dataWarning = {
     series: [
       {
-        data: [31, 10, 500, 60, 300, 40, 10],
-      },
+        data: [31, 10, 500, 60, 300, 40, 10]
+      }
     ],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "line",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'line',
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
-      colors: ["#FFC700"],
+      colors: ['#FFC700'],
       stroke: {
-        curve: "smooth",
-        lineCap: "round",
+        curve: 'smooth',
+        lineCap: 'round'
       },
       tooltip: {
-        enabled: true,
+        enabled: true
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
       grid: {
         show: false,
         padding: {
           left: 0,
-          right: 0,
-        },
+          right: 0
+        }
       },
       xaxis: {
         lines: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
+          show: false
         },
         tooltip: {
-          enabled: false,
+          enabled: false
         },
         labels: {
-          show: false,
-        },
+          show: false
+        }
       },
       responsive: [
         {
@@ -392,11 +392,11 @@ export default function Statistics() {
             legend: {
               itemMargin: {
                 horizontal: 16,
-                vertical: 8,
-              },
-            },
-          },
-        },
+                vertical: 8
+              }
+            }
+          }
+        }
       ],
       yaxis: [
         {
@@ -405,64 +405,64 @@ export default function Statistics() {
           offsetY: 0,
           padding: {
             left: 0,
-            right: 0,
-          },
-        },
-      ],
-    },
+            right: 0
+          }
+        }
+      ]
+    }
   };
 
   const dataBlack = {
     series: [
       {
-        data: [31, 10, 500, 60, 300, 40, 10],
-      },
+        data: [31, 10, 500, 60, 300, 40, 10]
+      }
     ],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "line",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'line',
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
-      colors: ["#111314"],
+      colors: ['#111314'],
       stroke: {
-        curve: "smooth",
-        lineCap: "round",
+        curve: 'smooth',
+        lineCap: 'round'
       },
       tooltip: {
-        enabled: true,
+        enabled: true
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
       grid: {
         show: false,
         padding: {
           left: 0,
-          right: 0,
-        },
+          right: 0
+        }
       },
       xaxis: {
         lines: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
+          show: false
         },
         tooltip: {
-          enabled: false,
+          enabled: false
         },
         labels: {
-          show: false,
-        },
+          show: false
+        }
       },
       responsive: [
         {
@@ -471,11 +471,11 @@ export default function Statistics() {
             legend: {
               itemMargin: {
                 horizontal: 16,
-                vertical: 8,
-              },
-            },
-          },
-        },
+                vertical: 8
+              }
+            }
+          }
+        }
       ],
       yaxis: [
         {
@@ -484,11 +484,11 @@ export default function Statistics() {
           offsetY: 0,
           padding: {
             left: 0,
-            right: 0,
-          },
-        },
-      ],
-    },
+            right: 0
+          }
+        }
+      ]
+    }
   };
 
   return (
@@ -499,16 +499,16 @@ export default function Statistics() {
           desc="You can find special Analytic Cards we designed for Yoda Admin Template"
           breadcrumb={[
             {
-              title: "Main",
+              title: 'Main'
             },
             {
-              title: "Widgets",
+              title: 'Widgets'
             },
             {
-              title: "YodaCards",
+              title: 'YodaCards'
             },
             {
-              title: "Statistics",
+              title: 'Statistics'
             }
           ]}
         />
@@ -559,52 +559,27 @@ export default function Statistics() {
               </Col>
 
               <Col md={12} span={24}>
-                <SummaryItem
-                  chartData={dataSuccess}
-                  title="Offer"
-                  type="success"
-                />
+                <SummaryItem chartData={dataSuccess} title="Offer" type="success" />
               </Col>
 
               <Col md={12} span={24}>
-                <SummaryItem
-                  chartData={dataDanger}
-                  title="Favorite"
-                  type="danger"
-                  arrowDown={true}
-                />
+                <SummaryItem chartData={dataDanger} title="Favorite" type="danger" arrowDown={true} />
               </Col>
 
               <Col md={12} span={24}>
-                <SummaryItem
-                  chartData={dataSecondary}
-                  title="Offer"
-                  type="secondary"
-                />
+                <SummaryItem chartData={dataSecondary} title="Offer" type="secondary" />
               </Col>
 
               <Col md={12} span={24}>
-                <SummaryItem
-                  chartData={dataInfo}
-                  title="Favorite"
-                  type="info"
-                />
+                <SummaryItem chartData={dataInfo} title="Favorite" type="info" />
               </Col>
 
               <Col md={12} span={24}>
-                <SummaryItem
-                  chartData={dataWarning}
-                  title="Offer"
-                  type="warning"
-                />
+                <SummaryItem chartData={dataWarning} title="Offer" type="warning" />
               </Col>
 
               <Col md={12} span={24}>
-                <SummaryItem
-                  chartData={dataBlack}
-                  title="Favorite"
-                  dark={true}
-                />
+                <SummaryItem chartData={dataBlack} title="Favorite" dark={true} />
               </Col>
             </Row>
           </Col>

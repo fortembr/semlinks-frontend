@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Card, Row, Col, Dropdown, Menu } from "antd";
-import {
-  RiMoreFill,
-  RiArrowRightUpLine,
-} from "react-icons/ri";
-import Chart from "react-apexcharts";
+import { Card, Row, Col, Dropdown, Menu } from 'antd';
+import { RiMoreFill, RiArrowRightUpLine } from 'react-icons/ri';
+import Chart from 'react-apexcharts';
 
 export default function SiteTrafficLineCard() {
   const menu = (
@@ -19,73 +16,73 @@ export default function SiteTrafficLineCard() {
   const [data1] = useState({
     series: [
       {
-        data: [31, 10, 109, 60, 140, 40, 150],
-      },
+        data: [31, 10, 109, 60, 140, 40, 150]
+      }
     ],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "line",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'line',
         stacked: true,
-        id: "visiters-line-card",
+        id: 'visiters-line-card',
 
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
-      colors: ["#0063F7"],
+      colors: ['#0063F7'],
       labels: {
         style: {
-          fontSize: "14px",
-        },
+          fontSize: '14px'
+        }
       },
       stroke: {
-        curve: "smooth",
-        lineCap: "round",
+        curve: 'smooth',
+        lineCap: 'round'
       },
 
       tooltip: {
-        enabled: false,
+        enabled: false
       },
 
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
 
       grid: {
         show: false,
         padding: {
           left: 0,
-          right: 0,
-        },
+          right: 0
+        }
       },
 
       markers: {
         strokeWidth: 0,
         size: 0,
-        colors: ["#0063F7", "#1BE7FF"],
+        colors: ['#0063F7', '#1BE7FF'],
         hover: {
-          sizeOffset: 1,
-        },
+          sizeOffset: 1
+        }
       },
       xaxis: {
         // type: "numeric",
         lines: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
+          show: false
         },
 
         labels: {
-          show: false,
-        },
+          show: false
+        }
       },
       // xaxis: {
       //   axisTicks: {
@@ -105,11 +102,11 @@ export default function SiteTrafficLineCard() {
             legend: {
               itemMargin: {
                 horizontal: 16,
-                vertical: 8,
-              },
-            },
-          },
-        },
+                vertical: 8
+              }
+            }
+          }
+        }
       ],
 
       yaxis: [
@@ -121,11 +118,11 @@ export default function SiteTrafficLineCard() {
           offsetY: 0,
           padding: {
             left: 0,
-            right: 0,
-          },
-        },
-      ],
-    },
+            right: 0
+          }
+        }
+      ]
+    }
   });
 
   return (
@@ -135,7 +132,7 @@ export default function SiteTrafficLineCard() {
           <Row justify="space-between">
             <h5 className="hp-mr-8">Site Traffic</h5>
 
-            <Dropdown overlay={menu} trigger={["click"]}>
+            <Dropdown overlay={menu} trigger={['click']}>
               <RiMoreFill className="hp-text-color-dark-0" size={24} onClick={(e) => e.preventDefault()} />
             </Dropdown>
           </Row>
@@ -155,13 +152,7 @@ export default function SiteTrafficLineCard() {
         </Col>
 
         <Col span={12} className="hp-mb-xs-32 hp-px-0">
-          <Chart
-            options={data1.options}
-            series={data1.series}
-            type="line"
-            height="70%"
-            legend="legend"
-          />
+          <Chart options={data1.options} series={data1.series} type="line" height="70%" legend="legend" />
         </Col>
       </Row>
     </Card>

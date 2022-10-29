@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { miniCircleProgressBar } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { miniCircleProgressBar } from './code.js';
 
-import { Card, Row, Col, Progress, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Progress, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function MiniCircleProgessBar() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -39,37 +39,17 @@ export default function MiniCircleProgessBar() {
         <Col span={24}>
           <Row gutter={[8, 8]}>
             <Col>
-              <Progress
-                type="circle"
-                percent={75}
-                width={100}
-                strokeWidth={2}
-              />
+              <Progress type="circle" percent={75} width={100} strokeWidth={2} />
             </Col>
 
             <Col className="hp-text-center">
-              <Progress
-                type="circle"
-                percent={70}
-                width={100}
-                strokeWidth={2}
-                status="exception"
-              />
-              <p className="hp-badge-text hp-font-weight-400 hp-mb-0 hp-mt-8">
-                Information
-              </p>
+              <Progress type="circle" percent={70} width={100} strokeWidth={2} status="exception" />
+              <p className="hp-badge-text hp-font-weight-400 hp-mb-0 hp-mt-8">Information</p>
             </Col>
 
             <Col className="hp-text-center">
-              <Progress
-                type="circle"
-                percent={100}
-                width={100}
-                strokeWidth={2}
-              />
-              <p className="hp-badge-text hp-font-weight-400 hp-mb-0 hp-mt-8">
-                Information
-              </p>
+              <Progress type="circle" percent={100} width={100} strokeWidth={2} />
+              <p className="hp-badge-text hp-font-weight-400 hp-mb-0 hp-mt-8">Information</p>
             </Col>
           </Row>
         </Col>
@@ -78,7 +58,7 @@ export default function MiniCircleProgessBar() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {miniCircleProgressBar}

@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import CollapseCard from "./collapse";
-import AccordionCard from "./accordion";
+import PageContent from '../../../../layout/components/content/page-content';
+import CollapseCard from './collapse';
+import AccordionCard from './accordion';
 
 export default function Collapse() {
   return (
@@ -15,14 +15,14 @@ export default function Collapse() {
           desc="A content area which can be collapsed and expanded."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Display",
+              title: 'Data Display'
             },
             {
-              title: "Collapse",
+              title: 'Collapse'
             }
           ]}
         />

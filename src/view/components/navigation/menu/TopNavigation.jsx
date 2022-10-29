@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { topNavigation } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { topNavigation } from './code.js';
 
-import { Card, Row, Col, Menu, Button } from "antd";
-import { RiMailLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Menu, Button } from 'antd';
+import { RiMailLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 const { SubMenu } = Menu;
 
 export default function TopNavigationMenu() {
-  const [current, setCurrent] = useState("mail");
+  const [current, setCurrent] = useState('mail');
   const [checkedCode, setCheckedCode] = useState(false);
   const [codeClass, setCodeClass] = useState(false);
 
@@ -26,7 +26,7 @@ export default function TopNavigationMenu() {
   };
 
   // Redux
-  const customise = useSelector(state => state.customise)
+  const customise = useSelector((state) => state.customise);
 
   return (
     <Card className="hp-border-color-black-40">
@@ -53,25 +53,17 @@ export default function TopNavigationMenu() {
             onClick={handleClick}
             selectedKeys={[current]}
             mode="horizontal"
-            theme={customise.theme == "light" ? "light" : "dark"}
+            theme={customise.theme == 'light' ? 'light' : 'dark'}
           >
             <Menu.Item key="mail" icon={<RiMailLine className="remix-icon" />}>
               Navigation One
             </Menu.Item>
 
-            <Menu.Item
-              key="app"
-              disabled
-              icon={<RiMailLine className="remix-icon" />}
-            >
+            <Menu.Item key="app" disabled icon={<RiMailLine className="remix-icon" />}>
               Navigation Two
             </Menu.Item>
 
-            <SubMenu
-              key="SubMenu"
-              icon={<RiMailLine className="remix-icon" />}
-              title="Navigation Three - Submenu"
-            >
+            <SubMenu key="SubMenu" icon={<RiMailLine className="remix-icon" />} title="Navigation Three - Submenu">
               <Menu.ItemGroup title="Item 1">
                 <Menu.Item key="setting:1">Option 1</Menu.Item>
                 <Menu.Item key="setting:2">Option 2</Menu.Item>
@@ -95,7 +87,7 @@ export default function TopNavigationMenu() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {topNavigation}

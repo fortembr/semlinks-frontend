@@ -1,11 +1,11 @@
 import React, { useContext, useState, useEffect, useRef } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { editableCells } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { editableCells } from './code.js';
 
-import { Table, Input, Button, Popconfirm, Form, Row, Col, Card } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Input, Button, Popconfirm, Form, Row, Col, Card } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const EditableContext = React.createContext(null);
 
@@ -18,21 +18,21 @@ export default function EditableCellsTable() {
     setCheckedCode(!checkedCode);
   }
 
-  const [count, setCount] = useState(2)
+  const [count, setCount] = useState(2);
   const [dataSource, setDataSource] = useState([
     {
       key: '0',
       name: 'John Brown 0',
       age: '32',
-      address: 'London, Park Lane no. 0',
+      address: 'London, Park Lane no. 0'
     },
     {
       key: '1',
       name: 'John Brown 1',
       age: '32',
-      address: 'London, Park Lane no. 1',
-    },
-  ])
+      address: 'London, Park Lane no. 1'
+    }
+  ]);
 
   const EditableRow = ({ index, ...props }) => {
     const [form] = Form.useForm();
@@ -45,15 +45,7 @@ export default function EditableCellsTable() {
     );
   };
 
-  const EditableCell = ({
-    title,
-    editable,
-    children,
-    dataIndex,
-    record,
-    handleSave,
-    ...restProps
-  }) => {
+  const EditableCell = ({ title, editable, children, dataIndex, record, handleSave, ...restProps }) => {
     const [editing, setEditing] = useState(false);
     const inputRef = useRef(null);
     const form = useContext(EditableContext);
@@ -66,7 +58,7 @@ export default function EditableCellsTable() {
     const toggleEdit = () => {
       setEditing(!editing);
       form.setFieldsValue({
-        [dataIndex]: record[dataIndex],
+        [dataIndex]: record[dataIndex]
       });
     };
 
@@ -86,14 +78,14 @@ export default function EditableCellsTable() {
       childNode = editing ? (
         <Form.Item
           style={{
-            margin: 0,
+            margin: 0
           }}
           name={dataIndex}
           rules={[
             {
               required: true,
-              message: title + ' is required.',
-            },
+              message: title + ' is required.'
+            }
           ]}
         >
           <Input ref={inputRef} onPressEnter={save} onBlur={save} />
@@ -102,7 +94,7 @@ export default function EditableCellsTable() {
         <div
           className="editable-cell-value-wrap"
           style={{
-            paddingRight: 24,
+            paddingRight: 24
           }}
           onClick={toggleEdit}
         >
@@ -119,15 +111,15 @@ export default function EditableCellsTable() {
       title: 'name',
       dataIndex: 'name',
       width: '30%',
-      editable: true,
+      editable: true
     },
     {
       title: 'age',
-      dataIndex: 'age',
+      dataIndex: 'age'
     },
     {
       title: 'address',
-      dataIndex: 'address',
+      dataIndex: 'address'
     },
     {
       title: 'operation',
@@ -137,8 +129,8 @@ export default function EditableCellsTable() {
           <Popconfirm title="Sure to delete?" onConfirm={() => handleDelete(record.key)}>
             <a>Delete</a>
           </Popconfirm>
-        ) : null,
-    },
+        ) : null
+    }
   ];
 
   const handleDelete = (key) => {
@@ -150,7 +142,7 @@ export default function EditableCellsTable() {
       key: count,
       name: 'John Brown' + count,
       age: '32',
-      address: 'London, Park Lane no. ' + count,
+      address: 'London, Park Lane no. ' + count
     };
     setDataSource([...dataSource, newData]);
     setCount(count + 1);
@@ -167,8 +159,8 @@ export default function EditableCellsTable() {
   const components = {
     body: {
       row: EditableRow,
-      cell: EditableCell,
-    },
+      cell: EditableCell
+    }
   };
 
   const columnsTable = columns.map((col) => {
@@ -183,8 +175,8 @@ export default function EditableCellsTable() {
         editable: col.editable,
         dataIndex: col.dataIndex,
         title: col.title,
-        handleSave: handleSave,
-      }),
+        handleSave: handleSave
+      })
     };
   });
 
@@ -199,11 +191,7 @@ export default function EditableCellsTable() {
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -211,7 +199,7 @@ export default function EditableCellsTable() {
             onClick={handleAdd}
             type="primary"
             style={{
-              marginBottom: 16,
+              marginBottom: 16
             }}
           >
             Add a row
@@ -231,7 +219,7 @@ export default function EditableCellsTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {editableCells}

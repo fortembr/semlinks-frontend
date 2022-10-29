@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicInput from "./basic";
-import InputSizes from "./sizes";
-import PrePostTab from "./prePostTab";
-import SearchBox from "./searchBox";
-import TextAreaItem from "./textArea";
-import TextAreaCounting from "./textAreaCounting";
-import PrefixSuffix from "./prefixSuffix";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicInput from './basic';
+import InputSizes from './sizes';
+import PrePostTab from './prePostTab';
+import SearchBox from './searchBox';
+import TextAreaItem from './textArea';
+import TextAreaCounting from './textAreaCounting';
+import PrefixSuffix from './prefixSuffix';
 
 export default function Inputs() {
   return (
@@ -20,14 +20,14 @@ export default function Inputs() {
           desc="A basic widget for getting the user input is a text field. Keyboard and mouse can be used for providing or changing data."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Entry",
+              title: 'Data Entry'
             },
             {
-              title: "Inputs",
+              title: 'Inputs'
             }
           ]}
         />

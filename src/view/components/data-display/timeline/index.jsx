@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicTimeline from "./basic";
-import AlternateTimeline from "./alternate";
-import LabelTimeline from "./label";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicTimeline from './basic';
+import AlternateTimeline from './alternate';
+import LabelTimeline from './label';
 
 export default function Timeline() {
   return (
@@ -16,14 +16,14 @@ export default function Timeline() {
           desc="Vertical display timeline."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Display",
+              title: 'Data Display'
             },
             {
-              title: "Timeline",
+              title: 'Timeline'
             }
           ]}
         />

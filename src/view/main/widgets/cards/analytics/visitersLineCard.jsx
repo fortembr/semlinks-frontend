@@ -1,103 +1,103 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Card, Row, Col, DatePicker } from "antd";
-import Chart from "react-apexcharts";
-import moment from "moment";
+import { Card, Row, Col, DatePicker } from 'antd';
+import Chart from 'react-apexcharts';
+import moment from 'moment';
 
 export default function VisitersLineCard() {
   const [data] = useState({
     series: [
       {
-        name: "Ads",
-        data: [8245, 14452, 8545, 14452, 6012, 22333],
+        name: 'Ads',
+        data: [8245, 14452, 8545, 14452, 6012, 22333]
       },
       {
-        name: "Organic",
-        data: [12245, 7952, 10623, 7935, 14345, 4002],
-      },
+        name: 'Organic',
+        data: [12245, 7952, 10623, 7935, 14345, 4002]
+      }
     ],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "area",
-        id: "visiters-line-card",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'area',
+        id: 'visiters-line-card',
 
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
-      colors: ["#0063F7", "#00F7BF"],
+      colors: ['#0063F7', '#00F7BF'],
       labels: {
         style: {
-          fontSize: "14px",
-        },
+          fontSize: '14px'
+        }
       },
       fill: {
-        opacity: 0.3,
+        opacity: 0.3
       },
 
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
 
       grid: {
-        borderColor: "#DFE6E9",
+        borderColor: '#DFE6E9',
         row: {
-          opacity: 0.5,
-        },
+          opacity: 0.5
+        }
       },
 
       markers: {
         strokeWidth: 0,
         size: 0,
-        colors: ["rgba(0, 255, 198, 0.17)", "rgba(45, 125, 239, 0.17)"],
+        colors: ['rgba(0, 255, 198, 0.17)', 'rgba(45, 125, 239, 0.17)'],
         hover: {
-          sizeOffset: 1,
-        },
+          sizeOffset: 1
+        }
       },
       xaxis: {
         axisTicks: {
           show: false,
-          borderType: "solid",
-          color: "#78909C",
+          borderType: 'solid',
+          color: '#78909C',
           height: 6,
           offsetX: 0,
-          offsetY: 0,
+          offsetY: 0
         },
 
         // tickPlacement: "between",
         labels: {
           style: {
-            colors: ["636E72"],
-            fontSize: "14px",
-          },
+            colors: ['636E72'],
+            fontSize: '14px'
+          }
         },
-        categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
       },
       legend: {
-        horizontalAlign: "right",
+        horizontalAlign: 'right',
         offsetX: 40,
-        position: "top",
+        position: 'top'
       },
       yaxis: {
         labels: {
           style: {
-            colors: ["636E72"],
-            fontSize: "14px",
+            colors: ['636E72'],
+            fontSize: '14px'
           },
           formatter: (value) => {
-            return value / 1000 + "K";
-          },
+            return value / 1000 + 'K';
+          }
         },
 
         min: 0,
         max: 30000,
-        tickAmount: 3,
-      },
-    },
+        tickAmount: 3
+      }
+    }
   });
 
   return (
@@ -108,25 +108,16 @@ export default function VisitersLineCard() {
             <Row align="bottom">
               <h5 className="hp-mr-8">Visiters</h5>
             </Row>
-            
+
             <Col>
-              <DatePicker
-                picker="year"
-                defaultValue={moment("2019", "YYYY")}
-              />
+              <DatePicker picker="year" defaultValue={moment('2019', 'YYYY')} />
             </Col>
           </Row>
         </Col>
 
         <Col span={24}>
           <div id="visiters-line-card">
-            <Chart
-              options={data.options}
-              series={data.series}
-              type="area"
-              height="100%"
-              legend="legend"
-            />
+            <Chart options={data.options} series={data.series} type="area" height="100%" legend="legend" />
           </div>
         </Col>
       </Row>

@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicRadio from "./basic";
-import DisabledRadio from "./disabled";
-import RadioGroup from "./radioGroup";
-import RadioGroupVertical from "./radioGroupVertical";
-import RadioButtonSolid from "./radioButtonSolid";
-import RadioButtonStyle from "./radioButtonStyle";
-import RadioButtonSize from "./radioButtonSize";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicRadio from './basic';
+import DisabledRadio from './disabled';
+import RadioGroup from './radioGroup';
+import RadioGroupVertical from './radioGroupVertical';
+import RadioButtonSolid from './radioButtonSolid';
+import RadioButtonStyle from './radioButtonStyle';
+import RadioButtonSize from './radioButtonSize';
 
 export default function Radio() {
   return (
@@ -20,14 +20,14 @@ export default function Radio() {
           desc="Radio."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Entry",
+              title: 'Data Entry'
             },
             {
-              title: "Radio",
+              title: 'Radio'
             }
           ]}
         />

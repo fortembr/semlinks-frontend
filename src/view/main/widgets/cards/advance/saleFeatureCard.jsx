@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col } from "antd";
-import { Ticket } from "react-iconly";
+import { Card, Row, Col } from 'antd';
+import { Ticket } from 'react-iconly';
 
 export default function SaleFeatureCard() {
   return (
@@ -14,14 +14,10 @@ export default function SaleFeatureCard() {
         <Col className="hp-mt-8">
           <h3 className="hp-mb-4">
             $ 323
-            <span className="hp-badge-text hp-ml-8 hp-text-color-warning-1">
-              -1.4%
-            </span>
+            <span className="hp-badge-text hp-ml-8 hp-text-color-warning-1">-1.4%</span>
           </h3>
 
-          <p className="hp-p1-body hp-mb-0 hp-text-color-black-80 hp-text-color-dark-30">
-            Average Sale
-          </p>
+          <p className="hp-p1-body hp-mb-0 hp-text-color-black-80 hp-text-color-dark-30">Average Sale</p>
         </Col>
       </Row>
     </Card>

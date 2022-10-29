@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col, Card } from "antd";
+import { Row, Col, Card } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import SelectBoxFlatItems from "./flatItems";
-import SelectBoxProductItems from "./productItems";
-import SelectBoxFlagItems from "./flagItems";
-import SelectBoxLogoItems from "./logoItems";
-import SelectBoxAvatarItems from "./avatarItems";
-import SelectBoxBoxedProductItems from "./boxedProductItems";
-import SelectBoxBoxedFlagItems from "./boxedFlagItems";
-import SelectBoxBoxedUserItems from "./boxedUserItems";
-import SelectBoxBoxedIllustrationItems from "./boxedIllustrationItems";
-import SelectBoxBoxedLogoItems from "./boxedLogoItems";
+import PageContent from '../../../../layout/components/content/page-content';
+import SelectBoxFlatItems from './flatItems';
+import SelectBoxProductItems from './productItems';
+import SelectBoxFlagItems from './flagItems';
+import SelectBoxLogoItems from './logoItems';
+import SelectBoxAvatarItems from './avatarItems';
+import SelectBoxBoxedProductItems from './boxedProductItems';
+import SelectBoxBoxedFlagItems from './boxedFlagItems';
+import SelectBoxBoxedUserItems from './boxedUserItems';
+import SelectBoxBoxedIllustrationItems from './boxedIllustrationItems';
+import SelectBoxBoxedLogoItems from './boxedLogoItems';
 
 export default function SelectBox() {
   return (
@@ -23,13 +23,13 @@ export default function SelectBox() {
           desc="These selectboxes designed for different usages. You can easly edit it regarding to your needs"
           breadcrumb={[
             {
-              title: "Main",
+              title: 'Main'
             },
             {
-              title: "Widgets",
+              title: 'Widgets'
             },
             {
-              title: "SelectBox",
+              title: 'SelectBox'
             }
           ]}
         />
@@ -73,19 +73,19 @@ export default function SelectBox() {
             <Col span={24}>
               <SelectBoxBoxedProductItems />
             </Col>
-     
+
             <Col span={24}>
               <SelectBoxBoxedFlagItems />
             </Col>
-     
+
             <Col span={24}>
               <SelectBoxBoxedUserItems />
             </Col>
-     
+
             <Col span={24}>
               <SelectBoxBoxedLogoItems />
             </Col>
-     
+
             <Col span={24}>
               <SelectBoxBoxedIllustrationItems />
             </Col>

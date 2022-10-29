@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { icon } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { icon } from './code.js';
 
-import { Card, Row, Col, Popconfirm, Button } from "antd";
-import { RiErrorWarningLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Popconfirm, Button } from 'antd';
+import { RiErrorWarningLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function IconPopconfirm() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -23,9 +23,7 @@ export default function IconPopconfirm() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Customize icon</h4>
-              <p className="hp-p1-body">
-                Set icon props to customize the icon.
-              </p>
+              <p className="hp-p1-body">Set icon props to customize the icon.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -41,9 +39,7 @@ export default function IconPopconfirm() {
         <Col span={24}>
           <Popconfirm
             title="Are you sure？"
-            icon={
-              <RiErrorWarningLine className="remix-icon hp-text-color-primary-1 hp-text-color-dark-primary-2" />
-            }
+            icon={<RiErrorWarningLine className="remix-icon hp-text-color-primary-1 hp-text-color-dark-primary-2" />}
           >
             <a href="#">Delete</a>
           </Popconfirm>
@@ -53,7 +49,7 @@ export default function IconPopconfirm() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {icon}

@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { redBadge } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { redBadge } from './code.js';
 
-import { Card, Row, Col, Badge, Button } from "antd";
-import { RiNotificationLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Badge, Button } from 'antd';
+import { RiNotificationLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function BadgeRed() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -18,7 +18,7 @@ export default function BadgeRed() {
   }
 
   // RTL
-  const direction = useSelector(state => state.customise.direction)
+  const direction = useSelector((state) => state.customise.direction);
 
   return (
     <Card className="hp-border-color-black-40">
@@ -26,17 +26,12 @@ export default function BadgeRed() {
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Red badge</h4>
           <p className="hp-p1-body">
-            This will simply display a red badge, without a specific count. If
-            count equals 0, it won't display the dot.
+            This will simply display a red badge, without a specific count. If count equals 0, it won't display the dot.
           </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -54,7 +49,7 @@ export default function BadgeRed() {
             </Col>
 
             <Col>
-              <Badge dot offset={direction == "rtl" ? [-4, 3] : [4, 3]}>
+              <Badge dot offset={direction == 'rtl' ? [-4, 3] : [4, 3]}>
                 <a href="#">Link something</a>
               </Badge>
             </Col>
@@ -65,7 +60,7 @@ export default function BadgeRed() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {redBadge}

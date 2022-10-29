@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
-import Flags from 'country-flag-icons/react/3x2'
+import { Row, Col } from 'antd';
+import Flags from 'country-flag-icons/react/3x2';
 
-import SelectBoxItem from "./selectBoxItem";
+import SelectBoxItem from './selectBoxItem';
 
 export default function SelectBoxBoxedFlagItems() {
   return (
@@ -14,15 +14,25 @@ export default function SelectBoxBoxedFlagItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -78,15 +88,25 @@ export default function SelectBoxBoxedFlagItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -138,15 +158,25 @@ export default function SelectBoxBoxedFlagItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -198,15 +228,25 @@ export default function SelectBoxBoxedFlagItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -258,15 +298,25 @@ export default function SelectBoxBoxedFlagItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -314,15 +364,25 @@ export default function SelectBoxBoxedFlagItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -370,15 +430,25 @@ export default function SelectBoxBoxedFlagItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>
@@ -426,15 +496,25 @@ export default function SelectBoxBoxedFlagItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Flag</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Title = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Badge = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Image = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col md={6} xl={5} span={24}>

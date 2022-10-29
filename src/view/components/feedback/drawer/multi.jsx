@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { multi } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { multi } from './code.js';
 
-import { Card, Row, Col, Drawer, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Drawer, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function MultiDrawer() {
   const [visible, setVisible] = useState(false);
@@ -41,10 +41,7 @@ export default function MultiDrawer() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Multi-level drawer</h4>
-              <p className="hp-p1-body">
-                Open a new drawer on top of an existing drawer to handle multi
-                branch tasks.
-              </p>
+              <p className="hp-p1-body">Open a new drawer on top of an existing drawer to handle multi branch tasks.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -90,7 +87,7 @@ export default function MultiDrawer() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {multi}

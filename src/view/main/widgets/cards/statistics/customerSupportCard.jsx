@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Card, Row, Col } from "antd";
-import { ExportSquare } from "iconsax-react";
-import Chart from "react-apexcharts";
+import { Card, Row, Col } from 'antd';
+import { ExportSquare } from 'iconsax-react';
+import Chart from 'react-apexcharts';
 
 export default function CustomerSupportCard() {
   const [data] = useState({
@@ -11,8 +11,8 @@ export default function CustomerSupportCard() {
       chart: {
         stacked: true,
         toolbar: {
-          show: false,
-        },
+          show: false
+        }
       },
       grid: {
         show: false,
@@ -20,70 +20,70 @@ export default function CustomerSupportCard() {
           left: -24,
           right: -24,
           top: -16,
-          bottom: -16,
-        },
+          bottom: -16
+        }
       },
       plotOptions: {
         radialBar: {
           startAngle: 0,
           endAngle: 360,
           hollow: {
-            size: '45%',
+            size: '45%'
           },
           track: {
             show: true,
-            background: "#ffffff",
+            background: '#ffffff',
             strokeWidth: '100%',
             opacity: 1,
-            margin: 0,
+            margin: 0
           },
           dataLabels: {
             show: true,
             value: {
-              fontSize: "12px",
-              color: "#FF455E",
+              fontSize: '12px',
+              color: '#FF455E',
               fontWeight: 500,
-              offsetY: -11,
+              offsetY: -11
             },
             total: {
               show: true,
-              fontSize: "12px",
-              label: "",
+              fontSize: '12px',
+              label: '',
               formatter: function (w) {
-                return "%" + 76;
-              },
-            },
-          },
-        },
+                return '%' + 76;
+              }
+            }
+          }
+        }
       },
       legend: {
-        show: false,
+        show: false
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
-      colors: ["#FF455E"],
+      colors: ['#FF455E'],
       xaxis: {
         labels: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
-        },
+          show: false
+        }
       },
       yaxis: {
         show: false,
-        max: 100,
+        max: 100
       },
       tooltip: {
         x: {
-          show: false,
-        },
-      },
-    },
+          show: false
+        }
+      }
+    }
   });
 
   return (
@@ -106,16 +106,10 @@ export default function CustomerSupportCard() {
         <Col flex="1 0 0" className="hp-overflow-hidden">
           <h3 className="hp-mb-0 hp-font-weight-600 hp-d-flex-center">
             <span>43,046</span>
-            <ExportSquare
-              size="20"
-              variant="Bold"
-              className="hp-ml-4"
-            />
+            <ExportSquare size="20" variant="Bold" className="hp-ml-4" />
           </h3>
 
-          <p className="hp-p1-body hp-mb-0">
-            Ticket Closed
-          </p>
+          <p className="hp-p1-body hp-mb-0">Ticket Closed</p>
         </Col>
       </Row>
     </Card>

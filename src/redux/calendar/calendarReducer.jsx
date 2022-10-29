@@ -1,27 +1,25 @@
 const initialState = {
   events: [],
   selectedEvent: {},
-  selectedCalendars: ["Important", "Work", "Social", "Travel"],
+  selectedCalendars: ['Important', 'Work', 'Social', 'Travel']
 };
 
 const calenderReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "FETCH_EVENTS":
+    case 'FETCH_EVENTS':
       return { ...state, events: action.events };
 
-    case "ADD_EVENT":
+    case 'ADD_EVENT':
       return { ...state };
 
-    case "REMOVE_EVENT":
+    case 'REMOVE_EVENT':
       return { ...state };
 
-    case "UPDATE_EVENT":
+    case 'UPDATE_EVENT':
       return { ...state };
 
-    case "UPDATE_FILTERS":
-      const filterIndex = state.selectedCalendars.findIndex(
-        (i) => i === action.filter
-      );
+    case 'UPDATE_FILTERS':
+      const filterIndex = state.selectedCalendars.findIndex((i) => i === action.filter);
       if (state.selectedCalendars.includes(action.filter)) {
         state.selectedCalendars.splice(filterIndex, 1);
       } else {
@@ -32,17 +30,17 @@ const calenderReducer = (state = initialState, action) => {
       }
       return { ...state };
 
-    case "UPDATE_ALL_FILTERS":
+    case 'UPDATE_ALL_FILTERS':
       const value = action.value;
       let selected = [];
       if (value === true) {
-        selected = ["Important", "Work", "Social", "Travel"];
+        selected = ['Important', 'Work', 'Social', 'Travel'];
       } else {
         selected = [];
       }
       return { ...state, selectedCalendars: selected };
 
-    case "SELECT_EVENT":
+    case 'SELECT_EVENT':
       return { ...state, selectedEvent: action.event };
 
     default:

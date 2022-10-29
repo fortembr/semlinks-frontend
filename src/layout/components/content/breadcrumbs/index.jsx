@@ -1,13 +1,8 @@
-import { Link } from "react-router-dom";
-import { Col, Breadcrumb } from "antd";
+import { Link } from 'react-router-dom';
+import { Col, Breadcrumb } from 'antd';
 
 const BreadCrumbs = (props) => {
-  const {
-    breadCrumbParent,
-    breadCrumbParent2,
-    breadCrumbParent3,
-    breadCrumbActive,
-  } = props;
+  const { breadCrumbParent, breadCrumbParent2, breadCrumbParent3, breadCrumbActive } = props;
 
   return (
     <Col>
@@ -16,7 +11,7 @@ const BreadCrumbs = (props) => {
           <Link to="/">Home</Link>
         </Breadcrumb.Item>
 
-        {breadCrumbParent === "Components" ? (
+        {breadCrumbParent === 'Components' ? (
           <Breadcrumb.Item>
             <Link to="/components/components-page">Components</Link>
           </Breadcrumb.Item>
@@ -24,13 +19,9 @@ const BreadCrumbs = (props) => {
           <Breadcrumb.Item>{breadCrumbParent}</Breadcrumb.Item>
         )}
 
-        {breadCrumbParent2 && (
-          <Breadcrumb.Item>{breadCrumbParent2}</Breadcrumb.Item>
-        )}
+        {breadCrumbParent2 && <Breadcrumb.Item>{breadCrumbParent2}</Breadcrumb.Item>}
 
-        {breadCrumbParent3 && (
-          <Breadcrumb.Item>{breadCrumbParent3}</Breadcrumb.Item>
-        )}
+        {breadCrumbParent3 && <Breadcrumb.Item>{breadCrumbParent3}</Breadcrumb.Item>}
 
         <Breadcrumb.Item>{breadCrumbActive}</Breadcrumb.Item>
       </Breadcrumb>

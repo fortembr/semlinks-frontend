@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { verticalMini } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { verticalMini } from './code.js';
 
-import { Card, Row, Col, Button, Steps } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button, Steps } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Step } = Steps;
 
@@ -23,17 +23,11 @@ export default function StepsVerticalMini() {
       <Row>
         <Col lg={16} span={20} className="hp-mb-16">
           <h4>Vertical Mini Version</h4>
-          <p className="hp-p1-body">
-            A simple mini version step bar in the vertical direction.
-          </p>
+          <p className="hp-p1-body">A simple mini version step bar in the vertical direction.</p>
         </Col>
 
         <Col lg={8} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -48,7 +42,7 @@ export default function StepsVerticalMini() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {verticalMini}

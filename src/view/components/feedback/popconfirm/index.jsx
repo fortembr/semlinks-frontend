@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicPopconfirm from "./basic";
-import TriggerPopconfirm from "./trigger";
-import IconPopconfirm from "./icon";
-import PlacementPopconfirm from "./placement";
-import AsyncPopconfirm from "./async";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicPopconfirm from './basic';
+import TriggerPopconfirm from './trigger';
+import IconPopconfirm from './icon';
+import PlacementPopconfirm from './placement';
+import AsyncPopconfirm from './async';
 
 export default function Popconfirm() {
   return (
@@ -18,14 +18,14 @@ export default function Popconfirm() {
           desc="A simple and compact confirmation dialog of an action."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Feedback",
+              title: 'Feedback'
             },
             {
-              title: "Popconfirm",
+              title: 'Popconfirm'
             }
           ]}
         />

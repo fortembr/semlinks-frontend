@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { fileListCode } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { fileListCode } from './code.js';
 
-import { Card, Row, Col, Upload, Button } from "antd";
-import { RiUpload2Line, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Upload, Button } from 'antd';
+import { RiUpload2Line, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function FileListUpload() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -18,11 +18,11 @@ export default function FileListUpload() {
 
   const [fileList, setFileList] = useState([
     {
-      uid: "-1",
-      name: "xxx.png",
-      status: "done",
-      url: "http://www.baidu.com/xxx.png",
-    },
+      uid: '-1',
+      name: 'xxx.png',
+      status: 'done',
+      url: 'http://www.baidu.com/xxx.png'
+    }
   ]);
 
   const handleChange = (info) => {
@@ -40,8 +40,8 @@ export default function FileListUpload() {
   };
 
   const props = {
-    action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
-    multiple: true,
+    action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+    multiple: true
   };
 
   return (
@@ -51,9 +51,7 @@ export default function FileListUpload() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Complete Control Over File List</h4>
-              <p className="hp-p1-body">
-                You can gain full control over filelist by configuring fileList
-              </p>
+              <p className="hp-p1-body">You can gain full control over filelist by configuring fileList</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -68,10 +66,7 @@ export default function FileListUpload() {
 
         <Col span={24}>
           <Upload {...props} onChange={handleChange} fileList={fileList}>
-            <Button
-              type="primary"
-              icon={<RiUpload2Line className="remix-icon" />}
-            >
+            <Button type="primary" icon={<RiUpload2Line className="remix-icon" />}>
               Upload
             </Button>
           </Upload>
@@ -81,7 +76,7 @@ export default function FileListUpload() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {fileListCode}

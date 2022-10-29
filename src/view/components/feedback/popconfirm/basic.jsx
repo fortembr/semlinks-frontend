@@ -1,16 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { basic } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { basic } from './code.js';
 
-import { Card, Row, Col, Popconfirm, message, Button } from "antd";
-import {
-  RiCheckboxCircleLine,
-  RiErrorWarningLine,
-  RiCloseCircleLine,
-  RiCodeSSlashLine,
-} from "react-icons/ri";
+import { Card, Row, Col, Popconfirm, message, Button } from 'antd';
+import { RiCheckboxCircleLine, RiErrorWarningLine, RiCloseCircleLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function BasicPopconfirm() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -23,15 +18,15 @@ export default function BasicPopconfirm() {
 
   function confirm() {
     message.success({
-      content: "Click on Yes",
-      icon: <RiCheckboxCircleLine className="remix-icon" />,
+      content: 'Click on Yes',
+      icon: <RiCheckboxCircleLine className="remix-icon" />
     });
   }
 
   function cancel() {
     message.error({
-      content: "Click on No",
-      icon: <RiCloseCircleLine className="remix-icon" />,
+      content: 'Click on No',
+      icon: <RiCloseCircleLine className="remix-icon" />
     });
   }
 
@@ -62,9 +57,7 @@ export default function BasicPopconfirm() {
             onCancel={cancel}
             okText="Yes"
             cancelText="No"
-            icon={
-              <RiErrorWarningLine className="remix-icon hp-text-color-primary-1 hp-text-color-dark-primary-2" />
-            }
+            icon={<RiErrorWarningLine className="remix-icon hp-text-color-primary-1 hp-text-color-dark-primary-2" />}
           >
             <a href="#">Delete</a>
           </Popconfirm>
@@ -74,7 +67,7 @@ export default function BasicPopconfirm() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {basic}

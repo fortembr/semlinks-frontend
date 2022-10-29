@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { success } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { success } from './code.js';
 
-import { Card, Row, Col, Result, Button } from "antd";
-import { RiCheckboxCircleFill, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Result, Button } from 'antd';
+import { RiCheckboxCircleFill, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function SuccessResult() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -44,9 +44,7 @@ export default function SuccessResult() {
             icon={<RiCheckboxCircleFill className="remix-icon" />}
             extra={
               <div className="hp-result-button hp-mt-32">
-                <Button type="primary">
-                  Go Console
-                </Button>
+                <Button type="primary">Go Console</Button>
 
                 <Button className="hp-ml-8" ghost>
                   Buy Again
@@ -60,7 +58,7 @@ export default function SuccessResult() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {success}

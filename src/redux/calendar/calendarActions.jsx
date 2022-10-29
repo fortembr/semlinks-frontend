@@ -1,12 +1,12 @@
-import instance from "./data";
+import instance from './data';
 
 // Fetch Events
 export const fetchEvents = (calendars) => {
   return (dispatch) => {
-    instance.get("/apps/calendar/events", { calendars }).then((response) => {
+    instance.get('/apps/calendar/events', { calendars }).then((response) => {
       dispatch({
-        type: "FETCH_EVENTS",
-        events: response.data,
+        type: 'FETCH_EVENTS',
+        events: response.data
       });
     });
   };
@@ -15,9 +15,9 @@ export const fetchEvents = (calendars) => {
 // Add Event
 export const addEvent = (event) => {
   return (dispatch, getState) => {
-    instance.post("/apps/calendar/add-event", { event }).then(() => {
+    instance.post('/apps/calendar/add-event', { event }).then(() => {
       dispatch({
-        type: "ADD_EVENT",
+        type: 'ADD_EVENT'
       });
       dispatch(fetchEvents(getState().calendar.selectedCalendars));
     });
@@ -27,9 +27,9 @@ export const addEvent = (event) => {
 // Update Event
 export const updateEvent = (event) => {
   return (dispatch) => {
-    instance.post("/apps/calendar/update-event", { event }).then(() => {
+    instance.post('/apps/calendar/update-event', { event }).then(() => {
       dispatch({
-        type: "UPDATE_EVENT",
+        type: 'UPDATE_EVENT'
       });
     });
   };
@@ -39,8 +39,8 @@ export const updateEvent = (event) => {
 export const updateFilter = (filter) => {
   return (dispatch, getState) => {
     dispatch({
-      type: "UPDATE_FILTERS",
-      filter,
+      type: 'UPDATE_FILTERS',
+      filter
     });
     dispatch(fetchEvents(getState().calendar.selectedCalendars));
   };
@@ -50,8 +50,8 @@ export const updateFilter = (filter) => {
 export const updateAllFilters = (value) => {
   return (dispatch, getState) => {
     dispatch({
-      type: "UPDATE_ALL_FILTERS",
-      value,
+      type: 'UPDATE_ALL_FILTERS',
+      value
     });
     dispatch(fetchEvents(getState().calendar.selectedCalendars));
   };
@@ -60,9 +60,9 @@ export const updateAllFilters = (value) => {
 // Remove Event
 export const removeEvent = (id) => {
   return (dispatch) => {
-    instance.delete("/apps/calendar/remove-event", { id }).then(() => {
+    instance.delete('/apps/calendar/remove-event', { id }).then(() => {
       dispatch({
-        type: "REMOVE_EVENT",
+        type: 'REMOVE_EVENT'
       });
     });
   };
@@ -72,8 +72,8 @@ export const removeEvent = (id) => {
 export const selectEvent = (event) => {
   return (dispatch) => {
     dispatch({
-      type: "SELECT_EVENT",
-      event,
+      type: 'SELECT_EVENT',
+      event
     });
   };
 };

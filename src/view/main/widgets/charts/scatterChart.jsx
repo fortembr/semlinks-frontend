@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Card, Row, Col, DatePicker } from "antd";
-import Chart from "react-apexcharts";
-import moment from "moment";
+import { Card, Row, Col, DatePicker } from 'antd';
+import Chart from 'react-apexcharts';
+import moment from 'moment';
 
 export default function ScatterChart() {
   function onChange(date, dateString) {
@@ -12,7 +12,7 @@ export default function ScatterChart() {
   const [data] = useState({
     series: [
       {
-        name: "Nike",
+        name: 'Nike',
         data: [
           [16.4, 5.4],
           [21.7, 2],
@@ -44,11 +44,11 @@ export default function ScatterChart() {
           [27.1, 0],
           [29.9, 1.5],
           [27.1, 0.8],
-          [22.1, 2],
-        ],
+          [22.1, 2]
+        ]
       },
       {
-        name: "Adidas",
+        name: 'Adidas',
         data: [
           [36.4, 13.4],
           [1.7, 11],
@@ -80,11 +80,11 @@ export default function ScatterChart() {
           [27.1, 10],
           [2.9, 11.5],
           [7.1, 10.8],
-          [2.1, 12],
-        ],
+          [2.1, 12]
+        ]
       },
       {
-        name: "Puma",
+        name: 'Puma',
         data: [
           [21.7, 3],
           [23.6, 3.5],
@@ -116,86 +116,86 @@ export default function ScatterChart() {
           [15.4, 0],
           [18.1, 0],
           [33.4, 0],
-          [16.4, 0],
-        ],
-      },
+          [16.4, 0]
+        ]
+      }
     ],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "scatter",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'scatter',
 
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: true,
-        },
+          enabled: true
+        }
       },
       labels: {
         style: {
-          fontSize: "14px",
-        },
+          fontSize: '14px'
+        }
       },
 
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
 
       grid: {
-        borderColor: "#DFE6E9",
+        borderColor: '#DFE6E9',
         row: {
-          opacity: 0.5,
-        },
+          opacity: 0.5
+        }
       },
       fill: {
         opacity: 1,
-        type: "solid",
+        type: 'solid'
       },
       stroke: {
         show: true,
         width: 4,
-        curve: "straight",
-        colors: ["transparent"],
+        curve: 'straight',
+        colors: ['transparent']
       },
       xaxis: {
         axisTicks: {
-          show: false,
+          show: false
         },
 
         tickAmount: 10,
         labels: {
           style: {
-            colors: ["636E72"],
-            fontSize: "14px",
+            colors: ['636E72'],
+            fontSize: '14px'
           },
           formatter: function (val) {
             return parseFloat(val).toFixed(1);
-          },
-        },
+          }
+        }
       },
 
       legend: {
-        horizontalAlign: "right",
+        horizontalAlign: 'right',
         offsetX: 40,
-        position: "top",
+        position: 'top',
         markers: {
-          radius: 12,
-        },
+          radius: 12
+        }
       },
-      colors: ["#00F7BF", "#55B1F3", "#0010F7"],
+      colors: ['#00F7BF', '#55B1F3', '#0010F7'],
 
       yaxis: {
         labels: {
           style: {
-            colors: ["636E72"],
-            fontSize: "14px",
-          },
+            colors: ['636E72'],
+            fontSize: '14px'
+          }
         },
 
-        tickAmount: 7,
-      },
-    },
+        tickAmount: 7
+      }
+    }
   });
 
   return (
@@ -209,24 +209,14 @@ export default function ScatterChart() {
             </Row>
 
             <Col>
-              <DatePicker
-                onChange={onChange}
-                picker="year"
-                defaultValue={moment("2019", "YYYY")}
-              />
+              <DatePicker onChange={onChange} picker="year" defaultValue={moment('2019', 'YYYY')} />
             </Col>
           </Row>
         </Col>
 
         <Col span={24}>
           <div id="chart">
-            <Chart
-              options={data.options}
-              series={data.series}
-              type="scatter"
-              height={350}
-              legend="legend"
-            />
+            <Chart options={data.options} series={data.series} type="scatter" height={350} legend="legend" />
           </div>
         </Col>
       </Row>

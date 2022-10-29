@@ -1,16 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col, Button } from "antd";
+import { Card, Row, Col, Button } from 'antd';
 
 export default function UpgradePlanCardOneDark() {
   return (
     <Card className="hp-bg-black-bg hp-border-color-black-40 hp-card-1 hp-border-radius-xxl hp-upgradePlanCardOne">
       <div className="hp-position-absolute-top-right hp-h-100">
-        <svg
-          className="hp-w-100 hp-h-100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg className="hp-w-100 hp-h-100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="m394.94 86.299-177.9-100.66 34.328 92.136L131.659 8.35l109.303 155.528L78.423 73.626l47.648 95.459L4.478 118.751"
             stroke="url(#UpgradePlanCardOneDark)"
@@ -41,9 +37,7 @@ export default function UpgradePlanCardOneDark() {
                 Get exclusive discounts for any payment method
               </h4>
 
-              <p className="hp-p1-body hp-mb-0 hp-text-color-black-0">
-                by upgrading your plan to premium
-              </p>
+              <p className="hp-p1-body hp-mb-0 hp-text-color-black-0">by upgrading your plan to premium</p>
             </Col>
 
             <Button className="hp-float-right hp-mt-xs-16 hp-border-none hp-hover-bg-black-10 hp-bg-black-0 hp-text-color-black-100">

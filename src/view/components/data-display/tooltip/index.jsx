@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicTooltip from "./basic";
-import TooltipPlacement from "./placement";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicTooltip from './basic';
+import TooltipPlacement from './placement';
 
 export default function Tooltip() {
   return (
@@ -15,14 +15,14 @@ export default function Tooltip() {
           desc="A simple text popup tip."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Display",
+              title: 'Data Display'
             },
             {
-              title: "Tooltip",
+              title: 'Tooltip'
             }
           ]}
         />

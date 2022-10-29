@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import productImage from "../../../../assets/images/selectbox/product/product-pink.png";
+import productImage from '../../../../assets/images/selectbox/product/product-pink.png';
 
-import SelectBoxItem from "./selectBoxItem";
+import SelectBoxItem from './selectBoxItem';
 
 export default function SelectBoxProductItems() {
   return (
@@ -15,13 +15,21 @@ export default function SelectBoxProductItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Image</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Image</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
             </Col>
 
             <Col lg={12} span={24}>
@@ -47,13 +55,21 @@ export default function SelectBoxProductItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Image</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Image</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
             </Col>
 
             <Col lg={12} span={24}>
@@ -62,7 +78,11 @@ export default function SelectBoxProductItems() {
                 name="select-box-item"
                 image={productImage}
                 title="Pink Xbox Controller"
-                info={<span>From €40/mo. <br /> or € 200</span>}
+                info={
+                  <span>
+                    From €40/mo. <br /> or € 200
+                  </span>
+                }
               />
             </Col>
 
@@ -72,7 +92,11 @@ export default function SelectBoxProductItems() {
                 name="select-box-item"
                 image={productImage}
                 title="Pink Xbox Controller"
-                info={<span>From €40/mo. <br /> or € 200</span>}
+                info={
+                  <span>
+                    From €40/mo. <br /> or € 200
+                  </span>
+                }
               />
             </Col>
           </Row>
@@ -81,13 +105,21 @@ export default function SelectBoxProductItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Image</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Image</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">False</span>
+              </span>
             </Col>
 
             <Col lg={12} span={24}>
@@ -97,7 +129,11 @@ export default function SelectBoxProductItems() {
                 image={productImage}
                 title="Pink Xbox Controller"
                 subTitle="Microsoft"
-                info={<span>From €40/mo. <br /> or € 200</span>}
+                info={
+                  <span>
+                    From €40/mo. <br /> or € 200
+                  </span>
+                }
               />
             </Col>
 
@@ -108,7 +144,11 @@ export default function SelectBoxProductItems() {
                 image={productImage}
                 title="Pink Xbox Controller"
                 subTitle="Microsoft"
-                info={<span>From €40/mo. <br /> or € 200</span>}
+                info={
+                  <span>
+                    From €40/mo. <br /> or € 200
+                  </span>
+                }
               />
             </Col>
           </Row>
@@ -117,13 +157,21 @@ export default function SelectBoxProductItems() {
         <Col span={24}>
           <Row gutter={[16, 16]}>
             <Col span={24} className="hp-mb-8">
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Image</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Type = <span className="hp-text-color-black-100 hp-text-color-dark-0">Image</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Price = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Subtitle = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
               <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30 hp-mx-8">/</span>
-              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span></span>
+              <span className="hp-p1-body hp-text-color-black-80 hp-text-color-dark-30">
+                Description = <span className="hp-text-color-black-100 hp-text-color-dark-0">True</span>
+              </span>
             </Col>
 
             <Col lg={12} span={24}>
@@ -133,14 +181,18 @@ export default function SelectBoxProductItems() {
                 image={productImage}
                 title="Pink Xbox Controller"
                 subTitle="Microsoft"
-                info={<span>From €40/mo. <br /> or € 200</span>}
+                info={
+                  <span>
+                    From €40/mo. <br /> or € 200
+                  </span>
+                }
                 description={[
-                  "Xbox one compatible.",
-                  "Xbox series X and S compatible.",
-                  "Featuring sculpted surfaces and refined geometry for enhanced comfort.",
-                  "Seamlessly capture and share content such as screenshots, recordings.",
-                  "This product comes with a minimum one year manufacturer’s guarantee",
-                  "Stay on target with the hybrid D-pad, textured",
+                  'Xbox one compatible.',
+                  'Xbox series X and S compatible.',
+                  'Featuring sculpted surfaces and refined geometry for enhanced comfort.',
+                  'Seamlessly capture and share content such as screenshots, recordings.',
+                  'This product comes with a minimum one year manufacturer’s guarantee',
+                  'Stay on target with the hybrid D-pad, textured'
                 ]}
               />
             </Col>
@@ -152,14 +204,18 @@ export default function SelectBoxProductItems() {
                 image={productImage}
                 title="Pink Xbox Controller"
                 subTitle="Microsoft"
-                info={<span>From €40/mo. <br /> or € 200</span>}
+                info={
+                  <span>
+                    From €40/mo. <br /> or € 200
+                  </span>
+                }
                 description={[
-                  "Xbox one compatible.",
-                  "Xbox series X and S compatible.",
-                  "Featuring sculpted surfaces and refined geometry for enhanced comfort.",
-                  "Seamlessly capture and share content such as screenshots, recordings.",
-                  "This product comes with a minimum one year manufacturer’s guarantee",
-                  "Stay on target with the hybrid D-pad, textured",
+                  'Xbox one compatible.',
+                  'Xbox series X and S compatible.',
+                  'Featuring sculpted surfaces and refined geometry for enhanced comfort.',
+                  'Seamlessly capture and share content such as screenshots, recordings.',
+                  'This product comes with a minimum one year manufacturer’s guarantee',
+                  'Stay on target with the hybrid D-pad, textured'
                 ]}
               />
             </Col>

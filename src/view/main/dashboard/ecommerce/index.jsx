@@ -1,18 +1,18 @@
-import React from "react";
-import { Row, Col, Select } from "antd";
+import React from 'react';
+import { Row, Col, Select } from 'antd';
 
-import RevenueColumnCard from "../../widgets/cards/analytics/revenueColumnCard";
-import ProjectTableEcommerceCard from "./projectTableEcommerceCard";
-import EarningsDonutCard from "./earningsDonutCard";
-import CtaCardTwo from "../../widgets/cards/advance/ctaCardTwo";
-import RevenueLineEcommerceList from "./revenueLineEcommerceList";
-import CheckDetailCard from "./checkDetailCard";
-import ECommerceProductCard from "./eCommerceProductCard";
-import ECommerceBrowserStates from "./eCommerceBrowserStates";
-import CustomerFeatureCard from "../../widgets/cards/advance/customerFeatureCard";
-import OrdersFeatureCard from "../../widgets/cards/advance/ordersFeatureCard";
-import SaleFeatureCard from "../../widgets/cards/advance/saleFeatureCard";
-import ProfitFeatureCard from "../../widgets/cards/advance/profitFeatureCard";
+import RevenueColumnCard from '../../widgets/cards/analytics/revenueColumnCard';
+import ProjectTableEcommerceCard from './projectTableEcommerceCard';
+import EarningsDonutCard from './earningsDonutCard';
+import CtaCardTwo from '../../widgets/cards/advance/ctaCardTwo';
+import RevenueLineEcommerceList from './revenueLineEcommerceList';
+import CheckDetailCard from './checkDetailCard';
+import ECommerceProductCard from './eCommerceProductCard';
+import ECommerceBrowserStates from './eCommerceBrowserStates';
+import CustomerFeatureCard from '../../widgets/cards/advance/customerFeatureCard';
+import OrdersFeatureCard from '../../widgets/cards/advance/ordersFeatureCard';
+import SaleFeatureCard from '../../widgets/cards/advance/saleFeatureCard';
+import ProfitFeatureCard from '../../widgets/cards/advance/profitFeatureCard';
 
 export default function ECommerce() {
   return (
@@ -22,17 +22,11 @@ export default function ECommerce() {
           <Col md={12} span={24}>
             <h3>Welcome back, Edward 👋</h3>
 
-            <p className="hp-p1-body hp-mb-0">
-              Your current status and analytics are here
-            </p>
+            <p className="hp-p1-body hp-mb-0">Your current status and analytics are here</p>
           </Col>
 
           <Col className="hp-mt-sm-24">
-            <Select
-              style={{ width: "100%" }}
-              defaultValue="this-mounth"
-              id="month-select"
-            >
+            <Select style={{ width: '100%' }} defaultValue="this-mounth" id="month-select">
               <Select.Option value="this-mounth">This Month</Select.Option>
 
               <Select.Option value="this-week">This Week</Select.Option>

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { searchbox } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { searchbox } from './code.js';
 
-import { Card, Row, Col, Input, Button } from "antd";
-import { RiMicLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Input, Button } from 'antd';
+import { RiMicLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Search } = Input;
 
@@ -28,37 +28,18 @@ export default function SearchBox() {
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Search box</h4>
           <p className="hp-p1-body">
-            Example of creating a search box by grouping a standard input with a
-            search button.
+            Example of creating a search box by grouping a standard input with a search button.
           </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
-          <Search
-            className="hp-mb-24"
-            placeholder="input search text"
-            onSearch={onSearch}
-          />
-          <Search
-            className="hp-mb-24"
-            placeholder="input search text"
-            allowClear
-            onSearch={onSearch}
-          />
-          <Search
-            className="hp-mb-24"
-            placeholder="input search text"
-            onSearch={onSearch}
-            enterButton
-          />
+          <Search className="hp-mb-24" placeholder="input search text" onSearch={onSearch} />
+          <Search className="hp-mb-24" placeholder="input search text" allowClear onSearch={onSearch} />
+          <Search className="hp-mb-24" placeholder="input search text" onSearch={onSearch} enterButton />
           <Search
             className="hp-mb-24"
             placeholder="input search text"
@@ -77,11 +58,11 @@ export default function SearchBox() {
           />
         </Col>
       </Row>
-      
+
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {searchbox}

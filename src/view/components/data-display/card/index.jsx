@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicCard from "./basic";
-import CardNoBorder from "./noBorder";
-import SimpleCard from "./simple";
-import CustomizedCard from "./customize";
-import CardWithTabs from "./withTabs";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicCard from './basic';
+import CardNoBorder from './noBorder';
+import SimpleCard from './simple';
+import CustomizedCard from './customize';
+import CardWithTabs from './withTabs';
 
 export default function Cards() {
   return (
@@ -18,14 +18,14 @@ export default function Cards() {
           desc="Simple rectangular container."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Display",
+              title: 'Data Display'
             },
             {
-              title: "Card",
+              title: 'Card'
             }
           ]}
         />

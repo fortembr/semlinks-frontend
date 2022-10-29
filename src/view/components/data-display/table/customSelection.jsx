@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { customSelection } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { customSelection } from './code.js';
 
-import { Table, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function CustomSelectionTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -21,16 +21,16 @@ export default function CustomSelectionTable() {
   const columns = [
     {
       title: 'Name',
-      dataIndex: 'name',
+      dataIndex: 'name'
     },
     {
       title: 'Age',
-      dataIndex: 'age',
+      dataIndex: 'age'
     },
     {
       title: 'Address',
-      dataIndex: 'address',
-    },
+      dataIndex: 'address'
+    }
   ];
 
   const data = [];
@@ -39,7 +39,7 @@ export default function CustomSelectionTable() {
       key: i,
       name: 'John Brown ' + i,
       age: 32,
-      address: 'London, Park Lane no. ' + i,
+      address: 'London, Park Lane no. ' + i
     });
   }
 
@@ -54,29 +54,29 @@ export default function CustomSelectionTable() {
       {
         key: 'all',
         text: 'Select All Data',
-        onSelect: changableRowKeys => {
+        onSelect: (changableRowKeys) => {
           let newSelectedRowKeys = [];
           newSelectedRowKeys = changableRowKeys.filter((key, index) => {
             return true;
           });
           setSelectedRowKeys(newSelectedRowKeys);
-        },
+        }
       },
       {
         key: 'none',
         text: 'Clear All Data',
-        onSelect: changableRowKeys => {
+        onSelect: (changableRowKeys) => {
           let newSelectedRowKeys = [];
           newSelectedRowKeys = changableRowKeys.filter((key, index) => {
             return false;
           });
           setSelectedRowKeys(newSelectedRowKeys);
-        },
+        }
       },
       {
         key: 'odd',
         text: 'Select Odd Row',
-        onSelect: changableRowKeys => {
+        onSelect: (changableRowKeys) => {
           let newSelectedRowKeys = [];
           newSelectedRowKeys = changableRowKeys.filter((key, index) => {
             if (index % 2 !== 0) {
@@ -85,12 +85,12 @@ export default function CustomSelectionTable() {
             return true;
           });
           setSelectedRowKeys(newSelectedRowKeys);
-        },
+        }
       },
       {
         key: 'even',
         text: 'Select Even Row',
-        onSelect: changableRowKeys => {
+        onSelect: (changableRowKeys) => {
           let newSelectedRowKeys = [];
           newSelectedRowKeys = changableRowKeys.filter((key, index) => {
             if (index % 2 !== 0) {
@@ -100,9 +100,9 @@ export default function CustomSelectionTable() {
           });
 
           setSelectedRowKeys(newSelectedRowKeys);
-        },
-      },
-    ],
+        }
+      }
+    ]
   };
 
   return (
@@ -111,32 +111,24 @@ export default function CustomSelectionTable() {
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Custom selection</h4>
           <p className="hp-p1-body">
-            Use rowSelection.selections custom selections, default no select dropdown, show default selections via setting to true.
+            Use rowSelection.selections custom selections, default no select dropdown, show default selections via
+            setting to true.
           </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
-          <Table
-            rowSelection={rowSelection}
-            columns={columns}
-            dataSource={data}
-            scroll={{ x: 500 }}
-          />
+          <Table rowSelection={rowSelection} columns={columns} dataSource={data} scroll={{ x: 500 }} />
         </Col>
       </Row>
 
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {customSelection}

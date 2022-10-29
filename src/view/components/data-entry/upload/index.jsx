@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import ClickUpload from "./click";
-import FileListUpload from "./fileList";
-import PicturesListUpload from "./picturesList";
-import AvatarUpload from "./avatar";
-import PicturesWallUpload from "./picturesWall";
-import DragUpload from "./drag";
+import PageContent from '../../../../layout/components/content/page-content';
+import ClickUpload from './click';
+import FileListUpload from './fileList';
+import PicturesListUpload from './picturesList';
+import AvatarUpload from './avatar';
+import PicturesWallUpload from './picturesWall';
+import DragUpload from './drag';
 
 export default function Upload() {
   return (
@@ -19,14 +19,14 @@ export default function Upload() {
           desc="Upload file by selecting or dragging."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Entry",
+              title: 'Data Entry'
             },
             {
-              title: "Upload",
+              title: 'Upload'
             }
           ]}
         />

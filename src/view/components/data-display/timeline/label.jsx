@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { label } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { label } from './code.js';
 
-import { Radio, Row, Col, Card, Timeline, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Radio, Row, Col, Card, Timeline, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function LabelTimeline() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -16,7 +16,7 @@ export default function LabelTimeline() {
     setCheckedCode(!checkedCode);
   }
 
-  const [mode, setMode] = useState("left");
+  const [mode, setMode] = useState('left');
 
   const onChange = (e) => {
     setMode(e.target.value);
@@ -31,11 +31,7 @@ export default function LabelTimeline() {
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -48,15 +44,11 @@ export default function LabelTimeline() {
           <Timeline mode={mode}>
             <Timeline.Item label="2015-09-01">Create a services</Timeline.Item>
 
-            <Timeline.Item label="2015-09-01 09:12:11">
-              Solve initial network problems
-            </Timeline.Item>
+            <Timeline.Item label="2015-09-01 09:12:11">Solve initial network problems</Timeline.Item>
 
             <Timeline.Item>Technical testing</Timeline.Item>
 
-            <Timeline.Item label="2015-09-01 09:12:11">
-              Network problems being solved
-            </Timeline.Item>
+            <Timeline.Item label="2015-09-01 09:12:11">Network problems being solved</Timeline.Item>
           </Timeline>
         </Col>
       </Row>
@@ -64,7 +56,7 @@ export default function LabelTimeline() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {label}

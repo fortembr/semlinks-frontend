@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicBadge from "./basic";
-import BadgeRed from "./redBadge";
-import BadgeSizes from "./badgeSizes";
-import BadgeStatus from "./status";
-import BadgeStandAlone from "./standAlone";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicBadge from './basic';
+import BadgeRed from './redBadge';
+import BadgeSizes from './badgeSizes';
+import BadgeStatus from './status';
+import BadgeStandAlone from './standAlone';
 
 export default function Badge() {
   return (
@@ -18,14 +18,14 @@ export default function Badge() {
           desc="Small numerical value or status descriptor for UI elements."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Display",
+              title: 'Data Display'
             },
             {
-              title: "Badge",
+              title: 'Badge'
             }
           ]}
         />

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { Col, Row, Button } from "antd";
-import { RiSettings4Line } from "react-icons/ri";
+import { Col, Row, Button } from 'antd';
+import { RiSettings4Line } from 'react-icons/ri';
 
 export default function ActionButton() {
   return (

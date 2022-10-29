@@ -1,5 +1,5 @@
 // Routes Imports
-import Pages from "./Pages";
+import Pages from './Pages';
 
 // Merge Routes
 const Routes = [...Pages];

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { formvalidation } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { formvalidation } from './code.js';
 
-import { Card, Row, Col, Form, Input, Button, Checkbox } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Form, Input, Button, Checkbox } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function FormValidation() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -17,11 +17,11 @@ export default function FormValidation() {
   }
 
   const onFinish = (values) => {
-    console.log("Success:", values);
+    console.log('Success:', values);
   };
 
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
+    console.log('Failed:', errorInfo);
   };
 
   return (
@@ -29,18 +29,11 @@ export default function FormValidation() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Form Validation</h4>
-          <p className="hp-p1-body">
-            Basic Form data control. Includes layout, initial values, validation
-            and submit.
-          </p>
+          <p className="hp-p1-body">Basic Form data control. Includes layout, initial values, validation and submit.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col xl={12} xs={24}>
@@ -51,11 +44,7 @@ export default function FormValidation() {
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
           >
-            <Form.Item
-              label="Username"
-              validateStatus="error"
-              help="This are required"
-            >
+            <Form.Item label="Username" validateStatus="error" help="This are required">
               <Input placeholder="Placeholder Text" id="error" />
             </Form.Item>
 
@@ -65,17 +54,10 @@ export default function FormValidation() {
               validateStatus="validating"
               help="The information is being validated..."
             >
-              <Input
-                placeholder="I'm the content is being validated"
-                id="validating"
-              />
+              <Input placeholder="I'm the content is being validated" id="validating" />
             </Form.Item>
 
-            <Form.Item
-              label="Password"
-              help="This are required"
-              validateStatus="warning"
-            >
+            <Form.Item label="Password" help="This are required" validateStatus="warning">
               <Input.Password placeholder="Warning" id="warning2" />
             </Form.Item>
 
@@ -95,7 +77,7 @@ export default function FormValidation() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {formvalidation}

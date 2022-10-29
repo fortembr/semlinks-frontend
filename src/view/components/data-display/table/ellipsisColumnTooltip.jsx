@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { ellipsisColumnTooltip } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { ellipsisColumnTooltip } from './code.js';
 
-import { Table, Tooltip, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Tooltip, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function EllipsisColumnTooltipTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -21,67 +21,67 @@ export default function EllipsisColumnTooltipTable() {
       title: 'Name',
       dataIndex: 'name',
       key: 'name',
-      render: text => <a>{text}</a>,
-      width: 150,
+      render: (text) => <a>{text}</a>,
+      width: 150
     },
     {
       title: 'Age',
       dataIndex: 'age',
       key: 'age',
-      width: 80,
+      width: 80
     },
     {
       title: 'Address',
       dataIndex: 'address',
       key: 'address 1',
       ellipsis: {
-        showTitle: false,
+        showTitle: false
       },
-      render: address => (
+      render: (address) => (
         <Tooltip placement="topLeft" title={address}>
           {address}
         </Tooltip>
-      ),
+      )
     },
     {
       title: 'Long Column Long Column Long Column',
       dataIndex: 'address',
       key: 'address 2',
       ellipsis: {
-        showTitle: false,
+        showTitle: false
       },
-      render: address => (
+      render: (address) => (
         <Tooltip placement="topLeft" title={address}>
           {address}
         </Tooltip>
-      ),
+      )
     },
     {
       title: 'Long Column Long Column',
       dataIndex: 'address',
       key: 'address 3',
       ellipsis: {
-        showTitle: false,
+        showTitle: false
       },
-      render: address => (
+      render: (address) => (
         <Tooltip placement="topLeft" title={address}>
           {address}
         </Tooltip>
-      ),
+      )
     },
     {
       title: 'Long Column',
       dataIndex: 'address',
       key: 'address 4',
       ellipsis: {
-        showTitle: false,
+        showTitle: false
       },
-      render: address => (
+      render: (address) => (
         <Tooltip placement="topLeft" title={address}>
           {address}
         </Tooltip>
-      ),
-    },
+      )
+    }
   ];
 
   const data = [
@@ -89,20 +89,20 @@ export default function EllipsisColumnTooltipTable() {
       key: '1',
       name: 'John Brown',
       age: 32,
-      address: 'New York No. 1 Lake Park, New York No. 1 Lake Park',
+      address: 'New York No. 1 Lake Park, New York No. 1 Lake Park'
     },
     {
       key: '2',
       name: 'Jim Green',
       age: 42,
-      address: 'London No. 2 Lake Park, London No. 2 Lake Park',
+      address: 'London No. 2 Lake Park, London No. 2 Lake Park'
     },
     {
       key: '3',
       name: 'Joe Black',
       age: 32,
-      address: 'Sidney No. 1 Lake Park, Sidney No. 1 Lake Park',
-    },
+      address: 'Sidney No. 1 Lake Park, Sidney No. 1 Lake Park'
+    }
   ];
 
   return (
@@ -111,16 +111,13 @@ export default function EllipsisColumnTooltipTable() {
         <Col className="hp-mb-16" lg={15} span={20}>
           <h4>Ellipsis column custom tooltip</h4>
           <p className="hp-p1-body">
-            Ellipsis cell content via setting column.ellipsis.showTitle, use Tooltip instead of the html title attribute.
+            Ellipsis cell content via setting column.ellipsis.showTitle, use Tooltip instead of the html title
+            attribute.
           </p>
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -131,7 +128,7 @@ export default function EllipsisColumnTooltipTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {ellipsisColumnTooltip}

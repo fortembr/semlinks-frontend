@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { closable } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { closable } from './code.js';
 
-import { Card, Row, Col, Alert, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Alert, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function ClosableAlert() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -39,29 +39,12 @@ export default function ClosableAlert() {
         </Col>
 
         <Col span={24}>
-          <Alert
-            message="Success Text"
-            type="success"
-            closable
-            onClose={onClose}
-          />
-          
-          <Alert
-            className="hp-mt-16"
-            message="Info Text"
-            type="info"
-            closable
-            onClose={onClose}
-          />
-          
-          <Alert
-            className="hp-mt-16"
-            message="Warning Text"
-            type="warning"
-            closable
-            onClose={onClose}
-          />
-          
+          <Alert message="Success Text" type="success" closable onClose={onClose} />
+
+          <Alert className="hp-mt-16" message="Info Text" type="info" closable onClose={onClose} />
+
+          <Alert className="hp-mt-16" message="Warning Text" type="warning" closable onClose={onClose} />
+
           <Alert
             className="hp-mt-16"
             message="Danger Text"
@@ -76,7 +59,7 @@ export default function ClosableAlert() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {closable}

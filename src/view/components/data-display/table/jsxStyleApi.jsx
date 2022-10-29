@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { jsxStyleApi } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { jsxStyleApi } from './code.js';
 
-import { Table, Tag, Space, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Tag, Space, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Column, ColumnGroup } = Table;
 
@@ -25,7 +25,7 @@ export default function JsxStyleApiTable() {
       lastName: 'Brown',
       age: 32,
       address: 'New York No. 1 Lake Park',
-      tags: ['nice', 'developer'],
+      tags: ['nice', 'developer']
     },
     {
       key: '2',
@@ -33,7 +33,7 @@ export default function JsxStyleApiTable() {
       lastName: 'Green',
       age: 42,
       address: 'London No. 1 Lake Park',
-      tags: ['designer'],
+      tags: ['designer']
     },
     {
       key: '3',
@@ -41,8 +41,8 @@ export default function JsxStyleApiTable() {
       lastName: 'Black',
       age: 32,
       address: 'Sidney No. 1 Lake Park',
-      tags: ['cool', 'teacher'],
-    },
+      tags: ['cool', 'teacher']
+    }
   ];
 
   return (
@@ -50,17 +50,11 @@ export default function JsxStyleApiTable() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>JSX style API</h4>
-          <p className="hp-p1-body">
-            Using JSX style API (introduced in 2.5.0)
-          </p>
+          <p className="hp-p1-body">Using JSX style API (introduced in 2.5.0)</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -75,9 +69,9 @@ export default function JsxStyleApiTable() {
               title="Tags"
               dataIndex="tags"
               key="tags"
-              render={tags => (
+              render={(tags) => (
                 <>
-                  {tags.map(tag => (
+                  {tags.map((tag) => (
                     <Tag color="blue" key={tag}>
                       {tag}
                     </Tag>
@@ -102,7 +96,7 @@ export default function JsxStyleApiTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {jsxStyleApi}

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { responsive } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { responsive } from './code.js';
 
-import { Select, Space, Card, Row, Col, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Select, Space, Card, Row, Col, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function SelectResponsive() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -22,7 +22,7 @@ export default function SelectResponsive() {
     const value = i.toString(36) + i;
     options.push({
       label: 'Long Label: ' + value,
-      value,
+      value
     });
   }
 
@@ -31,7 +31,7 @@ export default function SelectResponsive() {
   const selectProps = {
     mode: 'multiple',
     style: {
-      width: '100%',
+      width: '100%'
     },
     value,
     options,
@@ -39,7 +39,7 @@ export default function SelectResponsive() {
       setValue(newValue);
     },
     placeholder: 'Select Item...',
-    maxTagCount: 'responsive',
+    maxTagCount: 'responsive'
   };
 
   return (
@@ -47,22 +47,21 @@ export default function SelectResponsive() {
       <Row>
         <Col className="hp-mb-16" lg={13} span={20}>
           <h4>Responsive maxTagCount</h4>
-          <p className="hp-p1-body">Auto collapse to tag with responsive case. Not recommend use in large form case since responsive calculation has a perf cost.</p>
+          <p className="hp-p1-body">
+            Auto collapse to tag with responsive case. Not recommend use in large form case since responsive calculation
+            has a perf cost.
+          </p>
         </Col>
 
         <Col lg={11} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
           <Space
             direction="vertical"
             style={{
-              width: '100%',
+              width: '100%'
             }}
           >
             <Select {...selectProps} />
@@ -74,12 +73,12 @@ export default function SelectResponsive() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {responsive}
         </SyntaxHighlighter>
       )}
-    </Card >
+    </Card>
   );
 }

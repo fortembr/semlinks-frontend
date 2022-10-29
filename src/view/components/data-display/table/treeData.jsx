@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { treeData } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { treeData } from './code.js';
 
-import { Table, Switch, Space, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Switch, Space, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function TreeDataTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -22,20 +22,20 @@ export default function TreeDataTable() {
     {
       title: 'Name',
       dataIndex: 'name',
-      key: 'name',
+      key: 'name'
     },
     {
       title: 'Age',
       dataIndex: 'age',
       key: 'age',
-      width: '12%',
+      width: '12%'
     },
     {
       title: 'Address',
       dataIndex: 'address',
       width: '30%',
-      key: 'address',
-    },
+      key: 'address'
+    }
   ];
 
   const data = [
@@ -49,7 +49,7 @@ export default function TreeDataTable() {
           key: 11,
           name: 'John Brown',
           age: 42,
-          address: 'New York No. 2 Lake Park',
+          address: 'New York No. 2 Lake Park'
         },
         {
           key: 12,
@@ -61,9 +61,9 @@ export default function TreeDataTable() {
               key: 121,
               name: 'Jimmy Brown',
               age: 16,
-              address: 'New York No. 3 Lake Park',
-            },
-          ],
+              address: 'New York No. 3 Lake Park'
+            }
+          ]
         },
         {
           key: 13,
@@ -81,26 +81,26 @@ export default function TreeDataTable() {
                   key: 1311,
                   name: 'Jim Green jr.',
                   age: 25,
-                  address: 'London No. 3 Lake Park',
+                  address: 'London No. 3 Lake Park'
                 },
                 {
                   key: 1312,
                   name: 'Jimmy Green sr.',
                   age: 18,
-                  address: 'London No. 4 Lake Park',
-                },
-              ],
-            },
-          ],
-        },
-      ],
+                  address: 'London No. 4 Lake Park'
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       key: 2,
       name: 'Joe Black',
       age: 32,
-      address: 'Sidney No. 1 Lake Park',
-    },
+      address: 'Sidney No. 1 Lake Park'
+    }
   ];
 
   // rowSelection objects indicates the need for row selection
@@ -113,7 +113,7 @@ export default function TreeDataTable() {
     },
     onSelectAll: (selected, selectedRows, changeRows) => {
       console.log(selected, selectedRows, changeRows);
-    },
+    }
   };
 
   return (
@@ -122,16 +122,14 @@ export default function TreeDataTable() {
         <Col className="hp-mb-16" lg={15} span={20}>
           <h4>Tree data</h4>
           <p className="hp-p1-body">
-            Display tree structure data in Table when there is field key children in dataSource, try to customize childrenColumnName property to avoid tree table structure. You can control the indent width by setting indentSize.
+            Display tree structure data in Table when there is field key children in dataSource, try to customize
+            childrenColumnName property to avoid tree table structure. You can control the indent width by setting
+            indentSize.
           </p>
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -152,7 +150,7 @@ export default function TreeDataTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {treeData}

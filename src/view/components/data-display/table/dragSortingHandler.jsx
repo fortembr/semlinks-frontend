@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { dragSortingHandler } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { dragSortingHandler } from './code.js';
 
-import { Table, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine, RiMenu2Line } from "react-icons/ri";
+import { Table, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine, RiMenu2Line } from 'react-icons/ri';
 import { sortableContainer, sortableElement, sortableHandle } from 'react-sortable-hoc';
 import { arrayMoveImmutable } from 'array-move';
 
@@ -26,21 +26,21 @@ export default function DragSortingHandlerTable() {
       dataIndex: 'sort',
       width: 30,
       className: 'drag-visible',
-      render: () => <DragHandle />,
+      render: () => <DragHandle />
     },
     {
       title: 'Name',
       dataIndex: 'name',
-      className: 'drag-visible',
+      className: 'drag-visible'
     },
     {
       title: 'Age',
-      dataIndex: 'age',
+      dataIndex: 'age'
     },
     {
       title: 'Address',
-      dataIndex: 'address',
-    },
+      dataIndex: 'address'
+    }
   ];
 
   const data = [
@@ -49,50 +49,44 @@ export default function DragSortingHandlerTable() {
       name: 'John Brown',
       age: 32,
       address: 'New York No. 1 Lake Park',
-      index: 0,
+      index: 0
     },
     {
       key: '2',
       name: 'Jim Green',
       age: 42,
       address: 'London No. 1 Lake Park',
-      index: 1,
+      index: 1
     },
     {
       key: '3',
       name: 'Joe Black',
       age: 32,
       address: 'Sidney No. 1 Lake Park',
-      index: 2,
-    },
+      index: 2
+    }
   ];
 
-  const SortableItem = sortableElement(props => <tr {...props} />);
-  const SortableContainer = sortableContainer(props => <tbody {...props} />);
+  const SortableItem = sortableElement((props) => <tr {...props} />);
+  const SortableContainer = sortableContainer((props) => <tbody {...props} />);
 
-  const [dataSource, setDataSource] = useState(data)
+  const [dataSource, setDataSource] = useState(data);
 
   const onSortEnd = ({ oldIndex, newIndex }) => {
     if (oldIndex !== newIndex) {
-      const newData = arrayMoveImmutable([].concat(dataSource), oldIndex, newIndex).filter(el => !!el);
+      const newData = arrayMoveImmutable([].concat(dataSource), oldIndex, newIndex).filter((el) => !!el);
       console.log('Sorted items: ', newData);
-      setDataSource(newData)
+      setDataSource(newData);
     }
   };
 
-  const DraggableContainer = props => (
-    <SortableContainer
-      useDragHandle
-      disableAutoscroll
-      helperClass="row-dragging"
-      onSortEnd={onSortEnd}
-      {...props}
-    />
+  const DraggableContainer = (props) => (
+    <SortableContainer useDragHandle disableAutoscroll helperClass="row-dragging" onSortEnd={onSortEnd} {...props} />
   );
 
   const DraggableBodyRow = ({ className, style, ...restProps }) => {
     // function findIndex base on Table rowKey props and should always be a right array index
-    const index = dataSource.findIndex(x => x.index === restProps['data-row-key']);
+    const index = dataSource.findIndex((x) => x.index === restProps['data-row-key']);
     return <SortableItem index={index} {...restProps} />;
   };
 
@@ -107,11 +101,7 @@ export default function DragSortingHandlerTable() {
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -123,8 +113,8 @@ export default function DragSortingHandlerTable() {
             components={{
               body: {
                 wrapper: DraggableContainer,
-                row: DraggableBodyRow,
-              },
+                row: DraggableBodyRow
+              }
             }}
             scroll={{ x: 500 }}
           />
@@ -134,7 +124,7 @@ export default function DragSortingHandlerTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {dragSortingHandler}

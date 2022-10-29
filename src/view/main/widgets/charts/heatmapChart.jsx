@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Card, Row, Col, Dropdown, Menu } from "antd";
-import { RiMoreFill } from "react-icons/ri";
-import Chart from "react-apexcharts";
+import { Card, Row, Col, Dropdown, Menu } from 'antd';
+import { RiMoreFill } from 'react-icons/ri';
+import Chart from 'react-apexcharts';
 
 export default function HeatmapChart() {
   const menu = (
@@ -18,12 +18,11 @@ export default function HeatmapChart() {
     const series = [];
     while (i < count) {
       const x = `w${(i + 1).toString()}`;
-      const y =
-        Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+      const y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
 
       series.push({
         x,
-        y,
+        y
       });
       i++;
     }
@@ -33,66 +32,66 @@ export default function HeatmapChart() {
   const [data] = useState({
     series: [
       {
-        name: "SUN",
+        name: 'SUN',
         data: generateData(24, {
           min: 0,
-          max: 40,
-        }),
+          max: 40
+        })
       },
       {
-        name: "MON",
+        name: 'MON',
         data: generateData(24, {
           min: 0,
-          max: 40,
-        }),
+          max: 40
+        })
       },
       {
-        name: "TUE",
+        name: 'TUE',
         data: generateData(24, {
           min: 0,
-          max: 40,
-        }),
+          max: 40
+        })
       },
       {
-        name: "WED",
+        name: 'WED',
         data: generateData(24, {
           min: 0,
-          max: 40,
-        }),
+          max: 40
+        })
       },
       {
-        name: "THU",
+        name: 'THU',
         data: generateData(24, {
           min: 0,
-          max: 40,
-        }),
+          max: 40
+        })
       },
       {
-        name: "FRI",
+        name: 'FRI',
         data: generateData(24, {
           min: 0,
-          max: 40,
-        }),
+          max: 40
+        })
       },
       {
-        name: "SAT",
+        name: 'SAT',
         data: generateData(24, {
           min: 0,
-          max: 40,
-        }),
-      },
+          max: 40
+        })
+      }
     ],
     options: {
       chart: {
-        fontFamily: "Manrope, sans-serif",
-        type: "heatmap",
+        fontFamily: 'Manrope, sans-serif',
+        type: 'heatmap',
 
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: true,
-        },
+          enabled: true
+        }
       },
       plotOptions: {
         heatmap: {
@@ -103,78 +102,78 @@ export default function HeatmapChart() {
               {
                 from: 0,
                 to: 10,
-                name: "0-10",
-                color: "#EBFAFA",
+                name: '0-10',
+                color: '#EBFAFA'
               },
               {
                 from: 11,
                 to: 20,
-                name: "10-20",
-                color: "#55B1F3",
+                name: '10-20',
+                color: '#55B1F3'
               },
               {
                 from: 21,
                 to: 30,
-                name: "20-30",
-                color: "#0063F7",
+                name: '20-30',
+                color: '#0063F7'
               },
               {
                 from: 31,
                 to: 40,
-                name: "30-40",
-                color: "#0010F7",
-              },
-            ],
-          },
-        },
+                name: '30-40',
+                color: '#0010F7'
+              }
+            ]
+          }
+        }
       },
 
       labels: {
         style: {
-          fontSize: "14px",
-        },
+          fontSize: '14px'
+        }
       },
 
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
 
       grid: {
-        borderColor: "#DFE6E9",
+        borderColor: '#DFE6E9'
       },
       fill: {
         opacity: 1,
-        type: "solid",
+        type: 'solid'
       },
 
       xaxis: {
         labels: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
-        },
+          show: false
+        }
       },
       legend: {
-        horizontalAlign: "center",
-        position: "bottom",
-        fontSize: "14px",
+        horizontalAlign: 'center',
+        position: 'bottom',
+        fontSize: '14px',
         markers: {
-          radius: 12,
-        },
+          radius: 12
+        }
       },
       yaxis: {
         labels: {
           style: {
-            colors: ["636E72"],
-            fontSize: "14px",
-          },
-        },
-      },
-    },
+            colors: ['636E72'],
+            fontSize: '14px'
+          }
+        }
+      }
+    }
   });
 
   return (
@@ -186,9 +185,9 @@ export default function HeatmapChart() {
               <h4 className="hp-mr-8">Heatmap Chart</h4>
               <p className="hp-badge-text">Sales</p>
             </Col>
-            
+
             <Col>
-              <Dropdown overlay={menu} trigger={["click"]}>
+              <Dropdown overlay={menu} trigger={['click']}>
                 <RiMoreFill className="hp-text-color-dark-0" size={24} onClick={(e) => e.preventDefault()} />
               </Dropdown>
             </Col>
@@ -197,13 +196,7 @@ export default function HeatmapChart() {
 
         <Col span={24}>
           <div id="chart" className="hp-heatmap-chart">
-            <Chart
-              options={data.options}
-              series={data.series}
-              type="heatmap"
-              height={350}
-              legend="legend"
-            />
+            <Chart options={data.options} series={data.series} type="heatmap" height={350} legend="legend" />
           </div>
         </Col>
       </Row>

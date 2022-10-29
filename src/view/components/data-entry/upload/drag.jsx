@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { drag } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { drag } from './code.js';
 
-import { Card, Row, Col, Upload, message, Button } from "antd";
-import {
-  RiUploadCloud2Line,
-  RiCheckboxCircleLine,
-  RiCloseCircleLine,
-  RiCodeSSlashLine,
-} from "react-icons/ri";
-
+import { Card, Row, Col, Upload, message, Button } from 'antd';
+import { RiUploadCloud2Line, RiCheckboxCircleLine, RiCloseCircleLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Dragger } = Upload;
 
@@ -25,26 +19,26 @@ export default function DragUpload() {
   }
 
   const props = {
-    name: "file",
+    name: 'file',
     multiple: true,
-    action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
+    action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
     onChange(info) {
       const { status } = info.file;
-      if (status !== "uploading") {
+      if (status !== 'uploading') {
       }
-      if (status === "done") {
+      if (status === 'done') {
         message.success({
           content: `${info.file.name} file uploaded successfully.`,
-          icon: <RiCheckboxCircleLine className="remix-icon" />,
+          icon: <RiCheckboxCircleLine className="remix-icon" />
         });
-      } else if (status === "error") {
+      } else if (status === 'error') {
         message.error({
           content: `${info.file.name} file upload failed.`,
-          icon: <RiCloseCircleLine className="remix-icon" />,
+          icon: <RiCloseCircleLine className="remix-icon" />
         });
       }
     },
-    onDrop() {},
+    onDrop() {}
   };
 
   return (
@@ -55,8 +49,7 @@ export default function DragUpload() {
             <Col lg={12} span={20}>
               <h4>Drag and Drop</h4>
               <p className="hp-p1-body">
-                You can drag files to a specific area, to upload. Alternatively,
-                you can also upload by selecting.
+                You can drag files to a specific area, to upload. Alternatively, you can also upload by selecting.
               </p>
             </Col>
 
@@ -76,13 +69,10 @@ export default function DragUpload() {
               <RiUploadCloud2Line className="remix-icon" />
             </p>
 
-            <p className="ant-upload-text">
-              Click or drag file to this area to upload
-            </p>
+            <p className="ant-upload-text">Click or drag file to this area to upload</p>
 
             <p className="ant-upload-hint">
-              Support for a single or bulk upload. Strictly prohibit from
-              uploading company data or other band files
+              Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files
             </p>
           </Dragger>
         </Col>
@@ -91,7 +81,7 @@ export default function DragUpload() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {drag}

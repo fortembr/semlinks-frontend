@@ -1,11 +1,11 @@
-import instance from "./data";
+import instance from './data';
 
 export const getAllData = () => {
   return async (dispatch) => {
-    await instance.get("/api/users/list/all-data").then((response) => {
+    await instance.get('/api/users/list/all-data').then((response) => {
       dispatch({
-        type: "GET_ALL_DATA",
-        data: response.data,
+        type: 'GET_ALL_DATA',
+        data: response.data
       });
     });
   };
@@ -13,10 +13,10 @@ export const getAllData = () => {
 
 export const getData = (params) => {
   return async (dispatch) => {
-    await instance.get("/api/users/list/data", params).then((response) => {
+    await instance.get('/api/users/list/data', params).then((response) => {
       dispatch({
-        type: "GET_DATA",
-        data: response.data.users,
+        type: 'GET_DATA',
+        data: response.data.users
       });
     });
   };
@@ -25,13 +25,13 @@ export const getData = (params) => {
 export const getUser = (id) => {
   return async (dispatch) => {
     await instance
-      .get("/api/users/user", {
-        id,
+      .get('/api/users/user', {
+        id
       })
       .then((response) => {
         dispatch({
-          type: "GET_USER",
-          selectedUser: response.data.user,
+          type: 'GET_USER',
+          selectedUser: response.data.user
         });
       })
       .catch((err) => console.log(err));
@@ -41,11 +41,11 @@ export const getUser = (id) => {
 export const addUser = (user) => {
   return (dispatch, getState) => {
     instance
-      .post("/apps/users/add-user", user)
+      .post('/apps/users/add-user', user)
       .then((response) => {
         dispatch({
-          type: "ADD_USER",
-          user,
+          type: 'ADD_USER',
+          user
         });
       })
       .then(() => {
@@ -59,12 +59,12 @@ export const addUser = (user) => {
 export const deleteUser = (id) => {
   return (dispatch, getState) => {
     instance
-      .delete("/apps/users/delete", {
-        id,
+      .delete('/apps/users/delete', {
+        id
       })
       .then(() => {
         dispatch({
-          type: "DELETE_USER",
+          type: 'DELETE_USER'
         });
       })
       .then(() => {

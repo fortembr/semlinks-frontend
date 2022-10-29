@@ -1,20 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { switchable } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { switchable } from './code.js';
 
-import {
-  Card,
-  Row,
-  Col,
-  DatePicker,
-  TimePicker,
-  Space,
-  Select,
-  Button,
-} from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, DatePicker, TimePicker, Space, Select, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Option } = Select;
 
@@ -28,29 +19,23 @@ export default function SwitchablePicker() {
   }
 
   function PickerWithType({ type, onChange }) {
-    if (type === "time") return <TimePicker onChange={onChange} />;
-    if (type === "date") return <DatePicker onChange={onChange} />;
+    if (type === 'time') return <TimePicker onChange={onChange} />;
+    if (type === 'date') return <DatePicker onChange={onChange} />;
     return <DatePicker picker={type} onChange={onChange} />;
   }
 
-  const [type, setType] = useState("time");
+  const [type, setType] = useState('time');
 
   return (
     <Card className="hp-border-color-black-40">
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Switchable Picker</h4>
-          <p className="hp-p1-body">
-            Switch in different types of pickers by Select.
-          </p>
+          <p className="hp-p1-body">Switch in different types of pickers by Select.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={12}>
@@ -63,10 +48,7 @@ export default function SwitchablePicker() {
               <Option value="quarter">Quarter</Option>
               <Option value="year">Year</Option>
             </Select>
-            <PickerWithType
-              type={type}
-              onChange={(value) => console.log(value)}
-            />
+            <PickerWithType type={type} onChange={(value) => console.log(value)} />
           </Space>
         </Col>
       </Row>
@@ -74,7 +56,7 @@ export default function SwitchablePicker() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {switchable}

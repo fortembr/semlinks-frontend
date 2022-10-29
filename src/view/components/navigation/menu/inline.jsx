@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { inline } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { inline } from './code.js';
 
-import { Card, Row, Col, Menu, Button } from "antd";
-import { RiMailLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Menu, Button } from 'antd';
+import { RiMailLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 const { SubMenu } = Menu;
 
@@ -20,8 +20,8 @@ export default function InlineMenu() {
     setCheckedCode(!checkedCode);
   }
 
-   // Redux
-  const customise = useSelector(state => state.customise)
+  // Redux
+  const customise = useSelector((state) => state.customise);
 
   return (
     <Card className="hp-border-color-black-40">
@@ -45,16 +45,12 @@ export default function InlineMenu() {
 
         <Col span={24}>
           <Menu
-            defaultSelectedKeys={["1"]}
-            defaultOpenKeys={["sub1"]}
+            defaultSelectedKeys={['1']}
+            defaultOpenKeys={['sub1']}
             mode="inline"
-            theme={customise.theme == "light" ? "light" : "dark"}
+            theme={customise.theme == 'light' ? 'light' : 'dark'}
           >
-            <SubMenu
-              key="sub1"
-              icon={<RiMailLine className="remix-icon" />}
-              title="Navigation One"
-            >
+            <SubMenu key="sub1" icon={<RiMailLine className="remix-icon" />} title="Navigation One">
               <Menu.ItemGroup key="g1" title="NAVIGATION GROUP">
                 <Menu.Item key="1">Option 1</Menu.Item>
                 <Menu.Item key="2">Option 2</Menu.Item>
@@ -66,11 +62,7 @@ export default function InlineMenu() {
               </Menu.ItemGroup>
             </SubMenu>
 
-            <SubMenu
-              key="sub2"
-              icon={<RiMailLine className="remix-icon" />}
-              title="Navigation Two"
-            >
+            <SubMenu key="sub2" icon={<RiMailLine className="remix-icon" />} title="Navigation Two">
               <Menu.Item key="5">Option 5</Menu.Item>
               <Menu.Item key="6">Option 6</Menu.Item>
 
@@ -80,11 +72,7 @@ export default function InlineMenu() {
               </SubMenu>
             </SubMenu>
 
-            <SubMenu
-              key="sub4"
-              icon={<RiMailLine className="remix-icon" />}
-              title="Navigation Three"
-            >
+            <SubMenu key="sub4" icon={<RiMailLine className="remix-icon" />} title="Navigation Three">
               <Menu.Item key="9">Option 9</Menu.Item>
               <Menu.Item key="10">Option 10</Menu.Item>
               <Menu.Item key="11">Option 11</Menu.Item>
@@ -97,7 +85,7 @@ export default function InlineMenu() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {inline}

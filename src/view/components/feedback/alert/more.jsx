@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { more } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { more } from './code.js';
 
-import { Card, Row, Col, Alert, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Alert, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function MoreAlert() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -23,9 +23,7 @@ export default function MoreAlert() {
           <Row>
             <Col lg={12} span={20}>
               <h4>More Types</h4>
-              <p className="hp-p1-body">
-                There are 4 types of Alert: success, info, warning, error.
-              </p>
+              <p className="hp-p1-body">There are 4 types of Alert: success, info, warning, error.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -49,7 +47,7 @@ export default function MoreAlert() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {more}

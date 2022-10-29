@@ -367,17 +367,9 @@ body.dark {
     border-right: 2px solid;
   }
 
-  .ant-menu.ant-menu-dark
-    .ant-menu-submenu-title
-    .ant-menu-submenu-arrow::before,
-  .ant-menu-dark
-    .ant-menu-sub
-    .ant-menu-submenu-title
-    .ant-menu-submenu-arrow::before,
-  .ant-menu.ant-menu-dark
-    .ant-menu-sub
-    .ant-menu-submenu-title
-    .ant-menu-submenu-arrow::before {
+  .ant-menu.ant-menu-dark .ant-menu-submenu-title .ant-menu-submenu-arrow::before,
+  .ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::before,
+  .ant-menu.ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow::before {
     background: url("data:image/svg+xml,%3Csvg width='16' height='8' viewBox='0 0 16 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.6 1.45801L9.16669 6.89134C8.52503 7.53301 7.47503 7.53301 6.83336 6.89134L1.40002 1.45801' stroke='%23ffffff' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
       transparent no-repeat center / contain !important;
   }
@@ -424,14 +416,11 @@ body.dark {
       }
 
       .ant-menu-item:not(.ant-menu-item-selected):hover a,
-      .ant-menu-item:not(.ant-menu-item-selected):hover
-        .ant-menu-title-content {
+      .ant-menu-item:not(.ant-menu-item-selected):hover .ant-menu-title-content {
         color: @dark-0 !important;
       }
 
-      .ant-menu-item:not(.ant-menu-item-selected):hover
-        .ant-menu-item-icon
-        path {
+      .ant-menu-item:not(.ant-menu-item-selected):hover .ant-menu-item-icon path {
         stroke: @dark-0;
       }
     }
@@ -459,20 +448,16 @@ body.dark {
   }
 
   .ant-form-item-has-error :not(.ant-input-disabled).ant-input,
-  .ant-form-item-has-error
-    :not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper,
+  .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper,
   .ant-form-item-has-error :not(.ant-input-disabled).ant-input:hover,
-  .ant-form-item-has-error
-    :not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper:hover {
+  .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper:hover {
     background: @dark-100;
   }
 
   .ant-form-item-has-warning :not(.ant-input-disabled).ant-input,
-  .ant-form-item-has-warning
-    :not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper,
+  .ant-form-item-has-warning :not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper,
   .ant-form-item-has-warning :not(.ant-input-disabled).ant-input:hover,
-  .ant-form-item-has-warning
-    :not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper:hover {
+  .ant-form-item-has-warning :not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper:hover {
     background: @dark-100;
   }
 
@@ -605,8 +590,7 @@ body.dark {
     color: @dark-30;
   }
 
-  .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled
-    .ant-dropdown-menu-submenu-title,
+  .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled .ant-dropdown-menu-submenu-title,
   .ant-dropdown-menu-submenu.ant-dropdown-menu-submenu-disabled
     .ant-dropdown-menu-submenu-title
     .ant-dropdown-menu-submenu-arrow-icon {
@@ -623,12 +607,8 @@ body.dark {
     background: @dark-90;
   }
 
-  .ant-dropdown-menu-item
-    .ant-dropdown-menu-submenu-expand-icon
-    .ant-dropdown-menu-submenu-arrow-icon,
-  .ant-dropdown-menu-submenu-title
-    .ant-dropdown-menu-submenu-expand-icon
-    .ant-dropdown-menu-submenu-arrow-icon {
+  .ant-dropdown-menu-item .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon,
+  .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-expand-icon .ant-dropdown-menu-submenu-arrow-icon {
     color: @dark-0;
   }
 
@@ -668,25 +648,12 @@ body.dark {
   }
 
   .ant-skeleton.ant-skeleton-active .ant-skeleton-content .ant-skeleton-title,
-  .ant-skeleton.ant-skeleton-active
-    .ant-skeleton-content
-    .ant-skeleton-paragraph
-    > li {
-    background-image: linear-gradient(
-      90deg,
-      #5c5c5c 25%,
-      #858585 37%,
-      #5c5c5c 63%
-    );
+  .ant-skeleton.ant-skeleton-active .ant-skeleton-content .ant-skeleton-paragraph > li {
+    background-image: linear-gradient(90deg, #5c5c5c 25%, #858585 37%, #5c5c5c 63%);
   }
 
   .ant-skeleton.ant-skeleton-active .ant-skeleton-avatar {
-    background-image: linear-gradient(
-      90deg,
-      #5c5c5c 25%,
-      #858585 37%,
-      #5c5c5c 63%
-    );
+    background-image: linear-gradient(90deg, #5c5c5c 25%, #858585 37%, #5c5c5c 63%);
   }
 
   // Popconfirm
@@ -1061,149 +1028,29 @@ body.dark {
     border-color: @dark-80;
   }
 
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-content
-    > table
-    > thead
-    > tr:not(:last-child)
-    > th,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-header
-    > table
-    > thead
-    > tr:not(:last-child)
-    > th,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-body
-    > table
-    > thead
-    > tr:not(:last-child)
-    > th,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-summary
-    > table
-    > thead
-    > tr:not(:last-child)
-    > th {
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > thead > tr:not(:last-child) > th,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-header > table > thead > tr:not(:last-child) > th,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-body > table > thead > tr:not(:last-child) > th,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-summary > table > thead > tr:not(:last-child) > th {
     border-color: @dark-80;
   }
 
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-content
-    > table
-    > thead
-    > tr
-    > th,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-header
-    > table
-    > thead
-    > tr
-    > th,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-body
-    > table
-    > thead
-    > tr
-    > th,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-summary
-    > table
-    > thead
-    > tr
-    > th,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-content
-    > table
-    > tbody
-    > tr
-    > td,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-header
-    > table
-    > tbody
-    > tr
-    > td,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-body
-    > table
-    > tbody
-    > tr
-    > td,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-summary
-    > table
-    > tbody
-    > tr
-    > td,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-content
-    > table
-    > tfoot
-    > tr
-    > th,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-header
-    > table
-    > tfoot
-    > tr
-    > th,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-body
-    > table
-    > tfoot
-    > tr
-    > th,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-summary
-    > table
-    > tfoot
-    > tr
-    > th,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-content
-    > table
-    > tfoot
-    > tr
-    > td,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-header
-    > table
-    > tfoot
-    > tr
-    > td,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-body
-    > table
-    > tfoot
-    > tr
-    > td,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-summary
-    > table
-    > tfoot
-    > tr
-    > td {
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > thead > tr > th,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-header > table > thead > tr > th,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-body > table > thead > tr > th,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-summary > table > thead > tr > th,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > tbody > tr > td,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-header > table > tbody > tr > td,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-body > table > tbody > tr > td,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-summary > table > tbody > tr > td,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > tfoot > tr > th,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-header > table > tfoot > tr > th,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-body > table > tfoot > tr > th,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-summary > table > tfoot > tr > th,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > tfoot > tr > td,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-header > table > tfoot > tr > td,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-body > table > tfoot > tr > td,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-summary > table > tfoot > tr > td {
     border-color: @dark-80;
   }
 
@@ -1303,34 +1150,16 @@ body.dark {
     color: @dark-0;
   }
 
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-content
-    > table,
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-header
-    > table {
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table,
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-header > table {
     border-color: @dark-80;
   }
 
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-content
-    > table
-    > tbody
-    > tr
-    > td {
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > tbody > tr > td {
     border-color: @dark-80;
   }
 
-  .ant-table.ant-table-bordered
-    > .ant-table-container
-    > .ant-table-content
-    > table
-    > thead
-    > tr
-    > th {
+  .ant-table.ant-table-bordered > .ant-table-container > .ant-table-content > table > thead > tr > th {
     border-color: @dark-80;
   }
 
@@ -1522,22 +1351,10 @@ body.dark {
     color: @dark-0;
   }
 
-  .ant-picker-calendar-full
-    .ant-picker-panel
-    .ant-picker-cell-selected
-    .ant-picker-calendar-date,
-  .ant-picker-calendar-full
-    .ant-picker-panel
-    .ant-picker-cell-selected:hover
-    .ant-picker-calendar-date,
-  .ant-picker-calendar-full
-    .ant-picker-panel
-    .ant-picker-cell-selected
-    .ant-picker-calendar-date-today,
-  .ant-picker-calendar-full
-    .ant-picker-panel
-    .ant-picker-cell-selected:hover
-    .ant-picker-calendar-date-today {
+  .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected .ant-picker-calendar-date,
+  .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected:hover .ant-picker-calendar-date,
+  .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected .ant-picker-calendar-date-today,
+  .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected:hover .ant-picker-calendar-date-today {
     background: @dark-90;
   }
 
@@ -1737,8 +1554,7 @@ body.dark {
     color: @dark-0;
   }
 
-  .ant-radio-group-solid
-    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
     background: @primary-1;
     color: @dark-0;
   }
@@ -1790,8 +1606,7 @@ body.dark {
     background: @dark-100;
   }
 
-  .ant-select-item-option-selected:not(.ant-select-item-option-disabled)
-    .ant-select-item-option-state {
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) .ant-select-item-option-state {
     color: @primary-2;
   }
 
@@ -1819,8 +1634,7 @@ body.dark {
     border-color: @dark-80;
   }
 
-  .ant-select-disabled.ant-select:not(.ant-select-customize-input)
-    .ant-select-selector {
+  .ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector {
     background: @dark-90;
     border-color: @dark-90;
     color: @dark-80;
@@ -1849,8 +1663,7 @@ body.dark {
     color: @dark-0;
   }
 
-  .ant-select-tree
-    .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
+  .ant-select-tree .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
     background: @dark-90;
   }
 
@@ -1923,21 +1736,15 @@ body.dark {
     border-color: @dark-80;
   }
 
-  .ant-picker-time-panel-column
-    > li.ant-picker-time-panel-cell
-    .ant-picker-time-panel-cell-inner {
+  .ant-picker-time-panel-column > li.ant-picker-time-panel-cell .ant-picker-time-panel-cell-inner {
     color: @dark-0;
   }
 
-  .ant-picker-time-panel-column
-    > li.ant-picker-time-panel-cell
-    .ant-picker-time-panel-cell-inner:hover {
+  .ant-picker-time-panel-column > li.ant-picker-time-panel-cell .ant-picker-time-panel-cell-inner:hover {
     background: @dark-90;
   }
 
-  .ant-picker-time-panel-column
-    > li.ant-picker-time-panel-cell-selected
-    .ant-picker-time-panel-cell-inner {
+  .ant-picker-time-panel-column > li.ant-picker-time-panel-cell-selected .ant-picker-time-panel-cell-inner {
     background: @dark-80;
   }
 
@@ -2060,10 +1867,7 @@ body.dark {
   }
 
   // Steps
-  .ant-steps-item-finish
-    > .ant-steps-item-container
-    > .ant-steps-item-content
-    > .ant-steps-item-title {
+  .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
     color: @dark-0;
   }
 
@@ -2071,24 +1875,15 @@ body.dark {
     color: @dark-0;
   }
 
-  .ant-steps-item-finish
-    > .ant-steps-item-container
-    > .ant-steps-item-content
-    > .ant-steps-item-description {
+  .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description {
     color: @dark-30;
   }
 
-  .ant-steps-item-process
-    > .ant-steps-item-container
-    > .ant-steps-item-content
-    > .ant-steps-item-title {
+  .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
     color: @dark-0;
   }
 
-  .ant-steps-item-process
-    > .ant-steps-item-container
-    > .ant-steps-item-content
-    > .ant-steps-item-description {
+  .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description {
     color: @dark-0;
   }
 
@@ -2096,17 +1891,11 @@ body.dark {
     color: @dark-30;
   }
 
-  .ant-steps-item-wait
-    > .ant-steps-item-container
-    > .ant-steps-item-content
-    > .ant-steps-item-title {
+  .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
     color: @dark-40;
   }
 
-  .ant-steps-item-wait
-    > .ant-steps-item-container
-    > .ant-steps-item-content
-    > .ant-steps-item-description {
+  .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description {
     color: @dark-40;
   }
 
@@ -2127,37 +1916,21 @@ body.dark {
     background: @dark-100;
   }
 
-  .ant-steps-item-wait
-    > .ant-steps-item-container
-    > .ant-steps-item-tail::after,
+  .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-tail::after,
   .ant-steps-item-tail::after,
-  .ant-steps-item-process
-    > .ant-steps-item-container
-    > .ant-steps-item-tail::after {
+  .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-tail::after {
     background: @dark-80;
   }
 
-  .ant-steps-item-wait
-    .ant-steps-item-icon
-    > .ant-steps-icon
-    .ant-steps-icon-dot {
+  .ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
     background: @dark-70;
     border-color: @dark-70;
   }
 
-  .ant-steps-item-wait
-    > .ant-steps-item-container
-    > .ant-steps-item-content
-    > .ant-steps-item-title::after,
-  .ant-steps-item-process
-    > .ant-steps-item-container
-    > .ant-steps-item-content
-    > .ant-steps-item-title::after,
+  .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after,
+  .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after,
   .ant-steps-item-title::after,
-  .ant-steps-item-error
-    > .ant-steps-item-container
-    > .ant-steps-item-content
-    > .ant-steps-item-title::after {
+  .ant-steps-item-error > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
     background: @dark-80;
   }
 
@@ -2185,12 +1958,8 @@ body.dark {
     color: @dark-0;
   }
 
-  .ant-pagination-jump-prev
-    .ant-pagination-item-container
-    .ant-pagination-item-ellipsis,
-  .ant-pagination-jump-next
-    .ant-pagination-item-container
-    .ant-pagination-item-ellipsis {
+  .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis,
+  .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis {
     color: @dark-70;
   }
 
@@ -2272,8 +2041,7 @@ body.dark {
     color: @dark-70;
   }
 
-  .ant-pagination-simple.ant-pagination.ant-pagination-disabled
-    .ant-pagination-item-link {
+  .ant-pagination-simple.ant-pagination.ant-pagination-disabled .ant-pagination-item-link {
     background: transparent !important;
   }
 
@@ -2492,7 +2260,7 @@ body.dark {
   // Checkbox List
   .@{class-prefix}-calendar-checkbox-list {
     .ant-checkbox {
-      &-input[data-color="none"] {
+      &-input[data-color='none'] {
         & ~ .ant-checkbox-inner {
           &:before {
             background: @primary-dark;
@@ -2500,7 +2268,7 @@ body.dark {
         }
       }
 
-      &-input[data-color="travel"] {
+      &-input[data-color='travel'] {
         & ~ .ant-checkbox-inner {
           &:before {
             background: @secondary-dark;
@@ -2508,7 +2276,7 @@ body.dark {
         }
       }
 
-      &-input[data-color="social"] {
+      &-input[data-color='social'] {
         & ~ .ant-checkbox-inner {
           &:before {
             background: @success-dark;
@@ -2516,7 +2284,7 @@ body.dark {
         }
       }
 
-      &-input[data-color="work"] {
+      &-input[data-color='work'] {
         & ~ .ant-checkbox-inner {
           &:before {
             background: @warning-dark;
@@ -2524,7 +2292,7 @@ body.dark {
         }
       }
 
-      &-input[data-color="important"] {
+      &-input[data-color='important'] {
         & ~ .ant-checkbox-inner {
           &:before {
             background: @danger-dark;

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { sizes } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { sizes } from './code.js';
 
-import { Select, Radio, Card, Row, Col, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Select, Radio, Card, Row, Col, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Option } = Select;
 
@@ -24,12 +24,12 @@ export default function SelectSizes() {
   }
 
   function handleChange(value) {
-    console.log("selected", value);
+    console.log('selected', value);
   }
 
   const [size, setSize] = useState('default');
 
-  const handleSizeChange = e => {
+  const handleSizeChange = (e) => {
     setSize(e.target.value);
   };
 
@@ -38,15 +38,14 @@ export default function SelectSizes() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Sizes</h4>
-          <p className="hp-p1-body">The height of the input field for the select defaults to 32px. If size is set to large, the height will be 40px, and if set to small, 24px.</p>
+          <p className="hp-p1-body">
+            The height of the input field for the select defaults to 32px. If size is set to large, the height will be
+            40px, and if set to small, 24px.
+          </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -93,16 +92,15 @@ export default function SelectSizes() {
         </Col>
       </Row>
 
-      { checkedCode && (
+      {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {sizes}
         </SyntaxHighlighter>
-      )
-      }
-    </Card >
+      )}
+    </Card>
   );
 }

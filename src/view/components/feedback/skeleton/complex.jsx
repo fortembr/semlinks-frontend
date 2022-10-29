@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { complex } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { complex } from './code.js';
 
-import { Card, Row, Col, Skeleton, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Skeleton, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function ComplexSkeleton() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -23,9 +23,7 @@ export default function ComplexSkeleton() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Complex combination</h4>
-              <p className="hp-mb-0 hp-p1-body">
-                Complex combination with avatar and multiple paragraphs.
-              </p>
+              <p className="hp-mb-0 hp-p1-body">Complex combination with avatar and multiple paragraphs.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -46,7 +44,7 @@ export default function ComplexSkeleton() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {complex}

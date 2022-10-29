@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col, Divider } from "antd";
+import { Card, Row, Col, Divider } from 'antd';
 
 export default function VerticalDivider() {
   return (
@@ -14,7 +14,7 @@ export default function VerticalDivider() {
 
         <Col span={24}>
           <span className="hp-text-color-dark-0">Text</span>
-          
+
           <Divider type="vertical" />
 
           <a href="#">Link</a>

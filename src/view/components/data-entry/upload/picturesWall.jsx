@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { picturesWall } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { picturesWall } from './code.js';
 
-import { Card, Row, Col, Upload, Modal, Button } from "antd";
-import { RiAddLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Upload, Modal, Button } from 'antd';
+import { RiAddLine, RiCodeSSlashLine } from 'react-icons/ri';
 
-import images from "../../../../assets/images/memoji/memoji-1.png";
+import images from '../../../../assets/images/memoji/memoji-1.png';
 
 export default function PicturesWallUpload() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -32,34 +32,34 @@ export default function PicturesWallUpload() {
   const [previewTitle, setPreviewTitle] = useState();
   const [fileList, setFileList] = useState([
     {
-      uid: "-1",
-      name: "image.png",
-      status: "done",
-      url: images,
+      uid: '-1',
+      name: 'image.png',
+      status: 'done',
+      url: images
     },
     {
-      uid: "-2",
-      name: "image.png",
-      status: "done",
-      url: images,
+      uid: '-2',
+      name: 'image.png',
+      status: 'done',
+      url: images
     },
     {
-      uid: "-3",
-      name: "image.png",
-      status: "done",
-      url: images,
+      uid: '-3',
+      name: 'image.png',
+      status: 'done',
+      url: images
     },
     {
-      uid: "-4",
-      name: "image.png",
-      status: "done",
-      url: images,
+      uid: '-4',
+      name: 'image.png',
+      status: 'done',
+      url: images
     },
     {
-      uid: "-5",
-      name: "image.png",
-      status: "error",
-    },
+      uid: '-5',
+      name: 'image.png',
+      status: 'error'
+    }
   ]);
 
   const handleCancel = () => setPreviewVisible(false);
@@ -71,9 +71,7 @@ export default function PicturesWallUpload() {
 
     setPreviewImage(file.url || file.preview);
     setPreviewVisible(true);
-    setPreviewTitle(
-      file.name || file.url.substring(file.url.lastIndexOf("/") + 1)
-    );
+    setPreviewTitle(file.name || file.url.substring(file.url.lastIndexOf('/') + 1));
   };
 
   const handleChange = (e) => {
@@ -95,8 +93,8 @@ export default function PicturesWallUpload() {
             <Col lg={12} span={20}>
               <h4>Pictures Wall</h4>
               <p className="hp-p1-body">
-                After users upload picture, the thumbnail will be shown in list.
-                The upload button will disappear when count meets limitation.
+                After users upload picture, the thumbnail will be shown in list. The upload button will disappear when
+                count meets limitation.
               </p>
             </Col>
 
@@ -121,13 +119,8 @@ export default function PicturesWallUpload() {
             {fileList.length >= 8 ? null : uploadButton}
           </Upload>
 
-          <Modal
-            visible={previewVisible}
-            title={previewTitle}
-            footer={null}
-            onCancel={handleCancel}
-          >
-            <img alt="example" style={{ width: "100%" }} src={previewImage} />
+          <Modal visible={previewVisible} title={previewTitle} footer={null} onCancel={handleCancel}>
+            <img alt="example" style={{ width: '100%' }} src={previewImage} />
           </Modal>
         </Col>
       </Row>
@@ -135,7 +128,7 @@ export default function PicturesWallUpload() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {picturesWall}

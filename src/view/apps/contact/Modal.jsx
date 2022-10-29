@@ -1,9 +1,9 @@
-import { Modal, Col, Row, Divider, Input, Form, Button, Select } from "antd";
-import MaskedInput from 'antd-mask-input'
+import { Modal, Col, Row, Divider, Input, Form, Button, Select } from 'antd';
+import MaskedInput from 'antd-mask-input';
 
 // Redux
-import { useDispatch } from "react-redux";
-import { addUser } from "../../../redux/contact/contactActions";
+import { useDispatch } from 'react-redux';
+import { addUser } from '../../../redux/contact/contactActions';
 
 export default function AddNewUser({ open, toggleSidebar }) {
   const { Option } = Select;
@@ -25,25 +25,14 @@ export default function AddNewUser({ open, toggleSidebar }) {
         contact: values.phone,
         status: values.status,
         informationText: values.informationText,
-        aboutText: values.aboutText,
+        aboutText: values.aboutText
       })
     );
   };
 
   return (
-    <Modal
-      title="Add Contact"
-      visible={open}
-      onCancel={toggleSidebar}
-      footer={null}
-      bodyStyle={{ padding: 24 }}
-    >
-      <Form
-        layout="vertical"
-        name="basic"
-        initialValues={{ remember: true }}
-        onFinish={onFinish}
-      >
+    <Modal title="Add Contact" visible={open} onCancel={toggleSidebar} footer={null} bodyStyle={{ padding: 24 }}>
+      <Form layout="vertical" name="basic" initialValues={{ remember: true }} onFinish={onFinish}>
         <Row gutter={[8, 0]}>
           <Col md={12} span={24}>
             <Form.Item name="name" label="Name" rules={[{ required: true, message: 'This is required!' }]}>
@@ -58,7 +47,11 @@ export default function AddNewUser({ open, toggleSidebar }) {
           </Col>
 
           <Col md={12} span={24}>
-            <Form.Item name="email" label="Email" rules={[{ required: true, message: 'This is required!', type: 'email' }]}>
+            <Form.Item
+              name="email"
+              label="Email"
+              rules={[{ required: true, message: 'This is required!', type: 'email' }]}
+            >
               <Input />
             </Form.Item>
           </Col>
@@ -100,11 +93,7 @@ export default function AddNewUser({ open, toggleSidebar }) {
           <Divider />
 
           <Col span={24}>
-            <Button
-              type="primary"
-              htmlType="submit"
-              block
-            >
+            <Button type="primary" htmlType="submit" block>
               Add
             </Button>
           </Col>
@@ -112,4 +101,4 @@ export default function AddNewUser({ open, toggleSidebar }) {
       </Form>
     </Modal>
   );
-};
+}

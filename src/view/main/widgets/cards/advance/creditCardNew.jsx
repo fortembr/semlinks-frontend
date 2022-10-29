@@ -1,17 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
-import { RiVisaLine } from "react-icons/ri";
+import { Row, Col } from 'antd';
+import { RiVisaLine } from 'react-icons/ri';
 
 export default function CreditCardNew() {
   return (
     <div className="hp-overflow-hidden hp-position-relative hp-border-radius-xxl hp-bg-black-bg hp-pt-24 hp-px-24 hp-pb-18">
       <div className="hp-position-absolute-bottom-right" style={{ height: '90%', right: -30 }}>
-        <svg
-          className="hp-w-100 hp-h-100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg className="hp-w-100 hp-h-100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M384.797 85.179 194.619 10.257l46.816 86.462L113.23 44.63l129.884 138.803L69.597 116.68l60.469 87.899L2.651 171.657"
             stroke="url(#CreditCardNew)"
@@ -36,12 +32,7 @@ export default function CreditCardNew() {
 
       <Row justify="space-between" style={{ minHeight: 158, flexDirection: 'column' }}>
         <Col span={24}>
-          <svg
-            width={54}
-            height={61}
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width={54} height={61} fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M49.032 12 31.54 1.646c-2.856-1.69-6.39-1.69-9.276 0L4.801 12.001C1.945 13.69.178 16.83.178 20.242v20.65c0 3.382 1.767 6.522 4.623 8.243L22.294 59.49c2.856 1.69 6.39 1.69 9.276 0l17.492-10.355c2.856-1.691 4.623-4.83 4.623-8.242V20.243c-.03-3.412-1.796-6.522-4.653-8.242Z"
               fill="#fff"

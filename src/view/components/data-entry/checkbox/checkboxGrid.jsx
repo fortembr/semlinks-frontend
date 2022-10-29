@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { grid } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { grid } from './code.js';
 
-import { Card, Row, Col, Checkbox, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Checkbox, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function CheckboxGrid() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -17,7 +17,7 @@ export default function CheckboxGrid() {
   }
 
   function onChange(checkedValues) {
-    console.log("checked = ", checkedValues);
+    console.log('checked = ', checkedValues);
   }
 
   return (
@@ -25,21 +25,14 @@ export default function CheckboxGrid() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Use with Grid</h4>
-          <p className="hp-p1-body">
-            We can use Checkbox and Grid in Checkbox.Group, to implement complex
-            layout.
-          </p>
+          <p className="hp-p1-body">We can use Checkbox and Grid in Checkbox.Group, to implement complex layout.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
-        <Checkbox.Group style={{ width: "100%" }} onChange={onChange}>
+        <Checkbox.Group style={{ width: '100%' }} onChange={onChange}>
           <Row>
             <Col span={8}>
               <Checkbox value="A">A</Checkbox>
@@ -63,7 +56,7 @@ export default function CheckboxGrid() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {grid}

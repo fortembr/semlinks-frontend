@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col } from "antd";
-import { Discount } from "react-iconly";
+import { Card, Row, Col } from 'antd';
+import { Discount } from 'react-iconly';
 
 export default function ProfitFeatureCard() {
   return (
@@ -14,14 +14,10 @@ export default function ProfitFeatureCard() {
         <Col className="hp-mt-8">
           <h3 className="hp-mb-4">
             $ 1,32
-            <span className="hp-badge-text hp-ml-8 hp-text-color-danger-1">
-              +3%
-            </span>
+            <span className="hp-badge-text hp-ml-8 hp-text-color-danger-1">+3%</span>
           </h3>
 
-          <p className="hp-p1-body hp-mb-0 hp-text-color-black-80 hp-text-color-dark-30">
-            Gross Profit
-          </p>
+          <p className="hp-p1-body hp-mb-0 hp-text-color-black-80 hp-text-color-dark-30">Gross Profit</p>
         </Col>
       </Row>
     </Card>

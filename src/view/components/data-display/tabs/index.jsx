@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicTab from "./basic";
-import TabsDisabled from "./disabled";
-import TabsIcon from "./icon";
-import TabsPosition from "./position";
-import TabsSizes from "./tabsSizes";
-import TabsType from "./type";
-import TabsAddClose from "./addClose";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicTab from './basic';
+import TabsDisabled from './disabled';
+import TabsIcon from './icon';
+import TabsPosition from './position';
+import TabsSizes from './tabsSizes';
+import TabsType from './type';
+import TabsAddClose from './addClose';
 
 export default function Tabs() {
   return (
@@ -20,14 +20,14 @@ export default function Tabs() {
           desc="Tabs make it easy to switch between different views."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Display",
+              title: 'Data Display'
             },
             {
-              title: "Tabs",
+              title: 'Tabs'
             }
           ]}
         />

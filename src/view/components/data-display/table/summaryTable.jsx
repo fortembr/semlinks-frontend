@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { summary } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { summary } from './code.js';
 
-import { Table, Typography, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Typography, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Text } = Typography;
 
@@ -21,16 +21,16 @@ export default function SummaryTable() {
   const columns = [
     {
       title: 'Name',
-      dataIndex: 'name',
+      dataIndex: 'name'
     },
     {
       title: 'Borrow',
-      dataIndex: 'borrow',
+      dataIndex: 'borrow'
     },
     {
       title: 'Repayment',
-      dataIndex: 'repayment',
-    },
+      dataIndex: 'repayment'
+    }
   ];
 
   const data = [
@@ -38,26 +38,26 @@ export default function SummaryTable() {
       key: '1',
       name: 'John Brown',
       borrow: 10,
-      repayment: 33,
+      repayment: 33
     },
     {
       key: '2',
       name: 'Jim Green',
       borrow: 100,
-      repayment: 0,
+      repayment: 0
     },
     {
       key: '3',
       name: 'Joe Black',
       borrow: 10,
-      repayment: 10,
+      repayment: 10
     },
     {
       key: '4',
       name: 'Jim Red',
       borrow: 75,
-      repayment: 45,
-    },
+      repayment: 45
+    }
   ];
 
   const fixedColumns = [
@@ -65,12 +65,12 @@ export default function SummaryTable() {
       title: 'Name',
       dataIndex: 'name',
       fixed: true,
-      width: 100,
+      width: 100
     },
     {
       title: 'Description',
-      dataIndex: 'description',
-    },
+      dataIndex: 'description'
+    }
   ];
 
   const fixedData = [];
@@ -78,7 +78,7 @@ export default function SummaryTable() {
     fixedData.push({
       key: i,
       name: ['Light', 'Bamboo', 'Little'][i % 3],
-      description: 'Everything that has a beginning, has an end.',
+      description: 'Everything that has a beginning, has an end.'
     });
   }
 
@@ -88,16 +88,13 @@ export default function SummaryTable() {
         <Col className="hp-mb-16" lg={15} span={20}>
           <h4>Summary</h4>
           <p className="hp-p1-body">
-            Set summary content by summary prop. Sync column fixed status with Table.Summary.Cell. You can fixed it by set Table.Summary fixed prop(since 4.16.0).
+            Set summary content by summary prop. Sync column fixed status with Table.Summary.Cell. You can fixed it by
+            set Table.Summary fixed prop(since 4.16.0).
           </p>
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -107,7 +104,7 @@ export default function SummaryTable() {
             pagination={false}
             bordered
             scroll={{ x: 500 }}
-            summary={pageData => {
+            summary={(pageData) => {
               let totalBorrow = 0;
               let totalRepayment = 0;
 
@@ -162,7 +159,7 @@ export default function SummaryTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {summary}

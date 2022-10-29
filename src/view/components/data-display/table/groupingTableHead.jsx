@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { groupingTableHead } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { groupingTableHead } from './code.js';
 
-import { Table, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function GroupingTableHeadTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -26,14 +26,14 @@ export default function GroupingTableHeadTable() {
       filters: [
         {
           text: 'Joe',
-          value: 'Joe',
+          value: 'Joe'
         },
         {
           text: 'John',
-          value: 'John',
-        },
+          value: 'John'
+        }
       ],
-      onFilter: (value, record) => record.name.indexOf(value) === 0,
+      onFilter: (value, record) => record.name.indexOf(value) === 0
     },
     {
       title: 'Other',
@@ -43,7 +43,7 @@ export default function GroupingTableHeadTable() {
           dataIndex: 'age',
           key: 'age',
           width: 150,
-          sorter: (a, b) => a.age - b.age,
+          sorter: (a, b) => a.age - b.age
         },
         {
           title: 'Address',
@@ -52,7 +52,7 @@ export default function GroupingTableHeadTable() {
               title: 'Street',
               dataIndex: 'street',
               key: 'street',
-              width: 150,
+              width: 150
             },
             {
               title: 'Block',
@@ -61,19 +61,19 @@ export default function GroupingTableHeadTable() {
                   title: 'Building',
                   dataIndex: 'building',
                   key: 'building',
-                  width: 100,
+                  width: 100
                 },
                 {
                   title: 'Door No.',
                   dataIndex: 'number',
                   key: 'number',
-                  width: 100,
-                },
-              ],
-            },
-          ],
-        },
-      ],
+                  width: 100
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       title: 'Company',
@@ -82,22 +82,22 @@ export default function GroupingTableHeadTable() {
           title: 'Company Address',
           dataIndex: 'companyAddress',
           key: 'companyAddress',
-          width: 200,
+          width: 200
         },
         {
           title: 'Company Name',
           dataIndex: 'companyName',
-          key: 'companyName',
-        },
-      ],
+          key: 'companyName'
+        }
+      ]
     },
     {
       title: 'Gender',
       dataIndex: 'gender',
       key: 'gender',
       width: 80,
-      fixed: 'right',
-    },
+      fixed: 'right'
+    }
   ];
 
   const data = [];
@@ -111,7 +111,7 @@ export default function GroupingTableHeadTable() {
       number: 2035,
       companyAddress: 'Lake Street 42',
       companyName: 'SoftLake Co',
-      gender: 'M',
+      gender: 'M'
     });
   }
 
@@ -120,17 +120,11 @@ export default function GroupingTableHeadTable() {
       <Row>
         <Col className="hp-mb-16" lg={15} span={20}>
           <h4>Grouping table head</h4>
-          <p className="hp-p1-body">
-            Group table head with columns[n].children.
-          </p>
+          <p className="hp-p1-body">Group table head with columns[n].children.</p>
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -147,7 +141,7 @@ export default function GroupingTableHeadTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {groupingTableHead}

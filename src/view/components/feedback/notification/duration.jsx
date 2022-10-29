@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { duration } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { duration } from './code.js';
 
-import { Card, Row, Col, Button, notification } from "antd";
-import { RiCloseFill, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button, notification } from 'antd';
+import { RiCloseFill, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function DurationNotification() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -18,12 +18,10 @@ export default function DurationNotification() {
 
   const openNotification = () => {
     const args = {
-      message: "Primary",
-      description: "Primary message.",
+      message: 'Primary',
+      description: 'Primary message.',
       duration: 0,
-      closeIcon: (
-        <RiCloseFill className="remix-icon hp-text-color-black-80 hp-text-color-dark-30" size={24} />
-      ),
+      closeIcon: <RiCloseFill className="remix-icon hp-text-color-black-80 hp-text-color-dark-30" size={24} />
     };
     notification.open(args);
   };
@@ -36,11 +34,9 @@ export default function DurationNotification() {
             <Col lg={12} span={20}>
               <h4>Duration after which the notification box is closed</h4>
               <p className="hp-p1-body">
-                Duration can be used to specify how long the notification stays
-                open. After the duration time elapses, the notification closes
-                automatically. If not specified, default value is 4.5 seconds.
-                If you set the value to 0, the notification box will never close
-                automatically.
+                Duration can be used to specify how long the notification stays open. After the duration time elapses,
+                the notification closes automatically. If not specified, default value is 4.5 seconds. If you set the
+                value to 0, the notification box will never close automatically.
               </p>
             </Col>
 
@@ -64,7 +60,7 @@ export default function DurationNotification() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {duration}

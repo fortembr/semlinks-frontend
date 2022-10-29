@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { virtualList } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { virtualList } from './code.js';
 
 import { VariableSizeGrid as Grid } from 'react-window';
 import ResizeObserver from 'rc-resize-observer';
-import classNames from 'classnames'
-import { Table, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import classNames from 'classnames';
+import { Table, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function VirtualListTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -38,10 +38,10 @@ export default function VirtualListTable() {
         set: (scrollLeft) => {
           if (gridRef.current) {
             gridRef.current.scrollTo({
-              scrollLeft,
+              scrollLeft
             });
           }
-        },
+        }
       });
       return obj;
     });
@@ -50,7 +50,7 @@ export default function VirtualListTable() {
       if (gridRef.current != null) {
         gridRef.current.resetAfterIndices({
           columnIndex: 0,
-          shouldForceUpdate: true,
+          shouldForceUpdate: true
         });
       }
     };
@@ -67,9 +67,7 @@ export default function VirtualListTable() {
           columnCount={mergedColumns.length}
           columnWidth={(index) => {
             const { width } = mergedColumns[index];
-            return totalHeight > scroll.y && index === mergedColumns.length - 1
-              ? width - scrollbarSize - 1
-              : width;
+            return totalHeight > scroll.y && index === mergedColumns.length - 1 ? width - scrollbarSize - 1 : width;
           }}
           height={scroll.y}
           rowCount={rawData.length}
@@ -77,14 +75,14 @@ export default function VirtualListTable() {
           width={tableWidth}
           onScroll={({ scrollLeft }) => {
             onScroll({
-              scrollLeft,
+              scrollLeft
             });
           }}
         >
           {({ columnIndex, rowIndex, style }) => (
             <div
               className={classNames('virtual-table-cell', {
-                'virtual-table-cell-last': columnIndex === mergedColumns.length - 1,
+                'virtual-table-cell-last': columnIndex === mergedColumns.length - 1
               })}
               style={style}
             >
@@ -107,7 +105,7 @@ export default function VirtualListTable() {
           columns={mergedColumns}
           pagination={false}
           components={{
-            body: renderVirtualList,
+            body: renderVirtualList
           }}
         />
       </ResizeObserver>
@@ -118,39 +116,39 @@ export default function VirtualListTable() {
     {
       title: 'A',
       dataIndex: 'key',
-      width: 150,
+      width: 150
     },
     {
       title: 'B',
-      dataIndex: 'key',
+      dataIndex: 'key'
     },
     {
       title: 'C',
-      dataIndex: 'key',
+      dataIndex: 'key'
     },
     {
       title: 'D',
-      dataIndex: 'key',
+      dataIndex: 'key'
     },
     {
       title: 'E',
       dataIndex: 'key',
-      width: 200,
+      width: 200
     },
     {
       title: 'F',
       dataIndex: 'key',
-      width: 100,
-    },
+      width: 100
+    }
   ];
 
   const data = Array.from(
     {
-      length: 100000,
+      length: 100000
     },
     (_, key) => ({
-      key,
-    }),
+      key
+    })
   );
 
   return (
@@ -164,11 +162,7 @@ export default function VirtualListTable() {
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -177,7 +171,7 @@ export default function VirtualListTable() {
             dataSource={data}
             scroll={{
               y: 300,
-              x: '100vw',
+              x: '100vw'
             }}
           />
         </Col>
@@ -186,7 +180,7 @@ export default function VirtualListTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {virtualList}

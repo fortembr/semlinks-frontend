@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicInputNumber from "./basic";
-import InputNumberSizes from "./inputNumberSizes";
-import InputNumberDisabled from "./disabled";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicInputNumber from './basic';
+import InputNumberSizes from './inputNumberSizes';
+import InputNumberDisabled from './disabled';
 
 export default function InputNumber() {
   return (
@@ -16,14 +16,14 @@ export default function InputNumber() {
           desc="Enter a number within certain range with the mouse or keyboard."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Entry",
+              title: 'Data Entry'
             },
             {
-              title: "Input Number",
+              title: 'Input Number'
             }
           ]}
         />

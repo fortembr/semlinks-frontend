@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { switchStep } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { switchStep } from './code.js';
 
-import { Card, Row, Col, Button, Steps } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button, Steps } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 const { Step } = Steps;
 
@@ -20,17 +20,17 @@ export default function StepsSwitchStep() {
 
   const steps = [
     {
-      title: "First",
-      content: "First-content",
+      title: 'First',
+      content: 'First-content'
     },
     {
-      title: "Second",
-      content: "Second-content",
+      title: 'Second',
+      content: 'Second-content'
     },
     {
-      title: "Last",
-      content: "Last-content",
-    },
+      title: 'Last',
+      content: 'Last-content'
+    }
   ];
 
   const [current, setCurrent] = useState(0);
@@ -48,18 +48,11 @@ export default function StepsSwitchStep() {
       <Row>
         <Col lg={12} span={20} className="hp-mb-16">
           <h4>Switch Step</h4>
-          <p className="hp-p1-body">
-            Cooperate with the content and buttons, to represent the progress of
-            a process.
-          </p>
+          <p className="hp-p1-body">Cooperate with the content and buttons, to represent the progress of a process.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -82,13 +75,7 @@ export default function StepsSwitchStep() {
               </Button>
             )}
 
-            {current === steps.length - 1 && (
-              <Button
-                type="primary"
-              >
-                Done
-              </Button>
-            )}
+            {current === steps.length - 1 && <Button type="primary">Done</Button>}
 
             {current > 0 && (
               <Button className="hp-mx-8" onClick={() => prev()}>
@@ -102,7 +89,7 @@ export default function StepsSwitchStep() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {switchStep}

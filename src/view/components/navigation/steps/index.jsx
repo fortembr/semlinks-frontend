@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicSteps from "./basic";
-import StepsMiniVersion from "./miniVersion";
-import StepsWithIcon from "./withIcon";
-import StepsSwitchStep from "./switchStep";
-import StepsVertical from "./vertical";
-import StepsVerticalMini from "./verticalMini";
-import StepsErrorStatus from "./errorStatus";
-import StepsDotStyle from "./dotStyle";
-import StepsCustomizedDotStyle from "./customizedDotStyle";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicSteps from './basic';
+import StepsMiniVersion from './miniVersion';
+import StepsWithIcon from './withIcon';
+import StepsSwitchStep from './switchStep';
+import StepsVertical from './vertical';
+import StepsVerticalMini from './verticalMini';
+import StepsErrorStatus from './errorStatus';
+import StepsDotStyle from './dotStyle';
+import StepsCustomizedDotStyle from './customizedDotStyle';
 
 export default function Steps() {
   return (
@@ -22,14 +22,14 @@ export default function Steps() {
           desc="Steps is a navigation bar that guides users through the steps of a task."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Navigation",
+              title: 'Navigation'
             },
             {
-              title: "Steps",
+              title: 'Steps'
             }
           ]}
         />

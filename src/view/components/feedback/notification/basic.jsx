@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { basic } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { basic } from './code.js';
 
-import { Card, Row, Col, Button, notification } from "antd";
-import { RiCloseFill, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button, notification } from 'antd';
+import { RiCloseFill, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function BasicNotification() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -18,11 +18,9 @@ export default function BasicNotification() {
 
   const openNotification = () => {
     notification.open({
-      message: "Primary",
-      description: "Primary message.",
-      closeIcon: (
-        <RiCloseFill className="remix-icon hp-text-color-black-80 hp-text-color-dark-30" size={24} />
-      ),
+      message: 'Primary',
+      description: 'Primary message.',
+      closeIcon: <RiCloseFill className="remix-icon hp-text-color-black-80 hp-text-color-dark-30" size={24} />
     });
   };
 
@@ -33,9 +31,7 @@ export default function BasicNotification() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Basic</h4>
-              <p className="hp-p1-body">
-                The simplest usage that close the notification box after 4.5s.
-              </p>
+              <p className="hp-p1-body">The simplest usage that close the notification box after 4.5s.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -58,7 +54,7 @@ export default function BasicNotification() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {basic}

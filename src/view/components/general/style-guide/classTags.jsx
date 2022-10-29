@@ -1,17 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import { Card, Row, Col } from "antd";
+import { Card, Row, Col } from 'antd';
 
 export default function ClassTags() {
   return (
     <Card className="hp-border-color-black-40">
       <Row className="hp-mb-16">
         <h4>Class Tags</h4>
-        
+
         <p className="hp-p1-body text-primary-2 mt-4px">
-          Class tags can be use for, &lt;p&gt; and &lt;span&gt; add .caption,
-          .p1-body, p2-body classes, when you want to match the font styling of
-          a tag.
+          Class tags can be use for, &lt;p&gt; and &lt;span&gt; add .caption, .p1-body, p2-body classes, when you want
+          to match the font styling of a tag.
         </p>
       </Row>
 
@@ -21,9 +20,7 @@ export default function ClassTags() {
         </Col>
 
         <Col span={12}>
-          <p className="hp-caption hp-mt-1 hp-float-right hp-text-color-black-60">
-            Size
-          </p>
+          <p className="hp-caption hp-mt-1 hp-float-right hp-text-color-black-60">Size</p>
         </Col>
       </Row>
 

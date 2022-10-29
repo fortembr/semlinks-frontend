@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { basic } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { basic } from './code.js';
 
-import { Card, Row, Col, Alert, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Alert, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function BasicAlert() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -23,9 +23,7 @@ export default function BasicAlert() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Basic</h4>
-              <p className="hp-p1-body">
-                The simplest usage for short messages.
-              </p>
+              <p className="hp-p1-body">The simplest usage for short messages.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -39,17 +37,14 @@ export default function BasicAlert() {
         </Col>
 
         <Col span={24}>
-          <Alert
-            message="Success Alert - Lorem ipsum dolor sit amet,"
-            type="success"
-          />
+          <Alert message="Success Alert - Lorem ipsum dolor sit amet," type="success" />
         </Col>
       </Row>
 
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {basic}

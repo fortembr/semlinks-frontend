@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import Slider from "react-slick";
-import { Row, Col, Button } from "antd";
-import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+import Slider from 'react-slick';
+import { Row, Col, Button } from 'antd';
+import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
 
-import productImg1 from "../../../../assets/images/product/ecommerce-product-img-1.png";
-import productImg2 from "../../../../assets/images/product/ecommerce-product-img-2.png";
-import ECommerceProductCardItem from "./eCommerceProductCardItem";
+import productImg1 from '../../../../assets/images/product/ecommerce-product-img-1.png';
+import productImg2 from '../../../../assets/images/product/ecommerce-product-img-2.png';
+import ECommerceProductCardItem from './eCommerceProductCardItem';
 
 export default function ECommerceProductCard() {
   // Slider
@@ -38,41 +38,39 @@ export default function ECommerceProductCard() {
   const productCard = [
     {
       imgUrl: productImg1,
-      price: "$69.00",
-      discount: "$79.00",
-      title: "Rales Wireless Earbuds Bluetooth 5.0",
-      subTitle: "By Urbanears",
-      rate: "4.5",
+      price: '$69.00',
+      discount: '$79.00',
+      title: 'Rales Wireless Earbuds Bluetooth 5.0',
+      subTitle: 'By Urbanears',
+      rate: '4.5'
     },
     {
       imgUrl: productImg2,
-      price: "$69.00",
-      discount: "$79.00",
-      title: "Rales Wireless Earbuds Bluetooth 5.0",
-      subTitle: "By Urbanears",
-      rate: "4.5",
+      price: '$69.00',
+      discount: '$79.00',
+      title: 'Rales Wireless Earbuds Bluetooth 5.0',
+      subTitle: 'By Urbanears',
+      rate: '4.5'
     },
     {
       imgUrl: productImg1,
-      price: "$69.00",
-      discount: "$79.00",
-      title: "Rales Wireless Earbuds Bluetooth 5.0",
-      subTitle: "By Urbanears",
-      rate: "4.5",
+      price: '$69.00',
+      discount: '$79.00',
+      title: 'Rales Wireless Earbuds Bluetooth 5.0',
+      subTitle: 'By Urbanears',
+      rate: '4.5'
     },
     {
       imgUrl: productImg2,
-      price: "$69.00",
-      discount: "$79.00",
-      title: "Rales Wireless Earbuds Bluetooth 5.0",
-      subTitle: "By Urbanears",
-      rate: "4.5",
-    },
+      price: '$69.00',
+      discount: '$79.00',
+      title: 'Rales Wireless Earbuds Bluetooth 5.0',
+      subTitle: 'By Urbanears',
+      rate: '4.5'
+    }
   ];
 
-  const productCardMap = productCard.map((value, index) => (
-    <ECommerceProductCardItem key={index} value={value} />
-  ));
+  const productCardMap = productCard.map((value, index) => <ECommerceProductCardItem key={index} value={value} />);
 
   return (
     <Row gutter={[32, 0]} className="hp-dashboard-ecommerce-product-slider hp-mt-12">
@@ -92,14 +90,14 @@ export default function ECommerceProductCard() {
             breakpoint: 991,
             settings: {
               slidesToShow: 2,
-              slidesToScroll: 2,
+              slidesToScroll: 2
             }
           },
           {
             breakpoint: 767,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1,
+              slidesToScroll: 1
             }
           }
         ]}

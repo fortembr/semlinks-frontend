@@ -1,28 +1,28 @@
-import React from "react";
+import React from 'react';
 
-import { Col, Row, Button, Checkbox } from "antd";
+import { Col, Row, Button, Checkbox } from 'antd';
 
-import { RiCalendarEventLine } from "react-icons/ri";
-import illustration from "../../../assets/images/apps/calendar/sidebar.svg";
+import { RiCalendarEventLine } from 'react-icons/ri';
+import illustration from '../../../assets/images/apps/calendar/sidebar.svg';
 
 // Filters
 const filters = [
   {
-    label: "Travel",
-    color: "travel",
+    label: 'Travel',
+    color: 'travel'
   },
   {
-    label: "Social",
-    color: "social",
+    label: 'Social',
+    color: 'social'
   },
   {
-    label: "Work",
-    color: "work",
+    label: 'Work',
+    color: 'work'
   },
   {
-    label: "Important",
-    color: "important",
-  },
+    label: 'Important',
+    color: 'important'
+  }
 ];
 
 const Sidebar = (props) => {
@@ -74,11 +74,7 @@ const Sidebar = (props) => {
         </div>
       </Col>
 
-      <Row
-        className="hp-calendar-menu-footer hp-w-100"
-        align="bottom"
-        justify="center"
-      >
+      <Row className="hp-calendar-menu-footer hp-w-100" align="bottom" justify="center">
         <img src={illustration} alt="illustration" />
       </Row>
     </Row>

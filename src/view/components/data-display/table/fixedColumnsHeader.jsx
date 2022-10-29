@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { fixedColumnsHeader } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { fixedColumnsHeader } from './code.js';
 
-import { Table, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function FixedColumnsHeaderTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -22,56 +22,56 @@ export default function FixedColumnsHeaderTable() {
       width: 100,
       dataIndex: 'name',
       key: 'name',
-      fixed: 'left',
+      fixed: 'left'
     },
     {
       title: 'Age',
       width: 100,
       dataIndex: 'age',
       key: 'age',
-      fixed: 'left',
+      fixed: 'left'
     },
     {
       title: 'Column 1',
       dataIndex: 'address',
       key: '1',
-      width: 150,
+      width: 150
     },
     {
       title: 'Column 2',
       dataIndex: 'address',
       key: '2',
-      width: 150,
+      width: 150
     },
     {
       title: 'Column 3',
       dataIndex: 'address',
       key: '3',
-      width: 150,
+      width: 150
     },
     {
       title: 'Column 4',
       dataIndex: 'address',
       key: '4',
-      width: 150,
+      width: 150
     },
     {
       title: 'Column 5',
       dataIndex: 'address',
       key: '5',
-      width: 150,
+      width: 150
     },
     {
       title: 'Column 6',
       dataIndex: 'address',
       key: '6',
-      width: 150,
+      width: 150
     },
     {
       title: 'Column 7',
       dataIndex: 'address',
       key: '7',
-      width: 150,
+      width: 150
     },
     { title: 'Column 8', dataIndex: 'address', key: '8' },
     {
@@ -79,8 +79,8 @@ export default function FixedColumnsHeaderTable() {
       key: 'operation',
       fixed: 'right',
       width: 100,
-      render: () => <a>action</a>,
-    },
+      render: () => <a>action</a>
+    }
   ];
 
   const data = [];
@@ -89,7 +89,7 @@ export default function FixedColumnsHeaderTable() {
       key: i,
       name: 'John Brown ' + i,
       age: 32,
-      address: 'London, Park Lane no. ' + i,
+      address: 'London, Park Lane no. ' + i
     });
   }
 
@@ -98,17 +98,11 @@ export default function FixedColumnsHeaderTable() {
       <Row>
         <Col className="hp-mb-16" lg={15} span={20}>
           <h4>Fixed Columns and Header</h4>
-          <p className="hp-p1-body">
-            A Solution for displaying large amounts of data with long columns.
-          </p>
+          <p className="hp-p1-body">A Solution for displaying large amounts of data with long columns.</p>
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -119,7 +113,7 @@ export default function FixedColumnsHeaderTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {fixedColumnsHeader}

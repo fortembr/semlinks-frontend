@@ -1,16 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { types } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { types } from './code.js';
 
-import { Card, Row, Col, Button, message } from "antd";
-import {
-  RiCheckboxCircleLine,
-  RiErrorWarningLine,
-  RiCloseCircleLine,
-  RiCodeSSlashLine,
-} from "react-icons/ri";
+import { Card, Row, Col, Button, message } from 'antd';
+import { RiCheckboxCircleLine, RiErrorWarningLine, RiCloseCircleLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function TypesMessage() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -23,22 +18,22 @@ export default function TypesMessage() {
 
   const success = () => {
     message.success({
-      content: "This is a success message",
-      icon: <RiCheckboxCircleLine className="remix-icon" />,
+      content: 'This is a success message',
+      icon: <RiCheckboxCircleLine className="remix-icon" />
     });
   };
 
   const error = () => {
     message.error({
-      content: "This is an error message",
-      icon: <RiCloseCircleLine className="remix-icon" />,
+      content: 'This is an error message',
+      icon: <RiCloseCircleLine className="remix-icon" />
     });
   };
 
   const warning = () => {
     message.warning({
-      content: "This is a warning message",
-      icon: <RiErrorWarningLine className="remix-icon" />,
+      content: 'This is a warning message',
+      icon: <RiErrorWarningLine className="remix-icon" />
     });
   };
 
@@ -49,9 +44,7 @@ export default function TypesMessage() {
           <Row>
             <Col lg={12} span={20}>
               <h4>Other Types of Message</h4>
-              <p className="hp-p1-body">
-                Messages of success, error and warning types.
-              </p>
+              <p className="hp-p1-body">Messages of success, error and warning types.</p>
             </Col>
 
             <Col lg={12} span={4} className="hp-text-right">
@@ -65,30 +58,15 @@ export default function TypesMessage() {
         </Col>
 
         <Col span={24}>
-          <Button
-            className="hp-mb-16 hp-mr-16"
-            type="primary"
-            ghost
-            onClick={success}
-          >
+          <Button className="hp-mb-16 hp-mr-16" type="primary" ghost onClick={success}>
             Success
           </Button>
 
-          <Button
-            className="hp-mb-16 hp-mr-16"
-            type="primary"
-            ghost
-            onClick={error}
-          >
+          <Button className="hp-mb-16 hp-mr-16" type="primary" ghost onClick={error}>
             Error
           </Button>
 
-          <Button
-            className="hp-mb-16 hp-mr-16"
-            type="primary"
-            ghost
-            onClick={warning}
-          >
+          <Button className="hp-mb-16 hp-mr-16" type="primary" ghost onClick={warning}>
             Warning
           </Button>
         </Col>
@@ -97,7 +75,7 @@ export default function TypesMessage() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {types}

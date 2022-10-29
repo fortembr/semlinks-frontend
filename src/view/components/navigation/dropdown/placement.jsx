@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { placement } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { placement } from './code.js';
 
-import { Card, Row, Col, Menu, Dropdown, Button, Space } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Menu, Dropdown, Button, Space } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function PlacementDropdown() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -19,31 +19,19 @@ export default function PlacementDropdown() {
   const menu = (
     <Menu>
       <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="#"
-        >
+        <a target="_blank" rel="noopener noreferrer" href="#">
           1st menu item
         </a>
       </Menu.Item>
 
       <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="#"
-        >
+        <a target="_blank" rel="noopener noreferrer" href="#">
           2nd menu item
         </a>
       </Menu.Item>
 
       <Menu.Item>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="#"
-        >
+        <a target="_blank" rel="noopener noreferrer" href="#">
           3rd menu item
         </a>
       </Menu.Item>
@@ -106,7 +94,7 @@ export default function PlacementDropdown() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {placement}

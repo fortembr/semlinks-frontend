@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicNotification from "./basic";
-import DurationNotification from "./duration";
-import IconNotification from "./icon";
-import CustomCloseNotification from "./customClose";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicNotification from './basic';
+import DurationNotification from './duration';
+import IconNotification from './icon';
+import CustomCloseNotification from './customClose';
 
 export default function Notification() {
   return (
@@ -17,14 +17,14 @@ export default function Notification() {
           desc="Display a notification message globally."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Feedback",
+              title: 'Feedback'
             },
             {
-              title: "Notification",
+              title: 'Notification'
             }
           ]}
         />

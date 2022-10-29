@@ -1,76 +1,76 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Row, Col, Card } from "antd";
+import { Row, Col, Card } from 'antd';
 
-import Chart from "react-apexcharts";
+import Chart from 'react-apexcharts';
 
 export default function EarningsCard() {
   const [data] = useState({
     series: [
       {
-        name: "Marketing",
-        data: [48],
+        name: 'Marketing',
+        data: [48]
       },
       {
-        name: "Payment",
-        data: [21],
+        name: 'Payment',
+        data: [21]
       },
       {
-        name: "Bills",
-        data: [31],
-      },
+        name: 'Bills',
+        data: [31]
+      }
     ],
     options: {
       chart: {
-        type: "bar",
+        type: 'bar',
         stacked: true,
-        stackType: "100%",
+        stackType: '100%',
         toolbar: {
-          show: false,
-        },
+          show: false
+        }
       },
       grid: {
-        show: false,
+        show: false
       },
       plotOptions: {
         bar: {
           horizontal: true,
-          barHeight: "100%",
-          startingShape: "rounded",
-          endingShape: "rounded",
-        },
+          barHeight: '100%',
+          startingShape: 'rounded',
+          endingShape: 'rounded'
+        }
       },
 
-      colors: ["#00F7BF", "#1BE7FF", "#0010F7"],
+      colors: ['#00F7BF', '#1BE7FF', '#0010F7'],
       fill: {
-        type: "solid",
+        type: 'solid'
       },
       xaxis: {
-        type: "datetime",
+        type: 'datetime',
         labels: {
-          show: false,
+          show: false
         },
         axisBorder: {
-          show: false,
+          show: false
         },
         axisTicks: {
-          show: false,
-        },
+          show: false
+        }
       },
 
       yaxis: {
-        show: false,
+        show: false
       },
 
       legend: {
-        position: "left",
+        position: 'left'
       },
       tooltip: {
         x: {
-          show: false,
-        },
-      },
-    },
+          show: false
+        }
+      }
+    }
   });
 
   return (
@@ -80,9 +80,7 @@ export default function EarningsCard() {
           <Row>
             <Col>
               <h5>Earnings</h5>
-              <p className="hp-p1-body hp-text-color-black-60 hp-text-color-dark-50 hp-mb-0">
-                This month
-              </p>
+              <p className="hp-p1-body hp-text-color-black-60 hp-text-color-dark-50 hp-mb-0">This month</p>
               <h4 className="hp-mb-0">$6.340.42</h4>
             </Col>
           </Row>
@@ -91,12 +89,7 @@ export default function EarningsCard() {
         <Col sm={20} span={24} className="hp-overflow-hidden">
           <Row className="hp-w-100">
             <div id="chart" className="hp-w-100">
-              <Chart
-                options={data.options}
-                series={data.series}
-                type="bar"
-                height={100}
-              />
+              <Chart options={data.options} series={data.series} type="bar" height={100} />
             </div>
           </Row>
         </Col>

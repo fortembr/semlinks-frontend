@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { basic } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { basic } from './code.js';
 
-import { Card, Row, Col, Button, Modal } from "antd";
-import { RiCloseFill, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Button, Modal } from 'antd';
+import { RiCloseFill, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function BasicModal() {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -71,17 +71,11 @@ export default function BasicModal() {
                 </Button>
               </>
             }
-            closeIcon={
-              <RiCloseFill
-                className="remix-icon hp-text-color-black-100 hp-text-color-dark-0"
-                size={24}
-              />
-            }
+            closeIcon={<RiCloseFill className="remix-icon hp-text-color-black-100 hp-text-color-dark-0" size={24} />}
           >
             <p className="hp-p2-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              vestibulum risus velit, ut placerat diam imperdiet nec. Aenean ex
-              turpis, feugiat sed euismod nec, iaculis id dui. Suspendisse.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum risus velit, ut placerat diam
+              imperdiet nec. Aenean ex turpis, feugiat sed euismod nec, iaculis id dui. Suspendisse.
             </p>
           </Modal>
         </Col>
@@ -90,7 +84,7 @@ export default function BasicModal() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {basic}

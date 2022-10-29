@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicList from "./basic";
-import ListLoadMore from "./loadMore";
-import ListVertical from "./vertical";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicList from './basic';
+import ListLoadMore from './loadMore';
+import ListVertical from './vertical';
 
 export default function List() {
   return (
@@ -16,14 +16,14 @@ export default function List() {
           desc="Simple List."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Display",
+              title: 'Data Display'
             },
             {
-              title: "List",
+              title: 'List'
             }
           ]}
         />

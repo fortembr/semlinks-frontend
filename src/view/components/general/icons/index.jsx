@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Card, Row, Col, Radio, message, Input } from "antd";
+import { Card, Row, Col, Radio, message, Input } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import data from "./data"
+import PageContent from '../../../../layout/components/content/page-content';
+import data from './data';
 
 export default function Icons() {
   const { Search } = Input;
 
-  const [checked, setChecked] = useState("all");
-  const [search, setSearch] = useState("");
+  const [checked, setChecked] = useState('all');
+  const [search, setSearch] = useState('');
   const icon = data;
 
   function onChange(e) {
@@ -20,7 +20,7 @@ export default function Icons() {
     .filter((icon) => icon.includes(search))
     .map((icon, index) => (
       <React.Fragment key={index}>
-        {checked === "all" && (
+        {checked === 'all' && (
           <Col xl={4} md={8} span={12}>
             <Card
               onClick={() => {
@@ -29,13 +29,13 @@ export default function Icons() {
               }}
               className="hp-text-center hp-icon-card"
             >
-              <i className={"hp-text-color-dark-0 ri-2x ri-" + icon + "-line"} />
+              <i className={'hp-text-color-dark-0 ri-2x ri-' + icon + '-line'} />
               <p className="hp-badge-text">{icon}</p>
             </Card>
           </Col>
         )}
 
-        {checked === "all" && (
+        {checked === 'all' && (
           <Col xl={4} md={8} span={12}>
             <Card
               onClick={() => {
@@ -44,13 +44,13 @@ export default function Icons() {
               }}
               className="hp-text-center hp-icon-card"
             >
-              <i className={"hp-text-color-dark-0 ri-2x ri-" + icon + "-fill"} />
+              <i className={'hp-text-color-dark-0 ri-2x ri-' + icon + '-fill'} />
               <p className="hp-badge-text">{icon}</p>
             </Card>
           </Col>
         )}
 
-        {checked === "fill" && (
+        {checked === 'fill' && (
           <Col xl={4} md={8} span={12}>
             <Card
               onClick={() => {
@@ -59,13 +59,13 @@ export default function Icons() {
               }}
               className="hp-text-center hp-icon-card"
             >
-              <i className={"hp-text-color-dark-0 ri-2x ri-" + icon + "-fill"} />
+              <i className={'hp-text-color-dark-0 ri-2x ri-' + icon + '-fill'} />
               <p className="hp-badge-text">{icon}</p>
             </Card>
           </Col>
         )}
 
-        {checked === "line" && (
+        {checked === 'line' && (
           <Col xl={4} md={8} span={12}>
             <Card
               onClick={() => {
@@ -74,7 +74,7 @@ export default function Icons() {
               }}
               className="hp-text-center hp-icon-card"
             >
-              <i className={"hp-text-color-dark-0 ri-2x ri-" + icon + "-line"} />
+              <i className={'hp-text-color-dark-0 ri-2x ri-' + icon + '-line'} />
               <p className="hp-badge-text">{icon}</p>
             </Card>
           </Col>
@@ -90,14 +90,14 @@ export default function Icons() {
           desc="We used Remix Icon for Yoda Admin Template"
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "General",
+              title: 'General'
             },
             {
-              title: "Icons",
+              title: 'Icons'
             }
           ]}
         />
@@ -106,12 +106,7 @@ export default function Icons() {
       <Col lg={24} md={24} sm={24} xs={24}>
         <Row>
           <Col flex={0}>
-            <Radio.Group
-              size="large"
-              onChange={onChange}
-              defaultValue="all"
-              className="hp-pb-32 hp-mr-16"
-            >
+            <Radio.Group size="large" onChange={onChange} defaultValue="all" className="hp-pb-32 hp-mr-16">
               <Radio.Button value="line">Line</Radio.Button>
               <Radio.Button value="all">All</Radio.Button>
               <Radio.Button value="fill">Fill</Radio.Button>

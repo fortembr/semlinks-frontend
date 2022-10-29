@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../../layout/components/content/page-content";
-import BasicRate from "./basic";
-import HalfStarRate from "./halfStar";
-import RateCustomizeCharacter from "./customizeCharacter";
-import RateOtherCharacter from "./otherCharacter";
+import PageContent from '../../../../layout/components/content/page-content';
+import BasicRate from './basic';
+import HalfStarRate from './halfStar';
+import RateCustomizeCharacter from './customizeCharacter';
+import RateOtherCharacter from './otherCharacter';
 
 export default function Rate() {
   return (
@@ -17,14 +17,14 @@ export default function Rate() {
           desc="Rate component."
           breadcrumb={[
             {
-              title: "Components",
-              link: "/components/components-page"
+              title: 'Components',
+              link: '/components/components-page'
             },
             {
-              title: "Data Entry",
+              title: 'Data Entry'
             },
             {
-              title: "Rate",
+              title: 'Rate'
             }
           ]}
         />

@@ -1,10 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import MaskedInput from 'antd-mask-input'
+import MaskedInput from 'antd-mask-input';
 
-import { Row, Col, Button, Form, Input, Steps, Tag, Collapse } from "antd";
-import { RiBankCard2Line, RiHandCoinLine, RiWallet3Line, RiArrowRightSLine, RiCheckFill, RiFileCopyLine } from "react-icons/ri";
+import { Row, Col, Button, Form, Input, Steps, Tag, Collapse } from 'antd';
+import {
+  RiBankCard2Line,
+  RiHandCoinLine,
+  RiWallet3Line,
+  RiArrowRightSLine,
+  RiCheckFill,
+  RiFileCopyLine
+} from 'react-icons/ri';
 
 import BreadCrumbs from '../../../../layout/components/content/breadcrumbs';
 import Summary from './Summary';
@@ -13,27 +20,18 @@ const { Panel } = Collapse;
 const { Step } = Steps;
 
 export default function Payment(props) {
-  const { totalItem, totalPrice } = props
+  const { totalItem, totalPrice } = props;
 
-  const genExtra = () => (
-    <RiArrowRightSLine
-      size={24}
-      className="hp-collapse-arrow hp-text-color-black-60"
-    />
-  );
+  const genExtra = () => <RiArrowRightSLine size={24} className="hp-collapse-arrow hp-text-color-black-60" />;
 
-  const [bankValue1, setBankValue1] = useState()
-  const [bankValue2, setBankValue2] = useState()
+  const [bankValue1, setBankValue1] = useState();
+  const [bankValue2, setBankValue2] = useState();
 
   return (
     <Row className="hp-ecommerce-app-checkout hp-mb-32">
       <Col className="hp-mb-32" span={24}>
         <Row gutter={[32, 32]}>
-          <BreadCrumbs
-            breadCrumbParent="Applications"
-            breadCrumbParent2="E-Commerce"
-            breadCrumbActive="Checkout"
-          />
+          <BreadCrumbs breadCrumbParent="Applications" breadCrumbParent2="E-Commerce" breadCrumbActive="Checkout" />
         </Row>
       </Col>
 
@@ -42,38 +40,41 @@ export default function Payment(props) {
           <Col lg={18} span={24}>
             <div className="hp-p-24 hp-border-radius hp-border-1 hp-border-color-black-40 hp-border-color-dark-80 hp-bg-color-black-0 hp-bg-color-dark-100 hp-mb-32 hp-overflow-scroll hp-scrollbar-x-hidden">
               <Steps size="small" current={2}>
-                <Step title={
-                  <Link to="/apps/ecommerce/checkout">
-                    <span className="hp-text-color-black-80 hp-text-color-dark-30">Order Details</span>
-                  </Link>
-
-                } />
-                <Step title={
-                  <Link to="/apps/ecommerce/address-information">
-                    <span className="hp-text-color-black-80 hp-text-color-dark-30">Address Informations</span>
-                  </Link>
-                }
+                <Step
+                  title={
+                    <Link to="/apps/ecommerce/checkout">
+                      <span className="hp-text-color-black-80 hp-text-color-dark-30">Order Details</span>
+                    </Link>
+                  }
                 />
-                <Step title={
-                  <Link to="/apps/ecommerce/payment">
-                    <span className="hp-text-color-black-100 hp-text-color-dark-0">Payment</span>
-                  </Link>
-                } />
+                <Step
+                  title={
+                    <Link to="/apps/ecommerce/address-information">
+                      <span className="hp-text-color-black-80 hp-text-color-dark-30">Address Informations</span>
+                    </Link>
+                  }
+                />
+                <Step
+                  title={
+                    <Link to="/apps/ecommerce/payment">
+                      <span className="hp-text-color-black-100 hp-text-color-dark-0">Payment</span>
+                    </Link>
+                  }
+                />
               </Steps>
             </div>
 
             <div className="hp-p-sm-16 hp-p-24 hp-border-radius hp-border-1 hp-border-color-black-40 hp-border-color-dark-80 hp-bg-color-black-0 hp-bg-color-dark-100">
               <h3 className="hp-mb-4 hp-text-color-black-80 hp-text-color-dark-0">Payment Options</h3>
-              <p className="hp-mb-24 hp-p1-body hp-text-color-black-60 hp-text-color-dark-30">Be sure to click on correct payment option</p>
+              <p className="hp-mb-24 hp-p1-body hp-text-color-black-60 hp-text-color-dark-30">
+                Be sure to click on correct payment option
+              </p>
 
               <Collapse accordion defaultActiveKey={1}>
                 <Panel
                   header={
                     <p className="hp-d-flex-center hp-p1-body hp-mb-0">
-                      <RiBankCard2Line
-                        size={24}
-                        className="remix-icon hp-text-color-primary-1 hp-mr-18"
-                      />
+                      <RiBankCard2Line size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />
 
                       <span>Credit Card</span>
 
@@ -108,14 +109,9 @@ export default function Payment(props) {
                     </Col>
 
                     <Col span={24} className="hp-mt-16 hp-text-right">
-                      <Button
-                        type="primary"
-                        icon={
-                          <RiCheckFill className="hp-mr-8" />
-                        }
-                      >
+                      <Button type="primary" icon={<RiCheckFill className="hp-mr-8" />}>
                         Confirmed
-                        </Button>
+                      </Button>
                     </Col>
                   </Row>
                 </Panel>
@@ -123,10 +119,7 @@ export default function Payment(props) {
                 <Panel
                   header={
                     <p className="hp-d-flex-center hp-p1-body hp-mb-0">
-                      <RiHandCoinLine
-                        size={24}
-                        className="remix-icon hp-text-color-primary-1 hp-mr-18"
-                      />
+                      <RiHandCoinLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />
 
                       <span>Pay Cash on Delivery</span>
                     </p>
@@ -145,7 +138,8 @@ export default function Payment(props) {
                             onClick={() => navigator.clipboard.writeText(bankValue1)}
                             className="hp-transition hp-hover-text-color-primary-3 hp-cursor-pointer remix-icon hp-text-color-primary-1"
                           />
-                        } />
+                        }
+                      />
                     </Col>
 
                     <Col span={24}>
@@ -157,11 +151,14 @@ export default function Payment(props) {
                             onClick={() => navigator.clipboard.writeText(bankValue2)}
                             className="hp-transition hp-hover-text-color-primary-3 hp-cursor-pointer remix-icon hp-text-color-primary-1"
                           />
-                        } />
+                        }
+                      />
                     </Col>
 
                     <Col span={24}>
-                      <p className="hp-badge-text hp-font-weight-500 hp-text-color-primary-1">Please  enter your username on description area .</p>
+                      <p className="hp-badge-text hp-font-weight-500 hp-text-color-primary-1">
+                        Please enter your username on description area .
+                      </p>
                     </Col>
                   </Row>
                 </Panel>
@@ -169,10 +166,7 @@ export default function Payment(props) {
                 <Panel
                   header={
                     <p className="hp-d-flex-center hp-p1-body hp-mb-0">
-                      <RiWallet3Line
-                        size={24}
-                        className="remix-icon hp-text-color-primary-1 hp-mr-18"
-                      />
+                      <RiWallet3Line size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />
 
                       <span>Shopping Credit</span>
 
@@ -192,7 +186,9 @@ export default function Payment(props) {
                     </Col>
 
                     <Col xxl={6} md={9} span={24}>
-                      <Button type="primary" block>Submit Coupon</Button>
+                      <Button type="primary" block>
+                        Submit Coupon
+                      </Button>
                     </Col>
                   </Row>
                 </Panel>
@@ -200,13 +196,9 @@ export default function Payment(props) {
             </div>
           </Col>
 
-          <Summary
-            totalItem={totalItem}
-            totalPrice={totalPrice}
-            content={true}
-          />
+          <Summary totalItem={totalItem} totalPrice={totalPrice} content={true} />
         </Row>
       </Col>
-    </Row >
-  )
+    </Row>
+  );
 }

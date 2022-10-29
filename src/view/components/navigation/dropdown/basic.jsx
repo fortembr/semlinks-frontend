@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { basic } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { basic } from './code.js';
 
-import { Card, Row, Col, Menu, Dropdown, Button } from "antd";
-import { RiArrowDropDownLine, RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Menu, Dropdown, Button } from 'antd';
+import { RiArrowDropDownLine, RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function BasicDropdown() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -19,31 +19,19 @@ export default function BasicDropdown() {
   const menu = (
     <Menu>
       <Menu.Item>
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="#" target="_blank" rel="noopener noreferrer">
           1st menu item
         </a>
       </Menu.Item>
 
       <Menu.Item>
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="#" target="_blank" rel="noopener noreferrer">
           2nd menu item
         </a>
       </Menu.Item>
 
       <Menu.Item disabled>
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="#" target="_blank" rel="noopener noreferrer">
           3rd menu item
         </a>
       </Menu.Item>
@@ -74,11 +62,7 @@ export default function BasicDropdown() {
 
         <Col span={24}>
           <Dropdown overlay={menu}>
-            <a
-              href="#"
-              className="ant-dropdown-link"
-              onClick={(e) => e.preventDefault()}
-            >
+            <a href="#" className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
               Hover me <RiArrowDropDownLine className="remix-icon" size={24} />
             </a>
           </Dropdown>
@@ -88,7 +72,7 @@ export default function BasicDropdown() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {basic}

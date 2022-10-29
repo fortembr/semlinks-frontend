@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
+import React, { useState } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
 
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { basic } from "./code.js";
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { basic } from './code.js';
 
-import { Card, Row, Col, List, Avatar, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, List, Avatar, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
-import user from "../../../../assets/images/memoji/memoji-1.png";
+import user from '../../../../assets/images/memoji/memoji-1.png';
 
 export default function BasicList() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -20,17 +20,17 @@ export default function BasicList() {
 
   const data = [
     {
-      title: "Yoda Admin Title 1",
+      title: 'Yoda Admin Title 1'
     },
     {
-      title: "Yoda Admin Title 2",
+      title: 'Yoda Admin Title 2'
     },
     {
-      title: "Yoda Admin Title 3",
+      title: 'Yoda Admin Title 3'
     },
     {
-      title: "Yoda Admin Title 4",
-    },
+      title: 'Yoda Admin Title 4'
+    }
   ];
 
   return (
@@ -42,11 +42,7 @@ export default function BasicList() {
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -57,9 +53,7 @@ export default function BasicList() {
               <List.Item>
                 <List.Item.Meta
                   avatar={<Avatar src={user} />}
-                  title={
-                    <a href="#">{item.title}</a>
-                  }
+                  title={<a href="#">{item.title}</a>}
                   description="Yoda Design, a design language for background applications, is refined by Hypeople UED Team"
                 />
               </List.Item>
@@ -71,7 +65,7 @@ export default function BasicList() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {basic}
