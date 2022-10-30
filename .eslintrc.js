@@ -4,7 +4,7 @@ module.exports = {
     jest: true
   },
   ignorePatterns: ['.eslintrc.js'],
-  extends: ['plugin:prettier/recommended'],
+  extends: ['eslint:recommended', 'plugin:prettier/recommended', 'plugin:react/recommended'],
   parserOptions: {
     sourceType: 'module'
   },
