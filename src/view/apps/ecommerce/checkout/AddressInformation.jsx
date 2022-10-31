@@ -9,6 +9,7 @@ import Summary from './Summary';
 const { Step } = Steps;
 
 export default function AddressInformation(props) {
+  // eslint-disable-next-line react/prop-types
   const { totalItem, totalPrice } = props;
 
   return (
