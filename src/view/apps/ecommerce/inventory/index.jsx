@@ -1,8 +1,15 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { useSelector } from 'react-redux';
+// eslint-disable-next-line no-unused-vars
 import { Link, useHistory } from 'react-router-dom';
 
+// eslint-disable-next-line no-unused-vars
 import { Row, Col, Avatar, Checkbox, Tag, Button, Input, Pagination } from 'antd';
+// eslint-disable-next-line no-unused-vars
 import { ArrowDown, ArrowDownSquare, ChevronDownCircle, Discovery, InfoSquare, Plus } from 'react-iconly';
 
 import BreadCrumbs from '../../../../layout/components/content/breadcrumbs';
@@ -11,6 +18,7 @@ import InventoryItem from './item';
 export default function Inventory() {
   const history = useHistory();
 
+  // eslint-disable-next-line no-unused-vars
   const [itemArray, setItemArray] = useState([
     {
       id: 1,
@@ -107,7 +115,7 @@ export default function Inventory() {
               <Col>
                 <Button type="primary" onClick={() => history.push('/apps/ecommerce/inventory-new-product')}>
                   <Plus set="curved" size={18} />
-                  <span class="hp-ml-8">New Product</span>
+                  <span className="hp-ml-8">New Product</span>
                 </Button>
               </Col>
             </Row>
