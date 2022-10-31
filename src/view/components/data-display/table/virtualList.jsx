@@ -20,9 +20,12 @@ export default function VirtualListTable() {
   }
 
   function VirtualTable(props) {
+    // eslint-disable-next-line react/prop-types
     const { columns, scroll } = props;
     const [tableWidth, setTableWidth] = useState(0);
+    // eslint-disable-next-line react/prop-types
     const widthColumnCount = columns.filter(({ width }) => !width).length;
+    // eslint-disable-next-line react/prop-types
     const mergedColumns = columns.map((column) => {
       if (column.width) {
         return column;
@@ -67,8 +70,10 @@ export default function VirtualListTable() {
           columnCount={mergedColumns.length}
           columnWidth={(index) => {
             const { width } = mergedColumns[index];
+            // eslint-disable-next-line react/prop-types
             return totalHeight > scroll.y && index === mergedColumns.length - 1 ? width - scrollbarSize - 1 : width;
           }}
+          // eslint-disable-next-line react/prop-types
           height={scroll.y}
           rowCount={rawData.length}
           rowHeight={() => 54}

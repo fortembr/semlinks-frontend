@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 import * as actionTypes from './ecommerceTypes';
 
 import productData from './data/product.json';

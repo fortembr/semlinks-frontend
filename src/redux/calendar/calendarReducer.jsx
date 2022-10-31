@@ -5,6 +5,9 @@ const initialState = {
 };
 
 const calenderReducer = (state = initialState, action) => {
+  const filterIndex = state.selectedCalendars.findIndex((i) => i === action.filter);
+  const value = action.value;
+  let selected = [];
   switch (action.type) {
     case 'FETCH_EVENTS':
       return { ...state, events: action.events };
@@ -19,7 +22,6 @@ const calenderReducer = (state = initialState, action) => {
       return { ...state };
 
     case 'UPDATE_FILTERS':
-      const filterIndex = state.selectedCalendars.findIndex((i) => i === action.filter);
       if (state.selectedCalendars.includes(action.filter)) {
         state.selectedCalendars.splice(filterIndex, 1);
       } else {
@@ -31,8 +33,6 @@ const calenderReducer = (state = initialState, action) => {
       return { ...state };
 
     case 'UPDATE_ALL_FILTERS':
-      const value = action.value;
-      let selected = [];
       if (value === true) {
         selected = ['Important', 'Work', 'Social', 'Travel'];
       } else {

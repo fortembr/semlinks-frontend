@@ -27,6 +27,7 @@ export default function EditableRowsTable() {
     });
   }
 
+  // eslint-disable-next-line react/prop-types, no-unused-vars
   const EditableCell = ({ editing, dataIndex, title, inputType, record, index, children, ...restProps }) => {
     const inputNode = inputType === 'number' ? <InputNumber /> : <Input />;
     return (

@@ -42,6 +42,7 @@ export const addUser = (user) => {
   return (dispatch, getState) => {
     instance
       .post('/apps/users/add-user', user)
+      // eslint-disable-next-line no-unused-vars
       .then((response) => {
         dispatch({
           type: 'ADD_USER',

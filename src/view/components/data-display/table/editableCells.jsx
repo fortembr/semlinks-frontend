@@ -34,6 +34,7 @@ export default function EditableCellsTable() {
     }
   ]);
 
+  // eslint-disable-next-line react/prop-types, no-unused-vars
   const EditableRow = ({ index, ...props }) => {
     const [form] = Form.useForm();
     return (
@@ -45,6 +46,7 @@ export default function EditableCellsTable() {
     );
   };
 
+  // eslint-disable-next-line react/prop-types
   const EditableCell = ({ title, editable, children, dataIndex, record, handleSave, ...restProps }) => {
     const [editing, setEditing] = useState(false);
     const inputRef = useRef(null);

@@ -21,6 +21,7 @@ export default function DragSortingTable() {
     setCheckedCode(!checkedCode);
   }
 
+  // eslint-disable-next-line react/prop-types
   const DraggableBodyRow = ({ index, moveRow, className, style, ...restProps }) => {
     const ref = useRef();
     const [{ isOver, dropClassName }, drop] = useDrop({

@@ -8,6 +8,7 @@ import { Select, Spin, Card, Row, Col, Button } from 'antd';
 import debounce from 'lodash/debounce';
 import { RiCodeSSlashLine } from 'react-icons/ri';
 
+// eslint-disable-next-line no-unused-vars
 const { Option } = Select;
 
 export default function SearchSelectUsers() {
@@ -21,6 +22,7 @@ export default function SearchSelectUsers() {
 
   const [value, setValue] = useState([]);
 
+  // eslint-disable-next-line react/prop-types
   function DebounceSelect({ fetchOptions, debounceTimeout = 800, ...props }) {
     const [fetching, setFetching] = React.useState(false);
     const [options, setOptions] = React.useState([]);

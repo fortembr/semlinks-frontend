@@ -9,7 +9,7 @@
     "lint": "eslint src/**/*.js src/**/**/*.js src/**/**/**/*.js src/**/**/**/**/*.js src/**/*.jsx src/**/**/*.jsx src/**/**/**/*.jsx src/**/**/**/**/*.jsx"
   },
   "devDependencies": {
-    "eslint": "^8.26.0",
+    "eslint": "^7.11.0",
     "eslint-plugin-react": "^7.31.10"
   },
   "dependencies": {
