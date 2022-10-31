@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -13,6 +14,7 @@ export default function Wishlist() {
   const wishlist = useSelector((state) => state.ecommerce.wishlist);
 
   const wishlistCurrent = wishlist.filter((item) => item.wishCheck == true);
+  // eslint-disable-next-line no-unused-vars
   const [pagiCheck, setPagiCheck] = useState(wishlistCurrent.length <= 6 ? null : { pageSize: 6 });
 
   return (
