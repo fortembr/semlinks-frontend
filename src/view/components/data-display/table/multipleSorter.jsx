@@ -78,6 +78,7 @@ export default function MultipleSorterTable() {
     }
   ];
 
+  // eslint-disable-next-line no-unused-vars
   function onChange(pagination, filters, sorter, extra) {
     // console.log('params', pagination, filters, sorter, extra);
   }
