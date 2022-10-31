@@ -1,8 +1,11 @@
+/* eslint-disable no-undef */
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import MaskedInput from 'antd-mask-input';
 
+// eslint-disable-next-line no-unused-vars
 import { Row, Col, Button, Form, Input, Steps, Tag, Collapse } from 'antd';
 import {
   RiBankCard2Line,
