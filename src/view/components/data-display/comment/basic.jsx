@@ -65,7 +65,7 @@ export default function BasicComment() {
         <Col span={24}>
           <Comment
             actions={actions}
-            author={<a href="#">Dolores O'Riordan</a>}
+            author={<a href="#">Dolores O&apos;Riordan</a>}
             avatar={<Avatar src={user} alt="Dolores O'Riordan" />}
             content={
               <p>
