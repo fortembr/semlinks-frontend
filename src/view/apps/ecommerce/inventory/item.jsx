@@ -1,10 +1,16 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { useSelector } from 'react-redux';
+// eslint-disable-next-line no-unused-vars
 import { Link } from 'react-router-dom';
 
+// eslint-disable-next-line no-unused-vars
 import { Row, Col, Avatar, Checkbox, Tag, Button, Input } from 'antd';
+// eslint-disable-next-line no-unused-vars
 import { ArrowDown, ArrowDownSquare, ChevronDownCircle, Discovery, InfoSquare, Plus } from 'react-iconly';
 
+// eslint-disable-next-line no-unused-vars
 import BreadCrumbs from '../../../../layout/components/content/breadcrumbs';
 
 export default function InventoryItem(props) {
