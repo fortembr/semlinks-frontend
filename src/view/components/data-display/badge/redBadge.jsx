@@ -26,7 +26,8 @@ export default function BadgeRed() {
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Red badge</h4>
           <p className="hp-p1-body">
-            This will simply display a red badge, without a specific count. If count equals 0, it won't display the dot.
+            This will simply display a red badge, without a specific count. If count equals 0, it won&apos;t display the
+            dot.
           </p>
         </Col>
 
