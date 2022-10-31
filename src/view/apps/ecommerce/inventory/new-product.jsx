@@ -1,8 +1,12 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { useSelector } from 'react-redux';
+// eslint-disable-next-line no-unused-vars
 import { Link } from 'react-router-dom';
 
 import { Row, Col, Checkbox, Upload, message, Button, Input, Card, Divider, Select } from 'antd';
+// eslint-disable-next-line no-unused-vars
 import { ArrowDown, ArrowDownSquare, ChevronDownCircle, Discovery, InfoSquare, Plus } from 'react-iconly';
 import { RiUploadCloud2Line, RiCheckboxCircleLine, RiCloseCircleLine } from 'react-icons/ri';
 
@@ -23,6 +27,7 @@ export default function InventoryNewProduct() {
       const { status } = info.file;
       console.log(info.file);
       if (status !== 'uploading') {
+        // nothing here
       }
       if (status === 'done') {
         message.success({
