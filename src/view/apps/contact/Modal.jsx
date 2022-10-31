@@ -1,3 +1,4 @@
+import React from 'react';
 import { Modal, Col, Row, Divider, Input, Form, Button, Select } from 'antd';
 import MaskedInput from 'antd-mask-input';
 
@@ -5,6 +6,7 @@ import MaskedInput from 'antd-mask-input';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../../../redux/contact/contactActions';
 
+// eslint-disable-next-line react/prop-types
 export default function AddNewUser({ open, toggleSidebar }) {
   const { Option } = Select;
 
