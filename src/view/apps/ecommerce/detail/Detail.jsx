@@ -51,6 +51,7 @@ export default function Detail() {
 
   // Other Slide
   function SampleNextArrow(props) {
+    // eslint-disable-next-line react/prop-types
     const { onClick } = props;
 
     return (
@@ -63,6 +64,7 @@ export default function Detail() {
   }
 
   function SamplePrevArrow(props) {
+    // eslint-disable-next-line react/prop-types
     const { onClick } = props;
 
     return (
