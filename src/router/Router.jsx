@@ -1,3 +1,4 @@
+import React from 'react';
 import { Suspense, useEffect } from 'react';
 
 // Motion
@@ -34,14 +35,18 @@ export default function Router() {
   let themeLocal;
 
   useEffect(() => {
+    // eslint-disable-next-line no-undef
     if (localStorage) {
+      // eslint-disable-next-line no-undef
       themeLocal = localStorage.getItem('theme');
     }
 
     if (themeLocal === 'light' || themeLocal === 'dark') {
+      // eslint-disable-next-line no-undef
       document.querySelector('body').classList.add(themeLocal);
       dispatch(theme(themeLocal));
     } else {
+      // eslint-disable-next-line no-undef
       document.querySelector('body').classList.add(customise.theme);
       dispatch(theme(customise.theme));
     }
@@ -50,8 +55,10 @@ export default function Router() {
   // RTL
   useEffect(() => {
     if (customise.direction == 'ltr') {
+      // eslint-disable-next-line no-undef
       document.querySelector('html').setAttribute('dir', 'ltr');
     } else if (customise.direction == 'rtl') {
+      // eslint-disable-next-line no-undef
       document.querySelector('html').setAttribute('dir', 'rtl');
     }
   }, []);
@@ -60,17 +67,21 @@ export default function Router() {
   useEffect(() => {
     // Theme
     if (location.location.search == '?theme=dark') {
+      // eslint-disable-next-line no-undef
       localStorage.setItem('theme', 'dark');
       themeLocal = 'dark';
     } else if (location.location.search == '?theme=light') {
+      // eslint-disable-next-line no-undef
       localStorage.setItem('theme', 'light');
       themeLocal = 'light';
     }
 
     // Direction
     if (location.location.search == '?direction=ltr') {
+      // eslint-disable-next-line no-undef
       document.querySelector('html').setAttribute('dir', 'ltr');
     } else if (location.location.search == '?direction=rtl') {
+      // eslint-disable-next-line no-undef
       document.querySelector('html').setAttribute('dir', 'rtl');
     }
   }, []);
