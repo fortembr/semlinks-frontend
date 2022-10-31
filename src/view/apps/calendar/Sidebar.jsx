@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 import { Col, Row, Button, Checkbox } from 'antd';
@@ -26,6 +27,7 @@ const filters = [
 ];
 
 const Sidebar = (props) => {
+  // eslint-disable-next-line react/prop-types
   const { updateFilter, updateAllFilters, showModal, store, dispatch } = props;
 
   return (
