@@ -1,3 +1,4 @@
+import React from 'react';
 import { Award } from 'iconsax-react';
 
 import IntlMessages from '../../layout/components/lang/IntlMessages';
