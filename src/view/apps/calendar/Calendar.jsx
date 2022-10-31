@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
 import { useEffect, useRef, memo } from 'react';
 
 import FullCalendar from '@fullcalendar/react';
