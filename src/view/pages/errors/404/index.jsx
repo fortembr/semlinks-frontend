@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Row, Col, Button } from "antd";
+import { Row, Col, Button } from 'antd';
 
-import Line from "../line";
-import Header from "../header";
-import Footer from "../footer";
+import Line from '../line';
+import Header from '../header';
+import Footer from '../footer';
 
 export default function Error404() {
   return (

@@ -9,7 +9,7 @@ export default function VerticalDivider() {
         <Col className="hp-mb-16" span={24}>
           <h4>Vertical</h4>
 
-          <p className="hp-p1-body">Use type="vertical" make it vertical.</p>
+          <p className="hp-p1-body">Use type=&quot;vertical&quot; make it vertical.</p>
         </Col>
 
         <Col span={24}>

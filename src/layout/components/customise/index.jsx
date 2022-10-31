@@ -13,6 +13,7 @@ import {
   theme
 } from '../../../redux/customise/customiseActions';
 
+// eslint-disable-next-line no-unused-vars
 import { Row, Col, Button, Tag } from 'antd';
 import { RiCloseFill } from 'react-icons/ri';
 import { motion } from 'framer-motion/dist/framer-motion';
@@ -49,17 +50,21 @@ export default function CustomiseTheme() {
   useEffect(() => {
     if (themeClickCheck == false) {
       if (location.location.search == '?theme=dark') {
+        // eslint-disable-next-line no-undef
         localStorage.setItem('theme', 'dark');
         setThemeLocal('dark');
         themeRefActive('dark');
       } else if (location.location.search == '?theme=light') {
+        // eslint-disable-next-line no-undef
         localStorage.setItem('theme', 'light');
         setThemeLocal('light');
         themeRefActive('light');
       }
     }
 
+    // eslint-disable-next-line no-undef
     if (localStorage) {
+      // eslint-disable-next-line no-undef
       setThemeLocal(localStorage.getItem('theme'));
     }
 
@@ -74,13 +79,17 @@ export default function CustomiseTheme() {
     setThemeClickCheck(true);
 
     if (index == 0) {
+      // eslint-disable-next-line no-undef
       document.querySelector('body').classList.replace('dark', 'light');
+      // eslint-disable-next-line no-undef
       localStorage.setItem('theme', 'light');
       setThemeLocal('light');
 
       dispatch(theme('light'));
     } else {
+      // eslint-disable-next-line no-undef
       document.querySelector('body').classList.replace('light', 'dark');
+      // eslint-disable-next-line no-undef
       localStorage.setItem('theme', 'dark');
       setThemeLocal('dark');
 
@@ -119,9 +128,11 @@ export default function CustomiseTheme() {
   function directionClick(index) {
     if (index == 0) {
       dispatch(direction('ltr'));
+      // eslint-disable-next-line no-undef
       document.querySelector('html').setAttribute('dir', 'ltr');
     } else {
       dispatch(direction('rtl'));
+      // eslint-disable-next-line no-undef
       document.querySelector('html').setAttribute('dir', 'rtl');
     }
 

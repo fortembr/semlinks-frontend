@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col, Divider, Switch } from "antd";
+import { Row, Col, Divider, Switch } from 'antd';
 
 export default function NotificationsProfile() {
-  const colTextClass = "hp-caption hp-text-color-black-80 hp-text-color-dark-30";
-  const switchClass = "hp-mt-sm-8 hp-ml-sm-0 hp-ml-8";
-  const dividerClass = "hp-border-color-black-40 hp-border-color-dark-80";
+  const colTextClass = 'hp-caption hp-text-color-black-80 hp-text-color-dark-30';
+  const switchClass = 'hp-mt-sm-8 hp-ml-sm-0 hp-ml-8';
+  const dividerClass = 'hp-border-color-black-40 hp-border-color-dark-80';
 
   return (
     <Row>
       <Col span={24}>
         <h2>Notification Settings</h2>
         <p className="hp-p1-body hp-mb-0">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-          sodales sit amet nunc et vehicula. Mauris sed lectus nisi.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales sit amet nunc et vehicula. Mauris
+          sed lectus nisi.
         </p>
       </Col>
 

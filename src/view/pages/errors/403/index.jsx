@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Row, Col, Button } from "antd";
+import { Row, Col, Button } from 'antd';
 
-import Line from "../line";
-import Header from "../header";
-import Footer from "../footer";
+import Line from '../line';
+import Header from '../header';
+import Footer from '../footer';
 
 export default function Error403() {
   return (
@@ -23,7 +23,9 @@ export default function Error403() {
 
             <h2 className="h1 hp-mb-16">Forbidden</h2>
 
-            <p className="hp-mb-32 hp-p1-body hp-text-color-black-100 hp-text-color-dark-0">You don’t have an access to this page.</p>
+            <p className="hp-mb-32 hp-p1-body hp-text-color-black-100 hp-text-color-dark-0">
+              You don’t have an access to this page.
+            </p>
 
             <Link to="/">
               <Button type="primary">Back to Home</Button>

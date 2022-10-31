@@ -25,6 +25,7 @@ export default function DragUpload() {
     onChange(info) {
       const { status } = info.file;
       if (status !== 'uploading') {
+        // no response
       }
       if (status === 'done') {
         message.success({

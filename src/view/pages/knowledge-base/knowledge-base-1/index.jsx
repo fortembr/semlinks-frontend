@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col, Input, Tag } from "antd";
+import { Row, Col, Input, Tag } from 'antd';
 
-import ActionButton from "../../../../layout/components/content/action-button/index";
-import BreadCrumbs from "../../../../layout/components/content/breadcrumbs/index";
-import KnowledgeBaseCards from "./cards";
+import ActionButton from '../../../../layout/components/content/action-button/index';
+import BreadCrumbs from '../../../../layout/components/content/breadcrumbs/index';
+import KnowledgeBaseCards from './cards';
 
 const { Search } = Input;
 
@@ -13,10 +13,7 @@ export default function KnowledgeBase1() {
     <Row gutter={[32, 32]}>
       <Col span={24}>
         <Row gutter={[32, 32]} justify="space-between">
-          <BreadCrumbs
-            breadCrumbParent="Pages"
-            breadCrumbActive="Knowledge-Base-1"
-          />
+          <BreadCrumbs breadCrumbParent="Pages" breadCrumbActive="Knowledge-Base-1" />
 
           <ActionButton />
         </Row>

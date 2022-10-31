@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -8,6 +9,7 @@ import IntlMessages from '../../lang/IntlMessages';
 import avatar from '../../../../assets/images/memoji/user-avatar-8.png';
 
 export default function MenuFooter(props) {
+  // eslint-disable-next-line react/prop-types
   return props.collapsed === false ? (
     <Row className="hp-sidebar-footer hp-bg-color-dark-90" align="middle" justify="space-between">
       <Divider className="hp-border-color-black-40 hp-border-color-dark-70 hp-mt-0" />

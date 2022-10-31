@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import { Row, Col, Form, Input, Button } from "antd";
+import { Row, Col, Form, Input, Button } from 'antd';
 
-import Background from "../background";
-import Header from "../header";
-import Footer from "../footer";
+import Background from '../background';
+import Header from '../header';
+import Footer from '../footer';
 
 export default function ResetPassword() {
-  const [step, setStep] = useState(false)
+  const [step, setStep] = useState(false);
 
   return (
-    <Row className="hp-authentication-page hp-d-flex" style={{ flexDirection: "column" }}>
+    <Row className="hp-authentication-page hp-d-flex" style={{ flexDirection: 'column' }}>
       <Background />
 
       <Col span={24}>
@@ -23,50 +23,34 @@ export default function ResetPassword() {
           <Col span={24}>
             <h1>Reset Password</h1>
 
-            <Form
-              layout="vertical"
-              name="basic"
-              className="hp-mt-sm-16 hp-mt-32"
-            >
+            <Form layout="vertical" name="basic" className="hp-mt-sm-16 hp-mt-32">
               <Form.Item label="Password :">
-                <Input.Password
-                  id="password"
-                  placeholder="At least 6 characters"
-                />
+                <Input.Password id="password" placeholder="At least 6 characters" />
               </Form.Item>
 
-              {
-                step && (
-                  <>
-                    <Form.Item label="Confirm Password :">
-                      <Input.Password
-                        id="confirm-password"
-                        placeholder="At least 6 characters"
-                      />
-                    </Form.Item>
+              {step && (
+                <>
+                  <Form.Item label="Confirm Password :">
+                    <Input.Password id="confirm-password" placeholder="At least 6 characters" />
+                  </Form.Item>
 
-                    <Form.Item className="hp-mt-16 hp-mb-0">
-                      <Button block type="primary" htmlType="submit">
-                        Reset Password
+                  <Form.Item className="hp-mt-16 hp-mb-0">
+                    <Button block type="primary" htmlType="submit">
+                      Reset Password
                     </Button>
-                    </Form.Item>
-                  </>
-                )
-              }
+                  </Form.Item>
+                </>
+              )}
             </Form>
 
-            {
-              !step && (
-                <Button block type="primary" onClick={() => setStep(true)}>
-                  Continue
-                </Button>
-              )
-            }
+            {!step && (
+              <Button block type="primary" onClick={() => setStep(true)}>
+                Continue
+              </Button>
+            )}
 
             <div className="hp-form-info hp-text-center hp-mt-8">
-              <span className="hp-text-color-black-80 hp-text-color-dark-40 hp-caption hp-mr-4">
-                Go back to
-              </span>
+              <span className="hp-text-color-black-80 hp-text-color-dark-40 hp-caption hp-mr-4">Go back to</span>
 
               <Link
                 to="/pages/authentication-modern/login"

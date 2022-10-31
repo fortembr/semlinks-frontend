@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col, Card } from "antd";
+import { Row, Col, Card } from 'antd';
 
 export default function KnowledgeBaseCards() {
   return (

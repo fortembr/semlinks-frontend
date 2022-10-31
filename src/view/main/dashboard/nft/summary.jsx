@@ -1,5 +1,6 @@
 import React from 'react';
 
+// eslint-disable-next-line no-unused-vars
 import Chart from 'react-apexcharts';
 import { Row, Col, Select } from 'antd';
 import SummaryItem from '../../widgets/cards/statistics/summaryItem';

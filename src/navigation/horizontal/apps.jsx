@@ -1,3 +1,4 @@
+import React from 'react';
 import { Calendar, Bookmark, Award, Messages1, Shop } from 'iconsax-react';
 
 import IntlMessages from '../../layout/components/lang/IntlMessages';

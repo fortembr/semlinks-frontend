@@ -18,6 +18,7 @@ export default function SwitchablePicker() {
     setCheckedCode(!checkedCode);
   }
 
+  // eslint-disable-next-line react/prop-types
   function PickerWithType({ type, onChange }) {
     if (type === 'time') return <TimePicker onChange={onChange} />;
     if (type === 'date') return <DatePicker onChange={onChange} />;

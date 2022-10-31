@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import LandingHeader from './header';
 import LandingHero from './hero';
@@ -11,25 +11,25 @@ import LandingPricing from './pricing';
 import LandingFooter from './footer';
 
 export default function Landing() {
-    return (
-        <div className="hp-landing hp-bg-black-0 hp-bg-dark-90">
-            <LandingHeader />
+  return (
+    <div className="hp-landing hp-bg-black-0 hp-bg-dark-90">
+      <LandingHeader />
 
-            <LandingHero />
+      <LandingHero />
 
-            <LandingCompanies />
+      <LandingCompanies />
 
-            <LandingFeatures />
+      <LandingFeatures />
 
-            <LandingContent1 />
+      <LandingContent1 />
 
-            <LandingContent2 />
+      <LandingContent2 />
 
-            <LandingPeople />
+      <LandingPeople />
 
-            <LandingPricing />
+      <LandingPricing />
 
-            <LandingFooter />
-        </div>
-    )
+      <LandingFooter />
+    </div>
+  );
 }

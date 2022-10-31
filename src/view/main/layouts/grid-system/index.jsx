@@ -93,9 +93,9 @@ export default function GridSystem() {
         </p>
 
         <p className="hp-my-16 hp-p1-body">
-          We name the divided area 'box'. We suggest four boxes for horizontal arrangement at most, one at least. Boxes
-          are proportional to the entire screen as shown in the picture above. To ensure a high level of visual comfort,
-          we customize the typography inside of the box based on the box unit.
+          We name the divided area &apos;box&apos;. We suggest four boxes for horizontal arrangement at most, one at
+          least. Boxes are proportional to the entire screen as shown in the picture above. To ensure a high level of
+          visual comfort, we customize the typography inside of the box based on the box unit.
         </p>
 
         <h2 className="hp-mt-32 hp-mb-16">Outline</h2>

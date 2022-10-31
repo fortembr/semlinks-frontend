@@ -27,7 +27,7 @@ export default function TabsType() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Card Type Tab</h4>
-          <p className="hp-p1-body">Another type of Tabs, which doesn't support vertical mode.</p>
+          <p className="hp-p1-body">Another type of Tabs, which doesn&apos;t support vertical mode.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">

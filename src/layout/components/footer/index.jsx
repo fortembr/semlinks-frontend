@@ -1,3 +1,4 @@
+import React from 'react';
 import { Col, Layout, Row } from 'antd';
 
 export default function MenuFooter() {

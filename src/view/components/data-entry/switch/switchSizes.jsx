@@ -21,7 +21,7 @@ export default function SwitchSizes() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Two sizes</h4>
-          <p className="hp-p1-body">size="small" represents a small sized switch.</p>
+          <p className="hp-p1-body">size=&quot;small&quot; represents a small sized switch.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">

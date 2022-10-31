@@ -59,6 +59,7 @@ export default function ActiveUserCardVertical() {
               show: true,
               fontSize: '12px',
               label: '',
+              // eslint-disable-next-line no-unused-vars
               formatter: function (w) {
                 return '%' + 40;
               }

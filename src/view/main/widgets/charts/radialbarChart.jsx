@@ -59,6 +59,7 @@ export default function RadialbarChart() {
               show: true,
               fontSize: '16px',
               label: 'Total',
+              // eslint-disable-next-line no-unused-vars
               formatter: function (w) {
                 return 7400;
               }

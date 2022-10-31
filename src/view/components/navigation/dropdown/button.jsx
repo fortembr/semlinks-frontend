@@ -17,10 +17,12 @@ export default function ButtonWithDropdown() {
     setCheckedCode(!checkedCode);
   }
 
+  // eslint-disable-next-line no-unused-vars
   function handleButtonClick(e) {
     message.info('Click on left button.');
   }
 
+  // eslint-disable-next-line no-unused-vars
   function handleMenuClick(e) {
     message.info('Click on menu item.');
   }

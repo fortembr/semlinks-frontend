@@ -45,6 +45,7 @@ export default function MarketPlaceRadialbarCard() {
               show: true,
               fontSize: '10px',
               label: 'Total',
+              // eslint-disable-next-line no-unused-vars
               formatter: function (w) {
                 return 7400;
               }

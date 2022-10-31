@@ -42,6 +42,7 @@ export default function ConfirmationModal() {
       ),
       content: <p className="hp-p1-body">When clicked the OK button, this dialog will be closed after 1 second</p>,
       onOk() {
+        // eslint-disable-next-line no-undef
         return new Promise((resolve, reject) => {
           setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
         }).catch(() => console.log('Oops errors!'));

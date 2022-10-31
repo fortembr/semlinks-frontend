@@ -1,29 +1,25 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col, Button } from "antd";
+import { Row, Col, Button } from 'antd';
 
 export default function PricingItem(props) {
   const listSVG = (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M6.99992 13.6667C3.31792 13.6667 0.333252 10.682 0.333252 7.00004C0.333252 3.31804 3.31792 0.333374 6.99992 0.333374C10.6819 0.333374 13.6666 3.31804 13.6666 7.00004C13.6666 10.682 10.6819 13.6667 6.99992 13.6667ZM6.99992 12.3334C8.41441 12.3334 9.77096 11.7715 10.7712 10.7713C11.7713 9.77108 12.3333 8.41453 12.3333 7.00004C12.3333 5.58555 11.7713 4.229 10.7712 3.2288C9.77096 2.22861 8.41441 1.66671 6.99992 1.66671C5.58543 1.66671 4.22888 2.22861 3.22868 3.2288C2.22849 4.229 1.66659 5.58555 1.66659 7.00004C1.66659 8.41453 2.22849 9.77108 3.22868 10.7713C4.22888 11.7715 5.58543 12.3334 6.99992 12.3334ZM6.33525 9.66671L3.50659 6.83804L4.44925 5.89537L6.33525 7.78137L10.1059 4.01004L11.0493 4.95271L6.33525 9.66671Z"
         fill="#0010F7"
       />
     </svg>
   );
-  const listItem = "hp-pricing-item-list hp-d-flex-center hp-mt-8";
-  const listText = "hp-d-block hp-ml-8 hp-caption hp-font-weight-400 hp-text-color-dark-0";
+  const listItem = 'hp-pricing-item-list hp-d-flex-center hp-mt-8';
+  const listText = 'hp-d-block hp-ml-8 hp-caption hp-font-weight-400 hp-text-color-dark-0';
 
+  // eslint-disable-next-line react/prop-types
   const listMap = props.values.map((item, index) => (
     <Col
-      className={`hp-pricing-item hp-p-24 hp-mx-xl-8 hp-mx-16 hp-mb-sm-24 hp-mb-16 hp-border-1 hp-border-radius ${item.special ? "hp-pricing-item-special" : "hp-border-color-black-40 hp-border-color-dark-80"
-        }`}
+      className={`hp-pricing-item hp-p-24 hp-mx-xl-8 hp-mx-16 hp-mb-sm-24 hp-mb-16 hp-border-1 hp-border-radius ${
+        item.special ? 'hp-pricing-item-special' : 'hp-border-color-black-40 hp-border-color-dark-80'
+      }`}
       key={index}
     >
       <div>
@@ -62,17 +58,19 @@ export default function PricingItem(props) {
         </ul>
       </div>
 
-      {
-        item.special ? (
-          <Button className="hp-mt-32 hp-hover-border-color-primary-2 hp-hover-bg-primary-2 hp-hover-text-color-black-0" block type="primary">
-            {item.button}
-          </Button>
-        ) : (
-          <Button className="hp-mt-32" block type="primary">
-            {item.button}
-          </Button>
-        )
-      }
+      {item.special ? (
+        <Button
+          className="hp-mt-32 hp-hover-border-color-primary-2 hp-hover-bg-primary-2 hp-hover-text-color-black-0"
+          block
+          type="primary"
+        >
+          {item.button}
+        </Button>
+      ) : (
+        <Button className="hp-mt-32" block type="primary">
+          {item.button}
+        </Button>
+      )}
     </Col>
   ));
 

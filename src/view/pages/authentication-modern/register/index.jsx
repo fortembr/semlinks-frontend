@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import { Row, Col, Form, Input, Button } from "antd";
+import { Row, Col, Form, Input, Button } from 'antd';
 
-import Background from "../background";
-import Header from "../header";
-import Footer from "../footer";
+import Background from '../background';
+import Header from '../header';
+import Footer from '../footer';
 
 export default function SignUp() {
-  const [stepEmail, setStepEmail] = useState(false)
-  const [stepPassword, setStepPassword] = useState(false)
-  const [stepPasswordConfirm, setStepPasswordConfirm] = useState(false)
+  const [stepEmail, setStepEmail] = useState(false);
+  const [stepPassword, setStepPassword] = useState(false);
+  const [stepPasswordConfirm, setStepPasswordConfirm] = useState(false);
 
   return (
-    <Row className="hp-authentication-page hp-d-flex" style={{ flexDirection: "column" }}>
+    <Row className="hp-authentication-page hp-d-flex" style={{ flexDirection: 'column' }}>
       <Background />
 
       <Col span={24}>
@@ -25,67 +25,57 @@ export default function SignUp() {
           <Col span={24}>
             <h1>Create Account</h1>
 
-            <Form
-              layout="vertical"
-              name="basic"
-              className="hp-mt-sm-16 hp-mt-32"
-            >
+            <Form layout="vertical" name="basic" className="hp-mt-sm-16 hp-mt-32">
               <Form.Item label="Username :">
                 <Input id="error" />
               </Form.Item>
 
-              {
-                stepEmail && (
-                  <>
-                    <Form.Item label="E-mail :">
-                      <Input id="validating" />
-                    </Form.Item>
+              {stepEmail && (
+                <>
+                  <Form.Item label="E-mail :">
+                    <Input id="validating" />
+                  </Form.Item>
 
-                    {stepPassword && (
-                      <>
-                        <Form.Item label="Password :">
-                          <Input.Password id="password" />
-                        </Form.Item>
+                  {stepPassword && (
+                    <>
+                      <Form.Item label="Password :">
+                        <Input.Password id="password" />
+                      </Form.Item>
 
-                        {stepPasswordConfirm && (
-                          <>
-                            <Form.Item label="Confirm Password :">
-                              <Input.Password id="confirm-password" />
-                            </Form.Item>
+                      {stepPasswordConfirm && (
+                        <>
+                          <Form.Item label="Confirm Password :">
+                            <Input.Password id="confirm-password" />
+                          </Form.Item>
 
-                            <Form.Item className="hp-mt-16 hp-mb-0">
-                              <Button block type="primary" htmlType="submit">
-                                Sign up
-                              </Button>
-                            </Form.Item>
-                          </>
-                        )}
-                      </>
-                    )}
-                  </>
-                )
-              }
+                          <Form.Item className="hp-mt-16 hp-mb-0">
+                            <Button block type="primary" htmlType="submit">
+                              Sign up
+                            </Button>
+                          </Form.Item>
+                        </>
+                      )}
+                    </>
+                  )}
+                </>
+              )}
             </Form>
 
-            {
-              !stepEmail ? (
-                <Button block type="primary" onClick={() => setStepEmail(true)}>
+            {!stepEmail ? (
+              <Button block type="primary" onClick={() => setStepEmail(true)}>
+                Continue
+              </Button>
+            ) : !stepPassword ? (
+              <Button block type="primary" onClick={() => setStepPassword(true)}>
+                Continue
+              </Button>
+            ) : (
+              !stepPasswordConfirm && (
+                <Button block type="primary" onClick={() => setStepPasswordConfirm(true)}>
                   Continue
                 </Button>
-              ) : (
-                !stepPassword ? (
-                  <Button block type="primary" onClick={() => setStepPassword(true)}>
-                    Continue
-                  </Button>
-                ) : (
-                  !stepPasswordConfirm && (
-                    <Button block type="primary" onClick={() => setStepPasswordConfirm(true)}>
-                      Continue
-                    </Button>
-                  )
-                )
               )
-            }
+            )}
 
             <div className="hp-form-info hp-text-center hp-mt-8">
               <span className="hp-text-color-black-80 hp-text-color-dark-40 hp-caption hp-mr-4">
@@ -108,4 +98,4 @@ export default function SignUp() {
       </Col>
     </Row>
   );
-};
+}

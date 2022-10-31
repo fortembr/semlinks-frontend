@@ -151,7 +151,6 @@ export default function SummaryTable() {
                 </Table.Summary.Row>
               </Table.Summary>
             )}
-            scroll={{ x: 500 }}
           />
         </Col>
       </Row>

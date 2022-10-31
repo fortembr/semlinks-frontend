@@ -1,6 +1,7 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+import React from 'react';
 
-import { Col, Tabs } from "antd";
+import { Col, Tabs } from 'antd';
 
 const { TabPane } = Tabs;
 
@@ -16,19 +17,17 @@ export default function MenuFAQ(props) {
         defaultActiveKey="1"
         onChange={tabsChange}
       >
-        {
-          props.data.map((item, index) => (
-            <TabPane
-              tab={
-                <span className="hp-d-flex-center">
-                  {item.icon}
-                  {item.title}
-                </span>
-              }
-              key={"tab-" + index}
-            ></TabPane>
-          ))
-        }
+        {props.data.map((item, index) => (
+          <TabPane
+            tab={
+              <span className="hp-d-flex-center">
+                {item.icon}
+                {item.title}
+              </span>
+            }
+            key={'tab-' + index}
+          ></TabPane>
+        ))}
       </Tabs>
     </Col>
   );

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
+import { Row, Col } from 'antd';
 
-import PageContent from "../../../layout/components/content/page-content";
+import PageContent from '../../../layout/components/content/page-content';
 
 export default function Blank() {
   return (
@@ -12,10 +12,10 @@ export default function Blank() {
           title="Blank Page"
           breadcrumb={[
             {
-              title: "Pages",
+              title: 'Pages'
             },
             {
-              title: "Blank Page",
+              title: 'Blank Page'
             }
           ]}
         />

@@ -37,25 +37,25 @@ export default function PageHeaderNFT() {
               <path
                 d="M8.02422 5.64172V10.4073"
                 stroke="#0010F7"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M10.4097 8.02458H5.63916"
                 stroke="#0010F7"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M1.5332 8.02455C1.5332 3.15648 3.15636 1.53333 8.02443 1.53333C12.8925 1.53333 14.5157 3.15648 14.5157 8.02455C14.5157 12.8926 12.8925 14.5158 8.02443 14.5158C3.15636 14.5158 1.5332 12.8926 1.5332 8.02455Z"
                 stroke="#0010F7"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>

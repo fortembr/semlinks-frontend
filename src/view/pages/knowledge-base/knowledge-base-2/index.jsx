@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col, Input, Tag } from "antd";
+import { Row, Col, Input, Tag } from 'antd';
 
-import ActionButton from "../../../../layout/components/content/action-button/index";
-import BreadCrumbs from "../../../../layout/components/content/breadcrumbs/index";
-import KnowledgeBaseCards from "./cards";
+import ActionButton from '../../../../layout/components/content/action-button/index';
+import BreadCrumbs from '../../../../layout/components/content/breadcrumbs/index';
+import KnowledgeBaseCards from './cards';
 
 const { Search } = Input;
 
@@ -13,10 +13,7 @@ export default function KnowledgeBase2() {
     <Row gutter={[32, 32]}>
       <Col span={24}>
         <Row gutter={[32, 32]} justify="space-between">
-          <BreadCrumbs
-            breadCrumbParent="Pages"
-            breadCrumbActive="Knowledge Base-2"
-          />
+          <BreadCrumbs breadCrumbParent="Pages" breadCrumbActive="Knowledge Base-2" />
 
           <ActionButton />
         </Row>
@@ -24,7 +21,7 @@ export default function KnowledgeBase2() {
 
       <Col span={24}>
         <h1 className="hp-mb-0">Hello! How can we help you?</h1>
-        
+
         <h5 className="hp-mb-0 hp-text-color-black-80 hp-text-color-dark-30">
           or choose a category to quickly find the help you need.
         </h5>

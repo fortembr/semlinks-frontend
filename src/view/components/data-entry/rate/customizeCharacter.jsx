@@ -36,7 +36,7 @@ export default function RateCustomizeCharacter() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Customize character</h4>
-          <p className="hp-p1-body">Can customize each character using (RateProps) => ReactNode.</p>
+          <p className="hp-p1-body">Can customize each character using (RateProps) =&gt; ReactNode.</p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">

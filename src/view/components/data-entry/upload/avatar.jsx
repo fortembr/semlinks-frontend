@@ -17,6 +17,7 @@ export default function AvatarUpload() {
   }
 
   function getBase64(img, callback) {
+    // eslint-disable-next-line no-undef
     const reader = new FileReader();
     reader.addEventListener('load', () => callback(reader.result));
     reader.readAsDataURL(img);
@@ -67,7 +68,7 @@ export default function AvatarUpload() {
             <Col lg={12} span={20}>
               <h4>Avatar</h4>
               <p className="hp-p1-body">
-                Click to upload user's avatar, and validate size and format of picture with beforeUpload.
+                Click to upload user&apos;s avatar, and validate size and format of picture with beforeUpload.
               </p>
             </Col>
 

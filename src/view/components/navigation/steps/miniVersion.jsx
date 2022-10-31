@@ -23,7 +23,9 @@ export default function StepsMiniVersion() {
       <Row>
         <Col lg={12} span={20} className="hp-mb-16">
           <h4>Mini Version</h4>
-          <p className="hp-p1-body">By setting like this: &lt;Steps size="small"&gt;, you can get a mini version.</p>
+          <p className="hp-p1-body">
+            By setting like this: &lt;Steps size=&quot;small&quot;&gt;, you can get a mini version.
+          </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">

@@ -8,6 +8,7 @@ import MenuItem from '../item';
 import MenuFooter from '../footer';
 
 export default function MenuMobile(props) {
+  // eslint-disable-next-line react/prop-types
   const { onClose, visible } = props;
 
   return (

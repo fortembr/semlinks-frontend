@@ -18,7 +18,9 @@ import userImage13 from '../../../../assets/images/users/user-13.svg';
 import userImage14 from '../../../../assets/images/users/user-14.svg';
 import userImage16 from '../../../../assets/images/users/user-16.svg';
 import userImage17 from '../../../../assets/images/users/user-17.svg';
+// eslint-disable-next-line no-unused-vars
 import userImage18 from '../../../../assets/images/users/user-18.svg';
+// eslint-disable-next-line no-unused-vars
 import userImage19 from '../../../../assets/images/users/user-19.svg';
 import userImage20 from '../../../../assets/images/users/user-20.svg';
 import userImage21 from '../../../../assets/images/users/user-21.svg';

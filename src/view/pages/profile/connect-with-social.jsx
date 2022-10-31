@@ -1,18 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col, Divider, Button } from "antd";
-import { RiFacebookFill } from "react-icons/ri";
+import { Row, Col, Divider, Button } from 'antd';
+import { RiFacebookFill } from 'react-icons/ri';
 
 export default function SocialProfile() {
-  const dividerClass = "hp-border-color-black-40 hp-border-color-dark-80";
+  const dividerClass = 'hp-border-color-black-40 hp-border-color-dark-80';
 
   return (
     <Row>
       <Col span={24}>
         <h2>Connect With Social</h2>
-        <p className="hp-p1-body hp-mb-0">
-          These settings are helps you keep your account secure.
-        </p>
+        <p className="hp-p1-body hp-mb-0">These settings are helps you keep your account secure.</p>
       </Col>
 
       <Divider className={dividerClass} />
@@ -56,9 +54,7 @@ export default function SocialProfile() {
           <Button
             className="hp-py-24 hp-mt-16"
             block
-            icon={
-              <RiFacebookFill className="remix-icon hp-text-color-primary-1" />
-            }
+            icon={<RiFacebookFill className="remix-icon hp-text-color-primary-1" />}
           >
             Continue with Facebook account
           </Button>

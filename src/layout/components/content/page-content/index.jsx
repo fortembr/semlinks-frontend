@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Breadcrumb, Col, Row } from 'antd';
 
 export default function PageContent(props) {
+  // eslint-disable-next-line react/prop-types
   const { title, breadcrumb, desc } = props;
 
   return (

@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col, Card } from "antd";
+import { Row, Col, Card } from 'antd';
 
-import Callcenter from "../../../../assets/images/pages/knowledgebase/contact.png";
-import Charts from "../../../../assets/images/pages/knowledgebase/analyse.png";
-import Logistic from "../../../../assets/images/pages/knowledgebase/location.png";
-import Mailing from "../../../../assets/images/pages/knowledgebase/newsletter.png";
-import Finance from "../../../../assets/images/pages/knowledgebase/save-money.png";
-import Seo from "../../../../assets/images/pages/knowledgebase/seo.png";
+import Callcenter from '../../../../assets/images/pages/knowledgebase/contact.png';
+import Charts from '../../../../assets/images/pages/knowledgebase/analyse.png';
+import Logistic from '../../../../assets/images/pages/knowledgebase/location.png';
+import Mailing from '../../../../assets/images/pages/knowledgebase/newsletter.png';
+import Finance from '../../../../assets/images/pages/knowledgebase/save-money.png';
+import Seo from '../../../../assets/images/pages/knowledgebase/seo.png';
 
 export default function KnowledgeBaseCards() {
   return (

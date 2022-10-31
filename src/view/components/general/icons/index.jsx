@@ -24,6 +24,7 @@ export default function Icons() {
           <Col xl={4} md={8} span={12}>
             <Card
               onClick={() => {
+                // eslint-disable-next-line no-undef
                 navigator.clipboard.writeText(`<i className="ri-${icon}-line" />`);
                 message.success(`<i className="ri-${icon}-line" /> Copied successfully`);
               }}
@@ -39,6 +40,7 @@ export default function Icons() {
           <Col xl={4} md={8} span={12}>
             <Card
               onClick={() => {
+                // eslint-disable-next-line no-undef
                 navigator.clipboard.writeText(`<i className="ri-${icon}-fill" />`);
                 message.success(`<i className="ri-${icon}-fill" /> Copied successfully`);
               }}
@@ -54,6 +56,7 @@ export default function Icons() {
           <Col xl={4} md={8} span={12}>
             <Card
               onClick={() => {
+                // eslint-disable-next-line no-undef
                 navigator.clipboard.writeText(`<i className="ri-${icon}-fill" />`);
                 message.success(`<i className="ri-${icon}-fill" /> Copied successfully`);
               }}
@@ -69,6 +72,7 @@ export default function Icons() {
           <Col xl={4} md={8} span={12}>
             <Card
               onClick={() => {
+                // eslint-disable-next-line no-undef
                 navigator.clipboard.writeText(`<i className="ri-${icon}-line" />`);
                 message.success(`<i className="ri-${icon}-line" /> Copied successfully`);
               }}

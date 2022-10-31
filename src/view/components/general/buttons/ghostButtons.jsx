@@ -22,7 +22,7 @@ export default function GhostButtons() {
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Ghost Buttons</h4>
           <p className="hp-p1-body">
-            Ghost property will make button's background transparent, it is commonly used in colored background.
+            Ghost property will make button&apos;s background transparent, it is commonly used in colored background.
           </p>
         </Col>
 

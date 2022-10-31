@@ -3,6 +3,7 @@ import React from 'react';
 import { Col, Row } from 'antd';
 
 export default function PageTitle(props) {
+  // eslint-disable-next-line react/prop-types
   const { pageTitle, pageText } = props;
 
   return (

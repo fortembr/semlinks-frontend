@@ -14,6 +14,7 @@ import MenuMobile from './mobile';
 const { Sider } = Layout;
 
 export default function Sidebar(props) {
+  // eslint-disable-next-line react/prop-types
   const { visible, setVisible } = props;
 
   // Redux
@@ -31,6 +32,7 @@ export default function Sidebar(props) {
   }, [customise]);
 
   // Location
+  // eslint-disable-next-line no-unused-vars
   const location = useLocation();
 
   // Mobile Sidebar

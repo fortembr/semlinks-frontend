@@ -1,13 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import { Col, Row } from 'antd'
+import { Col, Row } from 'antd';
 
 export default function Footer() {
   return (
     <Col span={24} className="hp-py-32">
-      <p className="hp-mb-8 hp-p1-body hp-text-color-black-60">
-        COPYRIGHT ©2021 Hypeople, All rights Reserved
-      </p>
+      <p className="hp-mb-8 hp-p1-body hp-text-color-black-60">COPYRIGHT ©2021 Hypeople, All rights Reserved</p>
 
       <Row align="middle" justify="center" gutter="16">
         <Col>
@@ -19,5 +17,5 @@ export default function Footer() {
         </Col>
       </Row>
     </Col>
-  )
+  );
 }

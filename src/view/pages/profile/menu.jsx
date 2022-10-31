@@ -1,26 +1,20 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
-import { Col, Avatar, Badge, Menu } from "antd";
-import {
-  User,
-  Notification,
-  Activity,
-  Setting,
-  Password,
-  Heart,
-} from "react-iconly";
+import { Col, Avatar, Badge, Menu } from 'antd';
+import { User, Notification, Activity, Setting, Password, Heart } from 'react-iconly';
 
-import menuImg from "../../../assets/images/pages/profile/menu-img.svg";
-import avatar from "../../../assets/images/memoji/memoji-1.png";
+import menuImg from '../../../assets/images/pages/profile/menu-img.svg';
+import avatar from '../../../assets/images/memoji/memoji-1.png';
 
 export default function MenuProfile(props) {
-  const menuIconClass = "remix-icon hp-mr-8";
+  const menuIconClass = 'remix-icon hp-mr-8';
 
   function menuFooterItem() {
-    if (props.footer !== "none") {
+    // eslint-disable-next-line react/prop-types
+    if (props.footer !== 'none') {
       return (
         <div className="hp-profile-menu-footer">
           <img src={menuImg} alt="Profile Image" />
@@ -30,21 +24,19 @@ export default function MenuProfile(props) {
   }
 
   function moreBtn() {
-    if (props.moreBtnCheck !== "none") {
-      return (
-        <Col className="hp-menu-header-btn hp-pr-16 hp-mb-12 hp-text-right">
-          {props.moreBtn()}
-        </Col>
-      );
+    // eslint-disable-next-line react/prop-types
+    if (props.moreBtnCheck !== 'none') {
+      // eslint-disable-next-line react/prop-types
+      return <Col className="hp-menu-header-btn hp-pr-16 hp-mb-12 hp-text-right">{props.moreBtn()}</Col>;
     }
   }
 
   const location = useLocation();
   const { pathname } = location;
-  const splitLocation = pathname.split("/");
+  const splitLocation = pathname.split('/');
 
   // Redux
-  const customise = useSelector(state => state.customise)
+  const customise = useSelector((state) => state.customise);
 
   return (
     <Col flex="240px" className="hp-profile-menu hp-py-24">
@@ -65,22 +57,23 @@ export default function MenuProfile(props) {
         <Menu
           mode="inline"
           className="hp-w-100 hp-profile-menu-body"
-          theme={customise.theme == "light" ? "light" : "dark"}
+          theme={customise.theme == 'light' ? 'light' : 'dark'}
         >
           <Menu.Item
             key="1"
             icon={<User set="curved" className={menuIconClass} />}
             className={`
               hp-mb-16 hp-pl-24 hp-pr-32
-              ${splitLocation[splitLocation.length - 1] === "personel-information"
-                ? "ant-menu-item-selected"
-                : "ant-menu-item-selected-in-active"}
+              ${
+                splitLocation[splitLocation.length - 1] === 'personel-information'
+                  ? 'ant-menu-item-selected'
+                  : 'ant-menu-item-selected-in-active'
+              }
             `}
+            // eslint-disable-next-line react/prop-types
             onClick={props.onCloseDrawer}
           >
-            <Link to="/pages/profile/personel-information">
-              Personal Information
-            </Link>
+            <Link to="/pages/profile/personel-information">Personal Information</Link>
           </Menu.Item>
 
           <Menu.Item
@@ -88,10 +81,13 @@ export default function MenuProfile(props) {
             icon={<Notification set="curved" className={menuIconClass} />}
             className={`
               hp-mb-16 hp-pl-24 hp-pr-32
-              ${splitLocation[splitLocation.length - 1] === "notifications"
-                ? "ant-menu-item-selected"
-                : "ant-menu-item-selected-in-active"}
+              ${
+                splitLocation[splitLocation.length - 1] === 'notifications'
+                  ? 'ant-menu-item-selected'
+                  : 'ant-menu-item-selected-in-active'
+              }
             `}
+            // eslint-disable-next-line react/prop-types
             onClick={props.onCloseDrawer}
           >
             <Link to="/pages/profile/notifications">Notifications</Link>
@@ -102,10 +98,13 @@ export default function MenuProfile(props) {
             icon={<Activity set="curved" className={menuIconClass} />}
             className={`
               hp-mb-16 hp-pl-24 hp-pr-32
-              ${splitLocation[splitLocation.length - 1] === "activity"
-                ? "ant-menu-item-selected"
-                : "ant-menu-item-selected-in-active"}
+              ${
+                splitLocation[splitLocation.length - 1] === 'activity'
+                  ? 'ant-menu-item-selected'
+                  : 'ant-menu-item-selected-in-active'
+              }
             `}
+            // eslint-disable-next-line react/prop-types
             onClick={props.onCloseDrawer}
           >
             <Link to="/pages/profile/activity">Activity Monitor</Link>
@@ -116,10 +115,13 @@ export default function MenuProfile(props) {
             icon={<Setting set="curved" className={menuIconClass} />}
             className={`
               hp-mb-16 hp-pl-24 hp-pr-32
-              ${splitLocation[splitLocation.length - 1] === "security"
-                ? "ant-menu-item-selected"
-                : "ant-menu-item-selected-in-active"}
+              ${
+                splitLocation[splitLocation.length - 1] === 'security'
+                  ? 'ant-menu-item-selected'
+                  : 'ant-menu-item-selected-in-active'
+              }
             `}
+            // eslint-disable-next-line react/prop-types
             onClick={props.onCloseDrawer}
           >
             <Link to="/pages/profile/security">Security Settings</Link>
@@ -130,10 +132,13 @@ export default function MenuProfile(props) {
             icon={<Password set="curved" className={menuIconClass} />}
             className={`
               hp-mb-16 hp-pl-24 hp-pr-32
-              ${splitLocation[splitLocation.length - 1] === "password-change"
-                ? "ant-menu-item-selected"
-                : "ant-menu-item-selected-in-active"}
+              ${
+                splitLocation[splitLocation.length - 1] === 'password-change'
+                  ? 'ant-menu-item-selected'
+                  : 'ant-menu-item-selected-in-active'
+              }
             `}
+            // eslint-disable-next-line react/prop-types
             onClick={props.onCloseDrawer}
           >
             <Link to="/pages/profile/password-change">Password Change</Link>
@@ -144,15 +149,16 @@ export default function MenuProfile(props) {
             icon={<Heart set="curved" className={menuIconClass} />}
             className={`
               hp-mb-16 hp-pl-24 hp-pr-32
-              ${splitLocation[splitLocation.length - 1] === "connect-with-social"
-                ? "ant-menu-item-selected"
-                : "ant-menu-item-selected-in-active"}
+              ${
+                splitLocation[splitLocation.length - 1] === 'connect-with-social'
+                  ? 'ant-menu-item-selected'
+                  : 'ant-menu-item-selected-in-active'
+              }
             `}
+            // eslint-disable-next-line react/prop-types
             onClick={props.onCloseDrawer}
           >
-            <Link to="/pages/profile/connect-with-social">
-              Connect with Social
-            </Link>
+            <Link to="/pages/profile/connect-with-social">Connect with Social</Link>
           </Menu.Item>
         </Menu>
       </div>

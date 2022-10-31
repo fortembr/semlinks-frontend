@@ -1,7 +1,9 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Col, Breadcrumb } from 'antd';
 
 const BreadCrumbs = (props) => {
+  // eslint-disable-next-line react/prop-types
   const { breadCrumbParent, breadCrumbParent2, breadCrumbParent3, breadCrumbActive } = props;
 
   return (

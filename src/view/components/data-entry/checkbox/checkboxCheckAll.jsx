@@ -42,7 +42,9 @@ export default function CheckboxCheckAll() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Check all</h4>
-          <p className="hp-p1-body">The indeterminate property can help you to achieve a 'check all' effect.</p>
+          <p className="hp-p1-body">
+            The indeterminate property can help you to achieve a &apos;check all&apos; effect.
+          </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">

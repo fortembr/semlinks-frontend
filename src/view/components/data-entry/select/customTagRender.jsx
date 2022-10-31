@@ -19,6 +19,7 @@ export default function SelectCustomTagRender() {
   const options = [{ value: 'gold' }, { value: 'lime' }, { value: 'green' }, { value: 'cyan' }];
 
   function tagRender(props) {
+    // eslint-disable-next-line react/prop-types
     const { label, value, closable, onClose } = props;
     const onPreventMouseDown = (event) => {
       event.preventDefault();

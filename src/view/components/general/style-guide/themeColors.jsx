@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React from 'react';
 
 import { Card, Row, Col, Tooltip } from 'antd';
@@ -19,7 +20,7 @@ export default function ThemeColors() {
           <h5 className="hp-w-100 hp-mb-8">Theme Colors</h5>
 
           <p className="hp-p1-body">
-            Theme colors can be use with class .hp-&#123;css-property&#125;-primary-1. It's available for text,
+            Theme colors can be use with class .hp-&#123;css-property&#125;-primary-1. It&apos;s available for text,
             background-color, background and border.
           </p>
         </Row>

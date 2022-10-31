@@ -9,7 +9,7 @@ export default function DividerWithTitle() {
         <Col className="hp-mb-16" span={24}>
           <h4>Divider with title</h4>
 
-          <p className="hp-p1-body">Divider with inner title, set orientation="left/right" to align it.</p>
+          <p className="hp-p1-body">Divider with inner title, set orientation=&quot;left/right&quot; to align it.</p>
         </Col>
 
         <Col span={24}>

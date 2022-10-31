@@ -47,6 +47,7 @@ export default function VisitCustomerDonutCard() {
                 fontSize: '16px',
                 label: 'Total',
 
+                // eslint-disable-next-line no-unused-vars
                 formatter: function (w) {
                   return '2400';
                 }

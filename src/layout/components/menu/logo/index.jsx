@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
@@ -60,6 +62,7 @@ export default function MenuLogo(props) {
           href="https://hypeople-studio.gitbook.io/yoda/change-log"
           target="_blank"
           className="hp-caption hp-font-weight-400 hp-text-color-primary-1"
+          rel="noreferrer"
         >
           v.{themeConfig.version}
         </a>

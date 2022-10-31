@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Slider } from "antd";
-import { RiThumbUpLine, RiThumbDownLine } from "react-icons/ri";
+import { Slider } from 'antd';
+import { RiThumbUpLine, RiThumbDownLine } from 'react-icons/ri';
 
 export default function IconItem(props) {
   const [value, setValue] = useState(0);
@@ -10,16 +10,17 @@ export default function IconItem(props) {
     setValue(value);
   };
 
+  // eslint-disable-next-line react/prop-types
   const { max, min } = props;
   const mid = ((max - min) / 2).toFixed(5);
-  const nextColorCls = value >= mid ? "" : " icon-wrapper-active";
-  const preColorCls = value >= mid ? " icon-wrapper-active" : "";
+  const nextColorCls = value >= mid ? '' : ' icon-wrapper-active';
+  const preColorCls = value >= mid ? ' icon-wrapper-active' : '';
 
   return (
     <div className="hp-slider-icon-wrapper">
-      <RiThumbDownLine className={"hp-text-color-dark-0" + preColorCls} />
+      <RiThumbDownLine className={'hp-text-color-dark-0' + preColorCls} />
       <Slider {...props} onChange={handleChange} value={value} />
-      <RiThumbUpLine className={"hp-text-color-dark-0" + nextColorCls} />
+      <RiThumbUpLine className={'hp-text-color-dark-0' + nextColorCls} />
     </div>
   );
 }

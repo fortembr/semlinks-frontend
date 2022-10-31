@@ -47,12 +47,14 @@ export default function HeaderSearch(props) {
 
   function linkHandleClick() {
     autocompleteState.query = '';
+    // eslint-disable-next-line react/prop-types
     props.setSearchHeader(false);
   }
 
   return (
     <div {...autocomplete.getRootProps({})}>
       <Input
+        // eslint-disable-next-line react/prop-types
         {...props.inputFocusProp}
         {...autocomplete.getInputProps({})}
         placeholder="Search..."

@@ -1,15 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Row, Col, Form, Input, Button } from "antd";
+import { Row, Col, Form, Input, Button } from 'antd';
 
-import Background from "../background";
-import Header from "../header";
-import Footer from "../footer";
+import Background from '../background';
+import Header from '../header';
+import Footer from '../footer';
 
 export default function RecoverPassword() {
   return (
-    <Row className="hp-authentication-page hp-d-flex" style={{ flexDirection: "column" }}>
+    <Row className="hp-authentication-page hp-d-flex" style={{ flexDirection: 'column' }}>
       <Background />
 
       <Col span={24}>
@@ -21,11 +21,7 @@ export default function RecoverPassword() {
           <Col span={24}>
             <h1>Recover Password</h1>
 
-            <Form
-              layout="vertical"
-              name="basic"
-              className="hp-mt-sm-16 hp-mt-32"
-            >
+            <Form layout="vertical" name="basic" className="hp-mt-sm-16 hp-mt-32">
               <Form.Item label="E-mail :">
                 <Input id="validating" placeholder="you@example.com" />
               </Form.Item>
@@ -38,9 +34,7 @@ export default function RecoverPassword() {
             </Form>
 
             <div className="hp-form-info hp-text-center">
-              <span className="hp-text-color-black-80 hp-text-color-dark-40 hp-caption hp-mr-4">
-                Go back to
-              </span>
+              <span className="hp-text-color-black-80 hp-text-color-dark-40 hp-caption hp-mr-4">Go back to</span>
 
               <Link
                 to="/pages/authentication-modern/login"

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { adjustItemQty, loadCurrentItem, removeFromCart } from '../../../redux/ecommerce/ecommerceActions';
 
+// eslint-disable-next-line no-unused-vars
 import { Button, Row, Col, Divider, Tag, InputNumber, Empty, Avatar } from 'antd';
 import { ShoppingBag } from 'iconsax-react';
 

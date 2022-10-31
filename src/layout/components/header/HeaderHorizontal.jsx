@@ -18,6 +18,7 @@ import HeaderLanguages from './HeaderLanguages';
 const { Header } = Layout;
 
 export default function HeaderHorizontal(props) {
+  // eslint-disable-next-line react/prop-types
   const { visible, setVisible } = props;
 
   const [searchHeader, setSearchHeader] = useState(false);

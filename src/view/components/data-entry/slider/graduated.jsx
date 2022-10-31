@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { graduated } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { graduated } from './code.js';
 
-import { Card, Row, Col, Slider, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Card, Row, Col, Slider, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function GraduatedSlider() {
   const [marks] = useState({
-    0: "0",
-    30: "8",
-    70: "16",
-    100: "24",
+    0: '0',
+    30: '8',
+    70: '16',
+    100: '24'
   });
   const [checkedCode, setCheckedCode] = useState(false);
   const [codeClass, setCodeClass] = useState(false);
@@ -44,20 +44,15 @@ export default function GraduatedSlider() {
 
         <Col xxl={8} xl={12} md={18} span={20}>
           <Slider className="hp-mx-4" marks={marks} defaultValue={50} />
-          
-          <Slider
-            marks={marks}
-            className="hp-mt-48 hp-mx-4"
-            range
-            defaultValue={[10, 70]}
-          />
+
+          <Slider marks={marks} className="hp-mt-48 hp-mx-4" range defaultValue={[10, 70]} />
         </Col>
       </Row>
 
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {graduated}

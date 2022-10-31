@@ -29,7 +29,9 @@ export default function TabsPosition() {
       <Row>
         <Col className="hp-mb-16" lg={12} span={20}>
           <h4>Position</h4>
-          <p className="hp-p1-body">Tab's position: left, right, top or bottom. Will auto switch to top in mobile.</p>
+          <p className="hp-p1-body">
+            Tab&apos;s position: left, right, top or bottom. Will auto switch to top in mobile.
+          </p>
         </Col>
 
         <Col lg={12} span={4} className="hp-text-right">

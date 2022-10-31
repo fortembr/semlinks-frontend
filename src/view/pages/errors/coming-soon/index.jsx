@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import { Row, Col } from "antd";
-import Countdown from "react-countdown";
+import { Row, Col } from 'antd';
+import Countdown from 'react-countdown';
 
-import Line from "../line";
-import Header from "../header";
-import Footer from "../footer";
+import Line from '../line';
+import Header from '../header';
+import Footer from '../footer';
 
 export default function ComingSoon() {
   const Completionist = () => <span>You are good to go!</span>;
-  const timerClass = "hp-d-block hp-font-weight-300 hp-text-color-primary-1";
-  const timerTextClass = "hp-d-block hp-font-weight-300 hp-text-color-black-100 hp-text-color-dark-30 h4";
+  const timerClass = 'hp-d-block hp-font-weight-300 hp-text-color-primary-1';
+  const timerTextClass = 'hp-d-block hp-font-weight-300 hp-text-color-black-100 hp-text-color-dark-30 h4';
 
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {

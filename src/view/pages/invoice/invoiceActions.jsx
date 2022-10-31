@@ -1,21 +1,8 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+import React, { useState } from 'react';
 
-import {
-  Row,
-  Col,
-  Card,
-  Button,
-  Input,
-  Drawer,
-  Form,
-} from "antd";
-import {
-  RiMailSendLine,
-  RiAttachmentLine,
-  RiDownload2Line,
-  RiPrinterLine,
-  RiCloseFill,
-} from "react-icons/ri";
+import { Row, Col, Card, Button, Input, Drawer, Form } from 'antd';
+import { RiMailSendLine, RiAttachmentLine, RiDownload2Line, RiPrinterLine, RiCloseFill } from 'react-icons/ri';
 
 export default function InvoiceActions(props) {
   const [visible, setVisible] = useState(false);
@@ -39,25 +26,12 @@ export default function InvoiceActions(props) {
       >
         Send Invoice
       </Button>
-
-      <Button
-        className="hp-mb-16"
-        type="ghost"
-        icon={<RiDownload2Line className="remix-icon" />}
-        block
-      >
+      <Button className="hp-mb-16" type="ghost" icon={<RiDownload2Line className="remix-icon" />} block>
         Download
       </Button>
-
-      <Button
-        onClick={props.print}
-        type="ghost"
-        icon={<RiPrinterLine className="remix-icon" />}
-        block
-      >
+      <Button onClick={props.print} type="ghost" icon={<RiPrinterLine className="remix-icon" />} block>
         Print
       </Button>
-
       <Drawer
         className="hp-drawer-submit"
         title="Send Invoice"
@@ -67,35 +41,18 @@ export default function InvoiceActions(props) {
         visible={visible}
         width={false}
         bodyStyle={{ paddingBottom: 80 }}
-        closeIcon={
-          <RiCloseFill
-            className="remix-icon hp-text-color-black-80"
-            size={24}
-          />
-        }
+        closeIcon={<RiCloseFill className="remix-icon hp-text-color-black-80" size={24} />}
       >
         <Form layout="vertical" hideRequiredMark>
           <Row gutter={[16, 16]}>
             <Col span={24}>
-              <Form.Item
-                name="from"
-                label="From"
-                rules={[
-                  { required: true, message: "Please enter email address" },
-                ]}
-              >
+              <Form.Item name="from" label="From" rules={[{ required: true, message: 'Please enter email address' }]}>
                 <Input placeholder="Please enter email address" />
               </Form.Item>
             </Col>
 
             <Col span={24}>
-              <Form.Item
-                name="to"
-                label="To"
-                rules={[
-                  { required: true, message: "Please enter email address" },
-                ]}
-              >
+              <Form.Item name="to" label="To" rules={[{ required: true, message: 'Please enter email address' }]}>
                 <Input placeholder="Please enter email address" />
               </Form.Item>
             </Col>
@@ -107,14 +64,11 @@ export default function InvoiceActions(props) {
                 rules={[
                   {
                     required: true,
-                    message: "Please enter your message",
-                  },
+                    message: 'Please enter your message'
+                  }
                 ]}
               >
-                <Input.TextArea
-                  rows={4}
-                  placeholder="please enter url description"
-                />
+                <Input.TextArea rows={4} placeholder="please enter url description" />
               </Form.Item>
             </Col>
 

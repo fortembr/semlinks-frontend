@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
@@ -12,6 +13,7 @@ import navigation from '../../../../navigation/horizontal';
 const { SubMenu } = Menu;
 
 export default function MenuHorizontal(props) {
+  // eslint-disable-next-line react/prop-types
   const { onClose } = props;
 
   // Redux
@@ -94,7 +96,7 @@ export default function MenuHorizontal(props) {
                         {childItem.title}
                       </Link>
                     ) : childItem.id.split('-')[0] === 'email' ? (
-                      <a href={childItem.navLink} target="_blank">
+                      <a href={childItem.navLink} target="_blank" rel="noreferrer">
                         {childItem.title}
                       </a>
                     ) : (

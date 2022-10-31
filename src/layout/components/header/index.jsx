@@ -15,6 +15,7 @@ import HeaderText from './HeaderText';
 const { Header } = Layout;
 
 export default function MenuHeader(props) {
+  // eslint-disable-next-line react/prop-types
   const { setVisible } = props;
 
   const [searchHeader, setSearchHeader] = useState(false);

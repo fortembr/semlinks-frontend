@@ -12,6 +12,7 @@ import ScrollTop from './components/scroll-to-top';
 const { Content } = Layout;
 
 export default function HorizontalLayout(props) {
+  // eslint-disable-next-line react/prop-types
   const { children } = props;
   const [visible, setVisible] = useState(false);
 

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { responsive } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { responsive } from './code.js';
 
-import { Table, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 
 export default function ResponsiveTable() {
   const [checkedCode, setCheckedCode] = useState(false);
@@ -21,20 +21,20 @@ export default function ResponsiveTable() {
       title: 'Name (all screens)',
       dataIndex: 'name',
       key: 'name',
-      render: text => <a>{text}</a>,
+      render: (text) => <a>{text}</a>
     },
     {
       title: 'Age (medium screen or bigger)',
       dataIndex: 'age',
       key: 'age',
-      responsive: ['md'],
+      responsive: ['md']
     },
     {
       title: 'Address (large screen or bigger)',
       dataIndex: 'address',
       key: 'address',
-      responsive: ['lg'],
-    },
+      responsive: ['lg']
+    }
   ];
 
   const data = [
@@ -42,8 +42,8 @@ export default function ResponsiveTable() {
       key: '1',
       name: 'John Brown',
       age: 32,
-      address: 'New York No. 1 Lake Park',
-    },
+      address: 'New York No. 1 Lake Park'
+    }
   ];
 
   return (
@@ -51,17 +51,11 @@ export default function ResponsiveTable() {
       <Row>
         <Col className="hp-mb-16" lg={15} span={20}>
           <h4>Responsive</h4>
-          <p className="hp-p1-body">
-            Responsive columns.
-          </p>
+          <p className="hp-p1-body">Responsive columns.</p>
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -72,7 +66,7 @@ export default function ResponsiveTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show-code hp-mt-24 ${codeClass && "show-code-active"}`}
+          className={`show-code hp-mt-24 ${codeClass && 'show-code-active'}`}
           style={monoBlue}
         >
           {responsive}

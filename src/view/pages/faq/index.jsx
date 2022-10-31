@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { Row, Col, Input, Tag } from "antd";
+import { Row, Col, Input, Tag } from 'antd';
 import {
   RiFlagLine,
   RiPriceTag3Line,
@@ -8,11 +8,11 @@ import {
   RiMailSendLine,
   RiMailLine,
   RiBasketballLine
-} from "react-icons/ri";
+} from 'react-icons/ri';
 
-import PageContent from "../../../layout/components/content/page-content";
-import MenuFAQ from "./menu";
-import CollapseItemFAQ from "./collapseItem";
+import PageContent from '../../../layout/components/content/page-content';
+import MenuFAQ from './menu';
+import CollapseItemFAQ from './collapseItem';
 
 const { Search } = Input;
 
@@ -22,55 +22,39 @@ const text = `
 
 const data = [
   {
-    icon:
-      <RiFlagLine
-        className="remix-icon hp-text-color-black-80 hp-text-color-dark-30"
-        size={20}
-      />,
-    title:
-      <span className="hp-p1-body hp-text-color-black-100 hp-text-color-dark-0">
-        Getting Started
-      </span>,
+    icon: <RiFlagLine className="remix-icon hp-text-color-black-80 hp-text-color-dark-30" size={20} />,
+    title: <span className="hp-p1-body hp-text-color-black-100 hp-text-color-dark-0">Getting Started</span>,
     items: [
       {
         item: [
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 1-1</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 1-2</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 1-3</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           }
         ]
@@ -78,42 +62,33 @@ const data = [
       {
         item: [
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 1-1</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 1-2</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 1-3</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           }
         ]
@@ -121,276 +96,203 @@ const data = [
       {
         item: [
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 1-1</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 1-2</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 1-3</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           }
         ]
-      },
+      }
     ]
   },
   {
-    icon:
-      <RiPriceTag3Line
-        className="remix-icon hp-text-color-black-80 hp-text-color-dark-30"
-        size={20}
-      />,
-    title:
-      <span className="hp-p1-body hp-text-color-black-100 hp-text-color-dark-0">
-        Pricing
-      </span>,
+    icon: <RiPriceTag3Line className="remix-icon hp-text-color-black-80 hp-text-color-dark-30" size={20} />,
+    title: <span className="hp-p1-body hp-text-color-black-100 hp-text-color-dark-0">Pricing</span>,
     items: [
       {
         item: [
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 2</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 2</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 2</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           }
         ]
-      },
+      }
     ]
   },
   {
-    icon:
-      <RiCustomerServiceLine
-        className="remix-icon hp-text-color-black-80 hp-text-color-dark-30"
-        size={20}
-      />,
-    title:
-      <span className="hp-p1-body hp-text-color-black-100 hp-text-color-dark-0">
-        Call Service
-      </span>,
+    icon: <RiCustomerServiceLine className="remix-icon hp-text-color-black-80 hp-text-color-dark-30" size={20} />,
+    title: <span className="hp-p1-body hp-text-color-black-100 hp-text-color-dark-0">Call Service</span>,
     items: [
       {
         item: [
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 3</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 3</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 3</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           }
         ]
-      },
+      }
     ]
   },
   {
-    icon:
-      <RiMailSendLine
-        className="remix-icon hp-text-color-black-80 hp-text-color-dark-30"
-        size={20}
-      />,
-    title:
-      <span className="hp-p1-body hp-text-color-black-100 hp-text-color-dark-0">
-        Mailing
-      </span>,
+    icon: <RiMailSendLine className="remix-icon hp-text-color-black-80 hp-text-color-dark-30" size={20} />,
+    title: <span className="hp-p1-body hp-text-color-black-100 hp-text-color-dark-0">Mailing</span>,
     items: [
       {
         item: [
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 4</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 4</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 4</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           }
         ]
-      },
+      }
     ]
   },
   {
-    icon:
-      <RiMailLine
-        className="remix-icon hp-text-color-black-80 hp-text-color-dark-30"
-        size={20}
-      />,
-    title:
-      <span className="hp-p1-body hp-text-color-black-100 hp-text-color-dark-0">
-        Server
-      </span>,
+    icon: <RiMailLine className="remix-icon hp-text-color-black-80 hp-text-color-dark-30" size={20} />,
+    title: <span className="hp-p1-body hp-text-color-black-100 hp-text-color-dark-0">Server</span>,
     items: [
       {
         item: [
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 5</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 5</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           },
           {
-            icon:
-              <RiBasketballLine
-                size={24}
-                className="remix-icon hp-text-color-primary-1 hp-mr-18"
-              />,
+            icon: <RiBasketballLine size={24} className="remix-icon hp-text-color-primary-1 hp-mr-18" />,
             title: <span>Lorem Ipsum Collapse Title 5</span>,
-            tag:
+            tag: (
               <Tag className="hp-ml-16" color="blue">
                 Tag
-                </Tag>,
+              </Tag>
+            ),
             text: <p className="hp-p1-body">{text}</p>
           }
         ]
-      },
+      }
     ]
-  },
-]
+  }
+];
 
 export default function FAQ() {
-  const [tabValue, setTabValue] = useState("tab-0");
+  const [tabValue, setTabValue] = useState('tab-0');
 
   return (
     <Row gutter={[32, 32]}>
@@ -400,15 +302,15 @@ export default function FAQ() {
           desc="or choose a category to quickly find the help you need."
           breadcrumb={[
             {
-              title: "Pages",
+              title: 'Pages'
             },
             {
-              title: "FAQ",
+              title: 'FAQ'
             }
           ]}
         />
       </Col>
- 
+
       <Col xxl={10} lg={15} span={24}>
         <Search
           className="hp-xl-search-button"

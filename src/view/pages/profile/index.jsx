@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-import { Row, Col, Drawer, Button, Dropdown, Menu } from "antd";
-import { RiMore2Line, RiMenuFill, RiCloseFill } from "react-icons/ri";
+import { Row, Col, Drawer, Button, Dropdown, Menu } from 'antd';
+import { RiMore2Line, RiMenuFill, RiCloseFill } from 'react-icons/ri';
 
-import Breadcrumbs from "../../../layout/components/content/breadcrumbs";
-import ActionButton from "../../../layout/components/content/action-button";
-import InfoProfile from "./personel-information";
-import NotificationsProfile from "./notifications";
-import MenuProfile from "./menu";
-import ActivityProfile from "./activity";
-import SecurityProfile from "./security";
-import PasswordProfile from "./password-change";
-import SocialProfile from "./connect-with-social";
+import Breadcrumbs from '../../../layout/components/content/breadcrumbs';
+import ActionButton from '../../../layout/components/content/action-button';
+import InfoProfile from './personel-information';
+import NotificationsProfile from './notifications';
+import MenuProfile from './menu';
+import ActivityProfile from './activity';
+import SecurityProfile from './security';
+import PasswordProfile from './password-change';
+import SocialProfile from './connect-with-social';
 
 export default function Profile() {
   const [visible, setVisible] = useState(false);
@@ -51,18 +51,9 @@ export default function Profile() {
         closable={true}
         onClose={onClose}
         visible={visible}
-        closeIcon={
-          <RiCloseFill
-            className="remix-icon hp-text-color-black-80"
-            size={24}
-          />
-        }
+        closeIcon={<RiCloseFill className="remix-icon hp-text-color-black-80" size={24} />}
       >
-        <MenuProfile
-          onCloseDrawer={onClose}
-          moreBtnCheck="none"
-          footer="none"
-        />
+        <MenuProfile onCloseDrawer={onClose} moreBtnCheck="none" footer="none" />
       </Drawer>
 
       <Col span={24}>
@@ -78,12 +69,7 @@ export default function Profile() {
           <Button
             className="hp-p-0"
             type="text"
-            icon={
-              <RiMenuFill
-                size={24}
-                className="remix-icon hp-text-color-black-80 hp-text-color-dark-30"
-              />
-            }
+            icon={<RiMenuFill size={24} className="remix-icon hp-text-color-black-80 hp-text-color-dark-30" />}
             onClick={showDrawer}
           ></Button>
         </Row>
@@ -91,10 +77,7 @@ export default function Profile() {
         <Row className="hp-bg-color-black-0 hp-bg-color-dark-100 hp-border-radius hp-pr-sm-16 hp-pr-32">
           <MenuProfile moreBtn={moreBtn} />
 
-          <Col
-            flex="1 1"
-            className="hp-pl-sm-16 hp-pl-32 hp-py-sm-24 hp-py-32 hp-pb-24 hp-overflow-hidden"
-          >
+          <Col flex="1 1" className="hp-pl-sm-16 hp-pl-32 hp-py-sm-24 hp-py-32 hp-pb-24 hp-overflow-hidden">
             <Switch>
               <Route path="/pages/profile/personel-information" exact>
                 <InfoProfile />

@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Row, Col, Form, Input, Button, Checkbox } from "antd";
+import { Row, Col, Form, Input, Button, Checkbox } from 'antd';
 
-import LeftContent from "../leftContent";
-import Footer from "../footer";
+import LeftContent from '../leftContent';
+import Footer from '../footer';
 
 export default function Login() {
   return (
@@ -13,25 +13,11 @@ export default function Login() {
 
       <Col lg={12} span={24} className="hp-py-sm-0 hp-py-md-64">
         <Row className="hp-h-100" align="middle" justify="center">
-          <Col
-            xxl={11}
-            xl={15}
-            lg={20}
-            md={20}
-            sm={24}
-            className="hp-px-sm-8 hp-pt-24 hp-pb-48"
-          >
+          <Col xxl={11} xl={15} lg={20} md={20} sm={24} className="hp-px-sm-8 hp-pt-24 hp-pb-48">
             <h1 className="hp-mb-sm-0">Login</h1>
-            <p className="hp-mt-sm-0 hp-mt-8 hp-text-color-black-60">
-              Welcome back, please login to your account.
-            </p>
+            <p className="hp-mt-sm-0 hp-mt-8 hp-text-color-black-60">Welcome back, please login to your account.</p>
 
-            <Form
-              layout="vertical"
-              name="basic"
-              initialValues={{ remember: true }}
-              className="hp-mt-sm-16 hp-mt-32"
-            >
+            <Form layout="vertical" name="basic" initialValues={{ remember: true }} className="hp-mt-sm-16 hp-mt-32">
               <Form.Item label="Username :" className="hp-mb-16">
                 <Input id="error" />
               </Form.Item>
@@ -81,4 +67,4 @@ export default function Login() {
       </Col>
     </Row>
   );
-};
+}
