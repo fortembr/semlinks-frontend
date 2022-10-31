@@ -1,11 +1,11 @@
-import React, { useState, useCallback, useRef } from "react";
+import React, { useState, useCallback, useRef } from 'react';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { monoBlue } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { dragSorting } from "./code.js";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { dragSorting } from './code.js';
 
-import { Table, Row, Col, Card, Button } from "antd";
-import { RiCodeSSlashLine } from "react-icons/ri";
+import { Table, Row, Col, Card, Button } from 'antd';
+import { RiCodeSSlashLine } from 'react-icons/ri';
 import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import update from 'immutability-helper';
@@ -25,26 +25,26 @@ export default function DragSortingTable() {
     const ref = useRef();
     const [{ isOver, dropClassName }, drop] = useDrop({
       accept: type,
-      collect: monitor => {
+      collect: (monitor) => {
         const { index: dragIndex } = monitor.getItem() || {};
         if (dragIndex === index) {
           return {};
         }
         return {
           isOver: monitor.isOver(),
-          dropClassName: dragIndex < index ? ' drop-over-downward' : ' drop-over-upward',
+          dropClassName: dragIndex < index ? ' drop-over-downward' : ' drop-over-upward'
         };
       },
-      drop: item => {
+      drop: (item) => {
         moveRow(item.index, index);
-      },
+      }
     });
     const [, drag] = useDrag({
       type,
       item: { index },
-      collect: monitor => ({
-        isDragging: monitor.isDragging(),
-      }),
+      collect: (monitor) => ({
+        isDragging: monitor.isDragging()
+      })
     });
     drop(drag(ref));
 
@@ -62,18 +62,18 @@ export default function DragSortingTable() {
     {
       title: 'Name',
       dataIndex: 'name',
-      key: 'name',
+      key: 'name'
     },
     {
       title: 'Age',
       dataIndex: 'age',
-      key: 'age',
+      key: 'age'
     },
     {
       title: 'Address',
       dataIndex: 'address',
-      key: 'address',
-    },
+      key: 'address'
+    }
   ];
 
   const [data, setData] = useState([
@@ -81,26 +81,26 @@ export default function DragSortingTable() {
       key: '1',
       name: 'John Brown',
       age: 32,
-      address: 'New York No. 1 Lake Park',
+      address: 'New York No. 1 Lake Park'
     },
     {
       key: '2',
       name: 'Jim Green',
       age: 42,
-      address: 'London No. 1 Lake Park',
+      address: 'London No. 1 Lake Park'
     },
     {
       key: '3',
       name: 'Joe Black',
       age: 32,
-      address: 'Sidney No. 1 Lake Park',
-    },
+      address: 'Sidney No. 1 Lake Park'
+    }
   ]);
 
   const components = {
     body: {
-      row: DraggableBodyRow,
-    },
+      row: DraggableBodyRow
+    }
   };
 
   const moveRow = useCallback(
@@ -110,12 +110,12 @@ export default function DragSortingTable() {
         update(data, {
           $splice: [
             [dragIndex, 1],
-            [hoverIndex, 0, dragRow],
-          ],
-        }),
+            [hoverIndex, 0, dragRow]
+          ]
+        })
       );
     },
-    [data],
+    [data]
   );
 
   return (
@@ -129,11 +129,7 @@ export default function DragSortingTable() {
         </Col>
 
         <Col lg={9} span={4} className="hp-text-right">
-          <Button
-            onClick={toggleChecked}
-            type="text"
-            icon={<RiCodeSSlashLine className="hp-text-color-black-80" />}
-          />
+          <Button onClick={toggleChecked} type="text" icon={<RiCodeSSlashLine className="hp-text-color-black-80" />} />
         </Col>
 
         <Col span={24}>
@@ -144,7 +140,7 @@ export default function DragSortingTable() {
               components={components}
               onRow={(record, index) => ({
                 index,
-                moveRow,
+                moveRow
               })}
               scroll={{ x: 500 }}
             />
@@ -155,7 +151,7 @@ export default function DragSortingTable() {
       {checkedCode && (
         <SyntaxHighlighter
           language="javascript"
-          className={`show - code da - mt - 24 ${codeClass && "show-code-active"} `}
+          className={`show - code da - mt - 24 ${codeClass && 'show-code-active'} `}
           style={monoBlue}
         >
           {dragSorting}
