@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
 import { useEffect } from 'react';
 import { useParams, Link, useHistory } from 'react-router-dom';
 
