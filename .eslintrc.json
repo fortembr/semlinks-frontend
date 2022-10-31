@@ -1,0 +1,23 @@
+{
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "extends": ["eslint:recommended", "plugin:prettier/recommended", "plugin:react/recommended"],
+  "ignorePatterns": ["eslint.config.js"],
+  "overrides": [
+    {
+      "files": ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
+      "parserOptions": {
+        "ecmaVersion": 2015,
+        "ecmaFeatures": {
+          "jsx": true
+        },
+        "sourceType": "module"
+      },
+      "plugins": ["react"],
+      "rules": {}
+    }
+  ],
+  "root": true
+}
