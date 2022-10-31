@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 
 import Slider from 'react-slick';
 import { Row, Col, Card, Tabs } from 'antd';
+// eslint-disable-next-line no-unused-vars
 import { ArrowCircleLeft, ArrowCircleRight } from 'iconsax-react';
 
 import PageContent from '../../../layout/components/content/page-content';
