@@ -44,6 +44,7 @@ const AddEventSidebar = (props) => {
     { value: 'Important', label: 'Important', badge: '#FF0022' }
   ];
 
+  // eslint-disable-next-line
   const OptionComponent = ({ data, ...props }) => {
     return (
       <components.Option {...props}>
