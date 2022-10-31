@@ -65,7 +65,7 @@ export default function ExpandableRowTable() {
         <Col className="hp-mb-16" lg={15} span={20}>
           <h4>Expandable Row</h4>
           <p className="hp-p1-body">
-            When there's too much information to show and the table can't display all at once.
+            When there&apos;s too much information to show and the table can&apos;t display all at once.
           </p>
         </Col>
 
