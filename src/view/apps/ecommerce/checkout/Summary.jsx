@@ -5,6 +5,7 @@ import { Row, Col, Button, Modal, Divider } from 'antd';
 import { RiCheckboxCircleFill } from 'react-icons/ri';
 
 export default function Summary(props) {
+  // eslint-disable-next-line react/prop-types
   const { content, totalItem, totalPrice, stepUrl } = props;
 
   const summaryOtherPrice = {
