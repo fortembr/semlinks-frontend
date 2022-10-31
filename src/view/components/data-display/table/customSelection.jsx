@@ -56,6 +56,7 @@ export default function CustomSelectionTable() {
         text: 'Select All Data',
         onSelect: (changableRowKeys) => {
           let newSelectedRowKeys = [];
+          // eslint-disable-next-line no-unused-vars
           newSelectedRowKeys = changableRowKeys.filter((key, index) => {
             return true;
           });
@@ -67,6 +68,7 @@ export default function CustomSelectionTable() {
         text: 'Clear All Data',
         onSelect: (changableRowKeys) => {
           let newSelectedRowKeys = [];
+          // eslint-disable-next-line no-unused-vars
           newSelectedRowKeys = changableRowKeys.filter((key, index) => {
             return false;
           });
