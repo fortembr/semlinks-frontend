@@ -31,6 +31,7 @@ export default function ListVertical() {
     });
   }
 
+  // eslint-disable-next-line react/prop-types
   const IconText = ({ icon, text }) => (
     <Space>
       {icon}
