@@ -13,6 +13,7 @@ import EmptyImage from '../../../../assets/images/apps/ecommerce/checkout-empty.
 const { Step } = Steps;
 
 export default function OrderDetails(props) {
+  // eslint-disable-next-line react/prop-types
   const { totalItem, totalPrice } = props;
   const cart = useSelector((state) => state.ecommerce.cart);
 
