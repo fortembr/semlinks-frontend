@@ -8,7 +8,7 @@ import { motion } from 'framer-motion/dist/framer-motion';
 import HeaderSearch from './HeaderSearch';
 import HeaderUser from './HeaderUser';
 import HeaderNotifications from './HeaderNotifications';
-import HeaderLanguages from './HeaderLanguages';
+// import HeaderLanguages from './HeaderLanguages';
 import HeaderCart from './HeaderCart';
 import HeaderText from './HeaderText';
 
