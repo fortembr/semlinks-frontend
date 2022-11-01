@@ -72,7 +72,7 @@ export default function MenuHeader(props) {
 
         <Col>
           <Row align="middle">
-            <HeaderLanguages />
+            {/* <HeaderLanguages /> */}
 
             <Col className="hp-d-flex-center">
               {!searchHeader ? (
