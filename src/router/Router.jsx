@@ -167,11 +167,6 @@ export default function Router() {
           exact
           path={'/'}
           render={() => {
-            return DefaultLayout == 'HorizontalLayout' ? (
-              <Layouts.HorizontalLayout>
-                <Analytics />
-              </Layouts.HorizontalLayout>
-            ) : (
               <Layouts.VerticalLayout>
                 <Analytics />
               </Layouts.VerticalLayout>
