@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { Divider, Avatar, Row, Col } from 'antd';
 import { RiSettings3Line } from 'react-icons/ri';
 
-import IntlMessages from '../../lang/IntlMessages';
 import avatar from '../../../../assets/images/memoji/user-avatar-8.png';
 
 export default function MenuFooter(props) {
@@ -31,7 +30,7 @@ export default function MenuFooter(props) {
               className="hp-badge-text hp-text-color-dark-30 hp-font-weight-400"
               onClick={props.onClose}
             >
-              <IntlMessages id="sidebar-view-profile" />
+              Digital Agency
             </Link>
           </div>
         </Row>
