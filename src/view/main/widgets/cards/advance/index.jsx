@@ -71,7 +71,6 @@ import BestTeamCard from '../statistics/bestTeamCard';
 import EarningsCard from './earningsCard';
 import ExpensesCard from './expensesCard';
 import BidCardNFT from '../../../dashboard/nft/bidCard';
-import OwnNFT from '../../../dashboard/nft/ownNFT';
 import NFTProductCard from '../../../dashboard/nft/nftProductCard';
 import RecentActivityNFT from '../../../dashboard/nft/recentActivity';
 import DownloadCard from './downloadCard';
