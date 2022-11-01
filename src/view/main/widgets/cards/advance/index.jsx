@@ -63,7 +63,6 @@ import SaleFeatureCard from './saleFeatureCard';
 import ProfitFeatureCard from './profitFeatureCard';
 import OrdersFeatureCard from './ordersFeatureCard';
 import CustomerFeatureCard from './customerFeatureCard';
-import ECommerceProductCardItem from '../../../dashboard/ecommerce/eCommerceProductCardItem';
 import UpgradePlanCardOneLight from './upgradePlanCardOneLight';
 import UpgradePlanCardOneDark from './upgradePlanCardOneDark';
 import CreditCardNew from './creditCardNew';
