@@ -12,9 +12,6 @@ import BalanceCard from './balanceCard';
 import HistoryCard from './historyCard';
 
 export default function Dashboard() {
-  // Redux
-  const customise = useSelector((state) => state.customise);
-
   return (
     <Row gutter={[32, 32]} className="hp-mb-32">
       <Col flex="1" className="hp-overflow-hidden">
