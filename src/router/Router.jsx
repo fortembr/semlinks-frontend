@@ -167,6 +167,7 @@ export default function Router() {
           exact
           path={'/'}
           render={() => {
+            return (
               <Layouts.VerticalLayout>
                 <Dashboard />
               </Layouts.VerticalLayout>
