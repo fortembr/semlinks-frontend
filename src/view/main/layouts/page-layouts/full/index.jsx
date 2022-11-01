@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Analytics from '../../../dashboard/analytics';
+import Dashboard from '../../../dashboard';
 
 export default function PageLayoutsFull() {
   return (
