@@ -582,10 +582,6 @@ export default function Statistics() {
               </Col>
             </Row>
           </Col>
-
-          <Col xl={8} span={24}>
-            <RevenueLineEcommerceList />
-          </Col>
         </Row>
       </Col>
     </Row>
