@@ -1,7 +1,7 @@
 import React from 'react';
 import { Health } from 'iconsax-react';
 
-import IntlMessages from '../../layout/components/lang/IntlMessages';
+// import IntlMessages from '../../layout/components/lang/IntlMessages';
 
 const main = [
   {
