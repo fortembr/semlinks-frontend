@@ -3,7 +3,7 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { RiVisaLine } from 'react-icons/ri';
 
-import logoBlue from '../../../../assets/images/logo/logo-blue.svg';
+import logoBlue from './../../../assets/images/logo/logo-blue.svg';
 
 export default function CreditCard() {
   return (
