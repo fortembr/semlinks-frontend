@@ -9,7 +9,7 @@ export default function MenuFooter() {
       <Row align="middle" justify="space-between">
         <Col md={12} span={24}>
           <p className="hp-badge-text hp-font-weight-600 hp-mb-0 hp-text-color-dark-30">
-            COPYRIGHT ©2021 Hypeople, All rights Reserved
+            Copyright © 2022 &middot; SEM Links &middot; All Rights Reserved.
           </p>
         </Col>
       </Row>
