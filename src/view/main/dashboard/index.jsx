@@ -7,7 +7,6 @@ import HistoryUser1 from '../../../../assets/images/memoji/user-avatar-5.png';
 import HistoryUser2 from '../../../../assets/images/memoji/user-avatar-6.png';
 import HistoryUser3 from '../../../../assets/images/memoji/user-avatar-7.png';
 import SalesForceLogo from '../../../../assets/images/dasboard/sales-force-logo.svg';
-import AppleLogo from '../../../../assets/images/dasboard/apple-logo.svg';
 
 import FeatureCard from './featureCard';
 import BalanceCard from './balanceCard';
