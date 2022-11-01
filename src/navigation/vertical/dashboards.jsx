@@ -5,7 +5,7 @@ import { Health } from 'iconsax-react';
 
 const main = [
   {
-    header: <IntlMessages id="sidebar-dashboards" />
+    header: 'Main'
   },
   {
     id: 'dashboards-analytics',
