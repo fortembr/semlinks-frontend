@@ -106,10 +106,6 @@ export default function Dashboard() {
       <Col className={`hp-analytics-col-2${customise.contentWidth && ' hp-boxed-active'}`}>
         <Row gutter={[32, 40]}>
           <Col span={24}>
-            <CreditCard />
-          </Col>
-
-          <Col span={24}>
             <ListCard
               title="Recent Activities"
               date="05 Dec 2021"
