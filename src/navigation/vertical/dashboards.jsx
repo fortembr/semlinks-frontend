@@ -1,5 +1,5 @@
 import React from 'react';
-import { Health, Setting, Grid5 } from 'iconsax-react';
+import { Health } from 'iconsax-react';
 
 import IntlMessages from '../../layout/components/lang/IntlMessages';
 
