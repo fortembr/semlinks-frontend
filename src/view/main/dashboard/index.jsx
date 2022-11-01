@@ -20,7 +20,7 @@ import ListCard from './listCard';
 import HistoryCard from './historyCard';
 import CreditCard from './creditCard';
 
-export default function Analytics() {
+export default function Dashboard() {
   // Redux
   const customise = useSelector((state) => state.customise);
 
