@@ -96,13 +96,6 @@ export default function Dashboard() {
           </Col>
         </Row>
       </Col>
-
-      {customise.contentWidth === 'boxed' && (
-        <Col className="hp-dashboard-line hp-px-0">
-          <div className="hp-bg-black-40 hp-bg-dark-80 hp-h-100 hp-mx-24" style={{ width: 1 }}></div>
-        </Col>
-      )}
-
     </Row>
   );
 }
