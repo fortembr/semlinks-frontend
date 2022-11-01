@@ -14,6 +14,7 @@ const PagesRoutes = [
     component: lazy(() => import('../../view/main/layouts/page-layouts/vertical')),
     layout: 'VerticalLayout'
   },
+  // TECHNICAL SEO
   {
     layout: 'VerticalLayout'
   }
