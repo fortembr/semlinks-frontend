@@ -402,16 +402,6 @@ export default function Advance() {
 
       <Col span={24}>
         <Row gutter={[32, 32]}>
-          {hotBidData.map((item, index) => (
-            <Col lg={6} md={12} span={24} key={index}>
-              <HotBidItem item={item} />
-            </Col>
-          ))}
-        </Row>
-      </Col>
-
-      <Col span={24}>
-        <Row gutter={[32, 32]}>
           {creditCardData.map((item, index) => (
             <Col lg={8} md={12} span={24} key={index}>
               <CreditCard item={item} />
