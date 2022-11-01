@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import { useSelector } from 'react-redux';
-
 import { Layout, Row, Col } from 'antd';
 
 import Sidebar from './components/menu/Sidebar';
