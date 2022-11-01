@@ -16,7 +16,6 @@ import { Routes } from './routes';
 
 // Layouts
 import VerticalLayout from '../layout/VerticalLayout';
-import FullLayout from '../layout/FullLayout';
 
 // Components
 // eslint-disable-next-line no-unused-vars
