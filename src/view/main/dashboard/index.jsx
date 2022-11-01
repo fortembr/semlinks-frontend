@@ -9,7 +9,6 @@ import HistoryUser3 from './../../../assets/images/memoji/user-avatar-7.png';
 
 import FeatureCard from './featureCard';
 import BalanceCard from './balanceCard';
-import ListCard from './listCard';
 import HistoryCard from './historyCard';
 import CreditCard from './creditCard';
 
