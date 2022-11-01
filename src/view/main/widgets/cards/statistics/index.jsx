@@ -13,7 +13,6 @@ import CustomerSupportCardVertical from './customerSupportCardVertical';
 import SubsColumnCardVertical from './subsColumnCardVertical';
 import ActiveUserCardVertical from './activeUserCardVertical';
 import OrderColumnCardVertical from './orderColumnCardVertical';
-import RevenueLineEcommerceList from '../../../dashboard/ecommerce/revenueLineEcommerceList';
 import SummaryItem from './summaryItem';
 
 export default function Statistics() {
