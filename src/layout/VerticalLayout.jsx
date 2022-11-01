@@ -45,8 +45,6 @@ export default function VerticalLayout(props) {
 
         <MenuFooter />
       </Layout>
-
-      <ScrollTop />
     </Layout>
   );
 }
