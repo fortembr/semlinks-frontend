@@ -16,6 +16,9 @@ const PagesRoutes = [
   },
   // TECHNICAL SEO
   {
+    // Robots Page
+    path: '/technical/robots/',
+    component: lazy(() => import('../../view/components/components-page')),
     layout: 'VerticalLayout'
   }
 ];
