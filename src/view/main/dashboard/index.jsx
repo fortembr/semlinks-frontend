@@ -103,36 +103,6 @@ export default function Dashboard() {
         </Col>
       )}
 
-      <Col className={`hp-analytics-col-2${customise.contentWidth && ' hp-boxed-active'}`}>
-        <Row gutter={[32, 40]}>
-          <Col span={24}>
-            <ListCard
-              title="Upcoming Payments"
-              date="05 Dec 2021"
-              list={[
-                {
-                  img: ZendeskLogo,
-                  title: 'Zendesk',
-                  date: '05 Dec 2021',
-                  price: '$ 500.00'
-                },
-                {
-                  img: SalesForceLogo,
-                  title: 'Sales Force',
-                  date: '24 Dec 2021',
-                  price: '$ 337.00'
-                },
-                {
-                  img: VirginLogo,
-                  title: 'Virgin Media',
-                  date: '29 Dec 2021',
-                  price: '$ 28.00'
-                }
-              ]}
-            />
-          </Col>
-        </Row>
-      </Col>
     </Row>
   );
 }
