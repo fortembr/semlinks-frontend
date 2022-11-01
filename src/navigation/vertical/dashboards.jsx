@@ -24,6 +24,18 @@ const main = [
     navLink: '/main/dashboard/nft'
     navLink: '/'
   }
+  // {
+  //   id: 'ecommerce',
+  //   title: <IntlMessages id="sidebar-apps-ecommerce" />,
+  //   icon: <Award size={18} />,
+  //   children: [
+  //     {
+  //       id: 'shop',
+  //       title: <IntlMessages id="sidebar-apps-ecommerce-shop" />,
+  //       navLink: '/apps/ecommerce/shop'
+  //     },
+  //   ]
+  // },
 ];
 
 export default main;
