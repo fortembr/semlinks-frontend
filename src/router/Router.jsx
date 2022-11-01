@@ -89,7 +89,7 @@ export default function Router() {
   const DefaultLayout = customise.layout; // FullLayout or VerticalLayout
 
   // All of the available layouts
-  const Layouts = { VerticalLayout, HorizontalLayout, FullLayout };
+  const Layouts = { VerticalLayout };
 
   // Return Filtered Array of Routes & Paths
   const LayoutRoutesAndPaths = (layout) => {
