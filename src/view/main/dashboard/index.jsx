@@ -9,7 +9,6 @@ import HistoryUser3 from '../../../../assets/images/memoji/user-avatar-7.png';
 import SalesForceLogo from '../../../../assets/images/dasboard/sales-force-logo.svg';
 import AppleLogo from '../../../../assets/images/dasboard/apple-logo.svg';
 import GoogleLogo from '../../../../assets/images/dasboard/google-logo.svg';
-import VirginLogo from '../../../../assets/images/dasboard/virgin-logo.svg';
 
 import FeatureCard from './featureCard';
 import BalanceCard from './balanceCard';
