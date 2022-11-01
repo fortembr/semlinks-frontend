@@ -263,16 +263,6 @@ export default function Advance() {
         </Row>
       </Col>
 
-      <Col span={24}>
-        <Row style={{ marginLeft: -16, marginRight: -16 }} gutter={[0, 32]}>
-          {productCard.map((value, index) => (
-            <Col md={8} span={24} key={index}>
-              <ECommerceProductCardItem value={value} />
-            </Col>
-          ))}
-        </Row>
-      </Col>
-
       <Col xl={8} sm={12} xs={24}>
         <CategoriesOfTheWeek />
         <BestSellingCategories />
