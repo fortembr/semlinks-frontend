@@ -168,7 +168,7 @@ export default function Router() {
           path={'/'}
           render={() => {
               <Layouts.VerticalLayout>
-                <Analytics />
+                <Dashboard />
               </Layouts.VerticalLayout>
             );
           }}
