@@ -384,10 +384,6 @@ export default function Advance() {
               </Col>
 
               <Col span={24}>
-                <OwnNFT />
-              </Col>
-
-              <Col span={24}>
                 <NFTProductCard />
               </Col>
 
