@@ -3,8 +3,9 @@ import { lazy } from 'react';
 const PagesRoutes = [
   // MAIN
   {
-    path: '/main/dashboard/analytics',
-    component: lazy(() => import('../../view/main/dashboard/analytics')),
+    // Dashboard Page
+    path: '/',
+    component: lazy(() => import('../../view/main/dashboard')),
     layout: 'VerticalLayout'
   },
   {
