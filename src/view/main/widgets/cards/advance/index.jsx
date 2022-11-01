@@ -71,7 +71,6 @@ import BestTeamCard from '../statistics/bestTeamCard';
 import EarningsCard from './earningsCard';
 import ExpensesCard from './expensesCard';
 import DownloadCard from './downloadCard';
-import HotBidItem from '../../../dashboard/nft/hotBidItem';
 import CreditCard from './creditCard';
 import SmallCardItem from './smallCardItem';
 
