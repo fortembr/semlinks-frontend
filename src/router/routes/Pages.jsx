@@ -9,6 +9,8 @@ const PagesRoutes = [
     layout: 'VerticalLayout'
   },
   {
+    // Projects Page
+    path: '/projects/',
     component: lazy(() => import('../../view/main/layouts/page-layouts/vertical')),
     layout: 'VerticalLayout'
   },
