@@ -21,6 +21,29 @@ const PagesRoutes = [
     component: lazy(() => import('../../view/components/components-page')),
     layout: 'VerticalLayout'
   }
+  // {
+  //   path: '/components/navigation/steps',
+  //   component: lazy(() => import('../../view/components/navigation/steps')),
+  //   layout: 'VerticalLayout'
+  // },
+  // ON-PAGE SEO
+  // {
+  //   path: '/apps/calendar',
+  //   component: lazy(() => import('../../view/apps/calendar')),
+  //   layout: 'VerticalLayout'
+  // },
+  // OFF-PAGE SEO
+  // {
+  //   path: '/apps/ecommerce/payment',
+  //   component: lazy(() => import('../../view/apps/ecommerce')),
+  //   layout: 'VerticalLayout'
+  // },
+  // LOCAL SEO
+  // {
+  //   path: '/pages/landing',
+  //   component: lazy(() => import('../../view/pages/landing')),
+  //   layout: 'FullLayout'
+  // },
 ];
 
 export default PagesRoutes;
