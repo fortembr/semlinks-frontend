@@ -107,45 +107,6 @@ export default function Dashboard() {
         <Row gutter={[32, 40]}>
           <Col span={24}>
             <ListCard
-              title="Recent Activities"
-              date="05 Dec 2021"
-              list={[
-                {
-                  img: ZendeskLogo,
-                  title: 'Zendesk',
-                  date: '05 Dec 2021',
-                  price: '$ 500.00'
-                },
-                {
-                  img: SalesForceLogo,
-                  title: 'Sales Force',
-                  date: '24 Dec 2021',
-                  price: '$ 337.00'
-                },
-                {
-                  img: AppleLogo,
-                  title: 'Apple',
-                  date: '29 Dec 2021',
-                  price: '$ 320.67'
-                },
-                {
-                  img: GoogleLogo,
-                  title: 'Google Inc',
-                  date: '29 Dec 2021',
-                  price: '$ 127.00'
-                },
-                {
-                  img: VirginLogo,
-                  title: 'Virgin Media',
-                  date: '29 Dec 2021',
-                  price: '$ 28.00'
-                }
-              ]}
-            />
-          </Col>
-
-          <Col span={24}>
-            <ListCard
               title="Upcoming Payments"
               date="05 Dec 2021"
               list={[
