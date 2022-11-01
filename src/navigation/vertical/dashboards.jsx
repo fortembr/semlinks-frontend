@@ -8,11 +8,9 @@ const main = [
     header: 'Main'
   },
   {
-    id: 'dashboards-analytics',
-    title: <IntlMessages id="sidebar-dashboards-analytics" />,
+    id: 'dashboard',
+    title: 'Dashboard',
     icon: <Health size={18} />,
-    navLink: '/main/dashboard/analytics'
-  },
   {
     id: 'dashboards-ecommerce',
     title: <IntlMessages id="sidebar-dashboards-ecommerce" />,
@@ -24,6 +22,7 @@ const main = [
     title: <IntlMessages id="sidebar-dashboards-nft" />,
     icon: <Grid5 size={18} />,
     navLink: '/main/dashboard/nft'
+    navLink: '/'
   }
 ];
 
