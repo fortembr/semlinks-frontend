@@ -3,9 +3,9 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import { ExportSquare, ImportSquare, MoneyRecive, MoneySend, WalletMinus } from 'iconsax-react';
 
-import HistoryUser1 from '../../../../assets/images/memoji/user-avatar-5.png';
 import HistoryUser2 from '../../../../assets/images/memoji/user-avatar-6.png';
 import HistoryUser3 from '../../../../assets/images/memoji/user-avatar-7.png';
+import HistoryUser1 from './../../../assets/images/memoji/user-avatar-5.png';
 
 import FeatureCard from './featureCard';
 import BalanceCard from './balanceCard';
