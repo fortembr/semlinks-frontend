@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
-
 import { Row, Col } from 'antd';
 import { ExportSquare, ImportSquare, MoneyRecive, MoneySend, WalletMinus } from 'iconsax-react';
 
