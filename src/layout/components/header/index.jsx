@@ -74,7 +74,7 @@ export default function MenuHeader(props) {
           <Row align="middle">
             {/* <HeaderLanguages /> */}
 
-            <Col className="hp-d-flex-center">
+            {/* <Col className="hp-d-flex-center">
               {!searchHeader ? (
                 <Button
                   ghost
@@ -92,7 +92,7 @@ export default function MenuHeader(props) {
                   onClick={() => setSearchHeader(false)}
                 />
               )}
-            </Col>
+            </Col> */}
 
             <HeaderNotifications />
 
