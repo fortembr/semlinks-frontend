@@ -94,7 +94,7 @@ export default function MenuHeader(props) {
               )}
             </Col> */}
 
-            <HeaderNotifications />
+            {/* <HeaderNotifications /> */}
 
             <HeaderCart />
 
