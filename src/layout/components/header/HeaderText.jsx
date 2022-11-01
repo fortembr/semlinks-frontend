@@ -14,9 +14,9 @@ export default function HeaderText() {
       </div>
 
       <p className="hp-header-left-text-item hp-p1-body hp-text-color-black-100 hp-text-color-dark-0 hp-ml-12 hp-mb-0">
-        Do you know the latest update of 2022? &nbsp;
-        <a href="https://trello.com/b/8ZRmDN5y/yoda-roadmap" target="_blank" rel="noreferrer">
-          Our roadmap is alive for future updates.
+        Check out the latest updates on our&nbsp;
+        <a href="https://semlinks.canny.io/semlinks" target="_blank" rel="noreferrer">
+          Roadmap!
         </a>
       </p>
     </Col>
