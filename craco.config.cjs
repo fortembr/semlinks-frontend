@@ -1,6 +1,15 @@
 const CracoLessPlugin = require('craco-less-plugin');
 
 module.exports = {
+  webpack: {
+    configure: {
+      resolve: {
+        alias: {
+          'react-dom$': 'react-dom/profiling'
+        }
+      }
+    }
+  },
   plugins: [
     {
       plugin: CracoLessPlugin,
