@@ -16,7 +16,6 @@ import { Routes } from './routes';
 
 // Layouts
 import VerticalLayout from '../layout/VerticalLayout';
-import HorizontalLayout from '../layout/HorizontalLayout';
 import FullLayout from '../layout/FullLayout';
 
 // Components
