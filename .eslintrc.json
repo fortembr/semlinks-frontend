@@ -7,7 +7,7 @@
   "ignorePatterns": [".eslintrc.json"],
   "overrides": [
     {
-      "files": ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
+      "files": ["**/*.{js,jsx,cjs}"],
       "parserOptions": {
         "ecmaVersion": 2020,
         "ecmaFeatures": {
