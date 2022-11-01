@@ -19,7 +19,8 @@ import VerticalLayout from '../layout/VerticalLayout';
 import FullLayout from '../layout/FullLayout';
 
 // Components
-import Analytics from '../view/main/dashboard/analytics';
+// eslint-disable-next-line no-unused-vars
+import Dashboard from '../view/main/dashboard';
 import Error404 from '../view/pages/errors/404';
 
 export default function Router() {
