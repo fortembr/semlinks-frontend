@@ -381,9 +381,6 @@ export default function Advance() {
                 <EarningsCard />
               </Col>
 
-              <Col span={24}>
-                <BidCardNFT />
-              </Col>
             </Row>
           </Col>
 
