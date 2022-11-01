@@ -390,10 +390,6 @@ export default function Advance() {
               </Col>
 
               <Col span={24}>
-                <RecentActivityNFT />
-              </Col>
-
-              <Col span={24}>
                 <DownloadCard />
               </Col>
 
