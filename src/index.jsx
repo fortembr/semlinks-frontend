@@ -13,12 +13,12 @@ import './assets/less/yoda-theme.less';
 import App from './App';
 
 ReactDOM.render(
-  <Suspense fallback="loading">
+  <Suspense fallback='loading'>
     <Provider store={store}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
     </Provider>
   </Suspense>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
