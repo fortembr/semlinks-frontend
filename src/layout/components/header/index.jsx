@@ -24,7 +24,7 @@ export default function MenuHeader(props) {
   // Focus
   const inputFocusRef = useRef(null);
   const inputFocusProp = {
-    ref: inputFocusRef
+    ref: inputFocusRef,
   };
 
   // Search Active
@@ -35,7 +35,7 @@ export default function MenuHeader(props) {
 
     setTimeout(() => {
       inputFocusRef.current.focus({
-        cursor: 'start'
+        cursor: 'start',
       });
     }, 200);
   };
@@ -49,29 +49,41 @@ export default function MenuHeader(props) {
   // Children
   const headerChildren = () => {
     return (
-      <Row className="hp-w-100 hp-position-relative" align="middle" justify="space-between">
-        <Col className="hp-mobile-sidebar-button hp-mr-24">
+      <Row
+        className='hp-w-100 hp-position-relative'
+        align='middle'
+        justify='space-between'
+      >
+        <Col className='hp-mobile-sidebar-button hp-mr-24'>
           <Button
-            type="none"
+            type='none'
             ghost
-            className="hp-mobile-sidebar-button hp-border-none"
+            className='hp-mobile-sidebar-button hp-border-none'
             onClick={showDrawer}
-            icon={<RiMenuFill size={24} className="remix-icon hp-text-color-black-80 hp-text-color-dark-30" />}
+            icon={
+              <RiMenuFill
+                size={24}
+                className='remix-icon hp-text-color-black-80 hp-text-color-dark-30'
+              />
+            }
           />
         </Col>
 
         <Col
-          flex="1"
+          flex='1'
           style={{ display: !searchHeader ? 'none' : 'block' }}
           className={`hp-mr-md-0 hp-mr-16 hp-pr-0 hp-header-search ${searchActive && 'hp-header-search-active'}`}
         >
-          <HeaderSearch inputFocusProp={inputFocusProp} setSearchHeader={setSearchHeader} />
+          <HeaderSearch
+            inputFocusProp={inputFocusProp}
+            setSearchHeader={setSearchHeader}
+          />
         </Col>
 
         {!searchHeader && <HeaderText />}
 
         <Col>
-          <Row align="middle">
+          <Row align='middle'>
             {/* <HeaderLanguages /> */}
 
             {/* <Col className="hp-d-flex-center">
@@ -107,13 +119,16 @@ export default function MenuHeader(props) {
 
   return (
     <Header>
-      <Row justify="center" className="hp-w-100">
+      <Row
+        justify='center'
+        className='hp-w-100'
+      >
         <Col span={24}>
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: 'spring', duration: 0.5, delay: 0.1 }}
-            className="hp-w-100"
+            className='hp-w-100'
           >
             {headerChildren()}
           </motion.div>
