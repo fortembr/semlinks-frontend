@@ -5,14 +5,20 @@ import { Health } from 'iconsax-react';
 
 const main = [
   {
-    header: 'Main'
+    header: 'Main',
   },
   {
     id: 'dashboard',
     title: 'Dashboard',
     icon: <Health size={18} />,
-    navLink: '/'
-  }
+    navLink: '/',
+  },
+  {
+    id: 'projects',
+    title: 'Projects',
+    icon: <Health size={18} />,
+    navLink: '/projects/',
+  },
   // {
   //   id: 'ecommerce',
   //   title: <IntlMessages id="sidebar-apps-ecommerce" />,
