@@ -12,7 +12,7 @@
   "scripts": {
     "build": "react-scripts build",
     "build:clean": "rm -r dist",
-    "start:dev": "NODE_ENV=development BROWSER=firefox react-scripts start",
+    "start:dev": "NODE_ENV=development react-scripts start",
     "start:prod": "NODE_ENV=production react-scripts start",
     "start:test": "react-scripts test"
   },
