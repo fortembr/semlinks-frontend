@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "craco start",
+    "start:dev": "BROWSER=firefox craco start",
     "build": "craco build",
     "test": "craco test",
     "lint": "eslint src/**/*.js src/**/**/*.js src/**/**/**/*.js src/**/**/**/**/*.js src/**/*.jsx src/**/**/*.jsx src/**/**/**/*.jsx src/**/**/**/**/*.jsx"
