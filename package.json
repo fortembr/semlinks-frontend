@@ -2,6 +2,11 @@
   "name": "semlinks-frontend",
   "version": "0.0.4",
   "private": true,
+  "author": {
+    "name": "Carbon Digital",
+    "email": "hello@carbondigital.us",
+    "url": "https://carbondigital.us/"
+  },
   "scripts": {
     "start": "craco start",
     "start:dev": "BROWSER=firefox craco start",
