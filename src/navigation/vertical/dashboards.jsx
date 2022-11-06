@@ -1,5 +1,5 @@
 import React from 'react';
-import { Health } from 'iconsax-react';
+import { ClipboardText, Health } from 'iconsax-react';
 
 // import IntlMessages from '../../layout/components/lang/IntlMessages';
 
@@ -16,7 +16,7 @@ const main = [
   {
     id: 'projects',
     title: 'Projects',
-    icon: <Health size={18} />,
+    icon: <ClipboardText size={18} />,
     navLink: '/projects/',
   },
   // {
