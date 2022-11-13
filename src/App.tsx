@@ -11,7 +11,6 @@ export default class App extends React.Component {
     {
       path: '/',
       element: <PageDashboard />
-      // loader: rootLoader,
     }
   ]);
   render() {
