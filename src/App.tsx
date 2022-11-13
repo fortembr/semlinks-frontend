@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Custom Modules
 import './assets/css/App.css';
+import { PageDashboard } from 'pages';
 
 export default class App extends React.Component {
   render() {
