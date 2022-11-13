@@ -15,12 +15,12 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 
 const drawerWidth = 240;
 
-export interface PortalProps {
+interface PageProps {
   children: any;
 }
 
-export default class TemplatePortal extends React.Component<PortalProps> {
-  constructor(props: PortalProps) {
+export default class PortalTemplate extends React.Component<PageProps> {
+  constructor(props: PageProps) {
     super(props);
   }
   render() {
