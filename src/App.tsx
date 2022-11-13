@@ -7,6 +7,13 @@ import './assets/css/App.css';
 import { PageDashboard } from 'pages';
 
 export default class App extends React.Component {
+  public router = createBrowserRouter([
+    {
+      path: '/',
+      element: <PageDashboard />
+      // loader: rootLoader,
+    }
+  ]);
   render() {
     return (
       <div className="App">
