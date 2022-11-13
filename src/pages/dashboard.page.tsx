@@ -3,12 +3,12 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-import TemplatePortal from 'templates/portal.template';
+import PortalTemplate from 'templates/portal.template';
 
-export default class PageDashboard extends React.Component {
+export default class PortalPage extends React.Component {
   render() {
     return (
-      <TemplatePortal>
+      <PortalTemplate>
         <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}>
           <Toolbar />
           <Typography paragraph>
@@ -32,7 +32,7 @@ export default class PageDashboard extends React.Component {
             posuere sollicitudin aliquam ultrices sagittis orci a.
           </Typography>
         </Box>
-      </TemplatePortal>
+      </PortalTemplate>
     );
   }
 }
