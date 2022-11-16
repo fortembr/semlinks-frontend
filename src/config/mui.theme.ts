@@ -257,7 +257,9 @@ const customTheme = createTheme({
     h6: {},
     subtitle1: {},
     subtitle2: {},
-    body1: {},
+    body1: {
+      fontSize: '1.2rem'
+    },
     body2: {},
     caption: {},
     button: {}
