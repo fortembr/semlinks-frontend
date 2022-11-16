@@ -134,7 +134,15 @@ const customTheme = createTheme({
     MuiTab: {},
     MuiTabs: {},
     // Text Field
-    MuiTextField: {},
+    MuiTextField: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          margin: '1rem'
+        }
+      }
+    },
     // Tooltip
     MuiTooltip: {},
     MuiToolbar: {},
