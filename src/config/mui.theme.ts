@@ -29,7 +29,16 @@ const customTheme = createTheme({
     // Breadcrumbs
     MuiBreadcrumbs: {},
     // Button
-    MuiButton: {},
+    MuiButton: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          padding: '1rem',
+          margin: '1rem'
+        }
+      }
+    },
     MuiButtonBase: {},
     // Button Group
     MuiButtonGroup: {},
@@ -125,7 +134,15 @@ const customTheme = createTheme({
     MuiTab: {},
     MuiTabs: {},
     // Text Field
-    MuiTextField: {},
+    MuiTextField: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          margin: '1rem'
+        }
+      }
+    },
     // Tooltip
     MuiTooltip: {},
     MuiToolbar: {},
@@ -228,7 +245,11 @@ const customTheme = createTheme({
     }
   },
   typography: {
-    h1: {},
+    h1: {
+      fontSize: '5rem',
+      fontWeight: '700',
+      textAlign: 'center'
+    },
     h2: {},
     h3: {},
     h4: {},
@@ -236,7 +257,9 @@ const customTheme = createTheme({
     h6: {},
     subtitle1: {},
     subtitle2: {},
-    body1: {},
+    body1: {
+      fontSize: '1.2rem'
+    },
     body2: {},
     caption: {},
     button: {}

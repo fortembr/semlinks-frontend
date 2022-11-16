@@ -3,7 +3,6 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Custom Modules
-import './assets/css/App.css';
 import { LoginPage, PortalPage } from 'pages';
 
 export default class App extends React.Component {
@@ -13,7 +12,15 @@ export default class App extends React.Component {
       element: <PortalPage />
     },
     {
+      path: '/forgot-password',
+      element: <LoginPage />
+    },
+    {
       path: '/login',
+      element: <LoginPage />
+    },
+    {
+      path: '/register',
       element: <LoginPage />
     }
   ]);
