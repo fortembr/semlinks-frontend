@@ -245,7 +245,11 @@ const customTheme = createTheme({
     }
   },
   typography: {
-    h1: {},
+    h1: {
+      fontSize: '5rem',
+      fontWeight: '700',
+      textAlign: 'center'
+    },
     h2: {},
     h3: {},
     h4: {},
