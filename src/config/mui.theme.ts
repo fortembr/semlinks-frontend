@@ -29,7 +29,16 @@ const customTheme = createTheme({
     // Breadcrumbs
     MuiBreadcrumbs: {},
     // Button
-    MuiButton: {},
+    MuiButton: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          padding: '1rem',
+          margin: '1rem'
+        }
+      }
+    },
     MuiButtonBase: {},
     // Button Group
     MuiButtonGroup: {},
