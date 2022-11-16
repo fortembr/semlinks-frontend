@@ -6,18 +6,17 @@
   text-transform: uppercase;
 }
 .navbar {
-	position: relative;
-	@include mq(med) {
-		margin-top: em(5px);
-		margin-bottom: 0;
-	}
+  position: relative;
+  @include mq(med) {
+    margin-top: em(5px);
+    margin-bottom: 0;
+  }
 }
 
 header {
-		padding: 20px;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header {
