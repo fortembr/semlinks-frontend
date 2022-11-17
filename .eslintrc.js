@@ -17,7 +17,7 @@ module.exports = {
         tsconfigRootDir: __dirname,
         sourceType: 'module'
       },
-      plugins: ['@typescript-eslint/eslint-plugin'],
+      plugins: ['@typescript-eslint/eslint-plugin', 'prettier'],
       rules: {
         quotes: 'off',
         '@typescript-eslint/ban-ts-comment': 'off',
@@ -29,7 +29,10 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
         '@typescript-eslint/no-unsafe-member-access': 'off',
         '@typescript-eslint/no-unsafe-call': 'off',
-        '@typescript-eslint/quotes': 'off'
+        '@typescript-eslint/quotes': 'off',
+        'prettier/prettier': ['error', {
+          'endOfLine': 'auto'}
+        ]
       }
     },
     {
