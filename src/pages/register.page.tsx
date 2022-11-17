@@ -14,7 +14,7 @@ export default class RegisterPage extends React.Component {
         <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3, mt: 50 }}>
           <img className="logo" src={logo} alt="SEM Links Logo" />
           <Typography className="headline-primary" variant="h1">
-            Login
+            Register
           </Typography>
           <RegisterForm />
           <Typography paragraph className="text-center m-20">
