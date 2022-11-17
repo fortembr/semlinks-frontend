@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 // NPM Modules
 import { Box, Button, TextField } from '@mui/material';
 import axios, { AxiosResponse } from 'axios';
@@ -28,10 +30,10 @@ export default class LoginForm extends React.Component {
     return res;
   }
 
-  private submitLogin() {
+  private async submitLogin() {
     const email: string = $('#email').val().toString();
     const password: string = $('#password').val().toString();
-    return this.userLogin(email, password);
+    return await this.userLogin(email, password);
   }
 
   render() {
