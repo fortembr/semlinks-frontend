@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 // NPM Modules
 import { Box, Button, TextField } from '@mui/material';
 import axios, { AxiosResponse } from 'axios';
