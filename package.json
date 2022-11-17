@@ -19,7 +19,7 @@
     "lint:twox": "eslint src/**/*.tsx --fix",
     "lint:threex": "eslint src/**/**/*.tsx --fix",
     "lint": "npm run lint:threex && npm run lint:twox && npm run lint:onex && npm run lint:three && npm run lint:two && npm run lint:one",
-    "start:dev": "NODE_ENV=development react-scripts start",
+    "start:dev": "NODE_ENV=development react-scripts start --fix",
     "start:prod": "NODE_ENV=production react-scripts start",
     "start:test": "react-scripts test",
     "style": "sass src/assets/css/scss/style.scss:src/assets/css/style.css",
