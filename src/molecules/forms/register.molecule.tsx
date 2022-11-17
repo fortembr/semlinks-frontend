@@ -65,7 +65,7 @@ export default class RegisterForm extends React.Component {
             fullWidth
             variant="contained"
             onClick={() => {
-              this.submitLogin();
+              this.submitRegister();
             }}
           >
             Register
