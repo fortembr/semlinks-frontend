@@ -3,7 +3,7 @@ import { Box, Link, Typography } from '@mui/material';
 import * as React from 'react';
 
 // Custom Modules
-import { LoginForm } from 'molecules/forms';
+import { RegisterForm } from 'molecules/forms';
 import { PublicTemplate } from 'templates';
 import logo from './../../src/assets/img/logo.png';
 
