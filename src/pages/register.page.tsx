@@ -16,7 +16,7 @@ export default class RegisterPage extends React.Component {
           <Typography className="headline-primary" variant="h1">
             Login
           </Typography>
-          <LoginForm />
+          <RegisterForm />
           <Typography paragraph className="text-center m-20">
             Don&apos;t have an account? <Link href="/register">Create an Account.</Link>
             <br />
