@@ -10,6 +10,9 @@ module.exports = {
       extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended', 'plugin:react/recommended'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        },
         project: ['./tsconfig.json'], // Specify it only for TypeScript files
         tsconfigRootDir: __dirname,
         sourceType: 'module'
