@@ -40,9 +40,12 @@ export default class RegisterForm extends React.Component {
   }
 
   private async submitRegister() {
+    const firstName: string = $('#firstName').val().toString();
+    const lastName: string = $('#lastName').val().toString();
     const email: string = $('#email').val().toString();
     const password: string = $('#password').val().toString();
     return await this.userLogin(email, password);
+    const passwordConfirm: string = $('#passwordConfirm').val().toString();
   }
 
   render() {
