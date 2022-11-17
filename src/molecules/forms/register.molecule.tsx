@@ -18,7 +18,7 @@ export default class RegisterForm extends React.Component {
     // @ts-ignore-next-line eslint-ignore-next-line
     const res: AxiosResponse = await axios({
       method: 'post',
-      url: 'https://api.semlinks.app/v1/account/login/',
+      url: 'https://api.semlinks.app/v1/account/register/',
       data: {
         email,
         password
