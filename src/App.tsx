@@ -21,7 +21,7 @@ export default class App extends React.Component {
     },
     {
       path: '/register',
-      element: <LoginPage />
+      element: <RegisterPage />
     }
   ]);
   render() {
