@@ -56,7 +56,7 @@ export default class RegisterForm extends React.Component {
           maxWidth: '100%'
         }}
       >
-        <form id="login-form">
+        <form id="register-form">
           <TextField id="email" className="form_input" fullWidth label="Email" />
           <TextField id="password" className="form_input" fullWidth label="Password" />
           <Button
