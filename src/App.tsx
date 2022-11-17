@@ -3,7 +3,7 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Custom Modules
-import { LoginPage, PortalPage } from 'pages';
+import { LoginPage, PortalPage, RegisterPage } from 'pages';
 
 export default class App extends React.Component {
   public router = createBrowserRouter([
