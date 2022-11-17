@@ -14,6 +14,7 @@ export default class RegisterForm extends React.Component {
     password: string,
     passwordConfirm: string
   ) {
+    console.log('Begin capture register data.');
     // @ts-ignore-next-line eslint-ignore-next-line
     const res: AxiosResponse = await axios({
       method: 'post',
