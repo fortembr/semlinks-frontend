@@ -20,8 +20,11 @@ export default class RegisterForm extends React.Component {
       method: 'post',
       url: 'https://api.semlinks.app/v1/account/register/',
       data: {
+        firstName,
+        lastName,
         email,
-        password
+        password,
+        passwordConfirm
       }
     })
       .then((res) => {
