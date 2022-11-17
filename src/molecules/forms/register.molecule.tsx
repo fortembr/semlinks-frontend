@@ -68,7 +68,7 @@ export default class RegisterForm extends React.Component {
               this.submitLogin();
             }}
           >
-            Login
+            Register
           </Button>
         </form>
       </Box>
