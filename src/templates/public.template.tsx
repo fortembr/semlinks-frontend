@@ -14,7 +14,7 @@ export default class PublicTemplate extends React.Component<PageProps> {
     return (
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <Container maxWidth="sm">
+        <Container maxWidth='sm'>
           <main>{this.props.children}</main>
         </Container>
       </Box>
