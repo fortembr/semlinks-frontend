@@ -30,10 +30,10 @@ export default class LoginForm extends React.Component {
     return res;
   }
 
-  private submitLogin() {
+  private async submitLogin() {
     const email: string = $('#email').val().toString();
     const password: string = $('#password').val().toString();
-    return this.userLogin(email, password);
+    return await this.userLogin(email, password);
   }
 
   render() {
