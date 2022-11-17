@@ -18,7 +18,7 @@ export default class RegisterPage extends React.Component {
           </Typography>
           <RegisterForm />
           <Typography paragraph className="text-center m-20">
-            Don&apos;t have an account? <Link href="/register">Create an Account.</Link>
+            Already have an account? <Link href="/login">Login.</Link>
             <br />
             <Link href="/forgot-password">Forgot Password?</Link>
           </Typography>
