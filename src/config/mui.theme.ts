@@ -16,7 +16,14 @@ const customTheme = createTheme({
     // Alert
     MuiAlert: {},
     // App Bar
-    MuiAppBar: {},
+    MuiAppBar: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          padding: '0'
+        }
+      }
+    },
     // Autocomplete
     MuiAutocomplete: {},
     // Avatar
