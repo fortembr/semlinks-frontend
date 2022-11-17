@@ -28,7 +28,7 @@ export default class RegisterForm extends React.Component {
       }
     })
       .then((res) => {
-        console.log('login success\n', res.statusText);
+        console.log('register success\n', res.statusText);
         window.setTimeout(() => {
           location.assign('/');
         }, 3000);
