@@ -1,4 +1,5 @@
-import * as React from 'react';
+import { Logout, PersonAdd, Settings } from '@mui/icons-material';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
 import {
   AppBar,
   Avatar,
@@ -18,9 +19,8 @@ import {
   Tooltip,
   Typography
 } from '@mui/material';
-
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import { Logout, PersonAdd, Settings } from '@mui/icons-material';
+import $ from 'jquery';
+import * as React from 'react';
 
 const drawerWidth = 240;
 
@@ -35,7 +35,16 @@ export default class PortalTemplate extends React.Component<PageProps> {
     super(props);
     this.state = {};
   }
-  handleAccountMenuClick(event: React.MouseEvent<HTMLElement>) {
+  componentDidMount(): void {
+    this.mountClickEventListener();
+  }
+  private mountClickEventListener() {
+    $('#avatar-icon').on('click', (event) => {
+      return this.handleAccountMenuClick(event);
+    });
+  }
+
+  private handleAccountMenuClick(event?: JQuery.ClickEvent<HTMLElement>) {
     if (this.isMenuOpen) {
       setAnchorEl(null);
       return false;
@@ -58,7 +67,7 @@ export default class PortalTemplate extends React.Component<PageProps> {
               <Tooltip title='Account settings'>
                 <IconButton
                   id='avatar-icon'
-                  onClick={() => this.handleAccountMenuClick(event)}
+                  onClick={() => this.handleAccountMenuClick()}
                   size='small'
                   sx={{ ml: 2 }}
                   aria-controls={this.isMenuOpen ? 'account-menu' : undefined}
@@ -73,8 +82,8 @@ export default class PortalTemplate extends React.Component<PageProps> {
               anchorEl={anchorEl}
               id='account-menu'
               open={this.isMenuOpen}
-              onClose={() => this.handleAccountMenuClick(event)}
-              onClick={() => this.handleAccountMenuClick(event)}
+              onClose={() => this.handleAccountMenuClick()}
+              onClick={() => this.handleAccountMenuClick()}
               PaperProps={{
                 elevation: 0,
                 sx: {
