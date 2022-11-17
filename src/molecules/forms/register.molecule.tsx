@@ -7,8 +7,13 @@ import $ from 'jquery';
 import * as React from 'react';
 
 export default class RegisterForm extends React.Component {
-  private async userLogin(email: string, password: string) {
-    console.log('Begin capture email and password.');
+  private async userRegister(
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string,
+    passwordConfirm: string
+  ) {
     // @ts-ignore-next-line eslint-ignore-next-line
     const res: AxiosResponse = await axios({
       method: 'post',
