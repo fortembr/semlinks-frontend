@@ -58,8 +58,8 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
     return (
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-          <Toolbar>
         <AppBar position='fixed' sx={{ width: `calc(100% - ${this.drawerWidth}px)`, ml: `${this.drawerWidth}px` }}>
+          <Toolbar className='box-header' sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <Typography variant='h6' noWrap component='div'>
               {this.props.pageTitle}
             </Typography>
