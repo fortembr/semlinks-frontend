@@ -19,7 +19,6 @@ import {
   Tooltip,
   Typography
 } from '@mui/material';
-import $ from 'jquery';
 import * as React from 'react';
 
 const drawerWidth = 240;
