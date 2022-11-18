@@ -27,7 +27,6 @@ export interface PageProps {
 }
 
 export default class PortalTemplate extends React.Component<PageProps> {
-  private isMenuOpen = false;
   private drawerWidth = 240;
   constructor(props: PageProps) {
     super(props);
