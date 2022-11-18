@@ -1,3 +1,4 @@
+// NPM Modules
 import { Logout, Settings } from '@mui/icons-material';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import {
@@ -8,6 +9,7 @@ import {
   Divider,
   Drawer,
   IconButton,
+  ImageListItem,
   List,
   ListItem,
   ListItemButton,
@@ -22,6 +24,8 @@ import {
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
+// Custom Modules
+import logo from './../../src/assets/img/logo.png';
 export interface PageProps {
   children: any;
   pageTitle: string;
@@ -173,7 +177,11 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
           variant='permanent'
           anchor='left'
         >
-          <Toolbar />
+          <Toolbar>
+            <ImageListItem sx={{ width: '100%', paddingTop: '10px' }}>
+              <img src={logo} alt='SEM Links Logo' loading='lazy' />
+            </ImageListItem>
+          </Toolbar>
           <Divider />
           <List>
             <ListItem key={'Inbox'} disablePadding>
