@@ -26,12 +26,12 @@ export interface PageProps {
   pageTitle: string;
 }
 
-export default class PortalTemplate extends React.Component<PageProps> {
 export interface PageState {
   anchorEl: HTMLElement | null;
   isMenuOpen: boolean;
 }
 
+export default class PortalTemplate extends React.Component<PageProps, PageState> {
   private drawerWidth = 240;
   constructor(props: PageProps) {
     super(props);
