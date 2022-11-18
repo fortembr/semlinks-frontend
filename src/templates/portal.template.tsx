@@ -21,8 +21,7 @@ import {
 } from '@mui/material';
 import * as React from 'react';
 
-
-interface PageProps {
+export interface PageProps {
   children: any;
   pageTitle: string;
 }
