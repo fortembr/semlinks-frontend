@@ -121,11 +121,35 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
                 <Avatar /> My Account
               </MenuItem>
               <Divider />
-              <MenuItem>
+              <MenuItem component={Link} to='/account/settings'>
+                <ListItemIcon>
+                  <Settings fontSize='small' />
+                </ListItemIcon>
+                Community
+              </MenuItem>
+              <MenuItem component={Link} to='/account/settings'>
+                <ListItemIcon>
+                  <Settings fontSize='small' />
+                </ListItemIcon>
+                Docs
+              </MenuItem>
+              <MenuItem component={Link} to='/account/settings'>
+                <ListItemIcon>
+                  <Settings fontSize='small' />
+                </ListItemIcon>
+                Feature Request
+              </MenuItem>
+              <MenuItem component={Link} to='/account/settings'>
                 <ListItemIcon>
                   <Settings fontSize='small' />
                 </ListItemIcon>
                 Settings
+              </MenuItem>
+              <MenuItem component={Link} to='/account/settings'>
+                <ListItemIcon>
+                  <Settings fontSize='small' />
+                </ListItemIcon>
+                Support
               </MenuItem>
               <MenuItem>
                 <ListItemIcon>
