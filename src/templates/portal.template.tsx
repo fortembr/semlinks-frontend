@@ -1,4 +1,4 @@
-import { Logout, PersonAdd, Settings } from '@mui/icons-material';
+import { Logout, Settings } from '@mui/icons-material';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import {
   AppBar,
