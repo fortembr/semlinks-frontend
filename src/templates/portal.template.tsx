@@ -122,12 +122,6 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
               <Divider />
               <MenuItem>
                 <ListItemIcon>
-                  <PersonAdd fontSize='small' />
-                </ListItemIcon>
-                Add another account
-              </MenuItem>
-              <MenuItem>
-                <ListItemIcon>
                   <Settings fontSize='small' />
                 </ListItemIcon>
                 Settings
