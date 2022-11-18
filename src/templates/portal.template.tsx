@@ -39,10 +39,6 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
     this.state = { isMenuOpen: false, anchorEl: null };
   }
   }
-  private mountClickEventListener() {
-    $('#avatar-icon').on('click', (event) => {
-      return this.handleAccountMenuClick(event);
-    });
   }
 
   private handleAccountMenuClick(event?: JQuery.ClickEvent<HTMLElement>) {
