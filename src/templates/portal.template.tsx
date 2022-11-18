@@ -140,7 +140,7 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
             width: this.drawerWidth,
             flexShrink: 0,
             '& .MuiDrawer-paper': {
-              width: drawerWidth,
+              width: this.drawerWidth,
               boxSizing: 'border-box'
             }
           }}
