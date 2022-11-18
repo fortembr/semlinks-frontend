@@ -83,7 +83,7 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
             <Menu
               anchorEl={this.state.anchorEl}
               id='account-menu'
-              open={this.isMenuOpen}
+              open={this.state.isMenuOpen}
               onClose={() => this.handleAccountMenuClick()}
               onClick={() => this.handleAccountMenuClick()}
               PaperProps={{
