@@ -117,9 +117,6 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
               anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
               <MenuItem>
-                <Avatar /> Profile
-              </MenuItem>
-              <MenuItem>
                 <Avatar /> My account
               </MenuItem>
               <Divider />
