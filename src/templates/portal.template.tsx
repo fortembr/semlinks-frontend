@@ -65,17 +65,19 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
             </Typography>
             <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
               <Tooltip title='Account settings'>
-                <IconButton
-                  id='avatar-icon'
-                  onClick={() => this.handleAccountMenuClick()}
-                  size='small'
-                  sx={{ ml: 2 }}
-                  aria-controls={this.isMenuOpen ? 'account-menu' : undefined}
-                  aria-haspopup='true'
-                  aria-expanded={this.isMenuOpen ? 'true' : undefined}
-                >
-                  <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
-                </IconButton>
+                <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+                  <IconButton
+                    id='avatar-icon'
+                    onClick={() => this.handleAccountMenuClick()}
+                    size='small'
+                    sx={{ ml: 2 }}
+                    aria-controls={this.state.isMenuOpen ? 'account-menu' : undefined}
+                    aria-haspopup='true'
+                    aria-expanded={this.state.isMenuOpen ? 'true' : undefined}
+                  >
+                    <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+                  </IconButton>
+                </Box>
               </Tooltip>
             </Box>
             <Menu
