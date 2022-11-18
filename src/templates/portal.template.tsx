@@ -137,7 +137,7 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
         </AppBar>
         <Drawer
           sx={{
-            width: drawerWidth,
+            width: this.drawerWidth,
             flexShrink: 0,
             '& .MuiDrawer-paper': {
               width: drawerWidth,
