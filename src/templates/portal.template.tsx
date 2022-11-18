@@ -33,6 +33,7 @@ export interface PageState {
 
 export default class PortalTemplate extends React.Component<PageProps, PageState> {
   private drawerWidth = 240;
+
   constructor(props: PageProps) {
     super(props);
     this.state = {};
