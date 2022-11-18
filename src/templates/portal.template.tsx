@@ -21,7 +21,6 @@ import {
 } from '@mui/material';
 import * as React from 'react';
 
-const drawerWidth = 240;
 
 interface PageProps {
   children: any;
@@ -30,6 +29,7 @@ interface PageProps {
 
 export default class PortalTemplate extends React.Component<PageProps> {
   private isMenuOpen = false;
+  private drawerWidth = 240;
   constructor(props: PageProps) {
     super(props);
     this.state = {};
