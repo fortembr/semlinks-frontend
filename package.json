@@ -1,6 +1,6 @@
 {
   "name": "semlinks-frontend",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "private": false,
   "author": {
@@ -12,7 +12,14 @@
   "scripts": {
     "build": "react-scripts build",
     "build:clean": "rm -r dist",
-    "start:dev": "NODE_ENV=development react-scripts start",
+    "lint:one": "eslint src/*.ts --fix",
+    "lint:two": "eslint src/**/*.ts --fix",
+    "lint:three": "eslint src/**/**/*.ts --fix",
+    "lint:onex": "eslint src/*.tsx --fix",
+    "lint:twox": "eslint src/**/*.tsx --fix",
+    "lint:threex": "eslint src/**/**/*.tsx --fix",
+    "lint": "npm run lint:threex && npm run lint:twox && npm run lint:onex && npm run lint:three && npm run lint:two && npm run lint:one",
+    "start:dev": "NODE_ENV=development react-scripts start --fix",
     "start:prod": "NODE_ENV=production react-scripts start",
     "start:test": "react-scripts test",
     "style": "sass src/assets/css/scss/style.scss:src/assets/css/style.css",

@@ -56,17 +56,17 @@ export default class RegisterForm extends React.Component {
           maxWidth: '100%'
         }}
       >
-        <form id="register-form">
-          <TextField id="firstName" className="form_input" fullWidth label="First Name" />
-          <TextField id="lastName" className="form_input" fullWidth label="Last Name" />
-          <TextField id="email" className="form_input" fullWidth label="Email" />
-          <TextField id="password" className="form_input" fullWidth label="Password" />
-          <TextField id="passwordConfirm" className="form_input" fullWidth label="Password Confirmation" />
+        <form id='register-form'>
+          <TextField id='firstName' className='form_input' fullWidth label='First Name' />
+          <TextField id='lastName' className='form_input' fullWidth label='Last Name' />
+          <TextField id='email' className='form_input' fullWidth label='Email' />
+          <TextField id='password' className='form_input' fullWidth label='Password' />
+          <TextField id='passwordConfirm' className='form_input' fullWidth label='Password Confirmation' />
           <Button
-            id="submit"
-            className="form_btn"
+            id='submit'
+            className='form_btn'
             fullWidth
-            variant="contained"
+            variant='contained'
             onClick={() => {
               this.submitRegister();
             }}

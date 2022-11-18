@@ -8,8 +8,8 @@ import PortalTemplate from 'templates/portal.template';
 export default class PortalPage extends React.Component {
   render() {
     return (
-      <PortalTemplate>
-        <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}>
+      <PortalTemplate pageTitle='Dashboard'>
+        <Box component='main' sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}>
           <Toolbar />
           <Typography paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et

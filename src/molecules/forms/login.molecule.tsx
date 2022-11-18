@@ -44,14 +44,14 @@ export default class LoginForm extends React.Component {
           maxWidth: '100%'
         }}
       >
-        <form id="login-form">
-          <TextField id="email" className="form_input" fullWidth label="Email" />
-          <TextField id="password" className="form_input" fullWidth label="Password" />
+        <form id='login-form'>
+          <TextField id='email' className='form_input' fullWidth label='Email' />
+          <TextField id='password' className='form_input' fullWidth label='Password' />
           <Button
-            id="submit"
-            className="form_btn"
+            id='submit'
+            className='form_btn'
             fullWidth
-            variant="contained"
+            variant='contained'
             onClick={() => {
               this.submitLogin();
             }}
