@@ -55,7 +55,6 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
   }
 
   render() {
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     return (
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
