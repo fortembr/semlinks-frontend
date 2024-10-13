@@ -158,7 +158,7 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
                 </ListItemIcon>
                 Support
               </MenuItem>
-              <MenuItem>
+              <MenuItem onClick={() => this.handleAccountLogout()}>
                 <ListItemIcon>
                   <Logout fontSize='small' />
                 </ListItemIcon>
