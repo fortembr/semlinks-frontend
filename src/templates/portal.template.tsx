@@ -62,6 +62,14 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
     }
   }
 
+  private setAuthToken(token: string) {
+    if (token) {
+      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    } else {
+      delete axios.defaults.headers.common['Authorization'];
+    }
+  }
+
   render() {
     return (
       <Box sx={{ display: 'flex' }}>
