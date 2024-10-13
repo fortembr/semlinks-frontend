@@ -70,6 +70,36 @@ export default class PortalTemplate extends React.Component<PageProps, PageState
     }
   }
 
+  private async handleAccountLogout() {
+    console.log('Begin logout.');
+    // @ts-ignore-next-line eslint-ignore-next-line
+    const res: AxiosResponse = await axios({
+      method: 'post',
+      url: 'https://api.semlinks.app/v1/account/logout/'
+    })
+      .then((res) => {
+        console.log('Logout success\n', res.statusText);
+
+        //get token from response
+        const token = res.data.token;
+
+        //set JWT token to local
+        localStorage.setItem('token', token);
+
+        //set token to axios common header
+        this.setAuthToken(token);
+
+        // redirect to page
+        window.setTimeout(() => {
+          location.assign('https://semlinks.app/');
+        }, 3000);
+      })
+      .catch((error) => {
+        console.log('Error Received:\n', error);
+      });
+    return res;
+  }
+
   render() {
     return (
       <Box sx={{ display: 'flex' }}>
